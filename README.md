@@ -6,7 +6,7 @@ Chess openings, historical games and Puzzle Rush in one app: https://chessbook-a
 - **Games:** search ~864k over-the-board games (both players 2400+) by player, head-to-head
   ("Polgar, Kasparov"), event, opening, ECO, year and result, and replay them.
 - **Puzzles:** Puzzle Rush survival mode: no clock, three strikes, rising difficulty.
-- **Bot:** play Stockfish in your browser at 400–3200, with optional hint arrow and eval bar.
+- **Stockfish:** play Stockfish in your browser at 400–3200, with optional hint arrow and eval bar.
 - **Play:** 1v1 against a friend: enter a name, see who's online, invite, play, rematch.
 
 See [PLAN.md](PLAN.md) for architecture, data sources and status.

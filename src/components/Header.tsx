@@ -7,7 +7,7 @@ const NAV = [
   { href: "/openings", label: "Openings" },
   { href: "/games", label: "Games" },
   { href: "/puzzles", label: "Puzzles" },
-  { href: "/bot", label: "Bot" },
+  { href: "/bot", label: "Stockfish" },
   { href: "/play", label: "Play" },
 ];
 // Sections that don't exist yet are shown disabled.

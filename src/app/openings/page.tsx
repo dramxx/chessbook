@@ -117,7 +117,7 @@ export default function OpeningsPage() {
             href={`/bot?moves=${encodeURIComponent(moves.slice(0, ply).join(" "))}`}
             className="ml-3 text-sm text-accent hover:underline"
           >
-            Play vs bot from here →
+            Play vs Stockfish from here →
           </Link>
         )}
       </div>

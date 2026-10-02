@@ -10,7 +10,7 @@ A chess app with an **opening browser**, a **historical games browser**, **Puzzl
 2. **Games:** search ~864k over-the-board games by player (or two players: head-to-head), event,
    opening, ECO, year and result, then replay any game.
 3. **Puzzles:** Puzzle Rush survival mode (merged in from the former `puzzlerush` app).
-4. **Bot:** play Stockfish at 400–3200 (steps of 100), from the start or from an opening.
+4. **Stockfish** (tab; route `/bot`): play Stockfish at 400–3200 (steps of 100), from the start or from an opening.
 5. **Play:** 1v1 against a friend: enter a name, see who's online, invite, play.
 6. **One app:** a shared header, board and layout for every section.
 
@@ -118,7 +118,7 @@ database: no account, no connection string, no limits beyond Vercel's.
 - High score is kept in `localStorage` (`puzzlerush.best`). Scores saved on the old
   puzzlerush site did not carry over (storage is per site).
 
-### Bot
+### Stockfish (`/bot`)
 
 - Two Stockfish workers: one plays at the chosen strength, one analyses at full strength for the
   eval bar and the hint arrow. Both run in the browser: no server, no cost.
@@ -132,7 +132,7 @@ database: no account, no connection string, no limits beyond Vercel's.
 - **Hint** (best-move arrow on your turn) and **Eval bar** are toggles, usable mid-game; the
   choice is kept in `localStorage` (`chessbook.bot.settings`).
 - The current game survives a reload (`localStorage`, `chessbook.bot`).
-- The openings page links "Play vs bot from here" (`/bot?moves=e4 c5 …`).
+- The openings page links "Play vs Stockfish from here" (`/bot?moves=e4 c5 …`).
 
 ### Play (1v1)
 
@@ -184,7 +184,7 @@ Hard requirement: the project must never generate costs.
 | 5 | Done: Elite PGN imported (863,774 games, 16 skipped as illegal). |
 | 6 | Done: games search (players, head-to-head, event, opening, ECO, years, result) and replay. Search 10–100 ms locally. |
 | 7 | Done: puzzlerush merged into `/puzzles`; its Vercel project deleted. Deleting the GitHub repo `dramxx/puzzlerush` waits on the owner granting `gh` the `delete_repo` scope. |
-| Bot | Done: play vs Stockfish with rating slider, hint and eval bar, tested in a headless browser. |
+| Stockfish | Done: play vs Stockfish with rating slider, hint and eval bar, tested in a headless browser. |
 | Play | Done: 1v1 with lobby, invites, rematch; tested live with two browsers (invite → mate → rematch). |
 | Deploy | Vercel project `chessbook` (Hobby), deployed with `vercel deploy --prod` from the CLI. `LICHESS_TOKEN` set for Production and Preview. |
 | Repo | Public: https://github.com/dramxx/chessbook (database excluded). |
@@ -192,7 +192,7 @@ Hard requirement: the project must never generate costs.
 ## Ideas
 
 - The header nav doesn't collapse on phones yet (it scrolls sideways).
-- An opening picker on the Bot page (today: "Play vs bot from here" on the Openings page).
+- An opening picker on the Stockfish page (today: "Play vs Stockfish from here" on the Openings page).
 
 ## Owner notes
 
