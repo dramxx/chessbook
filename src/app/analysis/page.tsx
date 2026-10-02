@@ -2,7 +2,7 @@
 
 import { use, useEffect, useMemo, useRef, useState } from "react";
 import Link from "next/link";
-import { Chess } from "chess.js";
+import { Chess, type Move } from "chess.js";
 import { Board, type Arrow } from "@/components/Board";
 import { EvalBar } from "@/components/EvalBar";
 import { GameLayout } from "@/components/GameLayout";
@@ -23,6 +23,7 @@ import {
 import { Engine } from "@/lib/engine";
 import { listGames, type SavedGame } from "@/lib/history";
 import { loadOpenings, type OpeningDb } from "@/lib/openings";
+import { playMoveSound } from "@/lib/sounds";
 
 const BEST_ARROW = "rgba(129,182,76,.85)";
 
@@ -168,10 +169,10 @@ function Review({ target }: { target: AnalysisTarget }) {
 
   const positions = useMemo(() => {
     const chess = new Chess();
-    const out = [{ fen: chess.fen(), last: null as { from: string; to: string } | null }];
+    const out = [{ fen: chess.fen(), last: null as Move | null }];
     for (const san of moves) {
-      const m = chess.move(san);
-      out.push({ fen: chess.fen(), last: { from: m.from, to: m.to } });
+      const last = chess.move(san);
+      out.push({ fen: chess.fen(), last });
     }
     return out;
   }, [moves]);
@@ -188,6 +189,12 @@ function Review({ target }: { target: AnalysisTarget }) {
     window.addEventListener("keydown", onKey);
     return () => window.removeEventListener("keydown", onKey);
   }, [moves.length]);
+
+  // Sound for the move that led to the shown position, however it was reached.
+  useEffect(() => {
+    const m = positions[ply].last;
+    if (m) playMoveSound(m);
+  }, [positions, ply]);
 
   const { fen, last } = positions[ply];
   const current = ply > 0 ? reviews[ply - 1] : null;
