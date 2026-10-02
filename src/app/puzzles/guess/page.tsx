@@ -4,14 +4,13 @@ import { useEffect, useRef, useState } from "react";
 import { Chess } from "chess.js";
 import { Board, type Arrow } from "@/components/Board";
 import { GameLayout } from "@/components/GameLayout";
-import { BestLine, GameOver } from "@/components/HighScore";
+import { GameOver, Leaderboard } from "@/components/HighScore";
 import { Engine } from "@/lib/engine";
 import { findPosition, type GuessPosition } from "@/lib/guess";
-import { readBest, saveBest, type Best } from "@/lib/best";
+import { fetchTop, qualifies, submitScore, type Score } from "@/lib/best";
 import { playMoveSound } from "@/lib/sounds";
 
 const LIVES = 3;
-const BEST_KEY = "guessmove.best";
 const START_FEN = "rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR w KQkq - 0 1";
 
 const LAST_MOVE = "rgba(255,255,51,.45)";
@@ -26,7 +25,7 @@ export default function GuessPage() {
   const engine = useRef<Engine>(null);
   const next = useRef<Promise<GuessPosition>>(null); // found in the background while the current one is played
   const [ready, setReady] = useState(false); // `next` has resolved
-  const [best, setBest] = useState<Best | null>(null);
+  const [top, setTop] = useState<Score[] | null>(null);
   const [run, setRun] = useState<Run | null>(null);
   const [saved, setSaved] = useState(false);
 
@@ -39,7 +38,8 @@ export default function GuessPage() {
   useEffect(() => {
     const e = new Engine();
     engine.current = e;
-    e.setOptions({ MultiPV: 2 }).then(() => setBest(readBest(BEST_KEY)));
+    e.setOptions({ MultiPV: 2 });
+    fetchTop("guess").then(setTop, () => {});
     prefetch();
     return () => e.terminate();
   }, []);
@@ -48,7 +48,7 @@ export default function GuessPage() {
   const misses = run ? run.history.length - score : 0;
   const lives = LIVES - misses;
   const over = run !== null && lives <= 0;
-  const newBest = over && score > 0 && score > (best?.score ?? 0);
+  const newBest = over && !!top && qualifies(top, score);
 
   async function advance(history: Attempt[]) {
     const current = await next.current!;
@@ -111,7 +111,7 @@ export default function GuessPage() {
                 Positions from master games. Find Stockfish&apos;s best move, not necessarily the one that was played.
                 Three strikes and you&apos;re out.
               </p>
-              <BestLine best={best} />
+              <Leaderboard top={top} />
               <button className="btn-primary" disabled={!ready} onClick={start}>
                 {ready ? "Start" : "Finding a position…"}
               </button>
@@ -150,12 +150,14 @@ export default function GuessPage() {
                 <GameOver
                   score={score}
                   label="found"
-                  best={best}
+                  top={top}
                   newBest={newBest && !saved}
-                  onSave={(name) => {
-                    setBest(saveBest(BEST_KEY, name, score));
-                    setSaved(true);
-                  }}
+                  onSave={(name) =>
+                    submitScore("guess", name, score).then((t) => {
+                      setTop(t);
+                      setSaved(true);
+                    })
+                  }
                   onRestart={start}
                 />
               )}

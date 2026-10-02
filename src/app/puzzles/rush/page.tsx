@@ -5,12 +5,11 @@ import { PuzzlePlayer, playerColor } from "@/components/PuzzlePlayer";
 import { Board } from "@/components/Board";
 import { GameLayout } from "@/components/GameLayout";
 import { loadPuzzles, pickPuzzle, targetRating, type Puzzle } from "@/lib/puzzles";
-import { readBest, saveBest, type Best } from "@/lib/best";
-import { BestLine, GameOver } from "@/components/HighScore";
+import { fetchTop, qualifies, submitScore, type Score } from "@/lib/best";
+import { GameOver, Leaderboard } from "@/components/HighScore";
 import { playCountdownBeep } from "@/lib/sounds";
 
 const LIVES = 3;
-const BEST_KEY = "puzzlerush.best";
 const START_FEN = "rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR w KQkq - 0 1";
 
 type Attempt = { puzzle: Puzzle; solved: boolean };
@@ -18,7 +17,7 @@ type Run = { current: Puzzle; history: Attempt[]; used: Set<string> };
 
 export default function SurvivalPage() {
   const [puzzles, setPuzzles] = useState<Puzzle[] | null>(null);
-  const [best, setBest] = useState<Best | null>(null);
+  const [top, setTop] = useState<Score[] | null>(null);
   const [run, setRun] = useState<Run | null>(null);
   const [feedback, setFeedback] = useState<"correct" | "wrong" | null>(null);
   const [saved, setSaved] = useState(false);
@@ -26,10 +25,8 @@ export default function SurvivalPage() {
   const timer = useRef<number>(undefined);
 
   useEffect(() => {
-    loadPuzzles().then((p) => {
-      setPuzzles(p);
-      setBest(readBest(BEST_KEY));
-    });
+    loadPuzzles().then(setPuzzles);
+    fetchTop("rush").then(setTop, () => {});
     return () => clearTimeout(timer.current);
   }, []);
 
@@ -37,7 +34,7 @@ export default function SurvivalPage() {
   const misses = run ? run.history.length - score : 0;
   const lives = LIVES - misses;
   const over = run !== null && lives <= 0 && feedback === null;
-  const newBest = over && score > 0 && score > (best?.score ?? 0);
+  const newBest = over && !!top && qualifies(top, score);
 
   function start() {
     if (!puzzles) return;
@@ -110,7 +107,7 @@ export default function SurvivalPage() {
               <p className="text-sm text-neutral-400">
                 No clock. Three strikes and you&apos;re out. Puzzles get harder as you go.
               </p>
-              <BestLine best={best} />
+              <Leaderboard top={top} />
               <button className="btn-primary" disabled={!puzzles} onClick={start}>
                 {puzzles ? "Start" : "Loading puzzles…"}
               </button>
@@ -152,12 +149,14 @@ export default function SurvivalPage() {
                 <GameOver
                   score={score}
                   label="solved"
-                  best={best}
+                  top={top}
                   newBest={newBest && !saved}
-                  onSave={(name) => {
-                    setBest(saveBest(BEST_KEY, name, score));
-                    setSaved(true);
-                  }}
+                  onSave={(name) =>
+                    submitScore("rush", name, score).then((t) => {
+                      setTop(t);
+                      setSaved(true);
+                    })
+                  }
                   onRestart={start}
                 />
               )}
