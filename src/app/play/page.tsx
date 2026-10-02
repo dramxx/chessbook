@@ -253,7 +253,7 @@ export default function PlayPage() {
   if (premove) highlights[premove.from] = highlights[premove.to] = PREMOVE;
 
   const messages = game && chat?.gameId === game.id ? chat.messages : [];
-  const unread = tab === "moves" ? messages.length - (chatSeen?.gameId === game?.id ? chatSeen!.count : 0) : 0;
+  const unread = tab === "moves" ? messages.length - (chatSeen && chatSeen.gameId === game?.id ? chatSeen.count : 0) : 0;
   function switchTab(t: "moves" | "chat") {
     if (t === "moves" && game) setChatSeen({ gameId: game.id, count: messages.length });
     setTab(t);
