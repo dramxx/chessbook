@@ -1,0 +1,2 @@
+chess-pieces.mp3  "Chess Pieces" (freesound_community, Pixabay id 60890), Pixabay Content License (royalty free).
+Move sound = 3rd hit (~5.62s), capture sound = 4th hit (~8.15s); see src/lib/sounds.ts.

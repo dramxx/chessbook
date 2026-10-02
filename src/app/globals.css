@@ -1,0 +1,57 @@
+@import "tailwindcss";
+
+:root {
+  --background: #302e2b;
+  --foreground: #ececec;
+  --panel: #262421;
+  --surface: #3c3a37;
+  --surface-hover: #4b4946;
+  --accent: #81b64c;
+  --accent-hover: #a3d160;
+  --accent-shadow: #45753c;
+  --header-h: 3rem;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-panel: var(--panel);
+  --color-surface: var(--surface);
+  --color-surface-hover: var(--surface-hover);
+  --color-accent: var(--accent);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-geist-sans), Arial, Helvetica, sans-serif;
+}
+
+@layer components {
+  .btn-primary {
+    @apply rounded-lg bg-accent px-4 py-3 text-lg font-bold text-white shadow-[0_4px_0_var(--accent-shadow)] hover:bg-[var(--accent-hover)] active:translate-y-0.5 active:shadow-none disabled:opacity-50;
+  }
+  .btn-secondary {
+    @apply rounded-lg bg-surface px-3 py-2 font-semibold hover:bg-surface-hover disabled:opacity-40;
+  }
+  .history-chip {
+    @apply rounded px-1.5 py-0.5 font-mono text-xs;
+  }
+}
+
+@keyframes countdown-pop {
+  from {
+    transform: scale(1.4);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+.countdown-number {
+  animation: countdown-pop 0.35s ease-out;
+}
