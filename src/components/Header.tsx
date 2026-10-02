@@ -7,16 +7,17 @@ const NAV = [
   { href: "/openings", label: "Openings" },
   { href: "/games", label: "Games" },
   { href: "/puzzles", label: "Puzzles" },
+  { href: "/bot", label: "Bot" },
   { href: "/play", label: "Play" },
 ];
 // Sections that don't exist yet are shown disabled.
-const AVAILABLE = new Set(["/openings", "/games", "/puzzles"]);
+const AVAILABLE = new Set(["/openings", "/games", "/puzzles", "/bot"]);
 
 export function Header() {
   const pathname = usePathname();
   return (
     <header className="sticky top-0 z-40 flex h-(--header-h) shrink-0 items-center gap-4 bg-panel px-4">
-      <Link href="/" className="text-lg font-bold">
+      <Link href="/" className="shrink-0 text-lg font-bold whitespace-nowrap">
         ♞ Chessbook
       </Link>
       <nav className="flex items-center gap-1 overflow-x-auto">

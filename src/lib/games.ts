@@ -17,7 +17,6 @@ export type GameRow = {
   round: string | null;
   result: string;
   eco: string | null;
-  opening: string | null;
   plies: number;
 };
 
@@ -41,9 +40,8 @@ function open() {
 }
 
 const SELECT = `SELECT g.id, w.name AS white, b.name AS black, g.white_elo AS whiteElo, g.black_elo AS blackElo,
-  e.name AS event, e.site, g.date, g.year, g.round, g.result, g.eco, o.name AS opening, g.plies
-FROM games g JOIN players w ON w.id = g.white JOIN players b ON b.id = g.black LEFT JOIN events e ON e.id = g.event
-  LEFT JOIN openings o ON o.id = g.opening`;
+  e.name AS event, e.site, g.date, g.year, g.round, g.result, g.eco, g.plies
+FROM games g JOIN players w ON w.id = g.white JOIN players b ON b.id = g.black LEFT JOIN events e ON e.id = g.event`;
 
 // Newest first. Returns one page and whether another follows.
 export function searchGames(s: Search): { games: GameRow[]; more: boolean } {

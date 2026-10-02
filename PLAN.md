@@ -1,7 +1,7 @@
 # Chessbook — Plan
 
-A chess app with an **opening browser**, a **historical games browser** and **Puzzle Rush**,
-live at https://chessbook-amber.vercel.app. Next: **play vs bots** and **play vs a friend**
+A chess app with an **opening browser**, a **historical games browser**, **Puzzle Rush** and
+**play vs Stockfish**, live at https://chessbook-amber.vercel.app. Next: **play vs a friend**
 (needs its own plan, see the end).
 
 ## Goals
@@ -11,12 +11,14 @@ live at https://chessbook-amber.vercel.app. Next: **play vs bots** and **play vs
 2. **Games:** search ~864k over-the-board games by player (or two players: head-to-head), event,
    opening, ECO, year and result, then replay any game.
 3. **Puzzles:** Puzzle Rush survival mode (merged in from the former `puzzlerush` app).
-4. **One app:** a shared header, board and layout for every section.
+4. **Bot:** play Stockfish at 400–3200 (steps of 100), from the start or from an opening.
+5. **One app:** a shared header, board and layout for every section.
 
 ## Stack
 
 Next.js 16 (App Router), React 19, TypeScript, Tailwind 4, chess.js (UI), chessops (import and
-move encoding), react-chessboard, Node's built-in `node:sqlite`. Deployed on Vercel Hobby.
+move encoding), react-chessboard, Node's built-in `node:sqlite`, Stockfish 19 lite (WASM, in the
+browser). Deployed on Vercel Hobby.
 
 > Next 16 has breaking changes: read `node_modules/next/dist/docs/` before writing code (see
 > `AGENTS.md`).
@@ -29,6 +31,7 @@ move encoding), react-chessboard, Node's built-in `node:sqlite`. Deployed on Ver
 | Move stats per position, top games | Lichess Opening Explorer `explorer.lichess.ovh/masters` | Needs a personal API token on **every** request (`401` without one) |
 | Single master game by id | `explorer.lichess.ovh/masters/pgn/{id}` | Works without a token |
 | Historical games | [Lumbra's GigaBase OTB](https://lumbrasgigabase.com/en/download-in-pgn-format-en/), "OTB Elite (both players 2400+)": 131 MB .7z = 764 MB PGN, 863,790 games | **CC BY-NC-SA 4.0**: non-commercial only, with attribution (shown on `/games`). The download is a public Mega link (fetchable with `megajs`) into `data/`. Never offer the full dump for download: the database is not in git and not served as a file. |
+| Engine | [Stockfish.js](https://github.com/nmrugg/stockfish.js) 19 lite single-threaded (`stockfish-19-lite-single.js` + `.wasm`, 1.8 MB) | GPLv3; copied into `public/stockfish/` with its license (`Copying.txt`) |
 | Puzzles | [Lichess puzzle database](https://database.lichess.org/#puzzles) | CC0; `scripts/build-puzzles.mjs` → `public/puzzles.json` (~5,000 puzzles, 400–3000) |
 
 ## Architecture
@@ -44,6 +47,7 @@ src/
     games/masters/[id]/     replay of a Lichess masters game (openings sidebar "Top games")
     puzzles/page.tsx        Puzzle Rush survival mode
     puzzles/[id]/page.tsx   retry one puzzle (unranked, hints)
+    bot/page.tsx            play vs Stockfish (?moves= starts from an opening line)
     api/explorer/route.ts   proxy to the Lichess explorer; adds the token server-side, CDN-cached
   components/
     Header.tsx              app header + nav (Play disabled until it exists)
@@ -53,6 +57,7 @@ src/
     ContinuationList.tsx    sidebar: next moves with opening names and stats
     Replay.tsx              read-only game replay (opening name, moves, copy PGN, ←/→ keys)
     PuzzlePlayer.tsx        plays one puzzle on the board
+    EvalBar.tsx             vertical evaluation bar
   lib/
     openings.ts             load openings.json, look up by position
     explorer.ts             client fetch + cache for /api/explorer
@@ -60,6 +65,7 @@ src/
     movecodec.mjs           one byte per move: index into the sorted legal moves (chessops)
     puzzles.ts, best.ts     puzzle loading/picking; high score in localStorage
     sounds.ts               move and countdown sounds
+    engine.ts               Stockfish Web Worker wrapper (queued UCI searches) + rating → strength
 scripts/
   build-openings.mjs        TSV → public/openings.json
   build-puzzles.mjs         Lichess puzzle dump → public/puzzles.json
@@ -109,6 +115,20 @@ database: no account, no connection string, no limits beyond Vercel's.
 - High score is kept in `localStorage` (`puzzlerush.best`). Scores saved on the old
   puzzlerush site did not carry over (storage is per site).
 
+### Bot
+
+- Two Stockfish workers: one plays at the chosen strength, one analyses at full strength for the
+  eval bar and the hint arrow. Both run in the browser: no server, no cost.
+- **Strength:** 3200 = full strength (1 s per move); 1400–3100 = `UCI_LimitStrength` +
+  `UCI_Elo` (0.7 s per move); 400–1300 (below Stockfish's 1320 minimum) = Skill Level 0, depth
+  1–4, and a 5–50% chance of a random legal move. Approximate: Stockfish's Elo is calibrated
+  against engines, not human rating pools.
+- Untimed. Color: White / Random / Black. Premoves, resign, review moves after the game, copy PGN.
+- **Hint** (best-move arrow on your turn) and **Eval bar** are toggles, usable mid-game; the
+  choice is kept in `localStorage` (`chessbook.bot.settings`).
+- The current game survives a reload (`localStorage`, `chessbook.bot`).
+- The openings page links "Play vs bot from here" (`/bot?moves=e4 c5 …`).
+
 ## Cost: must stay $0
 
 Hard requirement: the project must never generate costs.
@@ -129,17 +149,17 @@ Hard requirement: the project must never generate costs.
 | 1–4 | Done: scaffold, `openings.json`, openings page, explorer proxy with stats and top games. |
 | 5 | Done: Elite PGN imported (863,774 games, 16 skipped as illegal). |
 | 6 | Done: games search (players, head-to-head, event, opening, ECO, years, result) and replay. Search 10–100 ms locally. |
-| 7 | Done: puzzlerush merged into `/puzzles`; old repo and Vercel project deleted. |
+| 7 | Done: puzzlerush merged into `/puzzles`; its Vercel project deleted. Deleting the GitHub repo `dramxx/puzzlerush` waits on the owner granting `gh` the `delete_repo` scope. |
+| Bot | Done: play vs Stockfish with rating slider, hint and eval bar, tested in a headless browser. |
 | Deploy | Vercel project `chessbook` (Hobby), deployed with `vercel deploy --prod` from the CLI. `LICHESS_TOKEN` set for Production and Preview. |
 | Repo | Public: https://github.com/dramxx/chessbook (database excluded). |
 
-## Next: play vs bots and play vs a friend
+## Next: play vs a friend
 
 Needs its own plan before work starts. Known constraints:
 
 - `/play`: reuse `Board` (premoves already supported), `MoveList` and the header.
-- **vs bots:** an engine in the browser (e.g. Stockfish WASM in a Web Worker) costs nothing to run;
-  strength levels via depth/skill settings.
+- The header nav doesn't collapse on phones yet (it scrolls sideways); worth fixing with Play.
 - **vs a friend:** create a game, share a link, the friend joins; moves validated on both ends and
   on the server. Needs realtime transport (WebSockets on Vercel Functions, or a hosted realtime
   service) and a writable store for game state (the games SQLite file is read-only). Every option

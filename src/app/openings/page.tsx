@@ -112,6 +112,14 @@ export default function OpeningsPage() {
             Games in this opening →
           </Link>
         )}
+        {ply > 0 && (
+          <Link
+            href={`/bot?moves=${encodeURIComponent(moves.slice(0, ply).join(" "))}`}
+            className="ml-3 text-sm text-accent hover:underline"
+          >
+            Play vs bot from here →
+          </Link>
+        )}
       </div>
       <div className="flex gap-1">
         <button className="btn-secondary" disabled={ply === 0} onClick={() => setPly(0)} aria-label="Start">

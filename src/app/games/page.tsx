@@ -103,7 +103,6 @@ export default async function GamesPage({ searchParams }: PageProps<"/games">) {
                 <th className="px-3 py-2 font-semibold">White</th>
                 <th className="px-3 py-2 font-semibold">Black</th>
                 <th className="px-3 py-2 font-semibold">Result</th>
-                <th className="px-3 py-2 font-semibold">Opening</th>
                 <th className="px-3 py-2 font-semibold">Moves</th>
                 <th className="px-3 py-2 font-semibold">Event</th>
                 <th className="px-3 py-2 font-semibold">Year</th>
@@ -123,12 +122,10 @@ export default async function GamesPage({ searchParams }: PageProps<"/games">) {
                     {g.blackElo && <span className="ml-1 text-foreground/50">{g.blackElo}</span>}
                   </td>
                   <td className="px-3 py-1.5 font-mono whitespace-nowrap">{g.result.replace("1/2", "½")}</td>
-                  <td className="max-w-64 truncate px-3 py-1.5" title={g.opening ?? undefined}>
-                    <span className="mr-1 font-mono text-foreground/50">{g.eco}</span>
-                    {g.opening}
-                  </td>
                   <td className="px-3 py-1.5 font-mono">{Math.ceil(g.plies / 2)}</td>
-                  <td className="max-w-64 truncate px-3 py-1.5">{g.event}</td>
+                  <td className="max-w-96 truncate px-3 py-1.5" title={g.event ?? undefined}>
+                    {g.event}
+                  </td>
                   <td className="px-3 py-1.5 font-mono">{g.year}</td>
                 </tr>
               ))}
