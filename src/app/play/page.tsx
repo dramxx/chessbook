@@ -634,9 +634,15 @@ function NameModal({ onSave }: { onSave: (p: Player) => void }) {
             className="rounded bg-surface px-3 py-2 outline-none focus:ring-2 focus:ring-accent"
           />
         </label>
-        <button className="btn-primary" disabled={!name.trim()}>
-          Continue
-        </button>
+        <div className="flex gap-2">
+          <button className="btn-primary flex-1" disabled={!name.trim()}>
+            Continue
+          </button>
+          {/* Playing needs a name, so closing leaves the page. */}
+          <Link href="/" className="btn-secondary flex flex-1 items-center justify-center">
+            Cancel
+          </Link>
+        </div>
       </form>
     </Modal>
   );
