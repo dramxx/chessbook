@@ -32,12 +32,16 @@ export type Game = {
 
 export type Invite = { from: Player; at: number; minutes: Minutes };
 
+export type ChatMessage = { from: string; text: string; at: number }; // from = player id
+export const CHAT_MAX_LENGTH = 200;
+
 export type SyncResponse = {
   players: (Player & { playing: boolean })[]; // online, excluding you
   invite: Invite | null; // pending invite to you
   outgoing: { to: string; declined: boolean } | null; // your pending invite
   gameId: string | null; // a game that just started for you
   game: Game | null;
+  chat: ChatMessage[]; // the game's chat, oldest first; empty without a game
   now: number; // server time, to line up the clocks
 };
 
@@ -50,6 +54,7 @@ export type Action =
   | { type: "resign"; me: Player; gameId: string }
   | { type: "draw"; me: Player; gameId: string; answer?: "accept" | "decline" } // no answer = offer
   | { type: "rematch"; me: Player; gameId: string }
+  | { type: "chat"; me: Player; gameId: string; text: string }
   | { type: "restore"; me: Player; game: Game };
 
 export const colorOf = (game: Game, id: string): "white" | "black" | null =>

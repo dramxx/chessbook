@@ -10,11 +10,13 @@ import { analysisHref } from "@/lib/analysis";
 import { saveGame } from "@/lib/history";
 import { playMoveSound } from "@/lib/sounds";
 import {
+  CHAT_MAX_LENGTH,
   colorOf,
   sideToMove,
   timeLeft,
   TIME_CONTROLS,
   type Action,
+  type ChatMessage,
   type Game,
   type Minutes,
   type Player,
@@ -67,6 +69,9 @@ export default function PlayPage() {
   const [now, setNow] = useState(0); // local time, ticking while a clock runs
   const [inviteTo, setInviteTo] = useState<Player | null>(null); // time control picker
   const [minutes, setMinutes] = useState<Minutes>(3);
+  const [chat, setChat] = useState<{ gameId: string; messages: ChatMessage[] } | null>(null);
+  const [tab, setTab] = useState<"moves" | "chat">("moves");
+  const [chatSeen, setChatSeen] = useState<{ gameId: string; count: number } | null>(null); // read when leaving the chat tab
 
   // Identity and the current game survive reloads (this browser only).
   useEffect(() => {
@@ -92,6 +97,11 @@ export default function PlayPage() {
     save(GAME_KEY, g);
   }, []);
 
+  // Messages only get added, so a shorter list is from a poll that started before our own message.
+  const showChat = useCallback((gameId: string, messages: ChatMessage[]) => {
+    setChat((c) => (c?.gameId === gameId && c.messages.length > messages.length ? c : { gameId, messages }));
+  }, []);
+
   // Poll the server: lobby, invites, and the current game.
   const tick = useEffectEvent(async () => {
     if (!me) return;
@@ -100,6 +110,7 @@ export default function PlayPage() {
     if (!res) return;
     setOffset(res.now - Date.now());
     setSync(res);
+    if (res.game) showChat(res.game.id, res.chat);
     if (res.gameId && (!current || current.result)) {
       const started = await post<SyncResponse>({ type: "sync", me, gameId: res.gameId });
       if (started?.game) showGame(started.game);
@@ -241,6 +252,19 @@ export default function PlayPage() {
   const highlights: Record<string, string> = last ? { [last.from]: LAST_MOVE, [last.to]: LAST_MOVE } : {};
   if (premove) highlights[premove.from] = highlights[premove.to] = PREMOVE;
 
+  const messages = game && chat?.gameId === game.id ? chat.messages : [];
+  const unread = tab === "moves" ? messages.length - (chatSeen?.gameId === game?.id ? chatSeen!.count : 0) : 0;
+  function switchTab(t: "moves" | "chat") {
+    if (t === "moves" && game) setChatSeen({ gameId: game.id, count: messages.length });
+    setTab(t);
+  }
+  async function sendChat(text: string) {
+    if (!game || !me) return false;
+    const res = await post<{ chat: ChatMessage[] }>({ type: "chat", me, gameId: game.id, text });
+    if (res) showChat(game.id, res.chat);
+    return res !== null;
+  }
+
   const left = game ? timeLeft(game, now + offset) : null;
   const clockFor = (side: "white" | "black") =>
     left && game && (
@@ -338,11 +362,36 @@ export default function PlayPage() {
           </button>
         </div>
       )}
-      <div className="max-h-48 min-h-0 flex-1 overflow-y-auto landscape:max-h-none">
-        {moves.length > 0 && (
-          <MoveList moves={moves} ply={ply} onSelect={(p) => game.result && setView(p)} newestFirst />
-        )}
+      <div className="flex gap-1 border-b border-surface">
+        {(["moves", "chat"] as const).map((t) => (
+          <button
+            key={t}
+            onClick={() => switchTab(t)}
+            className={`-mb-px flex items-center gap-1.5 border-b-2 px-3 py-1.5 text-sm font-semibold capitalize ${
+              tab === t ? "border-accent" : "border-transparent text-foreground/60 hover:text-foreground"
+            }`}
+          >
+            {t}
+            {t === "chat" && unread > 0 && (
+              <span className="rounded-full bg-accent px-1.5 text-xs text-white">{unread}</span>
+            )}
+          </button>
+        ))}
       </div>
+      {tab === "moves" ? (
+        <div className="max-h-48 min-h-0 flex-1 overflow-y-auto landscape:max-h-none">
+          {moves.length > 0 && (
+            <MoveList moves={moves} ply={ply} onSelect={(p) => game.result && setView(p)} newestFirst />
+          )}
+        </div>
+      ) : (
+        <Chat
+          messages={messages}
+          names={{ [game.white.id]: game.white.name, [game.black.id]: game.black.name }}
+          me={me.id}
+          onSend={sendChat}
+        />
+      )}
       {clockFor(color)}
       <div className="flex flex-wrap items-center gap-2 border-t border-surface pt-3">
         {playing ? (
@@ -493,6 +542,63 @@ function ClockFace({ ms, active }: { ms: number; active: boolean }) {
       }`}
     >
       {text}
+    </div>
+  );
+}
+
+// The game's chat: messages oldest first, kept scrolled to the newest, and a message field.
+function Chat({
+  messages,
+  names,
+  me,
+  onSend,
+}: {
+  messages: ChatMessage[];
+  names: Record<string, string>;
+  me: string;
+  onSend: (text: string) => Promise<boolean>;
+}) {
+  const [text, setText] = useState("");
+  const [sending, setSending] = useState(false);
+  const list = useRef<HTMLDivElement>(null);
+  useEffect(() => {
+    list.current?.scrollTo({ top: list.current.scrollHeight });
+  }, [messages.length]);
+
+  return (
+    <div className="flex max-h-48 min-h-0 flex-1 flex-col gap-2 landscape:max-h-none">
+      <div ref={list} className="min-h-0 flex-1 overflow-y-auto text-sm">
+        {messages.length === 0 ? (
+          <p className="text-foreground/50">No messages yet.</p>
+        ) : (
+          messages.map((m) => (
+            <p key={`${m.from}-${m.at}`} className="break-words">
+              <b className={m.from === me ? "text-accent" : ""}>{names[m.from] ?? "?"}:</b> {m.text}
+            </p>
+          ))
+        )}
+      </div>
+      <form
+        className="flex gap-2"
+        onSubmit={async (e) => {
+          e.preventDefault();
+          if (!text.trim() || sending) return;
+          setSending(true);
+          if (await onSend(text)) setText("");
+          setSending(false);
+        }}
+      >
+        <input
+          value={text}
+          maxLength={CHAT_MAX_LENGTH}
+          onChange={(e) => setText(e.target.value)}
+          placeholder="Message"
+          className="min-w-0 flex-1 rounded bg-surface px-2 py-1.5 text-sm outline-none focus:ring-2 focus:ring-accent"
+        />
+        <button className="btn-secondary py-1.5 text-sm" disabled={!text.trim() || sending}>
+          Send
+        </button>
+      </form>
     </div>
   );
 }

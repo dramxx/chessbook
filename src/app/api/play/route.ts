@@ -1,11 +1,13 @@
 import { Chess } from "chess.js";
 import { getCache } from "@vercel/functions";
 import {
+  CHAT_MAX_LENGTH,
   colorOf,
   sideToMove,
   timeLeft,
   TIME_CONTROLS,
   type Action,
+  type ChatMessage,
   type Game,
   type Invite,
   type Player,
@@ -20,6 +22,8 @@ const cache = getCache({ namespace: "chessbook-play" });
 const ONLINE_MS = 15_000; // dropped from the lobby after this long without a sync
 const LOBBY_WRITE_MS = 4_000; // refresh your own lobby entry at most this often
 const DAY = 86_400;
+const CHAT_MAX_MESSAGES = 100; // per player and game
+const CHAT_MIN_GAP_MS = 500;
 
 type Lobby = Record<string, { name: string; seen: number; playing: boolean }>;
 type Outgoing = { to: string; declined: boolean };
@@ -73,6 +77,13 @@ function flagged(game: Game, now: number): Game | null {
   return { ...game, result, drawBy: null, clock: { ...game.clock!, [side]: 0 } };
 }
 
+// Each player's messages are stored under their own key and only they write it, so two messages
+// sent at once can't overwrite each other (or the game). Reading merges both lists.
+async function readChat(game: Game): Promise<ChatMessage[]> {
+  const lists = await Promise.all([game.white.id, game.black.id].map((id) => get<ChatMessage[]>(`chat:${game.id}:${id}`)));
+  return lists.flatMap((l) => l ?? []).sort((a, b) => a.at - b.at);
+}
+
 const fail = (status: number, error: string) => Response.json({ error }, { status });
 
 export async function POST(request: Request) {
@@ -113,6 +124,7 @@ export async function POST(request: Request) {
         await set("lobby", lobby, 3600);
       }
       if (started) await cache.delete(`started:${player.id}`);
+      const chat = game && colorOf(game, player.id) ? await readChat(game) : [];
       const body: SyncResponse = {
         players: Object.entries(lobby)
           .filter(([id]) => id !== player.id)
@@ -121,6 +133,7 @@ export async function POST(request: Request) {
         outgoing,
         gameId: started,
         game,
+        chat,
         now,
       };
       return Response.json(body);
@@ -228,6 +241,18 @@ export async function POST(request: Request) {
       }
       await set(`game:${game.id}`, updated, DAY);
       return Response.json({ game: updated });
+    }
+
+    case "chat": {
+      const game = await get<Game>(`game:${action.gameId}`);
+      const text = typeof action.text === "string" ? action.text.trim().slice(0, CHAT_MAX_LENGTH) : "";
+      if (!game || !colorOf(game, player.id) || !text) return fail(409, "can't chat");
+      const key = `chat:${game.id}:${player.id}`;
+      const mine = (await get<ChatMessage[]>(key)) ?? [];
+      const now = Date.now();
+      if (mine.length >= CHAT_MAX_MESSAGES || now - (mine.at(-1)?.at ?? 0) < CHAT_MIN_GAP_MS) return fail(429, "slow down");
+      await set(key, [...mine, { from: player.id, text, at: now }], DAY);
+      return Response.json({ chat: await readChat(game) });
     }
 
     case "restore": {
