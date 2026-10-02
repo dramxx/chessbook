@@ -15,6 +15,7 @@ type Props = {
   highlights?: Record<string, string>; // square -> background color
   arrows?: Arrow[];
   onSquareClick?: (square: string) => void; // replaces move input, e.g. for a position editor
+  badge?: { square: string; symbol: string; color: string; title?: string }; // marker in a square's corner, e.g. a move's rating
 };
 
 const FILES = ["a", "b", "c", "d", "e", "f", "g", "h"];
@@ -34,6 +35,7 @@ export function Board({
   highlights = {},
   arrows = [],
   onSquareClick,
+  badge,
 }: Props) {
   // Unvalidated: the position editor shows positions that aren't legal yet (e.g. missing a king).
   const chess = useMemo(() => new Chess(fen, { skipValidation: true }), [fen]);
@@ -82,7 +84,7 @@ export function Board({
           <div key={r} className={coord}>{r}</div>
         ))}
       </div>
-      <div className="relative aspect-square rounded-sm overflow-hidden shadow-lg">
+      <div className="@container relative aspect-square rounded-sm overflow-hidden shadow-lg">
         <Chessboard
           options={{
             position: fen,
@@ -123,6 +125,20 @@ export function Board({
             },
           }}
         />
+        {badge && (
+          <div
+            className="pointer-events-none absolute z-10 h-[12.5%] w-[12.5%]"
+            style={{ left: `${files.indexOf(badge.square[0]) * 12.5}%`, top: `${ranks.indexOf(badge.square[1]) * 12.5}%` }}
+          >
+            <span
+              title={badge.title}
+              className="absolute top-[3%] right-[3%] flex size-[40%] items-center justify-center rounded-full font-bold leading-none text-white shadow-md ring-1 ring-black/30"
+              style={{ backgroundColor: badge.color, fontSize: "2.4cqw" }}
+            >
+              {badge.symbol}
+            </span>
+          </div>
+        )}
         {pendingPromo && (
           <div className="absolute inset-0 z-10 bg-black/30" onClick={() => setPromo(null)}>
             {/* Column on the promotion square (where the cursor is), queen first, extending toward the board's center. */}

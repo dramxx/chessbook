@@ -199,6 +199,8 @@ function Review({ target }: { target: AnalysisTarget }) {
   const bestUci = ply > 0 && current?.bestSan ? evals[ply - 1]?.best : undefined;
   const arrows: Arrow[] = bestUci ? [{ startSquare: bestUci.slice(0, 2), endSquare: bestUci.slice(2, 4), color: BEST_ARROW }] : [];
 
+  const badge = last && current ? { square: last.to, ...LABELS[current.label], title: LABELS[current.label].name } : undefined;
+
   const orientation = flipped ? "black" : "white";
   const analyzed = evals.filter(Boolean).length;
 
@@ -287,7 +289,7 @@ function Review({ target }: { target: AnalysisTarget }) {
           orientation={orientation}
         />
       }
-      board={<Board fen={fen} orientation={orientation} canMove={false} onMove={() => {}} highlights={highlights} arrows={arrows} />}
+      board={<Board fen={fen} orientation={orientation} canMove={false} onMove={() => {}} highlights={highlights} arrows={arrows} badge={badge} />}
       panel={panel}
     />
   );
