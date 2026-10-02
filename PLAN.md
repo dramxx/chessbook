@@ -126,8 +126,9 @@ database: no account, no connection string, no limits beyond Vercel's.
   `UCI_Elo` (0.7 s per move); 400–1300 (below Stockfish's 1320 minimum) = Skill Level 0, depth
   1–4, and a 5–50% chance of a random legal move. Approximate: Stockfish's Elo is calibrated
   against engines, not human rating pools.
-- Untimed. Color: White / Random / Black. Premoves and resign. When a game ends (mate, draw or
-  resign) the page goes straight back to the setup screen.
+- Untimed. Color: White / Random / Black. Premoves, resign and draw offers (Stockfish accepts when
+  it isn't better than +0.3, judged at full strength). When a game ends (mate, draw or resign)
+  the page goes straight back to the setup screen.
 - **Hint** (best-move arrow on your turn) and **Eval bar** are toggles, usable mid-game; the
   choice is kept in `localStorage` (`chessbook.bot.settings`).
 - The current game survives a reload (`localStorage`, `chessbook.bot`).
@@ -139,9 +140,10 @@ Built for the owner and a friend; no accounts. Uses only Vercel (no extra servic
 
 - **Flow:** enter a name (kept in `localStorage` with a random id) → online list → **Play** sends
   an invite → the other side accepts → colours random. Untimed, no takeback, hint or eval bar.
-  Resign; after the game **Rematch** (colours swapped, the other accepts) or back to the lobby.
+  Resign or offer a draw (the opponent accepts/declines; moving instead declines). After the game
+  **Rematch** (colours swapped, the other accepts) or back to the lobby.
 - **Backend:** `POST /api/play` actions (`sync`, `invite`, `cancel`, `respond`, `move`, `resign`,
-  `rematch`, `restore`). State in Vercel **Runtime Cache** (`@vercel/functions` `getCache`,
+  `draw`, `rematch`, `restore`). State in Vercel **Runtime Cache** (`@vercel/functions` `getCache`,
   namespace `chessbook-play`): `lobby`, `invite:<id>`, `outgoing:<id>`, `started:<id>`,
   `game:<id>` (1-day TTL). Moves are validated server-side with chess.js; only the side to move
   can write a game, so plain get-then-set is safe for two players.

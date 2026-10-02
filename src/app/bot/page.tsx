@@ -54,6 +54,8 @@ export default function BotPage() {
   const [settings, setSettings] = useState<Settings>({ hint: false, evalBar: false });
   const [premove, setPremove] = useState<{ from: string; to: string } | null>(null);
   const [thinking, setThinking] = useState(false);
+  // Draw offer: pending, or declined at this many moves (shown until the next move).
+  const [draw, setDraw] = useState<{ pending: boolean; declinedAt: number | null }>({ pending: false, declinedAt: null });
   const [analysis, setAnalysis] = useState<{ fen: string; info: Info } | null>(null);
   const [named, setNamed] = useState<{ moves: string; name: string | null } | null>(null);
 
@@ -208,6 +210,25 @@ export default function BotPage() {
   // Engine scores are for the side to move; the bar wants White's view.
   const sign = turn === "white" ? 1 : -1;
 
+  // Stockfish accepts a draw when it isn't better than +0.3 pawns, judged at full strength.
+  async function offerDraw() {
+    if (!game || !analyst.current) return;
+    const at = game.moves.length;
+    const botToMove = turn !== game.color;
+    setDraw({ pending: true, declinedAt: null });
+    let judged = info && info.depth >= 12 ? info : null;
+    if (!judged) {
+      const latest: { info: Info | null } = { info: null };
+      await analyst.current.search(fen, "depth 12", (i) => (latest.info = i)).result;
+      judged = latest.info;
+    }
+    const score = judged?.mate !== undefined ? Math.sign(judged.mate) * 100_000 : (judged?.cp ?? 0);
+    const accept = (botToMove ? score : -score) <= 30;
+    setDraw({ pending: false, declinedAt: accept ? null : at });
+    // Accepted: the game ends, back to the setup screen (unless a move happened meanwhile).
+    if (accept) setGame((g) => (g && g.moves.length === at ? null : g));
+  }
+
   const highlights: Record<string, string> = last ? { [last.from]: LAST_MOVE, [last.to]: LAST_MOVE } : {};
   if (premove) highlights[premove.from] = highlights[premove.to] = PREMOVE;
   const arrows: Arrow[] =
@@ -301,15 +322,18 @@ export default function BotPage() {
       <div className="max-h-48 min-h-0 flex-1 overflow-y-auto landscape:max-h-none">
         {moves.length > 0 && <MoveList moves={moves} ply={ply} onSelect={() => {}} newestFirst />}
       </div>
-      <div className="flex items-center gap-4 border-t border-surface pt-3">
+      {draw.declinedAt === moves.length && <p className="text-sm text-foreground/60">Stockfish declines the draw.</p>}
+      <div className="flex flex-wrap items-center gap-x-4 gap-y-2 border-t border-surface pt-3">
         {toggle("hint", "Hint")}
         {toggle("evalBar", "Eval bar")}
-        <button
-          className="btn-secondary ml-auto text-sm"
-          onClick={() => setGame(null)}
-        >
-          Resign
-        </button>
+        <div className="ml-auto flex gap-2">
+          <button className="btn-secondary text-sm" disabled={draw.pending} onClick={offerDraw}>
+            {draw.pending ? "Draw offered…" : "Offer draw"}
+          </button>
+          <button className="btn-secondary text-sm" onClick={() => setGame(null)}>
+            Resign
+          </button>
+        </div>
       </div>
     </>
   );

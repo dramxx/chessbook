@@ -163,6 +163,12 @@ export default function PlayPage() {
   if (!loaded) return null;
   if (!me) return <NameModal onSave={(p) => (save(ME_KEY, p), setMe(p))} />;
 
+  // Game actions answer with the updated game.
+  async function gameAction(action: Action) {
+    const res = await post<{ game: Game }>(action);
+    if (res) showGame(res.game);
+  }
+
   const opponent = game && color ? (color === "white" ? game.black : game.white) : null;
   const opponentOnline = opponent ? sync?.players.some((p) => p.id === opponent.id) : false;
   const invite = sync?.invite ?? null;
@@ -244,6 +250,23 @@ export default function PlayPage() {
         </p>
       </div>
       {game.result && <div className="rounded bg-surface p-3 font-bold">{game.result.text}</div>}
+      {playing && game.drawBy === opponent.id && (
+        <div className="flex flex-wrap items-center gap-2 rounded bg-surface p-3">
+          <span className="flex-1 text-sm font-semibold">{opponent.name} offers a draw</span>
+          <button
+            className="rounded bg-accent px-3 py-1 text-sm font-semibold text-white hover:bg-[var(--accent-hover)]"
+            onClick={() => gameAction({ type: "draw", me, gameId: game.id, answer: "accept" })}
+          >
+            Accept
+          </button>
+          <button
+            className="btn-secondary py-1 text-sm"
+            onClick={() => gameAction({ type: "draw", me, gameId: game.id, answer: "decline" })}
+          >
+            Decline
+          </button>
+        </div>
+      )}
       <div className="max-h-48 min-h-0 flex-1 overflow-y-auto landscape:max-h-none">
         {moves.length > 0 && (
           <MoveList moves={moves} ply={ply} onSelect={(p) => game.result && setView(p)} newestFirst />
@@ -251,12 +274,25 @@ export default function PlayPage() {
       </div>
       <div className="flex flex-wrap items-center gap-2 border-t border-surface pt-3">
         {playing ? (
-          <button className="btn-secondary text-sm" onClick={async () => {
-            const res = await post<{ game: Game }>({ type: "resign", me, gameId: game.id });
-            if (res) showGame(res.game);
-          }}>
-            Resign
-          </button>
+          <>
+            {game.drawBy === me.id ? (
+              <span className="text-sm text-foreground/60">Draw offered…</span>
+            ) : (
+              <button
+                className="btn-secondary text-sm"
+                disabled={game.drawBy === opponent.id}
+                onClick={() => gameAction({ type: "draw", me, gameId: game.id })}
+              >
+                Offer draw
+              </button>
+            )}
+            <button
+              className="btn-secondary ml-auto text-sm"
+              onClick={() => gameAction({ type: "resign", me, gameId: game.id })}
+            >
+              Resign
+            </button>
+          </>
         ) : (
           <>
             {game.rematchBy === me.id ? (
@@ -264,10 +300,7 @@ export default function PlayPage() {
             ) : (
               <button
                 className="rounded bg-accent px-3 py-2 text-sm font-semibold text-white hover:bg-[var(--accent-hover)]"
-                onClick={async () => {
-                  const res = await post<{ game: Game }>({ type: "rematch", me, gameId: game.id });
-                  if (res) showGame(res.game);
-                }}
+                onClick={() => gameAction({ type: "rematch", me, gameId: game.id })}
               >
                 {game.rematchBy ? `Accept rematch` : "Rematch"}
               </button>

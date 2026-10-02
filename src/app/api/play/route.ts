@@ -117,7 +117,22 @@ export async function POST(request: Request) {
       } catch {
         return fail(400, "illegal move");
       }
-      const updated = { ...game, moves: chess.history(), result: outcome(chess) };
+      // Moving instead of answering declines the opponent's draw offer.
+      const drawBy = game.drawBy === player.id ? game.drawBy : null;
+      const updated = { ...game, moves: chess.history(), result: outcome(chess), drawBy };
+      await set(`game:${game.id}`, updated, DAY);
+      return Response.json({ game: updated });
+    }
+
+    case "draw": {
+      const game = await get<Game>(`game:${action.gameId}`);
+      if (!game || !colorOf(game, player.id) || game.result) return fail(409, "no draw");
+      const offered = game.drawBy && game.drawBy !== player.id;
+      let updated: Game;
+      if (!action.answer) updated = offered ? game : { ...game, drawBy: player.id };
+      else if (!offered) return fail(409, "no draw offer");
+      else if (action.answer === "accept") updated = { ...game, drawBy: null, result: { score: "1/2-1/2", text: "Draw by agreement" } };
+      else updated = { ...game, drawBy: null };
       await set(`game:${game.id}`, updated, DAY);
       return Response.json({ game: updated });
     }

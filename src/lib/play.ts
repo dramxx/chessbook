@@ -10,6 +10,7 @@ export type Game = {
   moves: string[]; // SAN
   result: { score: string; text: string } | null;
   rematchBy: string | null; // player id that offered a rematch
+  drawBy?: string | null; // player id with a pending draw offer
   next: string | null; // id of the accepted rematch game
 };
 
@@ -30,6 +31,7 @@ export type Action =
   | { type: "respond"; me: Player; accept: boolean }
   | { type: "move"; me: Player; gameId: string; ply: number; san: string }
   | { type: "resign"; me: Player; gameId: string }
+  | { type: "draw"; me: Player; gameId: string; answer?: "accept" | "decline" } // no answer = offer
   | { type: "rematch"; me: Player; gameId: string }
   | { type: "restore"; me: Player; game: Game };
 
