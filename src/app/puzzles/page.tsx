@@ -17,7 +17,7 @@ const MODES = [
 
 export default function PuzzlesPage() {
   return (
-    <main className="mx-auto grid w-full max-w-3xl flex-1 content-start gap-4 p-4 sm:grid-cols-2">
+    <main className="mx-auto grid w-full max-w-3xl flex-1 content-start gap-4 p-4">
       {MODES.map((m) => (
         <Link key={m.href} href={m.href} className="flex flex-col gap-2 rounded-lg bg-panel p-6 hover:bg-surface">
           <span className="text-4xl">{m.icon}</span>
