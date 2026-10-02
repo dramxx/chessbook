@@ -180,6 +180,7 @@ export default function OpeningsPage() {
 
   return (
     <GameLayout
+      scrollPanel
       board={
         <Board
           fen={fen}

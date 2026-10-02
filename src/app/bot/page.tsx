@@ -232,14 +232,6 @@ export default function BotPage() {
       : [];
 
   const orientation: Color = game?.color ?? (setup.color === "black" ? "black" : "white");
-  const pgn = game
-    ? `[White "${game.color === "white" ? "You" : `Stockfish ${game.rating}`}"]\n[Black "${
-        game.color === "black" ? "You" : `Stockfish ${game.rating}`
-      }"]\n[Result "${game.result?.score ?? "*"}"]\n\n${game.moves
-        .map((san, i) => (i % 2 === 0 ? `${i / 2 + 1}. ${san}` : san))
-        .join(" ")} ${game.result?.score ?? "*"}`
-    : "";
-
   const toggle = (key: keyof Settings, label: string) => (
     <button
       role="switch"
@@ -281,14 +273,7 @@ export default function BotPage() {
     <>
       <h1 className="text-xl font-bold">Play vs Stockfish</h1>
       {game?.result && (
-        <div className="flex flex-col gap-2 rounded bg-surface p-3">
-          <div className="font-bold">{game.result.text}</div>
-          <div className="flex gap-2">
-            <button className="btn-secondary text-sm" onClick={() => navigator.clipboard.writeText(pgn)}>
-              Copy PGN
-            </button>
-          </div>
-        </div>
+        <div className="rounded bg-surface p-3 font-bold">{game.result.text}</div>
       )}
       {game?.result && <MoveList moves={moves} ply={ply} onSelect={setView} />}
       {setup.moves.length > 0 && (

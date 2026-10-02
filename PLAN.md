@@ -55,7 +55,7 @@ src/
     GameLayout.tsx          board + side panel, sized below the header
     MoveList.tsx            clickable SAN list with current-ply highlight
     ContinuationList.tsx    sidebar: next moves with opening names and stats
-    Replay.tsx              read-only game replay (opening name, moves, copy PGN, ←/→ keys)
+    Replay.tsx              read-only game replay (opening name, moves, ←/→ keys)
     PuzzlePlayer.tsx        plays one puzzle on the board
     EvalBar.tsx             vertical evaluation bar
   lib/
@@ -123,7 +123,7 @@ database: no account, no connection string, no limits beyond Vercel's.
   `UCI_Elo` (0.7 s per move); 400–1300 (below Stockfish's 1320 minimum) = Skill Level 0, depth
   1–4, and a 5–50% chance of a random legal move. Approximate: Stockfish's Elo is calibrated
   against engines, not human rating pools.
-- Untimed. Color: White / Random / Black. Premoves, resign, review moves after the game, copy PGN.
+- Untimed. Color: White / Random / Black. Premoves, resign, review moves after the game.
 - **Hint** (best-move arrow on your turn) and **Eval bar** are toggles, usable mid-game; the
   choice is kept in `localStorage` (`chessbook.bot.settings`).
 - The current game survives a reload (`localStorage`, `chessbook.bot`).

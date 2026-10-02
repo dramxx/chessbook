@@ -74,14 +74,6 @@ export function Replay({ game, initialPly = 0 }: { game: ReplayGame; initialPly?
   }, [moves.length]);
 
   const highlights: Record<string, string> = last ? { [last.from]: LAST_MOVE, [last.to]: LAST_MOVE } : {};
-  const pgn = [
-    ...Object.entries({
-      Event: game.event, Site: game.site, Date: game.date, Round: game.round,
-      White: game.white, Black: game.black, Result: game.result, ECO: game.eco,
-    }).map(([k, v]) => `[${k} "${v ?? "?"}"]`),
-    "",
-    moves.map((san, i) => (i % 2 === 0 ? `${i / 2 + 1}. ${san}` : san)).join(" ") + ` ${game.result}`,
-  ].join("\n");
 
   const panel = (
     <>
@@ -128,9 +120,6 @@ export function Replay({ game, initialPly = 0 }: { game: ReplayGame; initialPly?
         </button>
       </div>
       <MoveList moves={moves} ply={ply} onSelect={setPly} />
-      <button className="btn-secondary self-start text-sm" onClick={() => navigator.clipboard.writeText(pgn)}>
-        Copy PGN
-      </button>
     </>
   );
 
