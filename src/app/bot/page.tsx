@@ -22,7 +22,6 @@ type Game = {
   moves: string[]; // SAN from the start position, including moves set up from the openings page
   color: Color;
   rating: number;
-  result: { score: string; text: string } | null;
 };
 type Settings = { hint: boolean; evalBar: boolean };
 
@@ -45,20 +44,6 @@ function replay(moves: string[]) {
   return chess;
 }
 
-// Result after the last move, or null while the game goes on.
-function outcome(chess: Chess, color: Color): Game["result"] {
-  if (chess.isCheckmate()) {
-    const winner: Color = chess.turn() === "w" ? "black" : "white";
-    return { score: winner === "white" ? "1-0" : "0-1", text: winner === color ? "Checkmate, you win" : "Checkmate, Stockfish wins" };
-  }
-  const draw = (why: string) => ({ score: "1/2-1/2", text: `Draw: ${why}` });
-  if (chess.isStalemate()) return draw("stalemate");
-  if (chess.isInsufficientMaterial()) return draw("insufficient material");
-  if (chess.isThreefoldRepetition()) return draw("threefold repetition");
-  if (chess.isDrawByFiftyMoves()) return draw("50-move rule");
-  return null;
-}
-
 export default function BotPage() {
   const [game, setGame] = useState<Game | null>(null);
   const [setup, setSetup] = useState<{ moves: string[]; color: Color | "random"; rating: number }>({
@@ -67,7 +52,6 @@ export default function BotPage() {
     rating: 1500,
   });
   const [settings, setSettings] = useState<Settings>({ hint: false, evalBar: false });
-  const [view, setView] = useState<number | null>(null); // ply being reviewed after the game
   const [premove, setPremove] = useState<{ from: string; to: string } | null>(null);
   const [thinking, setThinking] = useState(false);
   const [analysis, setAnalysis] = useState<{ fen: string; info: Info } | null>(null);
@@ -91,7 +75,7 @@ export default function BotPage() {
         setSetup((s) => ({ ...s, moves, rating: saved?.rating ?? s.rating }));
       } catch {}
       window.history.replaceState(null, "", window.location.pathname);
-    } else if (saved) {
+    } else if (saved && !replay(saved.moves).isGameOver()) {
       setGame(saved);
       setSetup((s) => ({ ...s, rating: saved.rating, color: saved.color }));
     }
@@ -108,7 +92,7 @@ export default function BotPage() {
   }, []);
 
   useEffect(() => {
-    if (game) save(GAME_KEY, game);
+    save(GAME_KEY, game);
   }, [game]);
   useEffect(() => save(SETTINGS_KEY, settings), [settings]);
 
@@ -137,24 +121,24 @@ export default function BotPage() {
     }
     return out;
   }, [moves]);
-  const ply = game?.result && view !== null ? view : moves.length;
+  const ply = moves.length;
   const { fen, last } = positions[ply];
   const turn: Color = fen.split(" ")[1] === "w" ? "white" : "black";
-  const playing = game !== null && game.result === null;
+  const playing = game !== null;
   const myTurn = playing && turn === game.color;
 
   function start() {
     const color = setup.color === "random" ? (Math.random() < 0.5 ? "white" : "black") : setup.color;
-    setGame({ moves: setup.moves, color, rating: setup.rating, result: null });
-    setView(null);
+    setGame({ moves: setup.moves, color, rating: setup.rating });
     setPremove(null);
   }
 
-  function addMove(g: Game, san: string): Game {
+  // Plays a move; a finished game goes straight back to the setup screen.
+  function addMove(g: Game, san: string) {
     const chess = replay(g.moves);
     const m = chess.move(san);
     playMoveSound(m);
-    return { ...g, moves: [...g.moves, m.san], result: outcome(chess, g.color) };
+    setGame(chess.isGameOver() ? null : { ...g, moves: [...g.moves, m.san] });
   }
 
   function onMove(from: string, to: string, promotion?: string) {
@@ -162,13 +146,13 @@ export default function BotPage() {
     try {
       const san = new Chess(fen).move({ from, to, promotion }).san;
       setPremove(null);
-      setGame(addMove(game, san));
+      addMove(game, san);
     } catch {}
   }
 
   // Bot's turn: search at the chosen strength (or play a random move), never faster than MIN_THINK_MS.
   useEffect(() => {
-    if (!game || game.result || turn === game.color || !bot.current) return;
+    if (!game || turn === game.color || !bot.current) return;
     const engine = bot.current;
     const level = botLevel(game.rating);
     const started = Date.now();
@@ -191,7 +175,7 @@ export default function BotPage() {
       if (cancelled || !uci) return;
       const san = chess.move({ from: uci.slice(0, 2), to: uci.slice(2, 4), promotion: uci[4] }).san;
       setThinking(false);
-      setGame(addMove(game, san));
+      addMove(game, san);
     })();
     return () => {
       cancelled = true;
@@ -269,13 +253,9 @@ export default function BotPage() {
     </label>
   );
 
-  const panel = !game || game.result ? (
+  const panel = !game ? (
     <>
       <h1 className="text-xl font-bold">Play vs Stockfish</h1>
-      {game?.result && (
-        <div className="rounded bg-surface p-3 font-bold">{game.result.text}</div>
-      )}
-      {game?.result && <MoveList moves={moves} ply={ply} onSelect={setView} />}
       {setup.moves.length > 0 && (
         <p className="text-sm text-foreground/60">
           Starting from {setupName ?? "the openings page"} ({setup.moves.length} moves).{" "}
@@ -299,7 +279,7 @@ export default function BotPage() {
         ))}
       </div>
       <button className="btn-primary" onClick={start}>
-        {game ? "New game" : "Start"}
+        Start
       </button>
       <div className="flex gap-4">
         {toggle("hint", "Hint")}
@@ -326,12 +306,7 @@ export default function BotPage() {
         {toggle("evalBar", "Eval bar")}
         <button
           className="btn-secondary ml-auto text-sm"
-          onClick={() =>
-            setGame({
-              ...game,
-              result: { score: game.color === "white" ? "0-1" : "1-0", text: "You resigned" },
-            })
-          }
+          onClick={() => setGame(null)}
         >
           Resign
         </button>

@@ -1,8 +1,7 @@
 # Chessbook — Plan
 
-A chess app with an **opening browser**, a **historical games browser**, **Puzzle Rush** and
-**play vs Stockfish**, live at https://chessbook-amber.vercel.app. Next: **play vs a friend**
-(needs its own plan, see the end).
+A chess app with an **opening browser**, a **historical games browser**, **Puzzle Rush**,
+**play vs Stockfish** and **play vs a friend**, live at https://chessbook-amber.vercel.app.
 
 ## Goals
 
@@ -12,7 +11,8 @@ A chess app with an **opening browser**, a **historical games browser**, **Puzzl
    opening, ECO, year and result, then replay any game.
 3. **Puzzles:** Puzzle Rush survival mode (merged in from the former `puzzlerush` app).
 4. **Bot:** play Stockfish at 400–3200 (steps of 100), from the start or from an opening.
-5. **One app:** a shared header, board and layout for every section.
+5. **Play:** 1v1 against a friend: enter a name, see who's online, invite, play.
+6. **One app:** a shared header, board and layout for every section.
 
 ## Stack
 
@@ -48,6 +48,8 @@ src/
     puzzles/page.tsx        Puzzle Rush survival mode
     puzzles/[id]/page.tsx   retry one puzzle (unranked, hints)
     bot/page.tsx            play vs Stockfish (?moves= starts from an opening line)
+    play/page.tsx           1v1: name prompt, online list, invites, game, rematch
+    api/play/route.ts       1v1 backend on Vercel Runtime Cache (polled)
     api/explorer/route.ts   proxy to the Lichess explorer; adds the token server-side, CDN-cached
   components/
     Header.tsx              app header + nav (Play disabled until it exists)
@@ -66,6 +68,7 @@ src/
     puzzles.ts, best.ts     puzzle loading/picking; high score in localStorage
     sounds.ts               move and countdown sounds
     engine.ts               Stockfish Web Worker wrapper (queued UCI searches) + rating → strength
+    play.ts                 1v1 types (Game, Player, actions)
 scripts/
   build-openings.mjs        TSV → public/openings.json
   build-puzzles.mjs         Lichess puzzle dump → public/puzzles.json
@@ -123,11 +126,32 @@ database: no account, no connection string, no limits beyond Vercel's.
   `UCI_Elo` (0.7 s per move); 400–1300 (below Stockfish's 1320 minimum) = Skill Level 0, depth
   1–4, and a 5–50% chance of a random legal move. Approximate: Stockfish's Elo is calibrated
   against engines, not human rating pools.
-- Untimed. Color: White / Random / Black. Premoves, resign, review moves after the game.
+- Untimed. Color: White / Random / Black. Premoves and resign. When a game ends (mate, draw or
+  resign) the page goes straight back to the setup screen.
 - **Hint** (best-move arrow on your turn) and **Eval bar** are toggles, usable mid-game; the
   choice is kept in `localStorage` (`chessbook.bot.settings`).
 - The current game survives a reload (`localStorage`, `chessbook.bot`).
 - The openings page links "Play vs bot from here" (`/bot?moves=e4 c5 …`).
+
+### Play (1v1)
+
+Built for the owner and a friend; no accounts. Uses only Vercel (no extra service).
+
+- **Flow:** enter a name (kept in `localStorage` with a random id) → online list → **Play** sends
+  an invite → the other side accepts → colours random. Untimed, no takeback, hint or eval bar.
+  Resign; after the game **Rematch** (colours swapped, the other accepts) or back to the lobby.
+- **Backend:** `POST /api/play` actions (`sync`, `invite`, `cancel`, `respond`, `move`, `resign`,
+  `rematch`, `restore`). State in Vercel **Runtime Cache** (`@vercel/functions` `getCache`,
+  namespace `chessbook-play`): `lobby`, `invite:<id>`, `outgoing:<id>`, `started:<id>`,
+  `game:<id>` (1-day TTL). Moves are validated server-side with chess.js; only the side to move
+  can write a game, so plain get-then-set is safe for two players.
+- **Polling:** each browser calls `sync` every 1 s in a game, 2 s in the lobby. Moves arrive in
+  about 0.5–1 s. Online = synced in the last 15 s.
+- **Not durable:** Runtime Cache can evict entries. Both browsers keep the game in `localStorage`
+  (`chessbook.play.game`) and `restore` it if the server copy is gone.
+- **Usage:** two players for an hour ≈ 7k function invocations (Hobby includes 1M/month).
+  Runtime Cache usage on Hobby has no published allowance; Hobby pauses rather than charges.
+- **Local dev:** without Vercel's cache env vars, `getCache` falls back to in-memory (one process).
 
 ## Cost: must stay $0
 
@@ -136,7 +160,8 @@ Hard requirement: the project must never generate costs.
 - **Vercel Hobby:** $0, hard caps, no overage purchases. Non-commercial use only; this matches the
   GigaBase license, so no ads, subscriptions or paid features. Never add a card or upgrade.
 - **Lichess:** free token, no billing.
-- **No database service:** the games are a SQLite file in the deployment.
+- **No database service:** the games are a SQLite file in the deployment; 1v1 state uses Vercel's
+  built-in Runtime Cache.
 - **Sizes to watch:** Hobby rejects uploaded files over 100 MB (hence the db parts) and caps
   function CPU (4 h/month), so keep queries cheap.
 - **No custom domain** (costs money).
@@ -151,19 +176,14 @@ Hard requirement: the project must never generate costs.
 | 6 | Done: games search (players, head-to-head, event, opening, ECO, years, result) and replay. Search 10–100 ms locally. |
 | 7 | Done: puzzlerush merged into `/puzzles`; its Vercel project deleted. Deleting the GitHub repo `dramxx/puzzlerush` waits on the owner granting `gh` the `delete_repo` scope. |
 | Bot | Done: play vs Stockfish with rating slider, hint and eval bar, tested in a headless browser. |
+| Play | Done: 1v1 with lobby, invites, rematch; tested live with two browsers (invite → mate → rematch). |
 | Deploy | Vercel project `chessbook` (Hobby), deployed with `vercel deploy --prod` from the CLI. `LICHESS_TOKEN` set for Production and Preview. |
 | Repo | Public: https://github.com/dramxx/chessbook (database excluded). |
 
-## Next: play vs a friend
+## Ideas
 
-Needs its own plan before work starts. Known constraints:
-
-- `/play`: reuse `Board` (premoves already supported), `MoveList` and the header.
-- The header nav doesn't collapse on phones yet (it scrolls sideways); worth fixing with Play.
-- **vs a friend:** create a game, share a link, the friend joins; moves validated on both ends and
-  on the server. Needs realtime transport (WebSockets on Vercel Functions, or a hosted realtime
-  service) and a writable store for game state (the games SQLite file is read-only). Every option
-  must stay $0 with no card.
+- The header nav doesn't collapse on phones yet (it scrolls sideways).
+- An opening picker on the Bot page (today: "Play vs bot from here" on the Openings page).
 
 ## Owner notes
 
