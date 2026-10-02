@@ -340,33 +340,29 @@ export default function BotPage() {
 
   return (
     <GameLayout
-      board={
-        <div className="flex gap-1">
-          {/* Always takes its space, so turning it on doesn't resize the board. Bottom margin: the
-              board's coordinate row. */}
-          <div
-            className={`mb-5 flex transition-opacity ${settings.evalBar && game ? "" : "invisible opacity-0"}`}
-            aria-hidden={!(settings.evalBar && game)}
-          >
-            <EvalBar
-              cp={info?.cp !== undefined ? info.cp * sign : undefined}
-              mate={info?.mate !== undefined ? info.mate * sign : undefined}
-              orientation={orientation}
-            />
-          </div>
-          <div className="min-w-0 flex-1">
-            <Board
-              fen={fen}
-              orientation={orientation}
-              canMove={myTurn && !premove}
-              onMove={onMove}
-              canPremove={playing && !myTurn}
-              onPremove={setPremove}
-              highlights={highlights}
-              arrows={arrows}
-            />
-          </div>
+      boardSide={
+        <div
+          className={`flex transition-opacity ${settings.evalBar && game ? "" : "invisible opacity-0"}`}
+          aria-hidden={!(settings.evalBar && game)}
+        >
+          <EvalBar
+            cp={info?.cp !== undefined ? info.cp * sign : undefined}
+            mate={info?.mate !== undefined ? info.mate * sign : undefined}
+            orientation={orientation}
+          />
         </div>
+      }
+      board={
+        <Board
+          fen={fen}
+          orientation={orientation}
+          canMove={myTurn && !premove}
+          onMove={onMove}
+          canPremove={playing && !myTurn}
+          onPremove={setPremove}
+          highlights={highlights}
+          arrows={arrows}
+        />
       }
       panel={panel}
     />
