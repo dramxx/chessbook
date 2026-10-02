@@ -1,12 +1,14 @@
 "use client";
 
-import { useEffect, useMemo, useState } from "react";
+import { useEffect, useMemo, useRef, useState } from "react";
 import Link from "next/link";
 import { Chess } from "chess.js";
 import { Board } from "@/components/Board";
+import { EvalBar } from "@/components/EvalBar";
 import { GameLayout } from "@/components/GameLayout";
 import { MoveList } from "@/components/MoveList";
 import { analysisHref } from "@/lib/analysis";
+import { Engine, type Info } from "@/lib/engine";
 import { epd, loadOpenings } from "@/lib/openings";
 
 const LAST_MOVE = "rgba(255,255,51,.4)";
@@ -35,18 +37,35 @@ export function Replay({ game, initialPly = 0 }: { game: ReplayGame; initialPly?
   const [ply, setPly] = useState(Math.max(0, Math.min(initialPly, moves.length)));
   const [opening, setOpening] = useState<string | null>(null);
   const [flipped, setFlipped] = useState(false);
+  const engine = useRef<Engine | null>(null);
+  const [analysis, setAnalysis] = useState<{ ply: number; info: Info } | null>(null);
 
   // positions[i] is the position after i moves; last is the move that led to it.
   const positions = useMemo(() => {
     const chess = new Chess();
-    const out = [{ fen: chess.fen(), last: null as { from: string; to: string } | null }];
+    const out = [{ fen: chess.fen(), last: null as { from: string; to: string } | null, mated: false }];
     for (const san of moves) {
       const m = chess.move(san);
-      out.push({ fen: chess.fen(), last: { from: m.from, to: m.to } });
+      out.push({ fen: chess.fen(), last: { from: m.from, to: m.to }, mated: chess.isCheckmate() });
     }
     return out;
   }, [moves]);
-  const { fen, last } = positions[ply];
+  const { fen, last, mated } = positions[ply];
+
+  useEffect(() => {
+    engine.current = new Engine();
+    return () => engine.current?.terminate();
+  }, []);
+
+  // Eval bar: analysis of the shown position.
+  useEffect(() => {
+    if (mated || !engine.current) return;
+    const search = engine.current.search(fen, "depth 18", (info) => setAnalysis({ ply, info }));
+    return () => search.stop();
+  }, [fen, ply, mated]);
+  const info = analysis?.ply === ply ? analysis.info : null;
+  // Engine scores are for the side to move; the bar wants White's view.
+  const sign = ply % 2 === 0 ? 1 : -1;
 
   useEffect(() => {
     window.history.replaceState(null, "", ply ? `?ply=${ply}` : window.location.pathname);
@@ -116,22 +135,35 @@ export function Replay({ game, initialPly = 0 }: { game: ReplayGame; initialPly?
         >
           ⏭
         </button>
-        <Link
-          href={analysisHref({ moves, white: game.white, black: game.black, result: game.result })}
+        <button
           className="btn-secondary ml-auto"
+          onClick={() => setFlipped(!flipped)}
+          aria-label="Flip board"
+          title="Flip board"
         >
-          Analyze
-        </Link>
-        <button className="btn-secondary" onClick={() => setFlipped(!flipped)}>
-          Flip
+          ⇅
         </button>
       </div>
       <MoveList moves={moves} ply={ply} onSelect={setPly} />
+      <Link
+        href={analysisHref({ moves, white: game.white, black: game.black, result: game.result })}
+        className="btn-secondary mt-auto text-center"
+      >
+        Analyze
+      </Link>
     </>
   );
 
   return (
     <GameLayout
+      boardSide={
+        <EvalBar
+          cp={info?.cp !== undefined ? info.cp * sign : undefined}
+          mate={mated ? (ply % 2 ? 1 : -1) : info?.mate !== undefined ? info.mate * sign : undefined}
+          text={mated ? game.result : undefined}
+          orientation={flipped ? "black" : "white"}
+        />
+      }
       board={
         <Board
           fen={fen}

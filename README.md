@@ -9,8 +9,6 @@ Chess openings, historical games and Puzzle Rush in one app: https://chessbook-a
 - **Stockfish:** play Stockfish in your browser at 400–3200, with optional hint arrow and eval bar.
 - **Play:** 1v1 against a friend: enter a name, see who's online, invite, play, rematch.
 
-See [PLAN.md](PLAN.md) for architecture, data sources and status.
-
 ## Development
 
 ```bash
