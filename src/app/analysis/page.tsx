@@ -1,17 +1,19 @@
 "use client";
 
-import { use, useEffect, useMemo, useState } from "react";
+import { use, useEffect, useMemo, useRef, useState } from "react";
 import Link from "next/link";
 import { Chess } from "chess.js";
 import { Board, type Arrow } from "@/components/Board";
 import { EvalBar } from "@/components/EvalBar";
 import { GameLayout } from "@/components/GameLayout";
+import { PositionAnalysis } from "@/components/PositionAnalysis";
 import {
   analysisHref,
   analyze,
   cachedEvals,
   cacheEvals,
   LABELS,
+  lineText,
   review,
   summarize,
   type AnalysisTarget,
@@ -24,7 +26,8 @@ import { loadOpenings, type OpeningDb } from "@/lib/openings";
 
 const BEST_ARROW = "rgba(129,182,76,.85)";
 
-// /analysis lists your finished games; /analysis?moves=…&white=…&black=…&result=… reviews one.
+// /analysis lists your finished games; /analysis?moves=…&white=…&black=…&result=… reviews one;
+// /analysis?board sets up and analyzes any position.
 export default function AnalysisPage({ searchParams }: { searchParams: Promise<Record<string, string | string[] | undefined>> }) {
   const sp = use(searchParams);
   const str = (k: string) => (typeof sp[k] === "string" ? sp[k] : "");
@@ -48,6 +51,7 @@ export default function AnalysisPage({ searchParams }: { searchParams: Promise<R
     // eslint-disable-next-line react-hooks/exhaustive-deps -- `str` reads the same params
   }, [movesParam, sp]);
 
+  if ("board" in sp) return <PositionAnalysis />;
   if (!movesParam) return <MyGames />;
   if (!target || target.moves.length === 0) return <p className="p-8">This game can&apos;t be analyzed: its moves are invalid.</p>;
   return <Review key={movesParam} target={target} />;
@@ -63,6 +67,9 @@ function MyGames() {
   const date = new Intl.DateTimeFormat(undefined, { dateStyle: "medium", timeStyle: "short" });
   return (
     <main className="mx-auto flex w-full max-w-3xl flex-1 flex-col gap-4 p-4">
+      <Link href="/analysis?board" className="btn-secondary self-start">
+        Analyze a position
+      </Link>
       <div>
         <h1 className="text-xl font-bold">My games</h1>
         <p className="text-sm text-foreground/60">
@@ -265,14 +272,13 @@ function Review({ target }: { target: AnalysisTarget }) {
         </button>
       </div>
 
-      <ReviewMoves moves={moves} reviews={reviews} ply={ply} onSelect={setPly} />
+      <ReviewMoves moves={moves} reviews={reviews} evals={evals} fens={positions.map((p) => p.fen)} ply={ply} onSelect={setPly} />
     </>
   );
 
   const mateOnBoard = shown?.mate === 0;
   return (
     <GameLayout
-      scrollPanel
       boardSide={
         <EvalBar
           cp={mateOnBoard ? undefined : shown?.cp}
@@ -399,32 +405,80 @@ function EvalGraph({
 function ReviewMoves({
   moves,
   reviews,
+  evals,
+  fens,
   ply,
   onSelect,
 }: {
   moves: string[];
   reviews: ReturnType<typeof review>;
+  evals: (PositionEval | undefined)[];
+  fens: string[];
   ply: number;
   onSelect: (ply: number) => void;
 }) {
+  // Hovered move and where to show its popup (fixed, so the scrolling panel doesn't clip it).
+  const [hover, setHover] = useState<{ i: number; left: number; top: number } | null>(null);
+  const box = useRef<HTMLDivElement>(null);
+
+  // Keeps the current move in view. Scrolls only the move box, which scrolls only in landscape.
+  useEffect(() => {
+    const el = box.current;
+    if (!el || el.scrollHeight <= el.clientHeight) return;
+    const current = el.querySelector("[data-current]");
+    if (!current) return void (el.scrollTop = 0);
+    const b = el.getBoundingClientRect();
+    const c = current.getBoundingClientRect();
+    if (c.top < b.top) el.scrollTop += c.top - b.top;
+    else if (c.bottom > b.bottom) el.scrollTop += c.bottom - b.bottom;
+  }, [ply]);
   const move = (i: number) => (
     <button
       onClick={() => onSelect(i + 1)}
+      onMouseEnter={(e) => {
+        const r = e.currentTarget.getBoundingClientRect();
+        setHover({ i, left: Math.min(r.left, window.innerWidth - 296), top: r.bottom + 4 });
+      }}
+      onMouseLeave={() => setHover(null)}
+      data-current={i + 1 === ply || undefined}
       className={`flex items-center gap-1.5 rounded px-1.5 py-0.5 text-left ${i + 1 === ply ? "bg-surface-hover" : "hover:bg-surface"}`}
     >
       {reviews[i] && <Badge label={reviews[i]!.label} />}
       {moves[i]}
     </button>
   );
+  const before = hover && evals[hover.i];
+  const hovered = hover && reviews[hover.i];
   return (
-    <div className="grid grid-cols-[2.5rem_1fr_1fr] gap-y-0.5 font-mono text-sm">
-      {Array.from({ length: Math.ceil(moves.length / 2) }, (_, r) => (
-        <div key={r} className="contents">
-          <span className="self-center pr-1 text-right text-foreground/50">{r + 1}.</span>
-          {move(2 * r)}
-          {2 * r + 1 < moves.length ? move(2 * r + 1) : <span />}
-        </div>
-      ))}
+    // In landscape only the moves scroll; the panel itself scrolls only if the screen is too short for the rest.
+    <div ref={box} className="landscape:min-h-32 landscape:flex-1 landscape:overflow-y-auto">
+      <div className="grid grid-cols-[2.5rem_1fr_1fr] gap-y-0.5 font-mono text-sm">
+        {Array.from({ length: Math.ceil(moves.length / 2) }, (_, r) => (
+          <div key={r} className="contents">
+            <span className="self-center pr-1 text-right text-foreground/50">{r + 1}.</span>
+            {move(2 * r)}
+            {2 * r + 1 < moves.length ? move(2 * r + 1) : <span />}
+          </div>
+        ))}
+        {hover && before?.best && (
+          <div
+            className="pointer-events-none fixed z-50 w-72 rounded bg-panel p-2 font-sans text-sm shadow-lg ring-1 ring-black/40"
+            style={{ left: hover.left, top: hover.top }}
+          >
+            {hovered && (
+              <div className="mb-1 flex items-center gap-1.5">
+                <Badge label={hovered.label} />
+                <span className="font-mono font-semibold">{moves[hover.i]}</span>
+                <span style={{ color: LABELS[hovered.label].color }}>{LABELS[hovered.label].name.toLowerCase()}</span>
+              </div>
+            )}
+            <div className="text-xs text-foreground/60">
+              Best line <span className="font-mono">({scoreText(before)})</span>
+            </div>
+            <div className="font-mono">{lineText(fens[hover.i], before.pv ?? [before.best])}</div>
+          </div>
+        )}
+      </div>
     </div>
   );
 }

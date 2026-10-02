@@ -14,6 +14,7 @@ type Props = {
   onPremove?: (move: { from: string; to: string } | null) => void; // null cancels
   highlights?: Record<string, string>; // square -> background color
   arrows?: Arrow[];
+  onSquareClick?: (square: string) => void; // replaces move input, e.g. for a position editor
 };
 
 const FILES = ["a", "b", "c", "d", "e", "f", "g", "h"];
@@ -32,8 +33,10 @@ export function Board({
   onPremove,
   highlights = {},
   arrows = [],
+  onSquareClick,
 }: Props) {
-  const chess = useMemo(() => new Chess(fen), [fen]);
+  // Unvalidated: the position editor shows positions that aren't legal yet (e.g. missing a king).
+  const chess = useMemo(() => new Chess(fen, { skipValidation: true }), [fen]);
   const myColor = moveBothSides ? chess.turn() : orientation[0]; // "w" | "b"
   const premoving = canPremove && !canMove;
   // Pending promotion is tied to the position it was made in. A selection survives position
@@ -101,6 +104,7 @@ export function Board({
               return false;
             },
             onSquareClick: ({ piece, square }) => {
+              if (onSquareClick) return onSquareClick(square);
               if (premoving) {
                 if (piece?.pieceType[0] === myColor && square !== selected) {
                   setSel(square);

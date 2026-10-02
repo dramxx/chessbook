@@ -12,6 +12,7 @@ export type PositionEval = {
   cp?: number; // White's view
   mate?: number; // White's view; 0 = checkmate on the board
   best?: string; // best move, UCI
+  pv?: string[]; // engine's main line from this position, UCI, starting with `best`
   second?: number; // winning chances of the side to move after the second-best move
 };
 
@@ -33,6 +34,8 @@ export type MoveReview = { label: Label; accuracy: number; bestSan: string | nul
 
 // Same depth for every position keeps the review consistent; the time cap bounds long thinks.
 const GO = "depth 18 movetime 1500";
+// Plies of the main line kept per position, for the best-line popup.
+const PV_LENGTH = 10;
 
 // Winning chances (0–100) of the side whose score this is.
 export function winChance(cp?: number, mate?: number) {
@@ -53,11 +56,13 @@ async function evaluate(engine: Engine, fen: string, onSearch: (s: { stop: () =>
   const [top, second] = lines;
   const moverWin = top ? winChance(top.cp, top.mate) : 50;
   const sign = white ? 1 : -1;
+  const bestMove = best ?? top?.pv[0];
   return {
     win: white ? moverWin : 100 - moverWin,
     cp: top?.cp !== undefined ? top.cp * sign : undefined,
     mate: top?.mate !== undefined ? top.mate * sign : undefined,
-    best: best ?? top?.pv[0],
+    best: bestMove,
+    pv: top?.pv[0] === bestMove ? top.pv.slice(0, PV_LENGTH) : undefined,
     second: second ? winChance(second.cp, second.mate) : undefined,
   };
 }
@@ -80,6 +85,24 @@ export function analyze(engine: Engine, moves: string[], onEval: (ply: number, e
     stopped = true;
     current?.stop();
   };
+}
+
+// Engine line in SAN with move numbers, e.g. "10. Be3 Nc5 11. Rd1".
+export function lineText(fen: string, uci: string[]) {
+  const chess = new Chess(fen);
+  const parts: string[] = [];
+  for (const m of uci) {
+    const white = chess.turn() === "w";
+    const n = chess.moveNumber();
+    let san: string;
+    try {
+      san = chess.move({ from: m.slice(0, 2), to: m.slice(2, 4), promotion: m[4] }).san;
+    } catch {
+      break;
+    }
+    parts.push(white ? `${n}. ${san}` : parts.length === 0 ? `${n}... ${san}` : san);
+  }
+  return parts.join(" ");
 }
 
 const VALUE: Record<PieceSymbol, number> = { p: 1, n: 3, b: 3, r: 5, q: 9, k: 0 };
