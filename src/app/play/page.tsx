@@ -23,6 +23,8 @@ const GAME_KEY = "chessbook.play.game";
 const POLL_GAME_MS = 1000;
 const POLL_TIMED_MS = 500;
 const POLL_LOBBY_MS = 2000;
+const IDLE_LOBBY_MS = 5 * 60_000; // no input for this long pauses polling
+const IDLE_GAME_MS = 15 * 60_000;
 const LAST_MOVE = "rgba(255,255,51,.4)";
 const PREMOVE = "rgba(244,42,50,.45)";
 const START_FEN = "rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR w KQkq - 0 1";
@@ -117,8 +119,33 @@ export default function PlayPage() {
   });
   const playing = game !== null && game.result === null;
   const timed = playing && !!game.clock;
+
+  // Polling stops while the tab is hidden or no one has touched the page for a while, so an idle
+  // tab makes no requests (and drops out of the lobby). Any input resumes it.
+  const [active, setActive] = useState(() => typeof document === "undefined" || !document.hidden);
+  const idleMs = playing ? IDLE_GAME_MS : IDLE_LOBBY_MS;
   useEffect(() => {
-    if (!me) return;
+    let last = Date.now();
+    const onInput = () => {
+      last = Date.now();
+      if (!document.hidden) setActive(true);
+    };
+    const onVisibility = () => (document.hidden ? setActive(false) : onInput());
+    const t = window.setInterval(() => {
+      if (Date.now() - last > idleMs) setActive(false);
+    }, 10_000);
+    const events = ["pointerdown", "pointermove", "keydown", "wheel"] as const;
+    for (const e of events) window.addEventListener(e, onInput, { passive: true });
+    document.addEventListener("visibilitychange", onVisibility);
+    return () => {
+      clearInterval(t);
+      for (const e of events) window.removeEventListener(e, onInput);
+      document.removeEventListener("visibilitychange", onVisibility);
+    };
+  }, [idleMs]);
+
+  useEffect(() => {
+    if (!me || !active) return;
     let busy = false;
     const run = async () => {
       if (busy) return;
@@ -129,7 +156,7 @@ export default function PlayPage() {
     run();
     const t = window.setInterval(run, timed ? POLL_TIMED_MS : playing ? POLL_GAME_MS : POLL_LOBBY_MS);
     return () => clearInterval(t);
-  }, [me, playing, timed]);
+  }, [me, playing, timed, active]);
 
   useEffect(() => {
     if (!timed) return;
@@ -363,7 +390,16 @@ export default function PlayPage() {
             highlights={highlights}
           />
         }
-        panel={gamePanel || lobbyPanel}
+        panel={
+          <>
+            {!active && (
+              <p className="rounded bg-surface p-3 text-sm">
+                Paused: you&apos;re offline to other players. Move the mouse or press a key to reconnect.
+              </p>
+            )}
+            {gamePanel || lobbyPanel}
+          </>
+        }
       />
       {invite && !playing && (
         <Modal>
