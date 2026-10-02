@@ -165,11 +165,15 @@ export default function BotPage() {
   const turn: Color = fen.split(" ")[1] === "w" ? "white" : "black";
   const playing = game !== null && !game.result;
   const myTurn = playing && turn === game.color;
+  const orientation: Color = game?.color ?? (setup.color === "black" ? "black" : "white");
+  // Before Start, moving a piece starts the game with the current settings, as the side that moved.
+  const startByMove = !game && turn === orientation;
 
-  function start() {
-    const color = setup.color === "random" ? (Math.random() < 0.5 ? "white" : "black") : setup.color;
-    setGame({ id: crypto.randomUUID(), moves: setup.moves, color, rating: setup.rating });
+  function start(color: Color = setup.color === "random" ? (Math.random() < 0.5 ? "white" : "black") : setup.color) {
+    const g: Game = { id: crypto.randomUUID(), moves: setup.moves, color, rating: setup.rating };
+    setGame(g);
     setPremove(null);
+    return g;
   }
 
   // Back to the setup screen with a fresh board.
@@ -187,11 +191,11 @@ export default function BotPage() {
   }
 
   function onMove(from: string, to: string, promotion?: string) {
-    if (!game || !myTurn) return;
+    if (!myTurn && !startByMove) return;
     try {
       const san = new Chess(fen).move({ from, to, promotion }).san;
       setPremove(null);
-      addMove(game, san);
+      addMove(game ?? start(turn), san);
     } catch {}
   }
 
@@ -279,7 +283,6 @@ export default function BotPage() {
       ? [{ startSquare: info.pv[0].slice(0, 2), endSquare: info.pv[0].slice(2, 4), color: HINT }]
       : [];
 
-  const orientation: Color = game?.color ?? (setup.color === "black" ? "black" : "white");
   const toggle = (key: keyof Settings, label: string) => (
     <button
       role="switch"
@@ -342,7 +345,7 @@ export default function BotPage() {
           </button>
         ))}
       </div>
-      <button className="btn-primary" onClick={start}>
+      <button className="btn-primary" onClick={() => start()}>
         Start
       </button>
       <div className="flex gap-4">
@@ -422,7 +425,7 @@ export default function BotPage() {
         <Board
           fen={fen}
           orientation={orientation}
-          canMove={myTurn && !premove}
+          canMove={(myTurn || startByMove) && !premove}
           onMove={onMove}
           canPremove={playing && !myTurn}
           onPremove={setPremove}
