@@ -15,14 +15,16 @@ See [PLAN.md](PLAN.md) for architecture, data sources and status.
 
 ```bash
 npm install
-cp .env.example .env.local   # optional: LICHESS_TOKEN for explorer stats
+vercel env pull .env.local   # Turso credentials for the games database, LICHESS_TOKEN for explorer stats
 npm run dev
 ```
 
-The games database is not in the repo (license, size). Build it locally:
+The games database lives on [Turso](https://turso.tech) (hosted SQLite, connected through the Vercel
+Marketplace). It is not in the repo (license, size). To rebuild it:
 
 1. Download "OTB Elite – ELO > 2400" from [Lumbra's GigaBase](https://lumbrasgigabase.com/en/download-in-pgn-format-en/) and unpack the PGN into `data/`.
 2. `node scripts/import-games.mjs data/<file>.pgn` (~10 min) writes `db/games.db`.
+3. `node --env-file=.env.local scripts/upload-turso.mjs` copies it to Turso (resumable).
 
 ## Data and credits
 

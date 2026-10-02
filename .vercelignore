@@ -3,4 +3,4 @@
 /.next
 /data
 *.tsbuildinfo
-/db/games.db
+/db

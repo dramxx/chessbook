@@ -4,12 +4,12 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "prebuild": "node scripts/join-db.mjs",
     "build": "next build",
     "start": "next start",
     "lint": "eslint"
   },
   "dependencies": {
+    "@libsql/client": "^0.18.0",
     "@vercel/functions": "^3.9.10",
     "chess.js": "^1.4.0",
     "chessops": "^0.15.1",

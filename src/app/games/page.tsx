@@ -34,7 +34,7 @@ export default async function GamesPage({ searchParams }: PageProps<"/games">) {
     page: int("page"),
   };
   const page = search.page ?? 0;
-  const { games, more } = searchGames(search);
+  const { games, more } = await searchGames(search);
 
   const pageHref = (p: number) => {
     const q = new URLSearchParams();
