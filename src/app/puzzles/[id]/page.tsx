@@ -70,7 +70,7 @@ export default function ReplayPage({ params }: { params: Promise<{ id: string }>
               Retry
             </button>
           </div>
-          <Link href="/puzzles" className="text-sm text-neutral-400 hover:text-neutral-200">
+          <Link href="/puzzles/rush" className="text-sm text-neutral-400 hover:text-neutral-200">
             ← Puzzle Rush
           </Link>
         </>

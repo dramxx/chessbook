@@ -100,3 +100,13 @@ export async function getGame(id: number): Promise<(GameRow & { moves: string[] 
   if (!row) return null;
   return { ...row, moves: decodeMoves(new Uint8Array(moves.rows[0].data as ArrayBuffer)) };
 }
+
+// A random game of at least `minPlies`. Ids are dense (1..max), so a few random picks are enough.
+export async function randomGame(minPlies: number): Promise<(GameRow & { moves: string[] }) | null> {
+  const max = Number((await db.execute("SELECT max(id) FROM games")).rows[0][0]);
+  for (let tries = 0; tries < 10; tries++) {
+    const game = await getGame(1 + Math.floor(Math.random() * max));
+    if (game && game.plies >= minPlies) return game;
+  }
+  return null;
+}
