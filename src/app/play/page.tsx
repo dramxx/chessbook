@@ -6,11 +6,22 @@ import { Board } from "@/components/Board";
 import { GameLayout } from "@/components/GameLayout";
 import { MoveList } from "@/components/MoveList";
 import { playMoveSound } from "@/lib/sounds";
-import { colorOf, type Action, type Game, type Player, type SyncResponse } from "@/lib/play";
+import {
+  colorOf,
+  sideToMove,
+  timeLeft,
+  TIME_CONTROLS,
+  type Action,
+  type Game,
+  type Minutes,
+  type Player,
+  type SyncResponse,
+} from "@/lib/play";
 
 const ME_KEY = "chessbook.play.me";
 const GAME_KEY = "chessbook.play.game";
 const POLL_GAME_MS = 1000;
+const POLL_TIMED_MS = 500;
 const POLL_LOBBY_MS = 2000;
 const LAST_MOVE = "rgba(255,255,51,.4)";
 const PREMOVE = "rgba(244,42,50,.45)";
@@ -47,6 +58,10 @@ export default function PlayPage() {
   const [premove, setPremove] = useState<{ from: string; to: string } | null>(null);
   const [view, setView] = useState<number | null>(null); // ply being reviewed after the game
   const gameRef = useRef<Game | null>(null); // latest game, for the poll loop
+  const [offset, setOffset] = useState(0); // server time minus local time
+  const [now, setNow] = useState(0); // local time, ticking while a clock runs
+  const [inviteTo, setInviteTo] = useState<Player | null>(null); // time control picker
+  const [minutes, setMinutes] = useState<Minutes>(3);
 
   // Identity and the current game survive reloads (this browser only).
   useEffect(() => {
@@ -78,6 +93,7 @@ export default function PlayPage() {
     const current = gameRef.current;
     const res = await post<SyncResponse>({ type: "sync", me, gameId: current?.id ?? null });
     if (!res) return;
+    setOffset(res.now - Date.now());
     setSync(res);
     if (res.gameId && (!current || current.result)) {
       const started = await post<SyncResponse>({ type: "sync", me, gameId: res.gameId });
@@ -100,6 +116,7 @@ export default function PlayPage() {
     }
   });
   const playing = game !== null && game.result === null;
+  const timed = playing && !!game.clock;
   useEffect(() => {
     if (!me) return;
     let busy = false;
@@ -110,9 +127,15 @@ export default function PlayPage() {
       busy = false;
     };
     run();
-    const t = window.setInterval(run, playing ? POLL_GAME_MS : POLL_LOBBY_MS);
+    const t = window.setInterval(run, timed ? POLL_TIMED_MS : playing ? POLL_GAME_MS : POLL_LOBBY_MS);
     return () => clearInterval(t);
-  }, [me, playing]);
+  }, [me, playing, timed]);
+
+  useEffect(() => {
+    if (!timed) return;
+    const t = window.setInterval(() => setNow(Date.now()), 100);
+    return () => clearInterval(t);
+  }, [timed]);
 
   const color = game && me ? colorOf(game, me.id) : null;
   const positions = useMemo(() => {
@@ -140,7 +163,11 @@ export default function PlayPage() {
       return;
     }
     setPremove(null);
-    const optimistic = { ...game, moves: [...game.moves, san] };
+    // Stop our clock right away; the server's answer has the exact times.
+    const serverNow = Date.now() + offset;
+    const left = timeLeft(game, serverNow);
+    const clock = game.clock && left && { ...game.clock, ...left, movedAt: serverNow, seenAt: null };
+    const optimistic = { ...game, moves: [...game.moves, san], clock };
     gameRef.current = optimistic;
     setGame(optimistic);
     const res = await post<{ game: Game }>({ type: "move", me, gameId: game.id, ply: game.moves.length, san });
@@ -177,6 +204,12 @@ export default function PlayPage() {
   const highlights: Record<string, string> = last ? { [last.from]: LAST_MOVE, [last.to]: LAST_MOVE } : {};
   if (premove) highlights[premove.from] = highlights[premove.to] = PREMOVE;
 
+  const left = game ? timeLeft(game, now + offset) : null;
+  const clockFor = (side: "white" | "black") =>
+    left && game && (
+      <ClockFace ms={left[side]} active={playing && game.clock?.movedAt != null && sideToMove(game) === side} />
+    );
+
   const lobbyPanel = (
     <>
       <div>
@@ -212,7 +245,7 @@ export default function PlayPage() {
                 ) : (
                   <button
                     className="rounded bg-accent px-3 py-1 text-sm font-semibold text-white hover:bg-[var(--accent-hover)]"
-                    onClick={() => post({ type: "invite", me, to: p.id })}
+                    onClick={() => setInviteTo(p)}
                   >
                     Play
                   </button>
@@ -234,6 +267,7 @@ export default function PlayPage() {
 
   const gamePanel = game && color && opponent && (
     <>
+      {clockFor(color === "white" ? "black" : "white")}
       <div>
         <h1 className="text-xl font-bold">
           {me.name} vs {opponent.name}
@@ -272,6 +306,7 @@ export default function PlayPage() {
           <MoveList moves={moves} ply={ply} onSelect={(p) => game.result && setView(p)} newestFirst />
         )}
       </div>
+      {clockFor(color)}
       <div className="flex flex-wrap items-center gap-2 border-t border-surface pt-3">
         {playing ? (
           <>
@@ -333,7 +368,8 @@ export default function PlayPage() {
       {invite && !playing && (
         <Modal>
           <p className="text-lg">
-            <b>{invite.from.name}</b> wants to play.
+            <b>{invite.from.name}</b> wants to play{" "}
+            {invite.minutes ? `${invite.minutes} min` : "unlimited"}.
           </p>
           <div className="flex gap-2">
             <button
@@ -353,7 +389,59 @@ export default function PlayPage() {
           </div>
         </Modal>
       )}
+      {inviteTo && (
+        <Modal>
+          <p className="text-lg">
+            Play <b>{inviteTo.name}</b>
+          </p>
+          <div className="flex gap-1">
+            {TIME_CONTROLS.map((m) => (
+              <button
+                key={m ?? "unlimited"}
+                onClick={() => setMinutes(m)}
+                className={`flex-1 rounded px-2 py-2 text-sm font-semibold ${
+                  minutes === m ? "bg-accent text-white" : "bg-surface hover:bg-surface-hover"
+                }`}
+              >
+                {m ? `${m} min` : "∞"}
+              </button>
+            ))}
+          </div>
+          <div className="flex gap-2">
+            <button
+              className="btn-primary flex-1"
+              onClick={() => {
+                post({ type: "invite", me, to: inviteTo.id, minutes });
+                setInviteTo(null);
+              }}
+            >
+              Send invite
+            </button>
+            <button className="btn-secondary flex-1" onClick={() => setInviteTo(null)}>
+              Cancel
+            </button>
+          </div>
+        </Modal>
+      )}
     </>
+  );
+}
+
+// Remaining time: m:ss, with tenths under 20 seconds.
+function ClockFace({ ms, active }: { ms: number; active: boolean }) {
+  const text =
+    ms >= 20_000
+      ? `${Math.floor(ms / 60_000)}:${String(Math.floor(ms / 1000) % 60).padStart(2, "0")}`
+      : (Math.floor(ms / 100) / 10).toFixed(1);
+  const low = ms < 10_000;
+  return (
+    <div
+      className={`self-end rounded px-3 py-1 font-mono text-2xl font-bold tabular-nums ${
+        active ? (low ? "bg-red-600 text-white" : "bg-foreground text-background") : "bg-surface text-foreground/60"
+      }`}
+    >
+      {text}
+    </div>
   );
 }
 

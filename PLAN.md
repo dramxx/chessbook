@@ -138,20 +138,27 @@ database: no account, no connection string, no limits beyond Vercel's.
 
 Built for the owner and a friend; no accounts. Uses only Vercel (no extra service).
 
-- **Flow:** enter a name (kept in `localStorage` with a random id) → online list → **Play** sends
-  an invite → the other side accepts → colours random. Untimed, no takeback, hint or eval bar.
+- **Flow:** enter a name (kept in `localStorage` with a random id) → online list → **Play** opens
+  a time control picker (1 · 3 · 5 · 10 min · unlimited, 3 preselected) → invite → the other side
+  accepts → colours random. No takeback, hint or eval bar.
+- **Clocks** (sudden death, no increment) are kept by the server: remaining ms per side plus
+  `movedAt`/`seenAt`. The side to move's clock starts when its browser first syncs the position,
+  or at most 2 s after the move was stored, so polling lag isn't charged. Clocks start after
+  White's first move. Any `sync` checks for a flag; out of time loses, or draws if the opponent
+  can't mate (lone king, or king + one minor). Timed games poll every 0.5 s.
   Resign or offer a draw (the opponent accepts/declines; moving instead declines). After the game
-  **Rematch** (colours swapped, the other accepts) or back to the lobby.
+  **Rematch** (colours swapped, same time control, the other accepts) or back to the lobby.
 - **Backend:** `POST /api/play` actions (`sync`, `invite`, `cancel`, `respond`, `move`, `resign`,
   `draw`, `rematch`, `restore`). State in Vercel **Runtime Cache** (`@vercel/functions` `getCache`,
   namespace `chessbook-play`): `lobby`, `invite:<id>`, `outgoing:<id>`, `started:<id>`,
   `game:<id>` (1-day TTL). Moves are validated server-side with chess.js; only the side to move
   can write a game, so plain get-then-set is safe for two players.
-- **Polling:** each browser calls `sync` every 1 s in a game, 2 s in the lobby. Moves arrive in
+- **Polling:** each browser calls `sync` every 0.5 s in a timed game, 1 s untimed, 2 s in the lobby. Moves arrive in
   about 0.5–1 s. Online = synced in the last 15 s.
 - **Not durable:** Runtime Cache can evict entries. Both browsers keep the game in `localStorage`
   (`chessbook.play.game`) and `restore` it if the server copy is gone.
-- **Usage:** two players for an hour ≈ 7k function invocations (Hobby includes 1M/month).
+- **Usage:** two players for an hour ≈ 7k function invocations untimed, 14k timed (Hobby
+  includes 1M/month).
   Runtime Cache usage on Hobby has no published allowance; Hobby pauses rather than charges.
 - **Local dev:** without Vercel's cache env vars, `getCache` falls back to in-memory (one process).
 

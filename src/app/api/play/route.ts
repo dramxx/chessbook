@@ -1,6 +1,16 @@
 import { Chess } from "chess.js";
 import { getCache } from "@vercel/functions";
-import { colorOf, type Action, type Game, type Invite, type Player, type SyncResponse } from "@/lib/play";
+import {
+  colorOf,
+  sideToMove,
+  timeLeft,
+  TIME_CONTROLS,
+  type Action,
+  type Game,
+  type Invite,
+  type Player,
+  type SyncResponse,
+} from "@/lib/play";
 
 // 1v1 play backend. Browsers poll `sync`; everything is stored in Vercel Runtime Cache. On Hobby
 // that cache is shared by all projects of the team, hence the namespace. Writes are plain
@@ -29,8 +39,38 @@ function outcome(chess: Chess): Game["result"] {
   return null;
 }
 
-function newGame(white: Player, black: Player): Game {
-  return { id: crypto.randomUUID(), white, black, moves: [], result: null, rematchBy: null, next: null };
+function newGame(white: Player, black: Player, minutes: number | null): Game {
+  const ms = (minutes ?? 0) * 60_000;
+  return {
+    id: crypto.randomUUID(),
+    white,
+    black,
+    moves: [],
+    result: null,
+    rematchBy: null,
+    next: null,
+    clock: minutes ? { minutes, white: ms, black: ms, movedAt: null, seenAt: null } : null,
+  };
+}
+
+// Only a lone king, or king and one minor piece, can't mate.
+function canMate(chess: Chess, color: "w" | "b") {
+  const pieces = chess.board().flat().filter((p) => p && p.color === color && p.type !== "k");
+  return !(pieces.length === 0 || (pieces.length === 1 && (pieces[0]!.type === "n" || pieces[0]!.type === "b")));
+}
+
+// The game with the side to move lost on time, or null if its clock hasn't run out.
+function flagged(game: Game, now: number): Game | null {
+  const left = timeLeft(game, now);
+  const side = sideToMove(game);
+  if (!left || game.result || left[side] > 0) return null;
+  const chess = new Chess();
+  for (const san of game.moves) chess.move(san);
+  const winner = side === "white" ? "black" : "white";
+  const result = canMate(chess, winner[0] as "w" | "b")
+    ? { score: winner === "white" ? "1-0" : "0-1", text: `${game[winner].name} wins on time` }
+    : { score: "1/2-1/2", text: "Draw: timeout vs insufficient material" };
+  return { ...game, result, drawBy: null, clock: { ...game.clock!, [side]: 0 } };
 }
 
 const fail = (status: number, error: string) => Response.json({ error }, { status });
@@ -44,13 +84,26 @@ export async function POST(request: Request) {
   switch (action.type) {
     case "sync": {
       const now = Date.now();
-      const [lobby, invite, outgoing, started, game] = await Promise.all([
+      const [lobby, invite, outgoing, started, stored] = await Promise.all([
         get<Lobby>("lobby").then((l) => l ?? {}),
         get<Invite>(`invite:${player.id}`),
         get<Outgoing>(`outgoing:${player.id}`),
         get<string>(`started:${player.id}`),
         action.gameId ? get<Game>(`game:${action.gameId}`) : null,
       ]);
+      // Clocks: the side to move has now seen the position; a clock at zero ends the game.
+      let game = stored;
+      if (game?.clock && !game.result) {
+        const c = game.clock;
+        let updated = flagged(game, now);
+        if (!updated && c.movedAt !== null && c.seenAt === null && colorOf(game, player.id) === sideToMove(game)) {
+          updated = { ...game, clock: { ...c, seenAt: now } };
+        }
+        if (updated) {
+          game = updated;
+          await set(`game:${game.id}`, game, DAY);
+        }
+      }
       const playing = game !== null && game.result === null;
       const mine = lobby[player.id];
       const stale = Object.entries(lobby).filter(([, p]) => now - p.seen > ONLINE_MS);
@@ -68,13 +121,15 @@ export async function POST(request: Request) {
         outgoing,
         gameId: started,
         game,
+        now,
       };
       return Response.json(body);
     }
 
     case "invite": {
       if (action.to === player.id) return fail(400, "can't invite yourself");
-      await set(`invite:${action.to}`, { from: player, at: Date.now() } satisfies Invite, 60);
+      const minutes = TIME_CONTROLS.includes(action.minutes) ? action.minutes : 3;
+      await set(`invite:${action.to}`, { from: player, at: Date.now(), minutes } satisfies Invite, 60);
       await set(`outgoing:${player.id}`, { to: action.to, declined: false } satisfies Outgoing, 60);
       return Response.json({ ok: true });
     }
@@ -97,7 +152,8 @@ export async function POST(request: Request) {
         await set(`outgoing:${invite.from.id}`, { to: player.id, declined: true } satisfies Outgoing, 60);
         return Response.json({ ok: true });
       }
-      const game = Math.random() < 0.5 ? newGame(invite.from, player) : newGame(player, invite.from);
+      const minutes = invite.minutes ?? null;
+      const game = Math.random() < 0.5 ? newGame(invite.from, player, minutes) : newGame(player, invite.from, minutes);
       await set(`game:${game.id}`, game, DAY);
       await set(`started:${invite.from.id}`, game.id, 120);
       await cache.delete(`outgoing:${invite.from.id}`);
@@ -105,8 +161,15 @@ export async function POST(request: Request) {
     }
 
     case "move": {
-      const game = await get<Game>(`game:${action.gameId}`);
-      if (!game) return fail(404, "game not found");
+      const stored = await get<Game>(`game:${action.gameId}`);
+      if (!stored) return fail(404, "game not found");
+      const now = Date.now();
+      const timeout = flagged(stored, now);
+      if (timeout) {
+        await set(`game:${stored.id}`, timeout, DAY);
+        return Response.json({ game: timeout });
+      }
+      const game = stored;
       const chess = new Chess();
       for (const san of game.moves) chess.move(san);
       if (game.result || colorOf(game, player.id)?.[0] !== chess.turn() || action.ply !== game.moves.length) {
@@ -119,7 +182,9 @@ export async function POST(request: Request) {
       }
       // Moving instead of answering declines the opponent's draw offer.
       const drawBy = game.drawBy === player.id ? game.drawBy : null;
-      const updated = { ...game, moves: chess.history(), result: outcome(chess), drawBy };
+      const left = timeLeft(game, now);
+      const clock = game.clock && left && { ...game.clock, ...left, movedAt: now, seenAt: null };
+      const updated = { ...game, moves: chess.history(), result: outcome(chess), drawBy, clock };
       await set(`game:${game.id}`, updated, DAY);
       return Response.json({ game: updated });
     }
@@ -155,7 +220,7 @@ export async function POST(request: Request) {
       if (game.next) return Response.json({ game });
       let updated: Game;
       if (game.rematchBy && game.rematchBy !== player.id) {
-        const next = newGame(game.black, game.white); // colours swapped
+        const next = newGame(game.black, game.white, game.clock?.minutes ?? null); // colours swapped
         await set(`game:${next.id}`, next, DAY);
         updated = { ...game, next: next.id };
       } else {
