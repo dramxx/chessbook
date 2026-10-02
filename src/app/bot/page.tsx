@@ -22,6 +22,7 @@ type Game = {
   moves: string[]; // SAN from the start position, including moves set up from the openings page
   color: Color;
   rating: number;
+  result?: string | null; // set when the game is over; it stays on the board until "New game"
 };
 type Settings = { hint: boolean; evalBar: boolean };
 
@@ -42,6 +43,15 @@ function replay(moves: string[]) {
   const chess = new Chess();
   for (const san of moves) chess.move(san);
   return chess;
+}
+
+function outcome(chess: Chess, color: Color): string | null {
+  if (chess.isCheckmate()) return chess.turn() === color[0] ? "Checkmate, Stockfish wins" : "Checkmate, you win!";
+  if (chess.isStalemate()) return "Draw by stalemate";
+  if (chess.isInsufficientMaterial()) return "Draw: insufficient material";
+  if (chess.isThreefoldRepetition()) return "Draw by threefold repetition";
+  if (chess.isDraw()) return "Draw by the 50-move rule";
+  return null;
 }
 
 export default function BotPage() {
@@ -77,7 +87,7 @@ export default function BotPage() {
         setSetup((s) => ({ ...s, moves, rating: saved?.rating ?? s.rating }));
       } catch {}
       window.history.replaceState(null, "", window.location.pathname);
-    } else if (saved && !replay(saved.moves).isGameOver()) {
+    } else if (saved && !saved.result && !replay(saved.moves).isGameOver()) {
       setGame(saved);
       setSetup((s) => ({ ...s, rating: saved.rating, color: saved.color }));
     }
@@ -126,7 +136,7 @@ export default function BotPage() {
   const ply = moves.length;
   const { fen, last } = positions[ply];
   const turn: Color = fen.split(" ")[1] === "w" ? "white" : "black";
-  const playing = game !== null;
+  const playing = game !== null && !game.result;
   const myTurn = playing && turn === game.color;
 
   function start() {
@@ -135,12 +145,18 @@ export default function BotPage() {
     setPremove(null);
   }
 
-  // Plays a move; a finished game goes straight back to the setup screen.
+  // Back to the setup screen with a fresh board.
+  function newGame() {
+    setGame(null);
+    setSetup((s) => ({ ...s, moves: [] }));
+    setDraw({ pending: false, declinedAt: null });
+  }
+
   function addMove(g: Game, san: string) {
     const chess = replay(g.moves);
     const m = chess.move(san);
     playMoveSound(m);
-    setGame(chess.isGameOver() ? null : { ...g, moves: [...g.moves, m.san] });
+    setGame({ ...g, moves: [...g.moves, m.san], result: outcome(chess, g.color) });
   }
 
   function onMove(from: string, to: string, promotion?: string) {
@@ -154,7 +170,7 @@ export default function BotPage() {
 
   // Bot's turn: search at the chosen strength (or play a random move), never faster than MIN_THINK_MS.
   useEffect(() => {
-    if (!game || turn === game.color || !bot.current) return;
+    if (!game || game.result || turn === game.color || !bot.current) return;
     const engine = bot.current;
     const level = botLevel(game.rating);
     const started = Date.now();
@@ -200,7 +216,7 @@ export default function BotPage() {
   }, [myTurn, premove]);
 
   // Full-strength analysis of the shown position, for the eval bar and the hint.
-  const analysing = game !== null && (settings.evalBar || (settings.hint && myTurn));
+  const analysing = playing && (settings.evalBar || (settings.hint && myTurn));
   useEffect(() => {
     if (!analysing || !analyst.current) return;
     const search = analyst.current.search(fen, "depth 18", (info) => setAnalysis({ fen, info }));
@@ -212,7 +228,7 @@ export default function BotPage() {
 
   // Stockfish accepts a draw when it isn't better than +0.3 pawns, judged at full strength.
   async function offerDraw() {
-    if (!game || !analyst.current) return;
+    if (!game || !playing || !analyst.current) return;
     const at = game.moves.length;
     const botToMove = turn !== game.color;
     setDraw({ pending: true, declinedAt: null });
@@ -225,8 +241,8 @@ export default function BotPage() {
     const score = judged?.mate !== undefined ? Math.sign(judged.mate) * 100_000 : (judged?.cp ?? 0);
     const accept = (botToMove ? score : -score) <= 30;
     setDraw({ pending: false, declinedAt: accept ? null : at });
-    // Accepted: the game ends, back to the setup screen (unless a move happened meanwhile).
-    if (accept) setGame((g) => (g && g.moves.length === at ? null : g));
+    // Accepted: the game ends (unless a move happened meanwhile).
+    if (accept) setGame((g) => (g && !g.result && g.moves.length === at ? { ...g, result: "Draw by agreement" } : g));
   }
 
   const highlights: Record<string, string> = last ? { [last.from]: LAST_MOVE, [last.to]: LAST_MOVE } : {};
@@ -315,26 +331,39 @@ export default function BotPage() {
       <div>
         <h1 className="text-xl font-bold">Stockfish {game.rating}</h1>
         <p className="text-sm text-foreground/60">
-          You play {game.color} · {thinking ? "Stockfish is thinking…" : myTurn ? "Your move" : ""}
+          You play {game.color}
+          {playing && ` · ${thinking ? "Stockfish is thinking…" : myTurn ? "Your move" : ""}`}
         </p>
       </div>
+      {game.result && <div className="rounded bg-surface p-3 font-bold">{game.result}</div>}
       {/* Only the moves scroll; the title stays on top and the controls at the bottom. */}
       <div className="max-h-48 min-h-0 flex-1 overflow-y-auto landscape:max-h-none">
         {moves.length > 0 && <MoveList moves={moves} ply={ply} onSelect={() => {}} newestFirst />}
       </div>
-      {draw.declinedAt === moves.length && <p className="text-sm text-foreground/60">Stockfish declines the draw.</p>}
-      <div className="flex flex-wrap items-center gap-x-4 gap-y-2 border-t border-surface pt-3">
-        {toggle("hint", "Hint")}
-        {toggle("evalBar", "Eval bar")}
-        <div className="ml-auto flex gap-2">
-          <button className="btn-secondary text-sm" disabled={draw.pending} onClick={offerDraw}>
-            {draw.pending ? "Draw offered…" : "Offer draw"}
-          </button>
-          <button className="btn-secondary text-sm" onClick={() => setGame(null)}>
-            Resign
-          </button>
+      {playing && draw.declinedAt === moves.length && (
+        <p className="text-sm text-foreground/60">Stockfish declines the draw.</p>
+      )}
+      {playing ? (
+        <div className="flex flex-wrap items-center gap-x-4 gap-y-2 border-t border-surface pt-3">
+          {toggle("hint", "Hint")}
+          {toggle("evalBar", "Eval bar")}
+          <div className="ml-auto flex gap-2">
+            <button className="btn-secondary text-sm" disabled={draw.pending} onClick={offerDraw}>
+              {draw.pending ? "Draw offered…" : "Offer draw"}
+            </button>
+            <button
+              className="btn-secondary text-sm"
+              onClick={() => setGame({ ...game, result: "You resigned, Stockfish wins" })}
+            >
+              Resign
+            </button>
+          </div>
         </div>
-      </div>
+      ) : (
+        <button className="btn-primary" onClick={newGame}>
+          New game
+        </button>
+      )}
     </>
   );
 
@@ -342,8 +371,8 @@ export default function BotPage() {
     <GameLayout
       boardSide={
         <div
-          className={`flex transition-opacity ${settings.evalBar && game ? "" : "invisible opacity-0"}`}
-          aria-hidden={!(settings.evalBar && game)}
+          className={`flex transition-opacity ${settings.evalBar && playing ? "" : "invisible opacity-0"}`}
+          aria-hidden={!(settings.evalBar && playing)}
         >
           <EvalBar
             cp={info?.cp !== undefined ? info.cp * sign : undefined}
