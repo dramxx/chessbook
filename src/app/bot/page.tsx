@@ -241,15 +241,23 @@ export default function BotPage() {
     : "";
 
   const toggle = (key: keyof Settings, label: string) => (
-    <label className="flex cursor-pointer items-center gap-2 text-sm">
-      <input
-        type="checkbox"
-        checked={settings[key]}
-        onChange={(e) => setSettings({ ...settings, [key]: e.target.checked })}
-        className="accent-[var(--accent)]"
-      />
+    <button
+      role="switch"
+      aria-checked={settings[key]}
+      onClick={() => setSettings({ ...settings, [key]: !settings[key] })}
+      className="flex items-center gap-2 text-sm"
+    >
+      <span
+        className={`relative h-5 w-9 rounded-full transition-colors ${settings[key] ? "bg-accent" : "bg-surface-hover"}`}
+      >
+        <span
+          className={`absolute top-0.5 left-0.5 size-4 rounded-full bg-white shadow transition-transform ${
+            settings[key] ? "translate-x-4" : ""
+          }`}
+        />
+      </span>
       {label}
-    </label>
+    </button>
   );
 
   const ratingSlider = (
@@ -328,7 +336,7 @@ export default function BotPage() {
         {toggle("hint", "Hint")}
         {toggle("evalBar", "Eval bar")}
       </div>
-      <MoveList moves={moves} ply={ply} onSelect={() => {}} />
+      {moves.length > 0 && <MoveList moves={moves} ply={ply} onSelect={() => {}} />}
       <button
         className="btn-secondary self-start text-sm"
         onClick={() =>
@@ -347,16 +355,18 @@ export default function BotPage() {
     <GameLayout
       board={
         <div className="flex gap-1">
-          {settings.evalBar && game && (
-            // Bottom margin: the board's coordinate row.
-            <div className="mb-5 flex">
-              <EvalBar
+          {/* Always takes its space, so turning it on doesn't resize the board. Bottom margin: the
+              board's coordinate row. */}
+          <div
+            className={`mb-5 flex transition-opacity ${settings.evalBar && game ? "" : "invisible opacity-0"}`}
+            aria-hidden={!(settings.evalBar && game)}
+          >
+            <EvalBar
               cp={info?.cp !== undefined ? info.cp * sign : undefined}
               mate={info?.mate !== undefined ? info.mate * sign : undefined}
               orientation={orientation}
-              />
-            </div>
-          )}
+            />
+          </div>
           <div className="min-w-0 flex-1">
             <Board
               fen={fen}
