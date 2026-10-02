@@ -237,7 +237,7 @@ export default function BotPage() {
       role="switch"
       aria-checked={settings[key]}
       onClick={() => setSettings({ ...settings, [key]: !settings[key] })}
-      className="flex items-center gap-2 text-sm"
+      className="flex items-center gap-2 text-sm whitespace-nowrap"
     >
       <span
         className={`relative h-5 w-9 rounded-full transition-colors ${settings[key] ? "bg-accent" : "bg-surface-hover"}`}
@@ -317,22 +317,25 @@ export default function BotPage() {
           You play {game.color} · {thinking ? "Stockfish is thinking…" : myTurn ? "Your move" : ""}
         </p>
       </div>
-      <div className="flex gap-4">
+      {/* Only the moves scroll; the title stays on top and the controls at the bottom. */}
+      <div className="max-h-48 min-h-0 flex-1 overflow-y-auto landscape:max-h-none">
+        {moves.length > 0 && <MoveList moves={moves} ply={ply} onSelect={() => {}} newestFirst />}
+      </div>
+      <div className="flex items-center gap-4 border-t border-surface pt-3">
         {toggle("hint", "Hint")}
         {toggle("evalBar", "Eval bar")}
+        <button
+          className="btn-secondary ml-auto text-sm"
+          onClick={() =>
+            setGame({
+              ...game,
+              result: { score: game.color === "white" ? "0-1" : "1-0", text: "You resigned" },
+            })
+          }
+        >
+          Resign
+        </button>
       </div>
-      {moves.length > 0 && <MoveList moves={moves} ply={ply} onSelect={() => {}} />}
-      <button
-        className="btn-secondary self-start text-sm"
-        onClick={() =>
-          setGame({
-            ...game,
-            result: { score: game.color === "white" ? "0-1" : "1-0", text: "You resigned" },
-          })
-        }
-      >
-        Resign
-      </button>
     </>
   );
 
