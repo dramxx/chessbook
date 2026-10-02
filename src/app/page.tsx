@@ -1,3 +1,4 @@
+import { HomeScroll } from "@/components/HomeScroll";
 import { fetchArticles, fetchBroadcasts, fetchStreams } from "@/lib/news";
 
 // Rebuilt at most every 15 minutes, so visitors don't each hit the news sites.
@@ -9,11 +10,11 @@ export default async function Home() {
   const [broadcasts, streams, articles] = await Promise.all([fetchBroadcasts(), fetchStreams(), fetchArticles()]);
 
   return (
-    <main className="mx-auto flex w-full max-w-5xl flex-1 flex-col gap-6 p-4">
+    <HomeScroll>
       {broadcasts.length > 0 && (
-        <section className="flex flex-col gap-2">
+        <section className="flex shrink-0 flex-col gap-2">
           <h2 className="text-sm font-bold tracking-wide text-foreground/60 uppercase">Tournaments on Lichess</h2>
-          <div className="flex gap-3 overflow-x-auto pb-2">
+          <div data-hscroll className="flex gap-3 overflow-x-auto pb-2">
             {broadcasts.map((b) => (
               <a
                 key={b.url}
@@ -41,9 +42,9 @@ export default async function Home() {
       )}
 
       {streams.length > 0 && (
-        <section className="flex flex-col gap-2">
+        <section className="flex shrink-0 flex-col gap-2">
           <h2 className="text-sm font-bold tracking-wide text-foreground/60 uppercase">Streamers on Twitch</h2>
-          <div className="flex gap-3 overflow-x-auto pb-2">
+          <div data-hscroll className="flex gap-3 overflow-x-auto pb-2">
             {streams.map((s) => (
               <a
                 key={s.url}
@@ -68,12 +69,12 @@ export default async function Home() {
         </section>
       )}
 
-      <section className="flex flex-col gap-2">
+      <section className="flex min-h-0 flex-1 flex-col gap-2">
         <h2 className="text-sm font-bold tracking-wide text-foreground/60 uppercase">News</h2>
         {articles.length === 0 ? (
           <p className="rounded-lg bg-panel p-4 text-foreground/60">News is unavailable right now.</p>
         ) : (
-          <ul className="flex flex-col gap-2">
+          <ul data-vscroll className="flex min-h-0 flex-col gap-2 overflow-y-auto">
             {articles.map((a) => (
               <li key={a.link}>
                 <a
@@ -93,6 +94,6 @@ export default async function Home() {
           </ul>
         )}
       </section>
-    </main>
+    </HomeScroll>
   );
 }
