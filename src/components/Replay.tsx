@@ -6,6 +6,7 @@ import { Chess } from "chess.js";
 import { Board } from "@/components/Board";
 import { GameLayout } from "@/components/GameLayout";
 import { MoveList } from "@/components/MoveList";
+import { analysisHref } from "@/lib/analysis";
 import { epd, loadOpenings } from "@/lib/openings";
 
 const LAST_MOVE = "rgba(255,255,51,.4)";
@@ -115,7 +116,13 @@ export function Replay({ game, initialPly = 0 }: { game: ReplayGame; initialPly?
         >
           ⏭
         </button>
-        <button className="btn-secondary ml-auto" onClick={() => setFlipped(!flipped)}>
+        <Link
+          href={analysisHref({ moves, white: game.white, black: game.black, result: game.result })}
+          className="btn-secondary ml-auto"
+        >
+          Analyze
+        </Link>
+        <button className="btn-secondary" onClick={() => setFlipped(!flipped)}>
           Flip
         </button>
       </div>

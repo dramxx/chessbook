@@ -1,10 +1,13 @@
 "use client";
 
 import { useCallback, useEffect, useEffectEvent, useMemo, useRef, useState } from "react";
+import Link from "next/link";
 import { Chess } from "chess.js";
 import { Board } from "@/components/Board";
 import { GameLayout } from "@/components/GameLayout";
 import { MoveList } from "@/components/MoveList";
+import { analysisHref } from "@/lib/analysis";
+import { saveGame } from "@/lib/history";
 import { playMoveSound } from "@/lib/sounds";
 import {
   colorOf,
@@ -165,6 +168,13 @@ export default function PlayPage() {
   }, [timed]);
 
   const color = game && me ? colorOf(game, me.id) : null;
+
+  // Finished games go to the history on the analysis page.
+  useEffect(() => {
+    if (!game?.result || !color) return;
+    const { id, white, black, moves, result } = game;
+    saveGame({ id, date: Date.now(), white: white.name, black: black.name, you: color, result: result.score, text: result.text, moves });
+  }, [game, color]);
   const positions = useMemo(() => {
     const chess = new Chess();
     const out = [{ fen: chess.fen(), last: null as { from: string; to: string } | null }];
@@ -367,6 +377,12 @@ export default function PlayPage() {
                 {game.rematchBy ? `Accept rematch` : "Rematch"}
               </button>
             )}
+            <Link
+              href={analysisHref({ moves, white: game.white.name, black: game.black.name, result: game.result!.score, you: color })}
+              className="btn-secondary text-sm"
+            >
+              Analyze
+            </Link>
             <button className="btn-secondary ml-auto text-sm" onClick={() => showGame(null)}>
               Back to lobby
             </button>

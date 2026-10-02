@@ -1,7 +1,8 @@
 // Stockfish 19 lite (single-threaded WASM, public/stockfish/, GPLv3) in a Web Worker.
 // Commands are queued, so one search runs at a time per engine; `stop` ends the running one.
 
-export type Info = { depth: number; cp?: number; mate?: number; pv: string[] }; // score for the side to move
+// Score for the side to move. `multipv` is the line's rank (1 = best), above 1 only with the MultiPV option.
+export type Info = { depth: number; multipv: number; cp?: number; mate?: number; pv: string[] };
 
 type Job = (send: (cmd: string) => void, onLine: (fn: (line: string) => void) => void) => Promise<void>;
 
@@ -81,13 +82,13 @@ function untilLine(
 function parseInfo(line: string): Info | null {
   const t = line.split(" ");
   const at = (k: string) => t.indexOf(k);
-  if (at("multipv") >= 0 && t[at("multipv") + 1] !== "1") return null;
   const score = at("score");
   if (score < 0) return null;
   const kind = t[score + 1];
   const value = Number(t[score + 2]);
   return {
     depth: Number(t[at("depth") + 1]),
+    multipv: at("multipv") >= 0 ? Number(t[at("multipv") + 1]) : 1,
     cp: kind === "cp" ? value : undefined,
     mate: kind === "mate" ? value : undefined,
     pv: t.slice(at("pv") + 1),

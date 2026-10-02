@@ -1,12 +1,15 @@
 "use client";
 
 import { useEffect, useEffectEvent, useMemo, useRef, useState } from "react";
+import Link from "next/link";
 import { Chess } from "chess.js";
 import { Board, type Arrow } from "@/components/Board";
 import { EvalBar } from "@/components/EvalBar";
 import { GameLayout } from "@/components/GameLayout";
 import { MoveList } from "@/components/MoveList";
+import { analysisHref } from "@/lib/analysis";
 import { botLevel, Engine, type Info } from "@/lib/engine";
+import { saveGame } from "@/lib/history";
 import { epd, loadOpenings } from "@/lib/openings";
 import { playMoveSound } from "@/lib/sounds";
 
@@ -18,11 +21,13 @@ const HINT = "rgba(80,160,255,.8)";
 const MIN_THINK_MS = 500;
 
 type Color = "white" | "black";
+type Result = { score: string; text: string };
 type Game = {
+  id: string;
   moves: string[]; // SAN from the start position, including moves set up from the openings page
   color: Color;
   rating: number;
-  result?: string | null; // set when the game is over; it stays on the board until "New game"
+  result?: Result | null; // set when the game is over; it stays on the board until "New game"
 };
 type Settings = { hint: boolean; evalBar: boolean };
 
@@ -39,18 +44,35 @@ function save(key: string, value: unknown) {
   } catch {}
 }
 
+// Players and result of a finished game, for the history and the analysis page.
+function target(g: Game) {
+  const bot = `Stockfish ${g.rating}`;
+  return {
+    moves: g.moves,
+    white: g.color === "white" ? "You" : bot,
+    black: g.color === "black" ? "You" : bot,
+    result: g.result?.score ?? "*",
+    you: g.color,
+  };
+}
+
 function replay(moves: string[]) {
   const chess = new Chess();
   for (const san of moves) chess.move(san);
   return chess;
 }
 
-function outcome(chess: Chess, color: Color): string | null {
-  if (chess.isCheckmate()) return chess.turn() === color[0] ? "Checkmate, Stockfish wins" : "Checkmate, you win!";
-  if (chess.isStalemate()) return "Draw by stalemate";
-  if (chess.isInsufficientMaterial()) return "Draw: insufficient material";
-  if (chess.isThreefoldRepetition()) return "Draw by threefold repetition";
-  if (chess.isDraw()) return "Draw by the 50-move rule";
+const drawn = (text: string): Result => ({ score: "1/2-1/2", text });
+
+function outcome(chess: Chess, color: Color): Result | null {
+  if (chess.isCheckmate()) {
+    const score = chess.turn() === "w" ? "0-1" : "1-0";
+    return { score, text: chess.turn() === color[0] ? "Checkmate, Stockfish wins" : "Checkmate, you win!" };
+  }
+  if (chess.isStalemate()) return drawn("Draw by stalemate");
+  if (chess.isInsufficientMaterial()) return drawn("Draw: insufficient material");
+  if (chess.isThreefoldRepetition()) return drawn("Draw by threefold repetition");
+  if (chess.isDraw()) return drawn("Draw by the 50-move rule");
   return null;
 }
 
@@ -88,7 +110,7 @@ export default function BotPage() {
       } catch {}
       window.history.replaceState(null, "", window.location.pathname);
     } else if (saved && !saved.result && !replay(saved.moves).isGameOver()) {
-      setGame(saved);
+      setGame({ ...saved, id: saved.id ?? crypto.randomUUID() });
       setSetup((s) => ({ ...s, rating: saved.rating, color: saved.color }));
     }
     /* eslint-enable react-hooks/set-state-in-effect */
@@ -105,6 +127,11 @@ export default function BotPage() {
 
   useEffect(() => {
     save(GAME_KEY, game);
+    // Finished games go to the history on the analysis page.
+    if (game?.result) {
+      const { white, black, result } = target(game);
+      saveGame({ id: game.id, date: Date.now(), white, black, you: game.color, result, text: game.result.text, moves: game.moves });
+    }
   }, [game]);
   useEffect(() => save(SETTINGS_KEY, settings), [settings]);
 
@@ -141,7 +168,7 @@ export default function BotPage() {
 
   function start() {
     const color = setup.color === "random" ? (Math.random() < 0.5 ? "white" : "black") : setup.color;
-    setGame({ moves: setup.moves, color, rating: setup.rating });
+    setGame({ id: crypto.randomUUID(), moves: setup.moves, color, rating: setup.rating });
     setPremove(null);
   }
 
@@ -242,7 +269,7 @@ export default function BotPage() {
     const accept = (botToMove ? score : -score) <= 30;
     setDraw({ pending: false, declinedAt: accept ? null : at });
     // Accepted: the game ends (unless a move happened meanwhile).
-    if (accept) setGame((g) => (g && !g.result && g.moves.length === at ? { ...g, result: "Draw by agreement" } : g));
+    if (accept) setGame((g) => (g && !g.result && g.moves.length === at ? { ...g, result: drawn("Draw by agreement") } : g));
   }
 
   const highlights: Record<string, string> = last ? { [last.from]: LAST_MOVE, [last.to]: LAST_MOVE } : {};
@@ -335,7 +362,7 @@ export default function BotPage() {
           {playing && ` · ${thinking ? "Stockfish is thinking…" : myTurn ? "Your move" : ""}`}
         </p>
       </div>
-      {game.result && <div className="rounded bg-surface p-3 font-bold">{game.result}</div>}
+      {game.result && <div className="rounded bg-surface p-3 font-bold">{game.result.text}</div>}
       {/* Only the moves scroll; the title stays on top and the controls at the bottom. */}
       <div className="max-h-48 min-h-0 flex-1 overflow-y-auto landscape:max-h-none">
         {moves.length > 0 && <MoveList moves={moves} ply={ply} onSelect={() => {}} newestFirst />}
@@ -353,16 +380,26 @@ export default function BotPage() {
             </button>
             <button
               className="btn-secondary text-sm"
-              onClick={() => setGame({ ...game, result: "You resigned, Stockfish wins" })}
+              onClick={() =>
+                setGame({
+                  ...game,
+                  result: { score: game.color === "white" ? "0-1" : "1-0", text: "You resigned, Stockfish wins" },
+                })
+              }
             >
               Resign
             </button>
           </div>
         </div>
       ) : (
-        <button className="btn-primary" onClick={newGame}>
-          New game
-        </button>
+        <div className="flex gap-2">
+          <Link href={analysisHref(target(game))} className="btn-secondary flex-1 text-center">
+            Analyze
+          </Link>
+          <button className="btn-primary flex-1" onClick={newGame}>
+            New game
+          </button>
+        </div>
       )}
     </>
   );

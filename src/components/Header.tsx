@@ -9,9 +9,10 @@ const NAV = [
   { href: "/puzzles", label: "Puzzles" },
   { href: "/bot", label: "Stockfish" },
   { href: "/play", label: "Play" },
+  { href: "/analysis", label: "Analysis" },
 ];
 // Sections that don't exist yet are shown disabled.
-const AVAILABLE = new Set(["/openings", "/games", "/puzzles", "/bot", "/play"]);
+const AVAILABLE = new Set(["/openings", "/games", "/puzzles", "/bot", "/play", "/analysis"]);
 
 export function Header() {
   const pathname = usePathname();
