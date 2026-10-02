@@ -114,7 +114,7 @@ export default function OpeningsPage() {
         )}
         {ply > 0 && (
           <Link
-            href={`/bot?moves=${encodeURIComponent(moves.slice(0, ply).join(" "))}`}
+            href={`/stockfish?moves=${encodeURIComponent(moves.slice(0, ply).join(" "))}`}
             className="ml-3 text-sm text-accent hover:underline"
           >
             Play vs Stockfish from here →
