@@ -1,4 +1,4 @@
-import { fetchArticles, fetchBroadcasts } from "@/lib/news";
+import { fetchArticles, fetchBroadcasts, fetchStreams } from "@/lib/news";
 
 // Rebuilt at most every 15 minutes, so visitors don't each hit the news sites.
 export const revalidate = 900;
@@ -6,7 +6,7 @@ export const revalidate = 900;
 const day = new Intl.DateTimeFormat("en-GB", { day: "numeric", month: "short", timeZone: "UTC" });
 
 export default async function Home() {
-  const [broadcasts, articles] = await Promise.all([fetchBroadcasts(), fetchArticles()]);
+  const [broadcasts, streams, articles] = await Promise.all([fetchBroadcasts(), fetchStreams(), fetchArticles()]);
 
   return (
     <main className="mx-auto flex w-full max-w-5xl flex-1 flex-col gap-6 p-4">
@@ -33,6 +33,34 @@ export default async function Home() {
                     {b.round}
                   </span>
                   {b.location && <span className="truncate text-xs text-foreground/40">{b.location}</span>}
+                </div>
+              </a>
+            ))}
+          </div>
+        </section>
+      )}
+
+      {streams.length > 0 && (
+        <section className="flex flex-col gap-2">
+          <h2 className="text-sm font-bold tracking-wide text-foreground/60 uppercase">Streamers on Twitch</h2>
+          <div className="flex gap-3 overflow-x-auto pb-2">
+            {streams.map((s) => (
+              <a
+                key={s.url}
+                href={s.url}
+                target="_blank"
+                rel="noreferrer"
+                className="flex w-56 shrink-0 flex-col overflow-hidden rounded-lg bg-panel hover:bg-surface"
+              >
+                {/* eslint-disable-next-line @next/next/no-img-element -- remote thumbnail, already sized by Twitch */}
+                <img src={s.thumbnail} alt="" className="aspect-video w-full object-cover" />
+                <div className="flex flex-col gap-1 p-3">
+                  <span className="text-sm font-semibold">{s.user}</span>
+                  <span className="flex items-center gap-2 text-xs text-foreground/60">
+                    <span className="rounded bg-red-600 px-1.5 py-0.5 font-bold text-white">LIVE</span>
+                    {s.viewers.toLocaleString("en-US")} viewers · {s.language.toUpperCase()}
+                  </span>
+                  <span className="line-clamp-2 text-xs text-foreground/40">{s.title}</span>
                 </div>
               </a>
             ))}
