@@ -282,7 +282,7 @@ function Openings({ db, picked, onPick }: { db: OpeningDb; picked: Line | null; 
         value={filter}
         onChange={(e) => setFilter(e.target.value)}
         placeholder="Filter by name or ECO…"
-        className="rounded bg-surface px-2 py-1.5 text-sm outline-none focus:ring-2 focus:ring-accent"
+        className="rounded bg-surface px-2 py-1.5 text-base outline-none focus:ring-2 focus:ring-accent sm:text-sm"
       />
       <ul className="flex flex-col gap-1">
         {rows.map(({ name, variations }) => {
@@ -297,7 +297,7 @@ function Openings({ db, picked, onPick }: { db: OpeningDb; picked: Line | null; 
                 <select
                   value={current?.epd ?? ""}
                   onChange={(e) => onPick(variations.find((v) => v.line.epd === e.target.value)!.line)}
-                  className="w-36 shrink-0 rounded bg-surface px-1 py-1 text-sm"
+                  className="w-36 shrink-0 rounded bg-surface px-1 py-1 text-base sm:text-sm"
                 >
                   <option value="" disabled>
                     Variation…

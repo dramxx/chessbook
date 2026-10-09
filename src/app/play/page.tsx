@@ -593,7 +593,7 @@ function Chat({
           maxLength={CHAT_MAX_LENGTH}
           onChange={(e) => setText(e.target.value)}
           placeholder="Message"
-          className="min-w-0 flex-1 rounded bg-surface px-2 py-1.5 text-sm outline-none focus:ring-2 focus:ring-accent"
+          className="min-w-0 flex-1 rounded bg-surface px-2 py-1.5 text-base outline-none focus:ring-2 focus:ring-accent sm:text-sm"
         />
         <button className="btn-secondary py-1.5 text-sm" disabled={!text.trim() || sending}>
           Send

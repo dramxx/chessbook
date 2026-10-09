@@ -208,7 +208,7 @@ function PositionEditor({
           }}
           onBlur={() => setDraft(null)}
           spellCheck={false}
-          className="rounded bg-surface px-2 py-1.5 font-mono text-xs text-foreground"
+          className="rounded bg-surface px-2 py-1.5 font-mono text-base text-foreground sm:text-xs"
         />
       </label>
       {error && <p className="text-sm text-red-400">{error}</p>}

@@ -444,11 +444,13 @@ function ReviewMoves({
   const move = (i: number) => (
     <button
       onClick={() => onSelect(i + 1)}
-      onMouseEnter={(e) => {
+      // Mouse only: a tap would open the popup with nothing to close it, stuck over the page as it scrolls.
+      onPointerEnter={(e) => {
+        if (e.pointerType !== "mouse") return;
         const r = e.currentTarget.getBoundingClientRect();
         setHover({ i, left: Math.min(r.left, window.innerWidth - 296), top: r.bottom + 4 });
       }}
-      onMouseLeave={() => setHover(null)}
+      onPointerLeave={() => setHover(null)}
       data-current={i + 1 === ply || undefined}
       className={`flex items-center gap-1.5 rounded px-1.5 py-0.5 text-left ${i + 1 === ply ? "bg-surface-hover" : "hover:bg-surface"}`}
     >

@@ -45,7 +45,7 @@ export default async function GamesPage({ searchParams }: PageProps<"/games">) {
     if (p > 0) q.set("page", String(p));
     return `/games?${q}`;
   };
-  const input = "rounded bg-surface px-2 py-1.5 text-sm outline-none focus:ring-2 focus:ring-accent";
+  const input = "rounded bg-surface px-2 py-1.5 text-base outline-none focus:ring-2 focus:ring-accent sm:text-sm";
 
   return (
     <main className="mx-auto flex w-full max-w-5xl flex-1 flex-col gap-4 p-4">
@@ -109,26 +109,41 @@ export default async function GamesPage({ searchParams }: PageProps<"/games">) {
               </tr>
             </thead>
             <tbody>
-              {games.map((g) => (
-                <tr key={g.id} className="relative border-t border-surface hover:bg-surface-hover">
-                  <td className="px-3 py-1.5 whitespace-nowrap">
-                    <Link href={`/games/${g.id}`} className="after:absolute after:inset-0">
-                      {g.white}
+              {games.map((g) => {
+                // Every cell links to the game, so the whole row is clickable; only the first is a tab stop.
+                // (An overlay link stretched over a `relative` row escapes the row on some mobile browsers
+                // and covers the whole page, search form included.)
+                const cell = (className: string, children: React.ReactNode, first = false) => (
+                  <td>
+                    <Link href={`/games/${g.id}`} tabIndex={first ? undefined : -1} className={`block px-3 py-1.5 ${className}`}>
+                      {children}
                     </Link>
-                    {g.whiteElo && <span className="ml-1 text-foreground/50">{g.whiteElo}</span>}
                   </td>
-                  <td className="px-3 py-1.5 whitespace-nowrap">
-                    {g.black}
-                    {g.blackElo && <span className="ml-1 text-foreground/50">{g.blackElo}</span>}
-                  </td>
-                  <td className="px-3 py-1.5 font-mono whitespace-nowrap">{g.result.replace("1/2", "½")}</td>
-                  <td className="px-3 py-1.5 font-mono">{Math.ceil(g.plies / 2)}</td>
-                  <td className="max-w-96 truncate px-3 py-1.5" title={g.event ?? undefined}>
-                    {g.event}
-                  </td>
-                  <td className="px-3 py-1.5 font-mono">{g.year}</td>
-                </tr>
-              ))}
+                );
+                return (
+                  <tr key={g.id} className="border-t border-surface hover:bg-surface-hover">
+                    {cell(
+                      "whitespace-nowrap",
+                      <>
+                        {g.white}
+                        {g.whiteElo && <span className="ml-1 text-foreground/50">{g.whiteElo}</span>}
+                      </>,
+                      true,
+                    )}
+                    {cell(
+                      "whitespace-nowrap",
+                      <>
+                        {g.black}
+                        {g.blackElo && <span className="ml-1 text-foreground/50">{g.blackElo}</span>}
+                      </>,
+                    )}
+                    {cell("font-mono whitespace-nowrap", g.result.replace("1/2", "½"))}
+                    {cell("font-mono", Math.ceil(g.plies / 2))}
+                    {cell("max-w-96 truncate", <span title={g.event ?? undefined}>{g.event}</span>)}
+                    {cell("font-mono", g.year)}
+                  </tr>
+                );
+              })}
             </tbody>
           </table>
         </div>
