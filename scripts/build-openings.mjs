@@ -1,7 +1,8 @@
 // Builds public/openings.json from lichess-org/chess-openings (CC0).
-// Output: { [epd]: { name?, eco?, next: { [san]: epd } } }, keyed by position (first four FEN
-// fields) so transpositions share a node. `name`/`eco` are set where a named line ends;
-// other nodes are intermediate positions on the way to one.
+// Output: { [epd]: { name?, eco?, moves?, next: { [san]: epd } } }, keyed by position (first four
+// FEN fields) so transpositions share a node. `name`/`eco`/`moves` are set where a named line ends,
+// `moves` keeping the line's own move order (space-separated SAN); other nodes are intermediate
+// positions on the way to one.
 // Usage: node scripts/build-openings.mjs
 import { Chess } from "chess.js";
 import { writeFileSync, mkdirSync } from "node:fs";
@@ -22,17 +23,20 @@ for (const file of ["a", "b", "c", "d", "e"]) {
     const [eco, name, pgn] = row.split("\t");
     const chess = new Chess();
     let from = node(epd(chess));
+    const moves = [];
     for (const san of pgn.split(/\s+/).filter((t) => !/^\d+\.+$/.test(t))) {
       const { san: canonical } = chess.move(san); // throws on an illegal move
       const to = epd(chess);
       from.next[canonical] = to;
       from = node(to);
+      moves.push(canonical);
     }
     if (from.name) {
       duplicates++; // two lines reach the same position: keep the first
     } else {
       from.name = name;
       from.eco = eco;
+      from.moves = moves.join(" ");
     }
     lines++;
   }

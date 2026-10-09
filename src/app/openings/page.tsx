@@ -12,14 +12,15 @@ import { fetchExplorer, type Explorer, type TopGame } from "@/lib/explorer";
 import { playMoveSound } from "@/lib/sounds";
 
 const LAST_MOVE = "rgba(255,255,51,.4)";
-const MAX_RESULTS = 100;
+const MAX_VARIATIONS = 10;
 
 export default function OpeningsPage() {
   const [db, setDb] = useState<OpeningDb | null>(null);
   const [moves, setMoves] = useState<string[]>([]);
   const [ply, setPly] = useState(0);
   const [flipped, setFlipped] = useState(false);
-  const [tab, setTab] = useState<"next" | "browse">("next");
+  const [tab, setTab] = useState<"next" | "openings">("next");
+  const [picked, setPicked] = useState<Line | null>(null);
 
   const [stats, setStats] = useState<{ fen: string; data: Explorer } | null>(null);
 
@@ -72,10 +73,11 @@ export default function OpeningsPage() {
     } catch {}
   }
 
-  function playLine(line: Line) {
+  // Loads a variation at its first move, to be stepped through with the move buttons.
+  function pickLine(line: Line) {
     setMoves(line.moves);
-    setPly(line.moves.length);
-    setTab("next");
+    setPly(0);
+    setPicked(line);
   }
 
   useEffect(() => {
@@ -150,13 +152,13 @@ export default function OpeningsPage() {
       </div>
       <MoveList moves={moves} ply={ply} onSelect={setPly} />
       <div className="flex gap-1 border-b border-surface">
-        {(["next", "browse"] as const).map((t) => (
+        {(["next", "openings"] as const).map((t) => (
           <button
             key={t}
             onClick={() => setTab(t)}
             className={`px-3 py-1.5 text-sm font-semibold ${tab === t ? "border-b-2 border-accent" : "text-foreground/60"}`}
           >
-            {t === "next" ? "Next moves" : "Browse"}
+            {t === "next" ? "Next moves" : "Openings"}
           </button>
         ))}
       </div>
@@ -173,7 +175,7 @@ export default function OpeningsPage() {
             {explorer && explorer.topGames.length > 0 && <TopGames games={explorer.topGames} />}
           </>
         ) : (
-          <Browse db={db} onPick={playLine} />
+          <Openings db={db} picked={picked} onPick={pickLine} />
         ))}
     </>
   );
@@ -223,34 +225,56 @@ function TopGames({ games }: { games: TopGame[] }) {
   );
 }
 
-// All named openings: grouped by family, or a flat list while filtering.
-function Browse({ db, onPick }: { db: OpeningDb; onPick: (line: Line) => void }) {
-  const lines = useMemo(() => buildLines(db), [db]);
-  const families = useMemo(() => {
-    const map = new Map<string, Line[]>();
-    for (const line of lines) {
-      const f = family(line.name);
-      map.set(f, [...(map.get(f) ?? []), line]);
+type Variation = { name: string; line: Line; count: number };
+
+// Openings grouped by family, each with its variations: the first part of the name after the
+// family ("Najdorf Variation" in "Sicilian Defense: Najdorf Variation, English Attack"), ranked by
+// how many named lines they contain. A variation plays its shortest line carrying exactly its name.
+function groupVariations(lines: Line[]): [string, Variation[]][] {
+  const families = new Map<string, Map<string, Variation>>();
+  for (const line of lines) {
+    const f = family(line.name);
+    const name = line.name.slice(f.length + 2).split(",")[0];
+    const variations = families.get(f) ?? families.set(f, new Map()).get(f)!;
+    const v = variations.get(name);
+    if (!v) variations.set(name, { name, line, count: 1 });
+    else {
+      v.count++;
+      // Prefer a line named exactly after the variation, then the shortest.
+      const exact = (l: Line) => +(l.name === (name ? `${f}: ${name}` : f));
+      if ((exact(line) - exact(v.line) || v.line.moves.length - line.moves.length) > 0) v.line = line;
     }
-    return [...map].sort(([a], [b]) => a.localeCompare(b));
-  }, [lines]);
+  }
+  // Main line first, then by number of named lines.
+  const rank = (a: Variation, b: Variation) => +!b.name - +!a.name || b.count - a.count || a.name.localeCompare(b.name);
+  return [...families]
+    .map(([f, m]): [string, Variation[]] => [f, [...m.values()].sort(rank)])
+    .sort(([a], [b]) => a.localeCompare(b));
+}
+
+// Names of openings with games in the database; null when unavailable (then every games link shows).
+let withGames: Promise<string[] | null> | null = null;
+const loadWithGames = () =>
+  (withGames ??= fetch("/api/openings")
+    .then((r) => (r.ok ? (r.json() as Promise<string[]>) : null))
+    .catch(() => null));
+
+// All opening families, each with a picker of its main variations; picking one loads it on the board.
+function Openings({ db, picked, onPick }: { db: OpeningDb; picked: Line | null; onPick: (line: Line) => void }) {
+  const families = useMemo(() => groupVariations(buildLines(db)), [db]);
   const [filter, setFilter] = useState("");
-  const [open, setOpen] = useState<string | null>(null);
+  const [gameNames, setGameNames] = useState<string[] | null>(null);
+
+  useEffect(() => {
+    loadWithGames().then(setGameNames);
+  }, []);
 
   const q = filter.trim().toLowerCase();
-  const matches = q ? lines.filter((l) => l.name.toLowerCase().includes(q) || l.eco.toLowerCase() === q) : [];
-
-  const item = (line: Line) => (
-    <li key={line.epd}>
-      <button
-        onClick={() => onPick(line)}
-        className="flex w-full items-baseline gap-2 rounded px-2 py-1 text-left text-sm hover:bg-surface-hover"
-      >
-        <span className="shrink-0 font-mono text-xs text-foreground/50">{line.eco}</span>
-        {line.name}
-      </button>
-    </li>
-  );
+  const rows = families.flatMap(([name, variations]) => {
+    if (!q || name.toLowerCase().includes(q)) return [{ name, variations: variations.slice(0, MAX_VARIATIONS) }];
+    const matches = variations.filter((v) => v.name.toLowerCase().includes(q) || v.line.eco.toLowerCase() === q);
+    return matches.length ? [{ name, variations: matches }] : [];
+  });
 
   return (
     <div className="flex flex-col gap-2">
@@ -260,32 +284,47 @@ function Browse({ db, onPick }: { db: OpeningDb; onPick: (line: Line) => void })
         placeholder="Filter by name or ECO…"
         className="rounded bg-surface px-2 py-1.5 text-sm outline-none focus:ring-2 focus:ring-accent"
       />
-      {q ? (
-        <ul>
-          {matches.slice(0, MAX_RESULTS).map(item)}
-          {matches.length > MAX_RESULTS && (
-            <li className="px-2 py-1 text-sm text-foreground/60">
-              {matches.length - MAX_RESULTS} more: refine the filter.
+      <ul className="flex flex-col gap-1">
+        {rows.map(({ name, variations }) => {
+          const current = picked && family(picked.name) === name ? picked : null;
+          return (
+            <li
+              key={name}
+              className={`flex flex-col gap-1 rounded px-2 py-1 text-sm ${current ? "bg-surface" : ""}`}
+            >
+              <div className="flex items-center gap-2">
+                <span className="min-w-0 flex-1 font-semibold">{name}</span>
+                <select
+                  value={current?.epd ?? ""}
+                  onChange={(e) => onPick(variations.find((v) => v.line.epd === e.target.value)!.line)}
+                  className="w-36 shrink-0 rounded bg-surface px-1 py-1 text-sm"
+                >
+                  <option value="" disabled>
+                    Variation…
+                  </option>
+                  {current && !variations.some((v) => v.line.epd === current.epd) && (
+                    <option value={current.epd}>{current.name}</option>
+                  )}
+                  {variations.map((v) => (
+                    <option key={v.line.epd} value={v.line.epd}>
+                      {v.name || "Main line"}
+                    </option>
+                  ))}
+                </select>
+              </div>
+              {current && (!gameNames || gameNames.some((n) => n.includes(current.name))) && (
+                <Link
+                  href={`/games?opening=${encodeURIComponent(current.name)}`}
+                  className="text-accent hover:underline"
+                >
+                  Games in this variation →
+                </Link>
+              )}
             </li>
-          )}
-          {matches.length === 0 && <li className="px-2 py-1 text-sm text-foreground/60">No matches.</li>}
-        </ul>
-      ) : (
-        <ul>
-          {families.map(([name, group]) => (
-            <li key={name}>
-              <button
-                onClick={() => setOpen(open === name ? null : name)}
-                className="flex w-full justify-between rounded px-2 py-1 text-left text-sm font-semibold hover:bg-surface-hover"
-              >
-                {name}
-                <span className="font-normal text-foreground/50">{group.length}</span>
-              </button>
-              {open === name && <ul className="ml-3">{group.map(item)}</ul>}
-            </li>
-          ))}
-        </ul>
-      )}
+          );
+        })}
+        {rows.length === 0 && <li className="px-2 py-1 text-sm text-foreground/60">No matches.</li>}
+      </ul>
     </div>
   );
 }

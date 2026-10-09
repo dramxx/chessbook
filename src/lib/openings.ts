@@ -1,5 +1,5 @@
 // Opening book built by scripts/build-openings.mjs: positions keyed by EPD (first four FEN fields).
-export type OpeningNode = { name?: string; eco?: string; next: Record<string, string> };
+export type OpeningNode = { name?: string; eco?: string; moves?: string; next: Record<string, string> };
 export type OpeningDb = Record<string, OpeningNode>;
 export type Line = { epd: string; name: string; eco: string; moves: string[] };
 
@@ -14,7 +14,7 @@ export function loadOpenings() {
   return (cache ??= fetch("/openings.json").then((r) => r.json() as Promise<OpeningDb>));
 }
 
-// Every named position with the shortest move sequence reaching it, sorted by ECO then name.
+// Every named position with the move order of its book line, sorted by ECO then name.
 export function buildLines(db: OpeningDb): Line[] {
   const lines: Line[] = [];
   const seen = new Set([START_EPD]);
@@ -23,7 +23,7 @@ export function buildLines(db: OpeningDb): Line[] {
     const nextQueue: [string, string[]][] = [];
     for (const [key, moves] of queue) {
       const node = db[key];
-      if (node.name) lines.push({ epd: key, name: node.name, eco: node.eco!, moves });
+      if (node.name) lines.push({ epd: key, name: node.name, eco: node.eco!, moves: node.moves!.split(" ") });
       for (const [san, to] of Object.entries(node.next)) {
         if (seen.has(to)) continue;
         seen.add(to);

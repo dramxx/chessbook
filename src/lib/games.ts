@@ -110,3 +110,9 @@ export async function randomGame(minPlies: number): Promise<(GameRow & { moves: 
   }
   return null;
 }
+
+// Names of the openings at least one game is tagged with.
+export async function openingsWithGames(): Promise<string[]> {
+  const r = await db.execute("SELECT name FROM openings o WHERE EXISTS (SELECT 1 FROM games g WHERE g.opening = o.id)");
+  return r.rows.map((row) => row[0] as string);
+}
