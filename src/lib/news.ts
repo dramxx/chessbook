@@ -109,6 +109,8 @@ const STREAMERS = [
   "dinabelenkaya",
   "gmbenjaminbok",
   "annarudolf",
+  "magnuscarlsen",
+  "alexandrabotez",
 ];
 
 type TwitchStream = { user_login: string; user_name: string; title: string; thumbnail_url: string; viewer_count: number; language: string; game_id: string };
