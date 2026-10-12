@@ -3,7 +3,7 @@
 import { useEffect, useEffectEvent, useMemo, useRef, useState } from "react";
 import Link from "next/link";
 import { Chess } from "chess.js";
-import { Board, type Arrow } from "@/components/Board";
+import { Board, resultBadges, type Arrow } from "@/components/Board";
 import { EvalBar } from "@/components/EvalBar";
 import { GameLayout } from "@/components/GameLayout";
 import { MoveList } from "@/components/MoveList";
@@ -431,6 +431,7 @@ export default function BotPage() {
           onPremove={setPremove}
           highlights={highlights}
           arrows={arrows}
+          badges={game?.result ? resultBadges(fen, game.result.score) : undefined}
         />
       }
       panel={panel}

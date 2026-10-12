@@ -3,7 +3,7 @@
 import { useCallback, useEffect, useEffectEvent, useMemo, useRef, useState } from "react";
 import Link from "next/link";
 import { Chess } from "chess.js";
-import { Board } from "@/components/Board";
+import { Board, resultBadges } from "@/components/Board";
 import { GameLayout } from "@/components/GameLayout";
 import { MoveList } from "@/components/MoveList";
 import { analysisHref } from "@/lib/analysis";
@@ -453,6 +453,7 @@ export default function PlayPage() {
             canPremove={playing && !myTurn}
             onPremove={setPremove}
             highlights={highlights}
+            badges={game?.result && ply === moves.length ? resultBadges(fen, game.result.score) : undefined}
           />
         }
         panel={

@@ -3,7 +3,7 @@
 import { use, useEffect, useMemo, useRef, useState } from "react";
 import Link from "next/link";
 import { Chess, type Move } from "chess.js";
-import { Board, type Arrow } from "@/components/Board";
+import { Board, resultBadges, type Arrow } from "@/components/Board";
 import { EvalBar } from "@/components/EvalBar";
 import { GameLayout } from "@/components/GameLayout";
 import { PositionAnalysis } from "@/components/PositionAnalysis";
@@ -207,6 +207,9 @@ function Review({ target }: { target: AnalysisTarget }) {
   const arrows: Arrow[] = bestUci ? [{ startSquare: bestUci.slice(0, 2), endSquare: bestUci.slice(2, 4), color: BEST_ARROW }] : [];
 
   const badge = last && current ? { square: last.to, ...LABELS[current.label], title: LABELS[current.label].name } : undefined;
+  // On the final position the kings show the result; it wins over a rating badge on the same square.
+  const results = ply === moves.length && result !== "*" ? resultBadges(fen, result) : [];
+  const badges = [...results, ...(badge && !results.some((r) => r.square === badge.square) ? [badge] : [])];
 
   const orientation = flipped ? "black" : "white";
   const analyzed = evals.filter(Boolean).length;
@@ -296,7 +299,7 @@ function Review({ target }: { target: AnalysisTarget }) {
           orientation={orientation}
         />
       }
-      board={<Board fen={fen} orientation={orientation} canMove={false} onMove={() => {}} highlights={highlights} arrows={arrows} badge={badge} />}
+      board={<Board fen={fen} orientation={orientation} canMove={false} onMove={() => {}} highlights={highlights} arrows={arrows} badges={badges} />}
       panel={panel}
     />
   );
