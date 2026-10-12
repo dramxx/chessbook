@@ -95,8 +95,23 @@ export async function fetchBroadcasts(limit = 8): Promise<Broadcast[]> {
 }
 
 const TWITCH_CHESS = "743"; // Twitch's game id for Chess
+const TWITCH_CHATTING = "509658"; // Just Chatting, where chess streamers often list their streams
+// Chess streamers shown when live in Chess or Just Chatting, not only in Chess (other games are left out).
+const STREAMERS = [
+  "akanemsko",
+  "gmhikaru",
+  "gothamchess",
+  "botezlive",
+  "chessbrah",
+  "annacramling",
+  "imrosen",
+  "chessnetwork",
+  "dinabelenkaya",
+  "gmbenjaminbok",
+  "annarudolf",
+];
 
-type TwitchStream = { user_login: string; user_name: string; title: string; thumbnail_url: string; viewer_count: number; language: string };
+type TwitchStream = { user_login: string; user_name: string; title: string; thumbnail_url: string; viewer_count: number; language: string; game_id: string };
 
 // Twitch lists live streams most watched first. Needs a Twitch app's TWITCH_CLIENT_ID and
 // TWITCH_CLIENT_SECRET; without them the section is left out.
@@ -111,12 +126,20 @@ export async function fetchStreams(limit = 8): Promise<Stream[]> {
     .then((r) => (r.ok ? (r.json() as Promise<{ access_token: string }>) : null))
     .catch(() => null);
   if (!auth) return [];
-  const res = await get(`https://api.twitch.tv/helix/streams?game_id=${TWITCH_CHESS}&first=${limit}`, {
-    "Client-Id": id,
-    Authorization: `Bearer ${auth.access_token}`,
-  });
-  const data = res && ((await res.json().catch(() => null)) as { data?: TwitchStream[] } | null);
-  return (data?.data ?? []).map((s) => ({
+  const headers = { "Client-Id": id, Authorization: `Bearer ${auth.access_token}` };
+  const streams = async (query: string) => {
+    const res = await get(`https://api.twitch.tv/helix/streams?${query}`, headers);
+    const data = res && ((await res.json().catch(() => null)) as { data?: TwitchStream[] } | null);
+    return data?.data ?? [];
+  };
+  const [chess, curated] = await Promise.all([
+    streams(`game_id=${TWITCH_CHESS}&first=${limit}`),
+    streams(STREAMERS.map((l) => `user_login=${l}`).join("&")),
+  ]);
+  const byLogin = new Map(chess.map((s) => [s.user_login, s]));
+  for (const s of curated) if (s.game_id === TWITCH_CHESS || s.game_id === TWITCH_CHATTING) byLogin.set(s.user_login, s);
+  const all = [...byLogin.values()].sort((a, b) => b.viewer_count - a.viewer_count).slice(0, limit);
+  return all.map((s) => ({
     user: s.user_name,
     title: s.title,
     url: `https://www.twitch.tv/${s.user_login}`,
