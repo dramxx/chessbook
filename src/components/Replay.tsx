@@ -3,7 +3,7 @@
 import { useEffect, useMemo, useRef, useState } from "react";
 import Link from "next/link";
 import { Chess } from "chess.js";
-import { Board } from "@/components/Board";
+import { Board, resultBadges } from "@/components/Board";
 import { EvalBar } from "@/components/EvalBar";
 import { GameLayout } from "@/components/GameLayout";
 import { MoveList } from "@/components/MoveList";
@@ -171,6 +171,7 @@ export function Replay({ game, initialPly = 0 }: { game: ReplayGame; initialPly?
           canMove={false}
           onMove={() => {}}
           highlights={highlights}
+          badges={ply === moves.length && game.result !== "*" ? resultBadges(fen, game.result) : undefined}
         />
       }
       panel={panel}
