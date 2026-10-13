@@ -1,0 +1,3403 @@
+{
+ "advance": [
+  {
+   "id": "advance-4-nf3",
+   "title": "4.Nf3",
+   "name": "Caro-Kann Defense: Advance Variation, Short Variation",
+   "moves": "e4 c6 d4 d5 e5 Bf5 Nf3 e6 Bd3 Bxd3 Qxd3 c5 c3 Nd7 O-O Ne7 Bg5 h6 Bh4 g5 Bg3 Nf5 Nbd2 h5",
+   "reach": 0.045,
+   "games": [
+    {
+     "id": 770217,
+     "ply": 16,
+     "white": "Gavritenkov, Sergei",
+     "black": "Tishin, Petr",
+     "year": 2016,
+     "result": "1/2-1/2"
+    }
+   ]
+  },
+  {
+   "id": "advance-4-nf3-5-be2",
+   "title": "4.Nf3 · 5.Be2",
+   "name": "Caro-Kann Defense: Advance Variation, Short Variation",
+   "moves": "e4 c6 d4 d5 e5 Bf5 Nf3 e6 Be2 Nd7 O-O h6 Nbd2 Ne7 Nb3 g5 a4 Bg7 a5 Qc7",
+   "reach": 0.01,
+   "games": [
+    {
+     "id": 624080,
+     "ply": 20,
+     "white": "Dominguez Perez, Leinier",
+     "black": "Vachier-Lagrave, Maxime",
+     "year": 2022,
+     "result": "0-1"
+    },
+    {
+     "id": 623030,
+     "ply": 20,
+     "white": "Donchenko, Alexander",
+     "black": "Rausis, Igors",
+     "year": 2020,
+     "result": "1-0"
+    },
+    {
+     "id": 623982,
+     "ply": 20,
+     "white": "Velilla Velasco, Francisco de Asís",
+     "black": "Wunderlich, Daniel",
+     "year": 2012,
+     "result": "1/2-1/2"
+    }
+   ]
+  },
+  {
+   "id": "advance-4-nf3-5-nc3",
+   "title": "4.Nf3 · 5.Nc3",
+   "name": "Caro-Kann Defense: Advance Variation, Short Variation",
+   "moves": "e4 c6 d4 d5 e5 Bf5 Nf3 e6 Nc3 c5 Be3 c4 Be2 Nc6 O-O a6",
+   "reach": 0.005,
+   "games": [
+    {
+     "id": 698601,
+     "ply": 9,
+     "white": "Vosahlík, Jirí",
+     "black": "Brodda, Wolfgang",
+     "year": 2010,
+     "result": "0-1"
+    }
+   ]
+  },
+  {
+   "id": "advance-4-nf3-5-c3",
+   "title": "4.Nf3 · 5.c3",
+   "name": "Caro-Kann Defense: Advance Variation, Short Variation",
+   "moves": "e4 c6 d4 d5 e5 Bf5 Nf3 e6 c3 Nd7 Bd3 Ne7 O-O c5",
+   "reach": 0.004,
+   "games": [
+    {
+     "id": 698258,
+     "ply": 12,
+     "white": "Sulskis, Sarunas",
+     "black": "Dautov, Rustem",
+     "year": 1998,
+     "result": "1/2-1/2"
+    },
+    {
+     "id": 622984,
+     "ply": 12,
+     "white": "Sulskis, Sarunas",
+     "black": "Butnorius, Algimantas",
+     "year": 1999,
+     "result": "0-1"
+    }
+   ]
+  },
+  {
+   "id": "advance-4-nf3-5-c4",
+   "title": "4.Nf3 · 5.c4",
+   "name": "Caro-Kann Defense: Advance Variation, Short Variation",
+   "moves": "e4 c6 d4 d5 e5 Bf5 Nf3 e6 c4 Bb4+ Nc3 Ne7 a3 Bxc3+ bxc3 c5",
+   "reach": 0.003,
+   "games": [
+    {
+     "id": 698283,
+     "ply": 15,
+     "white": "Nevednichy, Vladislav",
+     "black": "Indjic, Aleksandar",
+     "year": 2022,
+     "result": "1/2-1/2"
+    },
+    {
+     "id": 770863,
+     "ply": 15,
+     "white": "Geller, Jakov",
+     "black": "Shomoev, Anton",
+     "year": 2017,
+     "result": "1-0"
+    }
+   ]
+  },
+  {
+   "id": "advance-4-bd3",
+   "title": "4.Bd3",
+   "name": "Caro-Kann Defense: Advance Variation",
+   "moves": "e4 c6 d4 d5 e5 Bf5 Bd3 Bxd3 Qxd3 e6 Nf3",
+   "reach": 0.042,
+   "transposesTo": "advance-4-nf3",
+   "games": [
+    {
+     "id": 624554,
+     "ply": 11,
+     "white": "Feoktistov, Alexey A.",
+     "black": "Danin, Alexandre",
+     "year": 2007,
+     "result": "1/2-1/2"
+    },
+    {
+     "id": 551055,
+     "ply": 11,
+     "white": "Fernandez Guillen, Ernesto J.",
+     "black": "Barseghyan, Harutyun",
+     "year": 2025,
+     "result": "1/2-1/2"
+    },
+    {
+     "id": 770217,
+     "ply": 11,
+     "white": "Gavritenkov, Sergei",
+     "black": "Tishin, Petr",
+     "year": 2016,
+     "result": "1/2-1/2"
+    }
+   ]
+  },
+  {
+   "id": "advance-4-bd3-6-f4",
+   "title": "4.Bd3 · 6.f4",
+   "name": "Caro-Kann Defense: Advance Variation",
+   "moves": "e4 c6 d4 d5 e5 Bf5 Bd3 Bxd3 Qxd3 e6 f4 c5 c3 Nh6 Nf3 Nc6 O-O Qb6 Kh1 Rc8",
+   "reach": 0.008,
+   "games": [
+    {
+     "id": 624575,
+     "ply": 10,
+     "white": "Vachier-Lagrave, Maxime",
+     "black": "Fedoseev, Vladimir",
+     "year": 2026,
+     "result": "1-0"
+    },
+    {
+     "id": 771703,
+     "ply": 10,
+     "white": "Matlakov, Maxim",
+     "black": "Le, Quang Liem",
+     "year": 2018,
+     "result": "1-0"
+    },
+    {
+     "id": 697613,
+     "ply": 10,
+     "white": "Caruana, Fabiano",
+     "black": "Can, Isik",
+     "year": 2026,
+     "result": "1-0"
+    }
+   ]
+  },
+  {
+   "id": "advance-4-bd3-6-ne2",
+   "title": "4.Bd3 · 6.Ne2",
+   "name": "Caro-Kann Defense: Advance Variation",
+   "moves": "e4 c6 d4 d5 e5 Bf5 Bd3 Bxd3 Qxd3 e6 Ne2 c5 c3 Nc6 O-O Qb6 a3 Nge7 b4 cxd4 cxd4 Nf5 Be3 Be7",
+   "reach": 0.007,
+   "games": [
+    {
+     "id": 552370,
+     "ply": 19,
+     "white": "Ansat, Aldiyar",
+     "black": "Babazada, Khazar",
+     "year": 2026,
+     "result": "1/2-1/2"
+    }
+   ]
+  },
+  {
+   "id": "advance-4-bd3-6-c3",
+   "title": "4.Bd3 · 6.c3",
+   "name": "Caro-Kann Defense: Advance Variation",
+   "moves": "e4 c6 d4 d5 e5 Bf5 Bd3 Bxd3 Qxd3 e6 c3 c5 Nf3",
+   "reach": 0.004,
+   "transposesTo": "advance-4-nf3",
+   "games": [
+    {
+     "id": 624471,
+     "ply": 12,
+     "white": "Boruchovsky, Avital",
+     "black": "Fedoseev, Vladimir",
+     "year": 2025,
+     "result": "1-0"
+    }
+   ]
+  },
+  {
+   "id": "advance-4-h4",
+   "title": "4.h4",
+   "name": "Caro-Kann Defense: Advance Variation, Tal Variation",
+   "moves": "e4 c6 d4 d5 e5 Bf5 h4 h5 Bd3 Bxd3 Qxd3 Qa5+ Nd2 e6 Nf3 Nh6 O-O Nf5 c4 Be7 g3 O-O",
+   "reach": 0.024,
+   "games": [
+    {
+     "id": 624843,
+     "ply": 22,
+     "white": "Zhao, Zong-Yuan",
+     "black": "Le, Quang Liem",
+     "year": 2019,
+     "result": "1/2-1/2"
+    },
+    {
+     "id": 772120,
+     "ply": 22,
+     "white": "Bellahcene, Bilel",
+     "black": "Donchenko, Alexander",
+     "year": 2019,
+     "result": "1/2-1/2"
+    },
+    {
+     "id": 698042,
+     "ply": 22,
+     "white": "Kadric, Denis",
+     "black": "Shimanov, Aleksandr",
+     "year": 2017,
+     "result": "1/2-1/2"
+    }
+   ]
+  },
+  {
+   "id": "advance-4-h4-7-bd2",
+   "title": "4.h4 · 7.Bd2",
+   "name": "Caro-Kann Defense: Advance Variation, Tal Variation",
+   "moves": "e4 c6 d4 d5 e5 Bf5 h4 h5 Bd3 Bxd3 Qxd3 Qa5+ Bd2 Qa6 Qxa6 Nxa6 Nf3 e6",
+   "reach": 0.003,
+   "games": [
+    {
+     "id": 770593,
+     "ply": 18,
+     "white": "Munguntuul, Batkhuyag",
+     "black": "Dzagnidze, Nana",
+     "year": 2018,
+     "result": "0-1"
+    }
+   ]
+  },
+  {
+   "id": "advance-4-h4-7-c3",
+   "title": "4.h4 · 7.c3",
+   "name": "Caro-Kann Defense: Advance Variation, Tal Variation",
+   "moves": "e4 c6 d4 d5 e5 Bf5 h4 h5 Bd3 Bxd3 Qxd3 Qa5+ c3 e6 Nf3 Qa6 Qxa6 Nxa6",
+   "reach": 0.002,
+   "games": [
+    {
+     "id": 698045,
+     "ply": 18,
+     "white": "Kuru, Atilla",
+     "black": "Romanov, Egor S.",
+     "year": 2025,
+     "result": "0-1"
+    },
+    {
+     "id": 772073,
+     "ply": 18,
+     "white": "Petriashvili, Nikoloz",
+     "black": "Paichadze, Luka",
+     "year": 2025,
+     "result": "1/2-1/2"
+    },
+    {
+     "id": 698053,
+     "ply": 18,
+     "white": "Biedermann, Thomas",
+     "black": "Ballow, John",
+     "year": 2016,
+     "result": "1/2-1/2"
+    }
+   ]
+  },
+  {
+   "id": "advance-4-h4-5-bg5",
+   "title": "4.h4 · 5.Bg5",
+   "name": "Caro-Kann Defense: Advance Variation, Tal Variation",
+   "moves": "e4 c6 d4 d5 e5 Bf5 h4 h5 Bg5 Qb6 Bd3 Bxd3 Qxd3 e6 Nd2 c5 c4 Qxb2 Rb1 Qxd4 Qxd4 cxd4 cxd5 f6",
+   "reach": 0.005,
+   "games": [
+    {
+     "id": 772198,
+     "ply": 24,
+     "white": "Soltanici, Ruslan",
+     "black": "Vedmediuc, Serghei",
+     "year": 2017,
+     "result": "0-1"
+    }
+   ]
+  },
+  {
+   "id": "advance-4-h4-5-c4",
+   "title": "4.h4 · 5.c4",
+   "name": "Caro-Kann Defense: Advance Variation, Tal Variation",
+   "moves": "e4 c6 d4 d5 e5 Bf5 h4 h5 c4 e6 Nc3 Ne7 Bg5 dxc4 Bxc4 Nd7 Nge2 f6 exf6 gxf6 Be3 Nb6",
+   "reach": 0.003,
+   "games": [
+    {
+     "id": 698016,
+     "ply": 22,
+     "white": "Balogh, Csaba",
+     "black": "Nisipeanu, Liviu-Dieter",
+     "year": 2008,
+     "result": "1/2-1/2"
+    },
+    {
+     "id": 772121,
+     "ply": 22,
+     "white": "Nunn, John D M",
+     "black": "Karpov, Anatoly",
+     "year": 1995,
+     "result": "0-1"
+    },
+    {
+     "id": 770752,
+     "ply": 22,
+     "white": "Magem Badals, Jordi",
+     "black": "Karpov, Anatoly",
+     "year": 1996,
+     "result": "0-1"
+    }
+   ]
+  },
+  {
+   "id": "advance-4-f4",
+   "title": "4.f4",
+   "name": "Caro-Kann Defense: Advance Variation",
+   "moves": "e4 c6 d4 d5 e5 Bf5 f4 e6 Nf3 c5 c3 Nc6 Bb5 Qb6 Bxc6+ bxc6 O-O h5",
+   "reach": 0.016,
+   "games": [
+    {
+     "id": 325895,
+     "ply": 12,
+     "white": "Zvjaginsev, Vadim",
+     "black": "Khairullin, Ildar",
+     "year": 2010,
+     "result": "1/2-1/2"
+    },
+    {
+     "id": 696876,
+     "ply": 12,
+     "white": "Pruijssers, Roeland",
+     "black": "Swinkels, Robin",
+     "year": 2001,
+     "result": "1-0"
+    }
+   ]
+  },
+  {
+   "id": "advance-4-f4-5-bd3",
+   "title": "4.f4 · 5.Bd3",
+   "name": "Caro-Kann Defense: Advance Variation",
+   "moves": "e4 c6 d4 d5 e5 Bf5 f4 e6 Bd3 Nh6 Nf3 c5 c3 Nc6 O-O Qb6",
+   "reach": 0.003,
+   "games": [
+    {
+     "id": 770848,
+     "ply": 8,
+     "white": "Morozevich, Alexander",
+     "black": "Svidler, Peter",
+     "year": 2005,
+     "result": "1/2-1/2"
+    },
+    {
+     "id": 622963,
+     "ply": 8,
+     "white": "Morozevich, Alexander",
+     "black": "Ivanchuk, Vasyl",
+     "year": 2004,
+     "result": "0-1"
+    },
+    {
+     "id": 698228,
+     "ply": 8,
+     "white": "Van den Doel, Erik",
+     "black": "Bareev, Evgeny",
+     "year": 2005,
+     "result": "1/2-1/2"
+    }
+   ]
+  },
+  {
+   "id": "advance-4-g4",
+   "title": "4.g4",
+   "name": "Caro-Kann Defense: Advance Variation, Bayonet Attack",
+   "moves": "e4 c6 d4 d5 e5 Bf5 g4 Be4 f3 Bg6 h4 h5 e6 Qd6 exf7+ Bxf7 Ne2 hxg4 fxg4 Nd7 Bf4 e5 dxe5 Nxe5 Bg2 Qb4+",
+   "reach": 0.015,
+   "games": [
+    {
+     "id": 696870,
+     "ply": 16,
+     "white": "Vallejo Pons, Francisco",
+     "black": "So, Wesley",
+     "year": 2017,
+     "result": "0-1"
+    }
+   ]
+  },
+  {
+   "id": "advance-4-g4-7-g5",
+   "title": "4.g4 · 7.g5",
+   "name": "Caro-Kann Defense: Advance Variation, Bayonet Attack",
+   "moves": "e4 c6 d4 d5 e5 Bf5 g4 Be4 f3 Bg6 h4 h5 g5 e6 Bd3 c5",
+   "reach": 0.003,
+   "games": [
+    {
+     "id": 696870,
+     "ply": 12,
+     "white": "Vallejo Pons, Francisco",
+     "black": "So, Wesley",
+     "year": 2017,
+     "result": "0-1"
+    },
+    {
+     "id": 696866,
+     "ply": 12,
+     "white": "Bellahcene, Bilel",
+     "black": "Nyzhnyk, Illya",
+     "year": 2022,
+     "result": "0-1"
+    },
+    {
+     "id": 772352,
+     "ply": 12,
+     "white": "Bellahcene, Bilel",
+     "black": "Fridman, Daniel",
+     "year": 2021,
+     "result": "0-1"
+    }
+   ]
+  },
+  {
+   "id": "advance-4-nc3",
+   "title": "4.Nc3",
+   "name": "Caro-Kann Defense: Advance Variation, Van der Wiel Attack",
+   "moves": "e4 c6 d4 d5 e5 Bf5 Nc3 e6 g4 Bg6 Nge2 c5 h4 h5 Nf4 Bh7 Nxh5 Nc6 Bb5 cxd4 Qxd4 Ne7 Bg5 a6",
+   "reach": 0.013,
+   "games": [
+    {
+     "id": 552270,
+     "ply": 24,
+     "white": "Ehlvest, Jaan",
+     "black": "Bareev, Evgeny",
+     "year": 2001,
+     "result": "0-1"
+    },
+    {
+     "id": 771407,
+     "ply": 24,
+     "white": "Zezulkin, Jurij",
+     "black": "Pedersen, Steffen",
+     "year": 2001,
+     "result": "1-0"
+    }
+   ]
+  },
+  {
+   "id": "advance-4-nc3-5-nf3",
+   "title": "4.Nc3 · 5.Nf3",
+   "name": "Caro-Kann Defense: Advance Variation, Van der Wiel Attack",
+   "moves": "e4 c6 d4 d5 e5 Bf5 Nc3 e6 Nf3",
+   "reach": 0.003,
+   "transposesTo": "advance-4-nf3-5-nc3",
+   "games": [
+    {
+     "id": 698601,
+     "ply": 9,
+     "white": "Vosahlík, Jirí",
+     "black": "Brodda, Wolfgang",
+     "year": 2010,
+     "result": "0-1"
+    }
+   ]
+  },
+  {
+   "id": "advance-4-c3",
+   "title": "4.c3",
+   "name": "Caro-Kann Defense: Advance Variation",
+   "moves": "e4 c6 d4 d5 e5 Bf5 c3 e6 Bd3 Ne7 Nf3 Bxd3 Qxd3 Nf5 O-O c5",
+   "reach": 0.013,
+   "games": [
+    {
+     "id": 623874,
+     "ply": 9,
+     "white": "Fernandez Guillen, Ernesto J.",
+     "black": "Salgado Lopez, Ivan",
+     "year": 2022,
+     "result": "1-0"
+    },
+    {
+     "id": 696902,
+     "ply": 9,
+     "white": "Trembeckí, Lubos",
+     "black": "Gburek, Jürgen",
+     "year": 2010,
+     "result": "1/2-1/2"
+    }
+   ]
+  },
+  {
+   "id": "advance-4-c3-5-nf3",
+   "title": "4.c3 · 5.Nf3",
+   "name": "Caro-Kann Defense: Advance Variation",
+   "moves": "e4 c6 d4 d5 e5 Bf5 c3 e6 Nf3",
+   "reach": 0.004,
+   "transposesTo": "advance-4-nf3-5-c3",
+   "games": [
+    {
+     "id": 551477,
+     "ply": 9,
+     "white": "Nepomniachtchi, Ian",
+     "black": "Navara, David",
+     "year": 2017,
+     "result": "1/2-1/2"
+    },
+    {
+     "id": 770287,
+     "ply": 9,
+     "white": "Nepomniachtchi, Ian",
+     "black": "Fedoseev, Vladimir",
+     "year": 2019,
+     "result": "1-0"
+    },
+    {
+     "id": 770360,
+     "ply": 9,
+     "white": "Grischuk, Alexander",
+     "black": "Matlakov, Maxim",
+     "year": 2021,
+     "result": "1-0"
+    }
+   ]
+  },
+  {
+   "id": "advance-4-c4",
+   "title": "4.c4",
+   "name": "Caro-Kann Defense: Advance Variation",
+   "moves": "e4 c6 d4 d5 e5 Bf5 c4 e6 Nc3 Ne7 Nf3 Nd7",
+   "reach": 0.008,
+   "games": [
+    {
+     "id": 552070,
+     "ply": 12,
+     "white": "Yu, Yangyi",
+     "black": "Ghaem Maghami, Ehsan",
+     "year": 2012,
+     "result": "1/2-1/2"
+    },
+    {
+     "id": 698232,
+     "ply": 12,
+     "white": "Bernadskiy, Vitaliy",
+     "black": "Sumets, Andrey",
+     "year": 2022,
+     "result": "1/2-1/2"
+    },
+    {
+     "id": 623409,
+     "ply": 12,
+     "white": "Turner, Matthew J",
+     "black": "Antal, Gergely",
+     "year": 2015,
+     "result": "1/2-1/2"
+    }
+   ]
+  }
+ ],
+ "classical": [
+  {
+   "id": "classical-5-ng3",
+   "title": "5.Ng3",
+   "name": "Caro-Kann Defense: Classical Variation, Lobron System",
+   "moves": "e4 c6 d4 d5 Nc3 dxe4 Nxe4 Bf5 Ng3 Bg6 Nf3 Nd7 h4 h6 h5 Bh7 Bd3 Bxd3 Qxd3 e6 Bd2 Ngf6 O-O-O Be7 Kb1 O-O Ne4 Nxe4",
+   "reach": 0.083,
+   "games": [
+    {
+     "id": 402634,
+     "ply": 28,
+     "white": "So, Wesley",
+     "black": "Navara, David",
+     "year": 2019,
+     "result": "1/2-1/2"
+    },
+    {
+     "id": 402865,
+     "ply": 28,
+     "white": "Karjakin, Sergey",
+     "black": "Gustafsson, Jan",
+     "year": 2012,
+     "result": "1-0"
+    },
+    {
+     "id": 120318,
+     "ply": 28,
+     "white": "Bruzon Batista, Lazaro",
+     "black": "So, Wesley",
+     "year": 2012,
+     "result": "1/2-1/2"
+    }
+   ]
+  },
+  {
+   "id": "classical-5-ng3-11-bf4",
+   "title": "5.Ng3 · 11.Bf4",
+   "name": "Caro-Kann Defense: Classical Variation, Spassky Variation",
+   "moves": "e4 c6 d4 d5 Nc3 dxe4 Nxe4 Bf5 Ng3 Bg6 Nf3 Nd7 h4 h6 h5 Bh7 Bd3 Bxd3 Qxd3 e6 Bf4 Qa5+ Bd2 Bb4 c3 Be7 c4 Qc7",
+   "reach": 0.004,
+   "games": [
+    {
+     "id": 327872,
+     "ply": 28,
+     "white": "Anand, Viswanathan",
+     "black": "Topalov, Veselin",
+     "year": 2008,
+     "result": "1/2-1/2"
+    },
+    {
+     "id": 553272,
+     "ply": 28,
+     "white": "Karjakin, Sergey",
+     "black": "Topalov, Veselin",
+     "year": 2008,
+     "result": "1/2-1/2"
+    },
+    {
+     "id": 480690,
+     "ply": 28,
+     "white": "Leko, Peter",
+     "black": "Ivanchuk, Vasyl",
+     "year": 2008,
+     "result": "0-1"
+    }
+   ]
+  },
+  {
+   "id": "classical-5-ng3-8-bd3",
+   "title": "5.Ng3 · 8.Bd3",
+   "name": "Caro-Kann Defense: Classical Variation",
+   "moves": "e4 c6 d4 d5 Nc3 dxe4 Nxe4 Bf5 Ng3 Bg6 Nf3 Nd7 h4 h6 Bd3 Bxd3 Qxd3 e6 Bf4 Qa5+ c3 Ngf6",
+   "reach": 0.003,
+   "games": [
+    {
+     "id": 625835,
+     "ply": 22,
+     "white": "Riazantsev, Alexander",
+     "black": "Sjugirov, Sanan",
+     "year": 2021,
+     "result": "1/2-1/2"
+    },
+    {
+     "id": 625142,
+     "ply": 22,
+     "white": "Grischuk, Alexander",
+     "black": "Daneshvar, Bardiya",
+     "year": 2023,
+     "result": "1-0"
+    },
+    {
+     "id": 700441,
+     "ply": 22,
+     "white": "Mamedov, Rauf",
+     "black": "Dvirnyy, Danyyil",
+     "year": 2021,
+     "result": "1/2-1/2"
+    }
+   ]
+  },
+  {
+   "id": "classical-5-ng3-7-bd3",
+   "title": "5.Ng3 · 7.Bd3",
+   "name": "Caro-Kann Defense: Classical Variation",
+   "moves": "e4 c6 d4 d5 Nc3 dxe4 Nxe4 Bf5 Ng3 Bg6 Nf3 Nd7 Bd3 e6 O-O Ngf6 Re1 Be7 c3 O-O",
+   "reach": 0.012,
+   "games": [
+    {
+     "id": 120245,
+     "ply": 20,
+     "white": "Bokros, Albert",
+     "black": "Kallai, Gabor",
+     "year": 2002,
+     "result": "1/2-1/2"
+    },
+    {
+     "id": 625530,
+     "ply": 20,
+     "white": "Stojanovic, Dalibor",
+     "black": "Ratkovic, Miloje",
+     "year": 2019,
+     "result": "1/2-1/2"
+    },
+    {
+     "id": 626285,
+     "ply": 20,
+     "white": "Quizon, Daniel",
+     "black": "Soham Kamotra",
+     "year": 2025,
+     "result": "1/2-1/2"
+    }
+   ]
+  },
+  {
+   "id": "classical-5-ng3-7-bd3-8-bxg6",
+   "title": "5.Ng3 · 7.Bd3 · 8.Bxg6",
+   "name": "Caro-Kann Defense: Classical Variation",
+   "moves": "e4 c6 d4 d5 Nc3 dxe4 Nxe4 Bf5 Ng3 Bg6 Nf3 Nd7 Bd3 e6 Bxg6 hxg6 Bf4 Qa5+",
+   "reach": 0.003,
+   "games": [
+    {
+     "id": 328117,
+     "ply": 17,
+     "white": "Lagno, Kateryna",
+     "black": "Gunina, Valentina",
+     "year": 2014,
+     "result": "1-0"
+    }
+   ]
+  },
+  {
+   "id": "classical-5-ng3-7-bc4",
+   "title": "5.Ng3 · 7.Bc4",
+   "name": "Caro-Kann Defense: Classical Variation",
+   "moves": "e4 c6 d4 d5 Nc3 dxe4 Nxe4 Bf5 Ng3 Bg6 Nf3 Nd7 Bc4 e6 O-O Ngf6 Re1 Be7 c3 O-O",
+   "reach": 0.006,
+   "games": [
+    {
+     "id": 626293,
+     "ply": 20,
+     "white": "Kovchan, Alexander",
+     "black": "Hera, Imre Jr.",
+     "year": 2019,
+     "result": "1/2-1/2"
+    },
+    {
+     "id": 772463,
+     "ply": 20,
+     "white": "Gallagher, Joseph G.",
+     "black": "Rausis, Igors",
+     "year": 1998,
+     "result": "1/2-1/2"
+    },
+    {
+     "id": 698899,
+     "ply": 20,
+     "white": "Gallagher, Joseph G.",
+     "black": "Kallai, Gabor",
+     "year": 1997,
+     "result": "1/2-1/2"
+    }
+   ]
+  },
+  {
+   "id": "classical-5-ng3-7-c3",
+   "title": "5.Ng3 · 7.c3",
+   "name": "Caro-Kann Defense: Classical Variation",
+   "moves": "e4 c6 d4 d5 Nc3 dxe4 Nxe4 Bf5 Ng3 Bg6 Nf3 Nd7 c3 e6 Bd3 Ngf6 O-O Be7",
+   "reach": 0.002,
+   "games": [
+    {
+     "id": 120131,
+     "ply": 17,
+     "white": "Galyas, Miklos",
+     "black": "Popov, Ivan",
+     "year": 2019,
+     "result": "1/2-1/2"
+    },
+    {
+     "id": 327083,
+     "ply": 17,
+     "white": "Stojanovic, Dalibor",
+     "black": "Ratkovic, Milovan",
+     "year": 2021,
+     "result": "1/2-1/2"
+    }
+   ]
+  },
+  {
+   "id": "classical-5-ng3-6-h4",
+   "title": "5.Ng3 · 6.h4",
+   "name": "Caro-Kann Defense: Classical Variation",
+   "moves": "e4 c6 d4 d5 Nc3 dxe4 Nxe4 Bf5 Ng3 Bg6 h4 h6 Nf3 Nd7",
+   "reach": 0.027,
+   "transposesTo": "classical-5-ng3",
+   "games": [
+    {
+     "id": 772635,
+     "ply": 14,
+     "white": "Kasparov, Garry",
+     "black": "Anand, Viswanathan",
+     "year": 2003,
+     "result": "1-0"
+    },
+    {
+     "id": 402298,
+     "ply": 14,
+     "white": "Leko, Peter",
+     "black": "Topalov, Veselin",
+     "year": 2009,
+     "result": "1-0"
+    },
+    {
+     "id": 402734,
+     "ply": 14,
+     "white": "Karjakin, Sergey",
+     "black": "Mamedyarov, Shakhriyar",
+     "year": 2013,
+     "result": "1-0"
+    }
+   ]
+  },
+  {
+   "id": "classical-5-ng3-6-h4-7-h5",
+   "title": "5.Ng3 · 6.h4 · 7.h5",
+   "name": "Caro-Kann Defense: Classical Variation, Main Line",
+   "moves": "e4 c6 d4 d5 Nc3 dxe4 Nxe4 Bf5 Ng3 Bg6 h4 h6 h5 Bh7 Nf3 Nd7",
+   "reach": 0.011,
+   "transposesTo": "classical-5-ng3",
+   "games": [
+    {
+     "id": 772635,
+     "ply": 16,
+     "white": "Kasparov, Garry",
+     "black": "Anand, Viswanathan",
+     "year": 2003,
+     "result": "1-0"
+    },
+    {
+     "id": 402298,
+     "ply": 16,
+     "white": "Leko, Peter",
+     "black": "Topalov, Veselin",
+     "year": 2009,
+     "result": "1-0"
+    },
+    {
+     "id": 402734,
+     "ply": 16,
+     "white": "Karjakin, Sergey",
+     "black": "Mamedyarov, Shakhriyar",
+     "year": 2013,
+     "result": "1-0"
+    }
+   ]
+  },
+  {
+   "id": "classical-5-ng3-6-n1e2",
+   "title": "5.Ng3 · 6.N1e2",
+   "name": "Caro-Kann Defense: Classical Variation",
+   "moves": "e4 c6 d4 d5 Nc3 dxe4 Nxe4 Bf5 Ng3 Bg6 N1e2 e6 Nf4 Bd6 h4 Qc7 Nxg6 hxg6 Ne4 Bf4",
+   "reach": 0.003,
+   "games": [
+    {
+     "id": 553619,
+     "ply": 20,
+     "white": "Duda, Jan-Krzysztof",
+     "black": "Navara, David",
+     "year": 2014,
+     "result": "1-0"
+    },
+    {
+     "id": 626546,
+     "ply": 20,
+     "white": "Ter-Sahakyan, Samvel",
+     "black": "Sjugirov, Sanan",
+     "year": 2015,
+     "result": "1/2-1/2"
+    },
+    {
+     "id": 120219,
+     "ply": 20,
+     "white": "Delchev, Aleksander",
+     "black": "Jobava, Baadur",
+     "year": 2018,
+     "result": "1/2-1/2"
+    }
+   ]
+  },
+  {
+   "id": "classical-5-ng3-6-bc4",
+   "title": "5.Ng3 · 6.Bc4",
+   "name": "Caro-Kann Defense: Classical Variation",
+   "moves": "e4 c6 d4 d5 Nc3 dxe4 Nxe4 Bf5 Ng3 Bg6 Bc4 e6 N1e2 Bd6 O-O Nd7 f4 Ne7",
+   "reach": 0.003,
+   "games": [
+    {
+     "id": 326993,
+     "ply": 18,
+     "white": "Movsesian, Sergei",
+     "black": "Fontaine, Robert",
+     "year": 1997,
+     "result": "1/2-1/2"
+    },
+    {
+     "id": 700772,
+     "ply": 18,
+     "white": "Rodriguez Vila, Andres",
+     "black": "Soppe, Guillermo",
+     "year": 2009,
+     "result": "1/2-1/2"
+    }
+   ]
+  },
+  {
+   "id": "classical-5-ng3-6-f4",
+   "title": "5.Ng3 · 6.f4",
+   "name": "Caro-Kann Defense: Classical Variation, Maróczy Attack",
+   "moves": "e4 c6 d4 d5 Nc3 dxe4 Nxe4 Bf5 Ng3 Bg6 f4 e6 Nf3 Nd7 Bd3 Bd6 O-O Ne7",
+   "reach": 0.003,
+   "games": [
+    {
+     "id": 700008,
+     "ply": 18,
+     "white": "Yip, Carissa",
+     "black": "Dzagnidze, Nana",
+     "year": 2021,
+     "result": "0-1"
+    }
+   ]
+  },
+  {
+   "id": "classical-5-ng3-6-c3",
+   "title": "5.Ng3 · 6.c3",
+   "name": "Caro-Kann Defense: Classical Variation",
+   "moves": "e4 c6 d4 d5 Nc3 dxe4 Nxe4 Bf5 Ng3 Bg6 c3 e6 Nf3 Nd7",
+   "reach": 0.002,
+   "transposesTo": "classical-5-ng3-7-c3",
+   "games": [
+    {
+     "id": 253887,
+     "ply": 14,
+     "white": "Polgar, Judit",
+     "black": "Jobava, Baadur",
+     "year": 2010,
+     "result": "1-0"
+    },
+    {
+     "id": 625675,
+     "ply": 14,
+     "white": "Savic, Miodrag R",
+     "black": "Lupulescu, Constantin",
+     "year": 2009,
+     "result": "1/2-1/2"
+    },
+    {
+     "id": 553332,
+     "ply": 14,
+     "white": "Ivanov, Alexander Al.",
+     "black": "Iljin, Artem",
+     "year": 2008,
+     "result": "0-1"
+    }
+   ]
+  },
+  {
+   "id": "classical-5-bd3",
+   "title": "5.Bd3",
+   "name": "Caro-Kann Defense: Classical Variation",
+   "moves": "e4 c6 d4 d5 Nc3 dxe4 Nxe4 Bf5 Bd3 Qxd4 Nf3 Qd8 O-O Bxe4 Bxe4 Qxd1 Rxd1 Nf6 Bd3 a5",
+   "reach": 0.005,
+   "games": [
+    {
+     "id": 327742,
+     "ply": 12,
+     "white": "Gaehwiler, Gabriel",
+     "black": "Bogner, Sebastian",
+     "year": 2019,
+     "result": "0-1"
+    }
+   ]
+  },
+  {
+   "id": "classical-5-ng5",
+   "title": "5.Ng5",
+   "name": "Caro-Kann Defense: Classical Variation",
+   "moves": "e4 c6 d4 d5 Nc3 dxe4 Nxe4 Bf5 Ng5 e6 N1f3 h6 Nxf7 Kxf7 Ne5+ Ke8 Qh5+ g6 Nxg6 Nf6",
+   "reach": 0.003,
+   "games": [
+    {
+     "id": 402179,
+     "ply": 8,
+     "white": "Anand, Viswanathan",
+     "black": "Carlsen, Magnus",
+     "year": 2013,
+     "result": "1/2-1/2"
+    },
+    {
+     "id": 772635,
+     "ply": 8,
+     "white": "Kasparov, Garry",
+     "black": "Anand, Viswanathan",
+     "year": 2003,
+     "result": "1-0"
+    },
+    {
+     "id": 699232,
+     "ply": 8,
+     "white": "Kasparov, Garry",
+     "black": "Topalov, Veselin",
+     "year": 1998,
+     "result": "1/2-1/2"
+    }
+   ]
+  },
+  {
+   "id": "classical-5-f3",
+   "title": "5.f3",
+   "name": "Caro-Kann Defense: Classical Variation",
+   "moves": "e4 c6 d4 d5 Nc3 dxe4 Nxe4 Bf5 f3 Nd7 Bd3 e5",
+   "reach": 0.003,
+   "games": [
+    {
+     "id": 402179,
+     "ply": 8,
+     "white": "Anand, Viswanathan",
+     "black": "Carlsen, Magnus",
+     "year": 2013,
+     "result": "1/2-1/2"
+    },
+    {
+     "id": 772635,
+     "ply": 8,
+     "white": "Kasparov, Garry",
+     "black": "Anand, Viswanathan",
+     "year": 2003,
+     "result": "1-0"
+    },
+    {
+     "id": 699232,
+     "ply": 8,
+     "white": "Kasparov, Garry",
+     "black": "Topalov, Veselin",
+     "year": 1998,
+     "result": "1/2-1/2"
+    }
+   ]
+  },
+  {
+   "id": "classical-5-nc3",
+   "title": "5.Nc3",
+   "name": "Caro-Kann Defense: Classical Variation",
+   "moves": "e4 c6 d4 d5 Nc3 dxe4 Nxe4 Bf5 Nc3 Nf6 Nf3 e6 Bd3 Bxd3 Qxd3 Nbd7",
+   "reach": 0.002,
+   "games": [
+    {
+     "id": 700210,
+     "ply": 12,
+     "white": "Velickovic, Sasa",
+     "black": "Hodgson, Julian M",
+     "year": 1987,
+     "result": "0-1"
+    }
+   ]
+  },
+  {
+   "id": "classical-3-nd2",
+   "title": "3.Nd2",
+   "name": "Caro-Kann Defense: Main Line",
+   "moves": "e4 c6 d4 d5 Nd2 dxe4 Nxe4",
+   "reach": 0.024,
+   "transposesTo": "classical-5-ng3",
+   "games": [
+    {
+     "id": 553358,
+     "ply": 7,
+     "white": "Carlsen, Magnus",
+     "black": "Morozevich, Alexander",
+     "year": 2013,
+     "result": "1/2-1/2"
+    },
+    {
+     "id": 553796,
+     "ply": 7,
+     "white": "Duda, Jan-Krzysztof",
+     "black": "Carlsen, Magnus",
+     "year": 2020,
+     "result": "1-0"
+    },
+    {
+     "id": 402179,
+     "ply": 7,
+     "white": "Anand, Viswanathan",
+     "black": "Carlsen, Magnus",
+     "year": 2013,
+     "result": "1/2-1/2"
+    }
+   ]
+  }
+ ],
+ "exchange": [
+  {
+   "id": "exchange-4-nf3",
+   "title": "4.Nf3",
+   "name": "Caro-Kann Defense: Exchange Variation",
+   "moves": "e4 c6 d4 d5 exd5 cxd5 Nf3 Nc6 Bb5 e6 O-O Bd6 c4 Ne7",
+   "reach": 0.042,
+   "games": [
+    {
+     "id": 190432,
+     "ply": 14,
+     "white": "Karjakin, Sergey",
+     "black": "Mamedyarov, Shakhriyar",
+     "year": 2018,
+     "result": "1/2-1/2"
+    },
+    {
+     "id": 190428,
+     "ply": 14,
+     "white": "Carlsen, Magnus",
+     "black": "Topalov, Veselin",
+     "year": 2008,
+     "result": "1/2-1/2"
+    },
+    {
+     "id": 844421,
+     "ply": 14,
+     "white": "Bharath Subramaniyam H",
+     "black": "Halkias, Stelios",
+     "year": 2022,
+     "result": "1-0"
+    }
+   ]
+  },
+  {
+   "id": "exchange-4-nf3-6-ne5",
+   "title": "4.Nf3 · 6.Ne5",
+   "name": "Caro-Kann Defense: Exchange Variation",
+   "moves": "e4 c6 d4 d5 exd5 cxd5 Nf3 Nc6 Bb5 e6 Ne5 Bd7 Nxd7 Qxd7 O-O a6 Ba4 b5 Bb3 Bd6",
+   "reach": 0.002,
+   "games": [
+    {
+     "id": 190433,
+     "ply": 15,
+     "white": "Christiansen, Johan-Sebastian",
+     "black": "Belozerov, Andrei",
+     "year": 2018,
+     "result": "1/2-1/2"
+    }
+   ]
+  },
+  {
+   "id": "exchange-4-nf3-5-bd3",
+   "title": "4.Nf3 · 5.Bd3",
+   "name": "Caro-Kann Defense: Exchange Variation",
+   "moves": "e4 c6 d4 d5 exd5 cxd5 Nf3 Nc6 Bd3 Bg4 c3 Qc7 O-O e6 h3 Bh5",
+   "reach": 0.008,
+   "games": [
+    {
+     "id": 190233,
+     "ply": 16,
+     "white": "Bocharov, Ivan",
+     "black": "Ovetchkin, Roman",
+     "year": 2017,
+     "result": "1/2-1/2"
+    },
+    {
+     "id": 254429,
+     "ply": 16,
+     "white": "Diaz Rosas, Jonathan",
+     "black": "Henriquez Villagra, Cristobal",
+     "year": 2024,
+     "result": "0-1"
+    }
+   ]
+  },
+  {
+   "id": "exchange-4-nf3-5-nc3",
+   "title": "4.Nf3 · 5.Nc3",
+   "name": "Caro-Kann Defense: Exchange Variation",
+   "moves": "e4 c6 d4 d5 exd5 cxd5 Nf3 Nc6 Nc3 a6 Bd3 Bg4 Be3 e6",
+   "reach": 0.007,
+   "games": [
+    {
+     "id": 190440,
+     "ply": 8,
+     "white": "Carlsen, Magnus",
+     "black": "Mamedyarov, Shakhriyar",
+     "year": 2016,
+     "result": "1-0"
+    },
+    {
+     "id": 190432,
+     "ply": 8,
+     "white": "Karjakin, Sergey",
+     "black": "Mamedyarov, Shakhriyar",
+     "year": 2018,
+     "result": "1/2-1/2"
+    },
+    {
+     "id": 190016,
+     "ply": 8,
+     "white": "Carlsen, Magnus",
+     "black": "Vidit, Santosh Gujrathi",
+     "year": 2016,
+     "result": "1-0"
+    }
+   ]
+  },
+  {
+   "id": "exchange-4-nf3-5-c3",
+   "title": "4.Nf3 · 5.c3",
+   "name": "Caro-Kann Defense: Exchange Variation",
+   "moves": "e4 c6 d4 d5 exd5 cxd5 Nf3 Nc6 c3 Nf6 Bd3 Bg4 O-O e6 Bg5 Bd6",
+   "reach": 0.006,
+   "games": [
+    {
+     "id": 844291,
+     "ply": 15,
+     "white": "Barua, Dibyendu",
+     "black": "Ye, Rongguang",
+     "year": 1991,
+     "result": "1-0"
+    },
+    {
+     "id": 843749,
+     "ply": 15,
+     "white": "Paichadze, Luka",
+     "black": "Gunina, Valentina",
+     "year": 2012,
+     "result": "1/2-1/2"
+    }
+   ]
+  },
+  {
+   "id": "exchange-4-nf3-5-c4",
+   "title": "4.Nf3 · 5.c4",
+   "name": "Caro-Kann Defense: Panov Attack, Modern Defense, Mieses Line",
+   "moves": "e4 c6 d4 d5 exd5 cxd5 Nf3 Nc6 c4 Nf6 Nc3 Bg4 cxd5 Nxd5 Qb3 Bxf3 gxf3 e6 Qxb7 Nxd4 Bb5+ Nxb5 Qc6+ Ke7",
+   "reach": 0.005,
+   "games": [
+    {
+     "id": 49342,
+     "ply": 24,
+     "white": "Ivanchuk, Vasyl",
+     "black": "Najer, Evgeniy",
+     "year": 2017,
+     "result": "1/2-1/2"
+    },
+    {
+     "id": 48440,
+     "ply": 24,
+     "white": "Grischuk, Alexander",
+     "black": "Vidit, Santosh Gujrathi",
+     "year": 2016,
+     "result": "1-0"
+    },
+    {
+     "id": 253372,
+     "ply": 24,
+     "white": "Adams, Michael",
+     "black": "Ponomariov, Ruslan",
+     "year": 2005,
+     "result": "1/2-1/2"
+    }
+   ]
+  },
+  {
+   "id": "exchange-4-nf3-5-be2",
+   "title": "4.Nf3 · 5.Be2",
+   "name": "Caro-Kann Defense: Exchange Variation",
+   "moves": "e4 c6 d4 d5 exd5 cxd5 Nf3 Nc6 Be2 Bg4 O-O e6 c3 Bd6",
+   "reach": 0.003,
+   "games": [
+    {
+     "id": 843828,
+     "ply": 9,
+     "white": "Paveto, Kevin",
+     "black": "Krysa, Leandro",
+     "year": 2015,
+     "result": "1/2-1/2"
+    }
+   ]
+  },
+  {
+   "id": "exchange-4-bd3",
+   "title": "4.Bd3",
+   "name": "Caro-Kann Defense: Exchange Variation, Rubinstein Variation",
+   "moves": "e4 c6 d4 d5 exd5 cxd5 Bd3 Nc6 c3 Nf6 Bf4 Bg4 Qb3 Qd7 Nd2 e6 Ngf3 Bxf3 Nxf3 Bd6 Bxd6 Qxd6 O-O O-O Rae1 Qc7 Ne5 Nxe5",
+   "reach": 0.039,
+   "games": [
+    {
+     "id": 189998,
+     "ply": 28,
+     "white": "Duda, Jan-Krzysztof",
+     "black": "Shimanov, Aleksandr",
+     "year": 2022,
+     "result": "1-0"
+    }
+   ]
+  },
+  {
+   "id": "exchange-4-bd3-6-h3",
+   "title": "4.Bd3 · 6.h3",
+   "name": "Caro-Kann Defense: Exchange Variation",
+   "moves": "e4 c6 d4 d5 exd5 cxd5 Bd3 Nc6 c3 Nf6 h3 g6 Nf3 Bf5 O-O Bxd3 Qxd3 Bg7 Re1 Qb6",
+   "reach": 0.01,
+   "games": [
+    {
+     "id": 189888,
+     "ply": 19,
+     "white": "Alekseev, Evgeny",
+     "black": "Gharamian, Tigran",
+     "year": 2020,
+     "result": "1/2-1/2"
+    },
+    {
+     "id": 190112,
+     "ply": 19,
+     "white": "Alekseev, Evgeny",
+     "black": "Turov, Maxim",
+     "year": 2020,
+     "result": "1/2-1/2"
+    },
+    {
+     "id": 189908,
+     "ply": 19,
+     "white": "Bjerre, Jonas Buhl",
+     "black": "Hansen, Sune Berg",
+     "year": 2024,
+     "result": "1-0"
+    }
+   ]
+  },
+  {
+   "id": "exchange-4-bd3-6-h3-8-bxf5",
+   "title": "4.Bd3 · 6.h3 · 8.Bxf5",
+   "name": "Caro-Kann Defense: Exchange Variation",
+   "moves": "e4 c6 d4 d5 exd5 cxd5 Bd3 Nc6 c3 Nf6 h3 g6 Nf3 Bf5 Bxf5 gxf5 Bf4 Rg8 g3 e6",
+   "reach": 0.002,
+   "games": [
+    {
+     "id": 189897,
+     "ply": 17,
+     "white": "Socko, Bartosz",
+     "black": "Navara, David",
+     "year": 2014,
+     "result": "0-1"
+    },
+    {
+     "id": 190349,
+     "ply": 17,
+     "white": "Socko, Bartosz",
+     "black": "Eljanov, Pavel",
+     "year": 2015,
+     "result": "1-0"
+    },
+    {
+     "id": 254541,
+     "ply": 17,
+     "white": "Firouzja, Alireza",
+     "black": "Jobava, Baadur",
+     "year": 2017,
+     "result": "1-0"
+    }
+   ]
+  },
+  {
+   "id": "exchange-4-bd3-6-nf3",
+   "title": "4.Bd3 · 6.Nf3",
+   "name": "Caro-Kann Defense: Exchange Variation",
+   "moves": "e4 c6 d4 d5 exd5 cxd5 Bd3 Nc6 c3 Nf6 Nf3",
+   "reach": 0.004,
+   "transposesTo": "exchange-4-nf3-5-c3",
+   "games": [
+    {
+     "id": 190350,
+     "ply": 11,
+     "white": "Praggnanandhaa R",
+     "black": "Keymer, Vincent",
+     "year": 2023,
+     "result": "1-0"
+    },
+    {
+     "id": 844373,
+     "ply": 11,
+     "white": "Praggnanandhaa R",
+     "black": "Nihal Sarin",
+     "year": 2023,
+     "result": "1-0"
+    },
+    {
+     "id": 254538,
+     "ply": 11,
+     "white": "Kovalenko, Gleb I",
+     "black": "Navara, David",
+     "year": 2017,
+     "result": "1/2-1/2"
+    }
+   ]
+  },
+  {
+   "id": "exchange-4-bd3-5-nf3",
+   "title": "4.Bd3 · 5.Nf3",
+   "name": "Caro-Kann Defense: Exchange Variation",
+   "moves": "e4 c6 d4 d5 exd5 cxd5 Bd3 Nc6 Nf3",
+   "reach": 0.006,
+   "transposesTo": "exchange-4-nf3-5-bd3",
+   "games": [
+    {
+     "id": 189953,
+     "ply": 9,
+     "white": "Bjerre, Jonas Buhl",
+     "black": "Ghasi, Ameet K",
+     "year": 2025,
+     "result": "1-0"
+    }
+   ]
+  },
+  {
+   "id": "exchange-4-nc3",
+   "title": "4.Nc3",
+   "name": "Caro-Kann Defense: Exchange Variation",
+   "moves": "e4 c6 d4 d5 exd5 cxd5 Nc3 Nc6 Nf3",
+   "reach": 0.019,
+   "transposesTo": "exchange-4-nf3-5-nc3",
+   "games": [
+    {
+     "id": 190424,
+     "ply": 7,
+     "white": "Pham, Tien Toan",
+     "black": "Nguyen, Van Dat",
+     "year": 2012,
+     "result": "1-0"
+    },
+    {
+     "id": 844423,
+     "ply": 7,
+     "white": "Le, Quoc Dinh",
+     "black": "Nguyen, Phu Huy",
+     "year": 2012,
+     "result": "0-1"
+    },
+    {
+     "id": 844428,
+     "ply": 7,
+     "white": "Do, Dang Khoa",
+     "black": "Nguyen, Phu Huy",
+     "year": 2012,
+     "result": "0-1"
+    }
+   ]
+  },
+  {
+   "id": "exchange-4-nc3-5-bb5",
+   "title": "4.Nc3 · 5.Bb5",
+   "name": "Caro-Kann Defense: Exchange Variation",
+   "moves": "e4 c6 d4 d5 exd5 cxd5 Nc3 Nc6 Bb5 Nf6 Nf3 Bg4 h3 Bxf3 Qxf3 e6",
+   "reach": 0.003,
+   "games": [
+    {
+     "id": 326952,
+     "ply": 16,
+     "white": "Vallejo Pons, Francisco",
+     "black": "Navara, David",
+     "year": 2016,
+     "result": "1/2-1/2"
+    }
+   ]
+  },
+  {
+   "id": "exchange-4-c3",
+   "title": "4.c3",
+   "name": "Caro-Kann Defense: Exchange Variation",
+   "moves": "e4 c6 d4 d5 exd5 cxd5 c3 Nc6 Nf3",
+   "reach": 0.006,
+   "transposesTo": "exchange-4-nf3-5-c3",
+   "games": [
+    {
+     "id": 843869,
+     "ply": 9,
+     "white": "Liang, Awonder",
+     "black": "Caruana, Fabiano",
+     "year": 2026,
+     "result": "1/2-1/2"
+    },
+    {
+     "id": 254584,
+     "ply": 9,
+     "white": "Aravindh, Chithambaram VR.",
+     "black": "Praggnanandhaa R",
+     "year": 2026,
+     "result": "1/2-1/2"
+    },
+    {
+     "id": 254431,
+     "ply": 9,
+     "white": "Rapport, Richard",
+     "black": "Deac, Bogdan-Daniel",
+     "year": 2023,
+     "result": "1/2-1/2"
+    }
+   ]
+  }
+ ],
+ "panov": [
+  {
+   "id": "panov-5-nc3",
+   "title": "5.Nc3",
+   "name": "Caro-Kann Defense: Panov Attack, Main Line",
+   "moves": "e4 c6 d4 d5 exd5 cxd5 c4 Nf6 Nc3 e6 Nf3 Bb4 cxd5 Nxd5 Bd2 Nc6 Bd3 O-O O-O Be7",
+   "reach": 0.028,
+   "games": [
+    {
+     "id": 48658,
+     "ply": 20,
+     "white": "Giri, Anish",
+     "black": "Firouzja, Alireza",
+     "year": 2023,
+     "result": "0-1"
+    },
+    {
+     "id": 49135,
+     "ply": 20,
+     "white": "Nakamura, Hikaru",
+     "black": "Wojtaszek, Radoslaw",
+     "year": 2010,
+     "result": "0-1"
+    },
+    {
+     "id": 49284,
+     "ply": 20,
+     "white": "Ponomariov, Ruslan",
+     "black": "Wang, Hao",
+     "year": 2016,
+     "result": "1/2-1/2"
+    }
+   ]
+  },
+  {
+   "id": "panov-5-nc3-7-bd3",
+   "title": "5.Nc3 · 7.Bd3",
+   "name": "Caro-Kann Defense: Panov Attack, Main Line",
+   "moves": "e4 c6 d4 d5 exd5 cxd5 c4 Nf6 Nc3 e6 Nf3 Bb4 Bd3 dxc4 Bxc4 Qc7 Qb3 Nc6",
+   "reach": 0.003,
+   "games": [
+    {
+     "id": 49221,
+     "ply": 16,
+     "white": "Polgar, Judit",
+     "black": "Karpov, Anatoly",
+     "year": 1995,
+     "result": "1/2-1/2"
+    },
+    {
+     "id": 119719,
+     "ply": 16,
+     "white": "Kovacevic, Aleksandar",
+     "black": "Akopian, Vladimir",
+     "year": 2010,
+     "result": "1/2-1/2"
+    },
+    {
+     "id": 48385,
+     "ply": 16,
+     "white": "Timofeev, Artyom",
+     "black": "Svetushkin, Dmitry",
+     "year": 2003,
+     "result": "1-0"
+    }
+   ]
+  },
+  {
+   "id": "panov-5-nc3-7-bg5",
+   "title": "5.Nc3 · 7.Bg5",
+   "name": "Caro-Kann Defense: Panov Attack, Main Line",
+   "moves": "e4 c6 d4 d5 exd5 cxd5 c4 Nf6 Nc3 e6 Nf3 Bb4 Bg5 h6 Bh4 Qa5 Qc2 Ne4",
+   "reach": 0.002,
+   "games": [
+    {
+     "id": 48809,
+     "ply": 14,
+     "white": "Xu, Yi",
+     "black": "Jakovenko, Dmitry",
+     "year": 2019,
+     "result": "1/2-1/2"
+    }
+   ]
+  },
+  {
+   "id": "panov-5-nc3-7-a3",
+   "title": "5.Nc3 · 7.a3",
+   "name": "Caro-Kann Defense: Panov Attack, Main Line",
+   "moves": "e4 c6 d4 d5 exd5 cxd5 c4 Nf6 Nc3 e6 Nf3 Bb4 a3 Bxc3+ bxc3 O-O Bd3 dxc4 Bxc4 Qc7",
+   "reach": 0.002,
+   "games": [
+    {
+     "id": 48540,
+     "ply": 16,
+     "white": "Socko, Bartosz",
+     "black": "Macieja, Bartlomiej",
+     "year": 1999,
+     "result": "0-1"
+    },
+    {
+     "id": 844302,
+     "ply": 16,
+     "white": "Handoko, Eko",
+     "black": "Antonio, Rogelio Jr",
+     "year": 1994,
+     "result": "1-0"
+    }
+   ]
+  },
+  {
+   "id": "panov-5-nc3-7-bd2",
+   "title": "5.Nc3 · 7.Bd2",
+   "name": "Caro-Kann Defense: Panov Attack, Main Line",
+   "moves": "e4 c6 d4 d5 exd5 cxd5 c4 Nf6 Nc3 e6 Nf3 Bb4 Bd2 O-O a3 Bxc3 Bxc3 Nc6",
+   "reach": 0.002,
+   "games": [
+    {
+     "id": 48673,
+     "ply": 14,
+     "white": "Potapov, Pavel",
+     "black": "Kasimdzhanov, Rustam",
+     "year": 2009,
+     "result": "1/2-1/2"
+    },
+    {
+     "id": 49175,
+     "ply": 14,
+     "white": "Tazbir, Marcin",
+     "black": "Kengis, Edvins",
+     "year": 2006,
+     "result": "0-1"
+    }
+   ]
+  },
+  {
+   "id": "panov-5-nc3-6-bg5",
+   "title": "5.Nc3 · 6.Bg5",
+   "name": "Caro-Kann Defense: Panov Attack",
+   "moves": "e4 c6 d4 d5 exd5 cxd5 c4 Nf6 Nc3 e6 Bg5 Be7 Nf3 O-O Bd3 h6 Bh4 dxc4 Bxc4 Nc6 O-O b6",
+   "reach": 0.004,
+   "games": [
+    {
+     "id": 48888,
+     "ply": 15,
+     "white": "Ballecer, Dino",
+     "black": "Megaranto, Susanto",
+     "year": 2008,
+     "result": "1/2-1/2"
+    }
+   ]
+  },
+  {
+   "id": "panov-5-nc3-6-c5",
+   "title": "5.Nc3 · 6.c5",
+   "name": "Caro-Kann Defense: Panov Attack",
+   "moves": "e4 c6 d4 d5 exd5 cxd5 c4 Nf6 Nc3 e6 c5 Be7 Nf3 O-O Bd3 b6 b4 a5",
+   "reach": 0.002,
+   "games": [
+    {
+     "id": 119740,
+     "ply": 18,
+     "white": "Popov, Ivan",
+     "black": "Rodshtein, Maxim",
+     "year": 2009,
+     "result": "1-0"
+    },
+    {
+     "id": 49244,
+     "ply": 18,
+     "white": "Barua, Dibyendu",
+     "black": "Bagheri, Amir",
+     "year": 1998,
+     "result": "1/2-1/2"
+    },
+    {
+     "id": 255455,
+     "ply": 18,
+     "white": "Mallahi, Amir",
+     "black": "Ghaem Maghami, Ehsan",
+     "year": 2001,
+     "result": "1/2-1/2"
+    }
+   ]
+  },
+  {
+   "id": "panov-5-nf3",
+   "title": "5.Nf3",
+   "name": "Caro-Kann Defense: Panov Attack",
+   "moves": "e4 c6 d4 d5 exd5 cxd5 c4 Nf6 Nf3 e6 Nc3",
+   "reach": 0.005,
+   "transposesTo": "panov-5-nc3",
+   "games": [
+    {
+     "id": 48658,
+     "ply": 11,
+     "white": "Giri, Anish",
+     "black": "Firouzja, Alireza",
+     "year": 2023,
+     "result": "0-1"
+    },
+    {
+     "id": 47029,
+     "ply": 11,
+     "white": "Radjabov, Teimour",
+     "black": "Morozevich, Alexander",
+     "year": 2009,
+     "result": "1/2-1/2"
+    },
+    {
+     "id": 255562,
+     "ply": 11,
+     "white": "Adams, Michael",
+     "black": "Ivanchuk, Vasyl",
+     "year": 2009,
+     "result": "1/2-1/2"
+    }
+   ]
+  },
+  {
+   "id": "panov-5-cxd5",
+   "title": "5.cxd5",
+   "name": "Caro-Kann Defense: Panov Attack",
+   "moves": "e4 c6 d4 d5 exd5 cxd5 c4 Nf6 cxd5 Nxd5 Nc3 Nc6 Nf3 Bg4",
+   "reach": 0.003,
+   "transposesTo": "exchange-4-nf3-5-c4",
+   "games": [
+    {
+     "id": 49342,
+     "ply": 14,
+     "white": "Ivanchuk, Vasyl",
+     "black": "Najer, Evgeniy",
+     "year": 2017,
+     "result": "1/2-1/2"
+    },
+    {
+     "id": 48440,
+     "ply": 14,
+     "white": "Grischuk, Alexander",
+     "black": "Vidit, Santosh Gujrathi",
+     "year": 2016,
+     "result": "1-0"
+    },
+    {
+     "id": 253372,
+     "ply": 14,
+     "white": "Adams, Michael",
+     "black": "Ponomariov, Ruslan",
+     "year": 2005,
+     "result": "1/2-1/2"
+    }
+   ]
+  }
+ ],
+ "two-knights": [
+  {
+   "id": "two-knights-4-h3",
+   "title": "4.h3",
+   "name": "Caro-Kann Defense: Two Knights Attack, Mindeno Variation, Exchange Line",
+   "moves": "e4 c6 Nf3 d5 Nc3 Bg4 h3 Bxf3 Qxf3 e6 d4 dxe4 Qxe4 Nf6 Qd3 Nbd7 Bg5 Be7",
+   "reach": 0.018,
+   "games": [
+    {
+     "id": 118617,
+     "ply": 16,
+     "white": "Dominguez Perez, Leinier",
+     "black": "Wang, Hao",
+     "year": 2014,
+     "result": "1-0"
+    },
+    {
+     "id": 47216,
+     "ply": 16,
+     "white": "Howell, David W L",
+     "black": "Dreev, Aleksey",
+     "year": 2019,
+     "result": "1/2-1/2"
+    },
+    {
+     "id": 253443,
+     "ply": 16,
+     "white": "Mastrovasilis, Dimitrios",
+     "black": "Mamedyarov, Shakhriyar",
+     "year": 2016,
+     "result": "1/2-1/2"
+    }
+   ]
+  },
+  {
+   "id": "two-knights-4-h3-7-nxe4",
+   "title": "4.h3 · 7.Nxe4",
+   "name": "Caro-Kann Defense: Two Knights Attack, Mindeno Variation, Exchange Line",
+   "moves": "e4 c6 Nf3 d5 Nc3 Bg4 h3 Bxf3 Qxf3 e6 d4 dxe4 Nxe4 Qxd4 Bd3 Nd7 O-O Ne5",
+   "reach": 0.003,
+   "games": [
+    {
+     "id": 118600,
+     "ply": 16,
+     "white": "Nepomniachtchi, Ian",
+     "black": "Mamedyarov, Shakhriyar",
+     "year": 2019,
+     "result": "0-1"
+    },
+    {
+     "id": 254151,
+     "ply": 16,
+     "white": "Mamedov, Rauf",
+     "black": "Tomashevsky, Evgeny",
+     "year": 2015,
+     "result": "0-1"
+    },
+    {
+     "id": 326626,
+     "ply": 16,
+     "white": "Popov, Ivan",
+     "black": "Dreev, Aleksey",
+     "year": 2013,
+     "result": "0-1"
+    }
+   ]
+  },
+  {
+   "id": "two-knights-4-h3-6-d3",
+   "title": "4.h3 · 6.d3",
+   "name": "Caro-Kann Defense: Two Knights Attack, Mindeno Variation, Exchange Line",
+   "moves": "e4 c6 Nf3 d5 Nc3 Bg4 h3 Bxf3 Qxf3 e6 d3 Nd7 Bd2 g6 g4 d4",
+   "reach": 0.004,
+   "games": [
+    {
+     "id": 253473,
+     "ply": 15,
+     "white": "Sutovsky, Emil",
+     "black": "Dreev, Aleksey",
+     "year": 2004,
+     "result": "1/2-1/2"
+    },
+    {
+     "id": 325356,
+     "ply": 15,
+     "white": "Nevednichy, Vladislav",
+     "black": "Morozevich, Alexander",
+     "year": 2000,
+     "result": "0-1"
+    },
+    {
+     "id": 47973,
+     "ply": 15,
+     "white": "Garcia Ramos, Daniel",
+     "black": "Nisipeanu, Liviu-Dieter",
+     "year": 2021,
+     "result": "0-1"
+    }
+   ]
+  },
+  {
+   "id": "two-knights-4-h3-6-exd5",
+   "title": "4.h3 · 6.exd5",
+   "name": "Caro-Kann Defense: Two Knights Attack, Mindeno Variation, Exchange Line",
+   "moves": "e4 c6 Nf3 d5 Nc3 Bg4 h3 Bxf3 Qxf3 e6 exd5 cxd5 d4 Nc6 Bb5 Rc8 O-O a6",
+   "reach": 0.003,
+   "games": [
+    {
+     "id": 47895,
+     "ply": 10,
+     "white": "Carlsen, Magnus",
+     "black": "Ivanchuk, Vasyl",
+     "year": 2012,
+     "result": "1-0"
+    },
+    {
+     "id": 325314,
+     "ply": 10,
+     "white": "Duda, Jan-Krzysztof",
+     "black": "Carlsen, Magnus",
+     "year": 2022,
+     "result": "0-1"
+    },
+    {
+     "id": 325446,
+     "ply": 10,
+     "white": "Vachier-Lagrave, Maxime",
+     "black": "Mamedyarov, Shakhriyar",
+     "year": 2017,
+     "result": "1-0"
+    }
+   ]
+  },
+  {
+   "id": "two-knights-4-exd5",
+   "title": "4.exd5",
+   "name": "Caro-Kann Defense: Two Knights Attack, Mindeno Variation",
+   "moves": "e4 c6 Nf3 d5 Nc3 Bg4 exd5 cxd5 d4 Nc6 Be2 e6 O-O Bd6",
+   "reach": 0.007,
+   "games": [
+    {
+     "id": 47294,
+     "ply": 8,
+     "white": "Ajani Kelvin",
+     "black": "Kritz, Leonid",
+     "year": 2001,
+     "result": "1/2-1/2"
+    },
+    {
+     "id": 325311,
+     "ply": 8,
+     "white": "Mestrovic, Zvonimir",
+     "black": "Vukic, Milan",
+     "year": 1978,
+     "result": "0-1"
+    }
+   ]
+  },
+  {
+   "id": "two-knights-4-be2",
+   "title": "4.Be2",
+   "name": "Caro-Kann Defense: Two Knights Attack, Mindeno Variation",
+   "moves": "e4 c6 Nf3 d5 Nc3 Bg4 Be2 e6 d4 Nf6 e5 Nfd7",
+   "reach": 0.004,
+   "games": [
+    {
+     "id": 253279,
+     "ply": 12,
+     "white": "Svane, Rasmus",
+     "black": "Bluebaum, Matthias",
+     "year": 2025,
+     "result": "1/2-1/2"
+    },
+    {
+     "id": 189511,
+     "ply": 12,
+     "white": "Andreikin, Dmitry",
+     "black": "Riazantsev, Alexander",
+     "year": 2009,
+     "result": "1/2-1/2"
+    },
+    {
+     "id": 325694,
+     "ply": 12,
+     "white": "Steinberg, Nitzan",
+     "black": "Yakubboev, Nodirbek",
+     "year": 2024,
+     "result": "1/2-1/2"
+    }
+   ]
+  },
+  {
+   "id": "two-knights-4-d4",
+   "title": "4.d4",
+   "name": "Caro-Kann Defense: Two Knights Attack, Mindeno Variation",
+   "moves": "e4 c6 Nf3 d5 Nc3 Bg4 d4 e6 h3 Bxf3 Qxf3",
+   "reach": 0.003,
+   "transposesTo": "two-knights-4-h3",
+   "games": [
+    {
+     "id": 47895,
+     "ply": 11,
+     "white": "Carlsen, Magnus",
+     "black": "Ivanchuk, Vasyl",
+     "year": 2012,
+     "result": "1-0"
+    },
+    {
+     "id": 118600,
+     "ply": 11,
+     "white": "Nepomniachtchi, Ian",
+     "black": "Mamedyarov, Shakhriyar",
+     "year": 2019,
+     "result": "0-1"
+    },
+    {
+     "id": 325464,
+     "ply": 11,
+     "white": "Vachier-Lagrave, Maxime",
+     "black": "Ivanchuk, Vasyl",
+     "year": 2018,
+     "result": "1/2-1/2"
+    }
+   ]
+  },
+  {
+   "id": "two-knights-3-nf3",
+   "title": "3.Nf3",
+   "name": "Caro-Kann Defense: Two Knights Attack",
+   "moves": "e4 c6 Nc3 d5 Nf3",
+   "reach": 0.023,
+   "transposesTo": "two-knights-4-h3",
+   "games": [
+    {
+     "id": 47384,
+     "ply": 5,
+     "white": "Firouzja, Alireza",
+     "black": "Carlsen, Magnus",
+     "year": 2022,
+     "result": "1-0"
+    },
+    {
+     "id": 326312,
+     "ply": 5,
+     "white": "Vachier-Lagrave, Maxime",
+     "black": "Carlsen, Magnus",
+     "year": 2017,
+     "result": "1/2-1/2"
+    },
+    {
+     "id": 47895,
+     "ply": 5,
+     "white": "Carlsen, Magnus",
+     "black": "Ivanchuk, Vasyl",
+     "year": 2012,
+     "result": "1-0"
+    }
+   ]
+  }
+ ],
+ "fantasy": [
+  {
+   "id": "fantasy-4-nc3",
+   "title": "4.Nc3",
+   "name": "Caro-Kann Defense: Maróczy Variation",
+   "moves": "e4 c6 d4 d5 f3 e6 Nc3 Bb4 Bd2 Ne7 a3 Ba5 b4 Bb6",
+   "reach": 0.01,
+   "games": [
+    {
+     "id": 48249,
+     "ply": 12,
+     "white": "Nepomniachtchi, Ian",
+     "black": "Firouzja, Alireza",
+     "year": 2023,
+     "result": "0-1"
+    },
+    {
+     "id": 401816,
+     "ply": 12,
+     "white": "Vallejo Pons, Francisco",
+     "black": "Melkumyan, Hrant",
+     "year": 2022,
+     "result": "1/2-1/2"
+    },
+    {
+     "id": 401817,
+     "ply": 12,
+     "white": "Timofeev, Artyom",
+     "black": "Deviatkin, Andrei",
+     "year": 2010,
+     "result": "1-0"
+    }
+   ]
+  },
+  {
+   "id": "fantasy-4-e5",
+   "title": "4.e5",
+   "name": "Caro-Kann Defense: Maróczy Variation",
+   "moves": "e4 c6 d4 d5 f3 e6 e5 c5 c3 Nc6 f4 Qb6 Nf3 Nh6",
+   "reach": 0.002,
+   "games": [
+    {
+     "id": 401843,
+     "ply": 13,
+     "white": "Azarov, Sergei",
+     "black": "Navara, David",
+     "year": 2014,
+     "result": "0-1"
+    }
+   ]
+  }
+ ],
+ "sidelines": [
+  {
+   "id": "sidelines-2-d4-3-nc3-4-f3",
+   "title": "2.d4 · 3.Nc3 · 4.f3",
+   "name": "Blackmar-Diemer Gambit Accepted: Ziegler Defense",
+   "moves": "e4 c6 d4 d5 Nc3 dxe4 f3 exf3 Nxf3 Nf6 Bc4 Bf5 O-O e6 Ne5 Bg6 Bg5 Nbd7",
+   "reach": 0.007,
+   "games": [
+    {
+     "id": 119831,
+     "ply": 9,
+     "white": "Gareyev, Timur",
+     "black": "Shimanov, Aleksandr",
+     "year": 2017,
+     "result": "1/2-1/2"
+    }
+   ]
+  },
+  {
+   "id": "sidelines-2-d4-3-nc3-4-bc4",
+   "title": "2.d4 · 3.Nc3 · 4.Bc4",
+   "name": "Caro-Kann Defense: von Hennig Gambit",
+   "moves": "e4 c6 d4 d5 Nc3 dxe4 Bc4 Nf6 f3 exf3 Nxf3",
+   "reach": 0.003,
+   "transposesTo": "sidelines-2-d4-3-nc3-4-f3",
+   "games": [
+    {
+     "id": 400796,
+     "ply": 9,
+     "white": "Short, Nigel D",
+     "black": "Bareev, Evgeny",
+     "year": 2000,
+     "result": "0-1"
+    },
+    {
+     "id": 119894,
+     "ply": 9,
+     "white": "Badmatsyrenov, Oleg",
+     "black": "Kobalia, Mikhail",
+     "year": 2021,
+     "result": "0-1"
+    }
+   ]
+  },
+  {
+   "id": "sidelines-2-nf3",
+   "title": "2.Nf3",
+   "name": "Caro-Kann Defense",
+   "moves": "e4 c6 Nf3 d5 exd5 cxd5 d4",
+   "reach": 0.25,
+   "transposesTo": "exchange-4-nf3",
+   "games": [
+    {
+     "id": 190440,
+     "ply": 7,
+     "white": "Carlsen, Magnus",
+     "black": "Mamedyarov, Shakhriyar",
+     "year": 2016,
+     "result": "1-0"
+    },
+    {
+     "id": 254469,
+     "ply": 7,
+     "white": "Kramnik, Vladimir",
+     "black": "Caruana, Fabiano",
+     "year": 2018,
+     "result": "1-0"
+    },
+    {
+     "id": 190432,
+     "ply": 7,
+     "white": "Karjakin, Sergey",
+     "black": "Mamedyarov, Shakhriyar",
+     "year": 2018,
+     "result": "1/2-1/2"
+    }
+   ]
+  },
+  {
+   "id": "sidelines-2-nf3-4-bb5",
+   "title": "2.Nf3 · 4.Bb5+",
+   "name": "Caro-Kann Defense",
+   "moves": "e4 c6 Nf3 d5 exd5 cxd5 Bb5+ Bd7 Bxd7+ Nxd7 O-O e6 d4 Rc8 c3 Bd6",
+   "reach": 0.009,
+   "games": [
+    {
+     "id": 118913,
+     "ply": 6,
+     "white": "Kramnik, Vladimir",
+     "black": "Anand, Viswanathan",
+     "year": 2017,
+     "result": "1/2-1/2"
+    },
+    {
+     "id": 325845,
+     "ply": 6,
+     "white": "Carlsen, Magnus",
+     "black": "Dreev, Aleksey",
+     "year": 2014,
+     "result": "1-0"
+    },
+    {
+     "id": 47089,
+     "ply": 6,
+     "white": "Karjakin, Sergey",
+     "black": "Wei, Yi",
+     "year": 2019,
+     "result": "1-0"
+    }
+   ]
+  },
+  {
+   "id": "sidelines-2-nf3-4-nc3",
+   "title": "2.Nf3 · 4.Nc3",
+   "name": "Caro-Kann Defense",
+   "moves": "e4 c6 Nf3 d5 exd5 cxd5 Nc3 Nc6 d4",
+   "reach": 0.006,
+   "transposesTo": "exchange-4-nf3-5-nc3",
+   "games": [
+    {
+     "id": 118913,
+     "ply": 6,
+     "white": "Kramnik, Vladimir",
+     "black": "Anand, Viswanathan",
+     "year": 2017,
+     "result": "1/2-1/2"
+    },
+    {
+     "id": 325845,
+     "ply": 6,
+     "white": "Carlsen, Magnus",
+     "black": "Dreev, Aleksey",
+     "year": 2014,
+     "result": "1-0"
+    },
+    {
+     "id": 47089,
+     "ply": 6,
+     "white": "Karjakin, Sergey",
+     "black": "Wei, Yi",
+     "year": 2019,
+     "result": "1-0"
+    }
+   ]
+  },
+  {
+   "id": "sidelines-2-nf3-4-nc3-5-bb5",
+   "title": "2.Nf3 · 4.Nc3 · 5.Bb5",
+   "name": "Caro-Kann Defense",
+   "moves": "e4 c6 Nf3 d5 exd5 cxd5 Nc3 Nc6 Bb5 e6 O-O Bd6",
+   "reach": 0.002,
+   "games": [
+    {
+     "id": 118913,
+     "ply": 6,
+     "white": "Kramnik, Vladimir",
+     "black": "Anand, Viswanathan",
+     "year": 2017,
+     "result": "1/2-1/2"
+    },
+    {
+     "id": 325845,
+     "ply": 6,
+     "white": "Carlsen, Magnus",
+     "black": "Dreev, Aleksey",
+     "year": 2014,
+     "result": "1-0"
+    },
+    {
+     "id": 47089,
+     "ply": 6,
+     "white": "Karjakin, Sergey",
+     "black": "Wei, Yi",
+     "year": 2019,
+     "result": "1-0"
+    }
+   ]
+  },
+  {
+   "id": "sidelines-2-nf3-4-be2",
+   "title": "2.Nf3 · 4.Be2",
+   "name": "Caro-Kann Defense",
+   "moves": "e4 c6 Nf3 d5 exd5 cxd5 Be2 Bf5 O-O e6 d4 Bd6",
+   "reach": 0.003,
+   "games": [
+    {
+     "id": 118913,
+     "ply": 6,
+     "white": "Kramnik, Vladimir",
+     "black": "Anand, Viswanathan",
+     "year": 2017,
+     "result": "1/2-1/2"
+    },
+    {
+     "id": 325845,
+     "ply": 6,
+     "white": "Carlsen, Magnus",
+     "black": "Dreev, Aleksey",
+     "year": 2014,
+     "result": "1-0"
+    },
+    {
+     "id": 47089,
+     "ply": 6,
+     "white": "Karjakin, Sergey",
+     "black": "Wei, Yi",
+     "year": 2019,
+     "result": "1-0"
+    }
+   ]
+  },
+  {
+   "id": "sidelines-2-nf3-4-ne5",
+   "title": "2.Nf3 · 4.Ne5",
+   "name": "Caro-Kann Defense: Apocalypse Attack",
+   "moves": "e4 c6 Nf3 d5 exd5 cxd5 Ne5 Nc6 d4 e6 Bb5",
+   "reach": 0.002,
+   "transposesTo": "exchange-4-nf3-6-ne5",
+   "games": [
+    {
+     "id": 118459,
+     "ply": 11,
+     "white": "Morozevich, Alexander",
+     "black": "Bareev, Evgeny",
+     "year": 2005,
+     "result": "1-0"
+    },
+    {
+     "id": 190427,
+     "ply": 11,
+     "white": "Andreikin, Dmitry",
+     "black": "Kobalia, Mikhail",
+     "year": 2018,
+     "result": "1/2-1/2"
+    },
+    {
+     "id": 253861,
+     "ply": 11,
+     "white": "Romanov, Egor S.",
+     "black": "Andreikin, Dmitry",
+     "year": 2024,
+     "result": "1/2-1/2"
+    }
+   ]
+  },
+  {
+   "id": "sidelines-2-nf3-3-e5",
+   "title": "2.Nf3 · 3.e5",
+   "name": "Caro-Kann Defense",
+   "moves": "e4 c6 Nf3 d5 e5 Bg4 d4 e6 Be2 c5 c3 Nc6 O-O cxd4 cxd4 Nge7 Nc3 Nf5 Be3 Be7",
+   "reach": 0.041,
+   "games": [
+    {
+     "id": 478850,
+     "ply": 13,
+     "white": "Wang, Puchen",
+     "black": "Iotov, Valentin",
+     "year": 2011,
+     "result": "1/2-1/2"
+    },
+    {
+     "id": 479810,
+     "ply": 13,
+     "white": "Nitin, S.",
+     "black": "Anurag, Mhamal",
+     "year": 2015,
+     "result": "1/2-1/2"
+    }
+   ]
+  },
+  {
+   "id": "sidelines-2-nf3-3-e5-5-h3",
+   "title": "2.Nf3 · 3.e5 · 5.h3",
+   "name": "Caro-Kann Defense",
+   "moves": "e4 c6 Nf3 d5 e5 Bg4 d4 e6 h3 Bxf3 Qxf3 c5 c3 cxd4 cxd4 Qb6 Nc3 Nc6",
+   "reach": 0.008,
+   "games": [
+    {
+     "id": 253858,
+     "ply": 8,
+     "white": "Anand, Viswanathan",
+     "black": "Nihal Sarin",
+     "year": 2026,
+     "result": "0-1"
+    },
+    {
+     "id": 326963,
+     "ply": 8,
+     "white": "Wilczek, Tadeusz",
+     "black": "Jurkowitz, Romana",
+     "year": 2006,
+     "result": "1-0"
+    },
+    {
+     "id": 118874,
+     "ply": 8,
+     "white": "Mary, Patrick",
+     "black": "Magalhães, Leonardo Guedes de",
+     "year": 2010,
+     "result": "1/2-1/2"
+    }
+   ]
+  },
+  {
+   "id": "sidelines-2-nf3-3-e5-5-c3",
+   "title": "2.Nf3 · 3.e5 · 5.c3",
+   "name": "Caro-Kann Defense",
+   "moves": "e4 c6 Nf3 d5 e5 Bg4 d4 e6 c3 c5 Be2",
+   "reach": 0.003,
+   "transposesTo": "sidelines-2-nf3-3-e5",
+   "games": [
+    {
+     "id": 47388,
+     "ply": 9,
+     "white": "Mary, Patrick",
+     "black": "Jacquin, Roberto Juan",
+     "year": 2008,
+     "result": "0-1"
+    }
+   ]
+  },
+  {
+   "id": "sidelines-2-nf3-3-e5-4-be2",
+   "title": "2.Nf3 · 3.e5 · 4.Be2",
+   "name": "Caro-Kann Defense",
+   "moves": "e4 c6 Nf3 d5 e5 Bg4 Be2 e6 d4",
+   "reach": 0.006,
+   "transposesTo": "sidelines-2-nf3-3-e5",
+   "games": [
+    {
+     "id": 253858,
+     "ply": 9,
+     "white": "Anand, Viswanathan",
+     "black": "Nihal Sarin",
+     "year": 2026,
+     "result": "0-1"
+    },
+    {
+     "id": 47115,
+     "ply": 9,
+     "white": "Asadli, Vugar",
+     "black": "Suleymanli, Aydin",
+     "year": 2022,
+     "result": "1/2-1/2"
+    }
+   ]
+  },
+  {
+   "id": "sidelines-2-nf3-3-e5-4-h3",
+   "title": "2.Nf3 · 3.e5 · 4.h3",
+   "name": "Caro-Kann Defense",
+   "moves": "e4 c6 Nf3 d5 e5 Bg4 h3 Bxf3 Qxf3 e6 d4",
+   "reach": 0.004,
+   "transposesTo": "sidelines-2-nf3-3-e5-5-h3",
+   "games": [
+    {
+     "id": 253858,
+     "ply": 6,
+     "white": "Anand, Viswanathan",
+     "black": "Nihal Sarin",
+     "year": 2026,
+     "result": "0-1"
+    },
+    {
+     "id": 326409,
+     "ply": 6,
+     "white": "Mamedov, Rauf",
+     "black": "Gukesh D",
+     "year": 2022,
+     "result": "1/2-1/2"
+    },
+    {
+     "id": 189513,
+     "ply": 6,
+     "white": "Narayanan S L",
+     "black": "Anton Guijarro, David",
+     "year": 2023,
+     "result": "1/2-1/2"
+    }
+   ]
+  },
+  {
+   "id": "sidelines-2-nf3-3-d3",
+   "title": "2.Nf3 · 3.d3",
+   "name": "Caro-Kann Defense: Dinic Gambit",
+   "moves": "e4 c6 Nf3 d5 d3 dxe4 Ng5 exd3 Bxd3 Nd7 O-O Ne5",
+   "reach": 0.009,
+   "games": [
+    {
+     "id": 48094,
+     "ply": 6,
+     "white": "Anand, Viswanathan",
+     "black": "Carlsen, Magnus",
+     "year": 2023,
+     "result": "0-1"
+    },
+    {
+     "id": 325695,
+     "ply": 6,
+     "white": "Giri, Anish",
+     "black": "Nepomniachtchi, Ian",
+     "year": 2019,
+     "result": "1-0"
+    },
+    {
+     "id": 48059,
+     "ply": 6,
+     "white": "Nakamura, Hikaru",
+     "black": "Liang, Awonder",
+     "year": 2026,
+     "result": "1-0"
+    }
+   ]
+  },
+  {
+   "id": "sidelines-2-nf3-3-d3-4-dxe4",
+   "title": "2.Nf3 · 3.d3 · 4.dxe4",
+   "name": "Caro-Kann Defense: Endgame Variation",
+   "moves": "e4 c6 Nf3 d5 d3 dxe4 dxe4 Qxd1+ Kxd1 Nf6 Bd3 Nbd7",
+   "reach": 0.003,
+   "games": [
+    {
+     "id": 400763,
+     "ply": 12,
+     "white": "Chigaev, Maksim",
+     "black": "Paravyan, David",
+     "year": 2021,
+     "result": "1-0"
+    },
+    {
+     "id": 118786,
+     "ply": 12,
+     "white": "Andreikin, Dmitry",
+     "black": "Yu, Ruiyuan",
+     "year": 2019,
+     "result": "1-0"
+    },
+    {
+     "id": 326879,
+     "ply": 12,
+     "white": "Timofeev, Artyom",
+     "black": "Kukhmazov, Arsen",
+     "year": 2022,
+     "result": "1-0"
+    }
+   ]
+  },
+  {
+   "id": "sidelines-2-nc3",
+   "title": "2.Nc3",
+   "name": "Caro-Kann Defense",
+   "moves": "e4 c6 Nc3 d5 exd5 cxd5 d4",
+   "reach": 0.069,
+   "transposesTo": "exchange-4-nc3",
+   "games": [
+    {
+     "id": 190424,
+     "ply": 7,
+     "white": "Pham, Tien Toan",
+     "black": "Nguyen, Van Dat",
+     "year": 2012,
+     "result": "1-0"
+    },
+    {
+     "id": 844423,
+     "ply": 7,
+     "white": "Le, Quoc Dinh",
+     "black": "Nguyen, Phu Huy",
+     "year": 2012,
+     "result": "0-1"
+    },
+    {
+     "id": 844428,
+     "ply": 7,
+     "white": "Do, Dang Khoa",
+     "black": "Nguyen, Phu Huy",
+     "year": 2012,
+     "result": "0-1"
+    }
+   ]
+  },
+  {
+   "id": "sidelines-2-nc3-4-nf3",
+   "title": "2.Nc3 · 4.Nf3",
+   "name": "Caro-Kann Defense",
+   "moves": "e4 c6 Nc3 d5 exd5 cxd5 Nf3",
+   "reach": 0.002,
+   "transposesTo": "sidelines-2-nf3-4-nc3",
+   "games": [
+    {
+     "id": 253546,
+     "ply": 6,
+     "white": "Fries-Nielsen, Jens Ove",
+     "black": "Agrest, Evgenij",
+     "year": 2014,
+     "result": "1/2-1/2"
+    }
+   ]
+  },
+  {
+   "id": "sidelines-2-nc3-3-d4",
+   "title": "2.Nc3 · 3.d4",
+   "name": "Caro-Kann Defense",
+   "moves": "e4 c6 Nc3 d5 d4",
+   "reach": 0.008,
+   "transposesTo": "classical-5-ng3",
+   "games": [
+    {
+     "id": 553358,
+     "ply": 5,
+     "white": "Carlsen, Magnus",
+     "black": "Morozevich, Alexander",
+     "year": 2013,
+     "result": "1/2-1/2"
+    },
+    {
+     "id": 553796,
+     "ply": 5,
+     "white": "Duda, Jan-Krzysztof",
+     "black": "Carlsen, Magnus",
+     "year": 2020,
+     "result": "1-0"
+    },
+    {
+     "id": 402179,
+     "ply": 5,
+     "white": "Anand, Viswanathan",
+     "black": "Carlsen, Magnus",
+     "year": 2013,
+     "result": "1/2-1/2"
+    }
+   ]
+  },
+  {
+   "id": "sidelines-2-nc3-3-qf3",
+   "title": "2.Nc3 · 3.Qf3",
+   "name": "Caro-Kann Defense: Goldman Variation",
+   "moves": "e4 c6 Nc3 d5 Qf3 dxe4 Nxe4 Nd7 d4 Ndf6 c3 Nxe4 Qxe4 Nf6 Qc2 Bg4",
+   "reach": 0.003,
+   "games": [
+    {
+     "id": 120063,
+     "ply": 16,
+     "white": "Totsky, Leonid",
+     "black": "Morozevich, Alexander",
+     "year": 1999,
+     "result": "1/2-1/2"
+    },
+    {
+     "id": 625915,
+     "ply": 16,
+     "white": "Psakhis, Lev",
+     "black": "Razuvaev, Aleksandr",
+     "year": 1981,
+     "result": "1/2-1/2"
+    },
+    {
+     "id": 625916,
+     "ply": 16,
+     "white": "Psakhis, Lev",
+     "black": "Razuvaev, Aleksandr",
+     "year": 1981,
+     "result": "1/2-1/2"
+    }
+   ]
+  },
+  {
+   "id": "sidelines-2-nc3-3-e5",
+   "title": "2.Nc3 · 3.e5",
+   "name": "Caro-Kann Defense",
+   "moves": "e4 c6 Nc3 d5 e5 d4 Ne4 Qd5 d3 Qxe5 Nf3 Qa5+",
+   "reach": 0.003,
+   "games": [
+    {
+     "id": 47895,
+     "ply": 4,
+     "white": "Carlsen, Magnus",
+     "black": "Ivanchuk, Vasyl",
+     "year": 2012,
+     "result": "1-0"
+    },
+    {
+     "id": 47810,
+     "ply": 4,
+     "white": "Nepomniachtchi, Ian",
+     "black": "Carlsen, Magnus",
+     "year": 2016,
+     "result": "0-1"
+    },
+    {
+     "id": 326743,
+     "ply": 4,
+     "white": "Topalov, Veselin",
+     "black": "Carlsen, Magnus",
+     "year": 2022,
+     "result": "0-1"
+    }
+   ]
+  },
+  {
+   "id": "sidelines-2-nc3-3-d3",
+   "title": "2.Nc3 · 3.d3",
+   "name": "Caro-Kann Defense",
+   "moves": "e4 c6 Nc3 d5 d3 g6 g3 Bg7 Bg2 dxe4 Nxe4 Nf6",
+   "reach": 0.002,
+   "games": [
+    {
+     "id": 48070,
+     "ply": 12,
+     "white": "Jovanovic, Zoran",
+     "black": "Zelcic, Robert",
+     "year": 2008,
+     "result": "1/2-1/2"
+    },
+    {
+     "id": 325641,
+     "ply": 12,
+     "white": "Jovanovic, Zoran",
+     "black": "Pikula, Dejan",
+     "year": 2014,
+     "result": "1/2-1/2"
+    },
+    {
+     "id": 254238,
+     "ply": 12,
+     "white": "Pancevski, Filip",
+     "black": "Bogdanovski, Vlatko",
+     "year": 2017,
+     "result": "1/2-1/2"
+    }
+   ]
+  },
+  {
+   "id": "sidelines-2-bc4",
+   "title": "2.Bc4",
+   "name": "Caro-Kann Defense: Hillbilly Attack",
+   "moves": "e4 c6 Bc4 d5 exd5 cxd5 Bb3 Nf6 d4 Bg4 f3 Bd7 Ne2 e6",
+   "reach": 0.049,
+   "games": [
+    {
+     "id": 254260,
+     "ply": 9,
+     "white": "La Quoc Hiep",
+     "black": "Tran, Trung Tien",
+     "year": 2012,
+     "result": "0-1"
+    }
+   ]
+  },
+  {
+   "id": "sidelines-2-bc4-6-nf3",
+   "title": "2.Bc4 · 6.Nf3",
+   "name": "Caro-Kann Defense: Hillbilly Attack",
+   "moves": "e4 c6 Bc4 d5 exd5 cxd5 Bb3 Nf6 d4 Bg4 Nf3 Nc6 c3 Qc7",
+   "reach": 0.003,
+   "games": [
+    {
+     "id": 254260,
+     "ply": 9,
+     "white": "La Quoc Hiep",
+     "black": "Tran, Trung Tien",
+     "year": 2012,
+     "result": "0-1"
+    }
+   ]
+  },
+  {
+   "id": "sidelines-2-bc4-5-nf3",
+   "title": "2.Bc4 · 5.Nf3",
+   "name": "Caro-Kann Defense: Hillbilly Attack",
+   "moves": "e4 c6 Bc4 d5 exd5 cxd5 Bb3 Nf6 Nf3 Nc6 O-O Bg4 h3 Bh5 d3 e6",
+   "reach": 0.006,
+   "games": [
+    {
+     "id": 254260,
+     "ply": 8,
+     "white": "La Quoc Hiep",
+     "black": "Tran, Trung Tien",
+     "year": 2012,
+     "result": "0-1"
+    }
+   ]
+  },
+  {
+   "id": "sidelines-2-bc4-5-d3",
+   "title": "2.Bc4 · 5.d3",
+   "name": "Caro-Kann Defense: Hillbilly Attack",
+   "moves": "e4 c6 Bc4 d5 exd5 cxd5 Bb3 Nf6 d3 Bg4 f3 Bf5 Ne2 Nc6 O-O e6",
+   "reach": 0.005,
+   "games": [
+    {
+     "id": 254260,
+     "ply": 8,
+     "white": "La Quoc Hiep",
+     "black": "Tran, Trung Tien",
+     "year": 2012,
+     "result": "0-1"
+    }
+   ]
+  },
+  {
+   "id": "sidelines-2-bc4-5-h3",
+   "title": "2.Bc4 · 5.h3",
+   "name": "Caro-Kann Defense: Hillbilly Attack",
+   "moves": "e4 c6 Bc4 d5 exd5 cxd5 Bb3 Nf6 h3 Bf5 Nf3 h6 O-O e6",
+   "reach": 0.002,
+   "games": [
+    {
+     "id": 254260,
+     "ply": 8,
+     "white": "La Quoc Hiep",
+     "black": "Tran, Trung Tien",
+     "year": 2012,
+     "result": "0-1"
+    }
+   ]
+  },
+  {
+   "id": "sidelines-2-bc4-4-bb5",
+   "title": "2.Bc4 · 4.Bb5+",
+   "name": "Caro-Kann Defense: Hillbilly Attack",
+   "moves": "e4 c6 Bc4 d5 exd5 cxd5 Bb5+ Bd7 Bxd7+ Nxd7 Nf3 e6 O-O Rc8",
+   "reach": 0.011,
+   "games": [
+    {
+     "id": 254260,
+     "ply": 6,
+     "white": "La Quoc Hiep",
+     "black": "Tran, Trung Tien",
+     "year": 2012,
+     "result": "0-1"
+    }
+   ]
+  },
+  {
+   "id": "sidelines-2-bc4-4-bb5-6-d4",
+   "title": "2.Bc4 · 4.Bb5+ · 6.d4",
+   "name": "Caro-Kann Defense: Hillbilly Attack",
+   "moves": "e4 c6 Bc4 d5 exd5 cxd5 Bb5+ Bd7 Bxd7+ Nxd7 d4 e6 Nf3 Rc8",
+   "reach": 0.002,
+   "games": [
+    {
+     "id": 254260,
+     "ply": 6,
+     "white": "La Quoc Hiep",
+     "black": "Tran, Trung Tien",
+     "year": 2012,
+     "result": "0-1"
+    }
+   ]
+  },
+  {
+   "id": "sidelines-2-bc4-3-bb3",
+   "title": "2.Bc4 · 3.Bb3",
+   "name": "Caro-Kann Defense: Hillbilly Attack, Schaeffer Gambit",
+   "moves": "e4 c6 Bc4 d5 Bb3 dxe4 Qh5 g6 Qh4 a5",
+   "reach": 0.002,
+   "games": [
+    {
+     "id": 189633,
+     "ply": 9,
+     "white": "Williams, Simon K",
+     "black": "Maroroa Jones, Gawain C B",
+     "year": 2011,
+     "result": "0-1"
+    },
+    {
+     "id": 326298,
+     "ply": 9,
+     "white": "Berg, Emanuel",
+     "black": "Hillarp Persson, Tiger",
+     "year": 2015,
+     "result": "1-0"
+    }
+   ]
+  },
+  {
+   "id": "sidelines-2-f4",
+   "title": "2.f4",
+   "name": "Caro-Kann Defense",
+   "moves": "e4 c6 f4 d5 e5 Bf5 Nf3 e6 d4",
+   "reach": 0.045,
+   "transposesTo": "advance-4-f4",
+   "games": [
+    {
+     "id": 770848,
+     "ply": 9,
+     "white": "Morozevich, Alexander",
+     "black": "Svidler, Peter",
+     "year": 2005,
+     "result": "1/2-1/2"
+    },
+    {
+     "id": 622963,
+     "ply": 9,
+     "white": "Morozevich, Alexander",
+     "black": "Ivanchuk, Vasyl",
+     "year": 2004,
+     "result": "0-1"
+    },
+    {
+     "id": 400886,
+     "ply": 9,
+     "white": "Short, Nigel D",
+     "black": "Eljanov, Pavel",
+     "year": 2017,
+     "result": "0-1"
+    }
+   ]
+  },
+  {
+   "id": "sidelines-2-f4-5-be2",
+   "title": "2.f4 · 5.Be2",
+   "name": "Caro-Kann Defense",
+   "moves": "e4 c6 f4 d5 e5 Bf5 Nf3 e6 Be2 c5 O-O Nc6 d3 h5",
+   "reach": 0.002,
+   "games": [
+    {
+     "id": 48056,
+     "ply": 13,
+     "white": "Bernadskiy, Vitaliy",
+     "black": "Kovalev, Denis",
+     "year": 2017,
+     "result": "1-0"
+    }
+   ]
+  },
+  {
+   "id": "sidelines-2-f4-5-d3",
+   "title": "2.f4 · 5.d3",
+   "name": "Caro-Kann Defense",
+   "moves": "e4 c6 f4 d5 e5 Bf5 Nf3 e6 d3 Be7 Be2 c5",
+   "reach": 0.002,
+   "games": [
+    {
+     "id": 118990,
+     "ply": 8,
+     "white": "Movsesian, Sergei",
+     "black": "Eljanov, Pavel",
+     "year": 2010,
+     "result": "0-1"
+    },
+    {
+     "id": 400886,
+     "ply": 8,
+     "white": "Short, Nigel D",
+     "black": "Eljanov, Pavel",
+     "year": 2017,
+     "result": "0-1"
+    },
+    {
+     "id": 325895,
+     "ply": 8,
+     "white": "Zvjaginsev, Vadim",
+     "black": "Khairullin, Ildar",
+     "year": 2010,
+     "result": "1/2-1/2"
+    }
+   ]
+  },
+  {
+   "id": "sidelines-2-f4-4-d4",
+   "title": "2.f4 · 4.d4",
+   "name": "Caro-Kann Defense",
+   "moves": "e4 c6 f4 d5 e5 Bf5 d4",
+   "reach": 0.009,
+   "transposesTo": "advance-4-f4",
+   "games": [
+    {
+     "id": 770848,
+     "ply": 7,
+     "white": "Morozevich, Alexander",
+     "black": "Svidler, Peter",
+     "year": 2005,
+     "result": "1/2-1/2"
+    },
+    {
+     "id": 622963,
+     "ply": 7,
+     "white": "Morozevich, Alexander",
+     "black": "Ivanchuk, Vasyl",
+     "year": 2004,
+     "result": "0-1"
+    },
+    {
+     "id": 698228,
+     "ply": 7,
+     "white": "Van den Doel, Erik",
+     "black": "Bareev, Evgeny",
+     "year": 2005,
+     "result": "1/2-1/2"
+    }
+   ]
+  },
+  {
+   "id": "sidelines-2-f4-3-exd5",
+   "title": "2.f4 · 3.exd5",
+   "name": "Caro-Kann Defense",
+   "moves": "e4 c6 f4 d5 exd5 cxd5 Nf3 Nc6 d4 Bf5 c3 e6 Bd3 Nf6 O-O Bd6 Ne5 O-O",
+   "reach": 0.011,
+   "games": [
+    {
+     "id": 325897,
+     "ply": 4,
+     "white": "Movsesian, Sergei",
+     "black": "Ponomariov, Ruslan",
+     "year": 2010,
+     "result": "1/2-1/2"
+    },
+    {
+     "id": 118990,
+     "ply": 4,
+     "white": "Movsesian, Sergei",
+     "black": "Eljanov, Pavel",
+     "year": 2010,
+     "result": "0-1"
+    },
+    {
+     "id": 118995,
+     "ply": 4,
+     "white": "Ponomariov, Ruslan",
+     "black": "Jobava, Baadur",
+     "year": 2010,
+     "result": "1-0"
+    }
+   ]
+  },
+  {
+   "id": "sidelines-2-f4-3-exd5-4-d4",
+   "title": "2.f4 · 3.exd5 · 4.d4",
+   "name": "Caro-Kann Defense",
+   "moves": "e4 c6 f4 d5 exd5 cxd5 d4 Nc6 Nf3",
+   "reach": 0.004,
+   "transposesTo": "sidelines-2-f4-3-exd5",
+   "games": [
+    {
+     "id": 325897,
+     "ply": 4,
+     "white": "Movsesian, Sergei",
+     "black": "Ponomariov, Ruslan",
+     "year": 2010,
+     "result": "1/2-1/2"
+    },
+    {
+     "id": 118990,
+     "ply": 4,
+     "white": "Movsesian, Sergei",
+     "black": "Eljanov, Pavel",
+     "year": 2010,
+     "result": "0-1"
+    },
+    {
+     "id": 118995,
+     "ply": 4,
+     "white": "Ponomariov, Ruslan",
+     "black": "Jobava, Baadur",
+     "year": 2010,
+     "result": "1-0"
+    }
+   ]
+  },
+  {
+   "id": "sidelines-2-f4-3-nc3",
+   "title": "2.f4 · 3.Nc3",
+   "name": "Caro-Kann Defense",
+   "moves": "e4 c6 f4 d5 Nc3 dxe4 Nxe4 Nf6 Ng3 h5 Nf3 h4 Ne2 Bf5",
+   "reach": 0.002,
+   "games": [
+    {
+     "id": 326790,
+     "ply": 8,
+     "white": "Perez Candelario, Manuel",
+     "black": "Illescas Cordoba, Miguel",
+     "year": 2004,
+     "result": "0-1"
+    },
+    {
+     "id": 326786,
+     "ply": 8,
+     "white": "Conquest, Stuart C",
+     "black": "Morovic Fernandez, Ivan",
+     "year": 1996,
+     "result": "1-0"
+    },
+    {
+     "id": 326789,
+     "ply": 8,
+     "white": "Tiviakov, Sergei",
+     "black": "L'Ami, Erwin",
+     "year": 2003,
+     "result": "0-1"
+    }
+   ]
+  },
+  {
+   "id": "sidelines-2-f4-3-nf3",
+   "title": "2.f4 · 3.Nf3",
+   "name": "Caro-Kann Defense",
+   "moves": "e4 c6 f4 d5 Nf3 dxe4 Ng5 Nf6 Bc4 e6 Nc3 b5 Bb3 c5",
+   "reach": 0.002,
+   "games": [
+    {
+     "id": 325897,
+     "ply": 4,
+     "white": "Movsesian, Sergei",
+     "black": "Ponomariov, Ruslan",
+     "year": 2010,
+     "result": "1/2-1/2"
+    },
+    {
+     "id": 118990,
+     "ply": 4,
+     "white": "Movsesian, Sergei",
+     "black": "Eljanov, Pavel",
+     "year": 2010,
+     "result": "0-1"
+    },
+    {
+     "id": 118995,
+     "ply": 4,
+     "white": "Ponomariov, Ruslan",
+     "black": "Jobava, Baadur",
+     "year": 2010,
+     "result": "1-0"
+    }
+   ]
+  },
+  {
+   "id": "sidelines-2-c4",
+   "title": "2.c4",
+   "name": "Caro-Kann Defense: Accelerated Panov Attack, Modern Variation",
+   "moves": "e4 c6 c4 d5 cxd5 cxd5 exd5 Nf6 Nc3 Nxd5 Bc4 Nb6 Bb3 Nc6 Nf3 Bf5 d4 e6 O-O Be7",
+   "reach": 0.027,
+   "games": [
+    {
+     "id": 253663,
+     "ply": 20,
+     "white": "Larsen, Bent",
+     "black": "Portisch, Lajos",
+     "year": 1980,
+     "result": "1/2-1/2"
+    },
+    {
+     "id": 253672,
+     "ply": 20,
+     "white": "Morozevich, Alexander",
+     "black": "Saltaev, Mihail",
+     "year": 2011,
+     "result": "1/2-1/2"
+    },
+    {
+     "id": 253662,
+     "ply": 20,
+     "white": "Rozentalis, Eduardas",
+     "black": "Czarnota, Pawel",
+     "year": 2008,
+     "result": "1/2-1/2"
+    }
+   ]
+  },
+  {
+   "id": "sidelines-2-c4-6-nf3",
+   "title": "2.c4 · 6.Nf3",
+   "name": "Caro-Kann Defense: Accelerated Panov Attack, Modern Variation",
+   "moves": "e4 c6 c4 d5 cxd5 cxd5 exd5 Nf6 Nc3 Nxd5 Nf3 Nc6 Bc4 Nb6 Bb3",
+   "reach": 0.002,
+   "transposesTo": "sidelines-2-c4",
+   "games": [
+    {
+     "id": 253663,
+     "ply": 15,
+     "white": "Larsen, Bent",
+     "black": "Portisch, Lajos",
+     "year": 1980,
+     "result": "1/2-1/2"
+    },
+    {
+     "id": 253672,
+     "ply": 15,
+     "white": "Morozevich, Alexander",
+     "black": "Saltaev, Mihail",
+     "year": 2011,
+     "result": "1/2-1/2"
+    },
+    {
+     "id": 118305,
+     "ply": 15,
+     "white": "Stefansson, Hannes",
+     "black": "Aalto, Lenni",
+     "year": 1979,
+     "result": "1-0"
+    }
+   ]
+  },
+  {
+   "id": "sidelines-2-c4-4-e5",
+   "title": "2.c4 · 4.e5",
+   "name": "Caro-Kann Defense: Accelerated Panov Attack",
+   "moves": "e4 c6 c4 d5 cxd5 cxd5 e5 d4 Nf3 e6 Qa4+ Nc6 Bb5 Bd7 Bxc6 Bxc6 Qxd4 Ne7",
+   "reach": 0.003,
+   "games": [
+    {
+     "id": 119228,
+     "ply": 9,
+     "white": "Noritsyn, Nikolay",
+     "black": "Nagy, Gabor",
+     "year": 2023,
+     "result": "1/2-1/2"
+    }
+   ]
+  },
+  {
+   "id": "sidelines-2-c4-3-exd5",
+   "title": "2.c4 · 3.exd5",
+   "name": "Caro-Kann Defense: Accelerated Panov Attack",
+   "moves": "e4 c6 c4 d5 exd5 cxd5 cxd5",
+   "reach": 0.008,
+   "transposesTo": "sidelines-2-c4",
+   "games": [
+    {
+     "id": 189611,
+     "ply": 7,
+     "white": "Ivanchuk, Vasyl",
+     "black": "Topalov, Veselin",
+     "year": 2008,
+     "result": "1/2-1/2"
+    },
+    {
+     "id": 578398,
+     "ply": 7,
+     "white": "Carlsen, Magnus",
+     "black": "Gukesh D",
+     "year": 2026,
+     "result": "1-0"
+    },
+    {
+     "id": 253372,
+     "ply": 7,
+     "white": "Adams, Michael",
+     "black": "Ponomariov, Ruslan",
+     "year": 2005,
+     "result": "1/2-1/2"
+    }
+   ]
+  },
+  {
+   "id": "sidelines-2-c4-3-exd5-4-d4",
+   "title": "2.c4 · 3.exd5 · 4.d4",
+   "name": "Caro-Kann Defense: Panov Attack",
+   "moves": "e4 c6 c4 d5 exd5 cxd5 d4",
+   "reach": 0.002,
+   "transposesTo": "panov-5-nc3",
+   "games": [
+    {
+     "id": 48984,
+     "ply": 7,
+     "white": "Nepomniachtchi, Ian",
+     "black": "Carlsen, Magnus",
+     "year": 2023,
+     "result": "1/2-1/2"
+    },
+    {
+     "id": 48456,
+     "ply": 7,
+     "white": "Ivanchuk, Vasyl",
+     "black": "Topalov, Veselin",
+     "year": 2008,
+     "result": "1-0"
+    },
+    {
+     "id": 48658,
+     "ply": 7,
+     "white": "Giri, Anish",
+     "black": "Firouzja, Alireza",
+     "year": 2023,
+     "result": "0-1"
+    }
+   ]
+  },
+  {
+   "id": "sidelines-2-d3",
+   "title": "2.d3",
+   "name": "Caro-Kann Defense: Breyer Variation",
+   "moves": "e4 c6 d3 d5 Nd2 e5 Ngf3 Bd6 g3 Nf6 Bg2 O-O O-O Re8 Re1 Nbd7 c3 h6",
+   "reach": 0.024,
+   "games": [
+    {
+     "id": 401026,
+     "ply": 17,
+     "white": "Adams, Michael",
+     "black": "Dreev, Aleksey",
+     "year": 2007,
+     "result": "0-1"
+    },
+    {
+     "id": 119102,
+     "ply": 17,
+     "white": "Ljubojevic, Ljubomir",
+     "black": "Karpov, Anatoly",
+     "year": 1980,
+     "result": "1/2-1/2"
+    },
+    {
+     "id": 47547,
+     "ply": 17,
+     "white": "Yoo, Christopher Woojin",
+     "black": "Svane, Rasmus",
+     "year": 2022,
+     "result": "1-0"
+    }
+   ]
+  },
+  {
+   "id": "sidelines-2-d3-3-exd5",
+   "title": "2.d3 · 3.exd5",
+   "name": "Caro-Kann Defense: Breyer Variation",
+   "moves": "e4 c6 d3 d5 exd5 cxd5 Nf3 Nc6 Be2 e5 O-O Bd6",
+   "reach": 0.006,
+   "games": [
+    {
+     "id": 253610,
+     "ply": 4,
+     "white": "Yu, Yangyi",
+     "black": "Dessaules, Peter",
+     "year": 2019,
+     "result": "1/2-1/2"
+    },
+    {
+     "id": 401065,
+     "ply": 4,
+     "white": "Giri, Anish",
+     "black": "Nepomniachtchi, Ian",
+     "year": 2019,
+     "result": "1/2-1/2"
+    },
+    {
+     "id": 47538,
+     "ply": 4,
+     "white": "Kramnik, Vladimir",
+     "black": "Leko, Peter",
+     "year": 2008,
+     "result": "1/2-1/2"
+    }
+   ]
+  },
+  {
+   "id": "sidelines-2-d3-3-nf3",
+   "title": "2.d3 · 3.Nf3",
+   "name": "Caro-Kann Defense: Endgame Offer",
+   "moves": "e4 c6 d3 d5 Nf3",
+   "reach": 0.002,
+   "transposesTo": "sidelines-2-nf3-3-d3",
+   "games": [
+    {
+     "id": 326840,
+     "ply": 5,
+     "white": "Carlsen, Magnus",
+     "black": "Firouzja, Alireza",
+     "year": 2025,
+     "result": "1/2-1/2"
+    },
+    {
+     "id": 48094,
+     "ply": 5,
+     "white": "Anand, Viswanathan",
+     "black": "Carlsen, Magnus",
+     "year": 2023,
+     "result": "0-1"
+    },
+    {
+     "id": 254296,
+     "ply": 5,
+     "white": "Carlsen, Magnus",
+     "black": "Praggnanandhaa R",
+     "year": 2024,
+     "result": "1-0"
+    }
+   ]
+  },
+  {
+   "id": "sidelines-2-d3-3-nc3",
+   "title": "2.d3 · 3.Nc3",
+   "name": "Caro-Kann Defense: Breyer Variation",
+   "moves": "e4 c6 d3 d5 Nc3",
+   "reach": 0.002,
+   "transposesTo": "sidelines-2-nc3-3-d3",
+   "games": [
+    {
+     "id": 325691,
+     "ply": 5,
+     "white": "Leko, Peter",
+     "black": "Karpov, Anatoly",
+     "year": 2001,
+     "result": "1-0"
+    },
+    {
+     "id": 118759,
+     "ply": 5,
+     "white": "Short, Nigel D",
+     "black": "Leko, Peter",
+     "year": 1999,
+     "result": "0-1"
+    },
+    {
+     "id": 189555,
+     "ply": 5,
+     "white": "Short, Nigel D",
+     "black": "Roiz, Michael",
+     "year": 2011,
+     "result": "1/2-1/2"
+    }
+   ]
+  }
+ ]
+}

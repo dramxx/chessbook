@@ -5,6 +5,7 @@ import { usePathname } from "next/navigation";
 
 const NAV = [
   { href: "/openings", label: "Openings" },
+  { href: "/learn", label: "Learn" },
   { href: "/games", label: "Games" },
   { href: "/analysis", label: "Analysis" },
   { href: "/puzzles", label: "Puzzles" },
@@ -12,7 +13,7 @@ const NAV = [
   { href: "/play", label: "Play" },
 ];
 // Sections that don't exist yet are shown disabled.
-const AVAILABLE = new Set(["/openings", "/games", "/puzzles", "/stockfish", "/play", "/analysis"]);
+const AVAILABLE = new Set(["/openings", "/learn", "/games", "/puzzles", "/stockfish", "/play", "/analysis"]);
 
 export function Header() {
   const pathname = usePathname();

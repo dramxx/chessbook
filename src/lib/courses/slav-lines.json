@@ -1,0 +1,3167 @@
+{
+ "main": [
+  {
+   "id": "main-5-a4",
+   "title": "5.a4",
+   "name": "Slav Defense: Czech Variation, Dutch Variation",
+   "moves": "d4 d5 c4 c6 Nc3 Nf6 Nf3 dxc4 a4 Bf5 e3 e6 Bxc4 Bb4 O-O Nbd7 Qe2 Bg6 Rd1 O-O Ne5 Nxe5 dxe5 Nd7 f4 Qe7",
+   "reach": 0.053,
+   "games": [
+    {
+     "id": 734746,
+     "ply": 26,
+     "white": "Ernst, Sipke",
+     "black": "Van Wely, Loek",
+     "year": 2015,
+     "result": "1-0"
+    },
+    {
+     "id": 734980,
+     "ply": 26,
+     "white": "Lou, Yiping",
+     "black": "Ma, Qun",
+     "year": 2022,
+     "result": "1-0"
+    },
+    {
+     "id": 733707,
+     "ply": 26,
+     "white": "Dorfman, Iossif",
+     "black": "Timoscenko, Gennadij",
+     "year": 1978,
+     "result": "1/2-1/2"
+    }
+   ]
+  },
+  {
+   "id": "main-5-a4-10-e4",
+   "title": "5.a4 · 10.e4",
+   "name": "Slav Defense: Czech Variation, Dutch Variation",
+   "moves": "d4 d5 c4 c6 Nc3 Nf6 Nf3 dxc4 a4 Bf5 e3 e6 Bxc4 Bb4 O-O Nbd7 Qe2 Bg6 e4 O-O e5 Nd5 Nxd5 cxd5 Bd3 Bxd3",
+   "reach": 0.002,
+   "games": [
+    {
+     "id": 78432,
+     "ply": 26,
+     "white": "Movsesian, Sergei",
+     "black": "Melkumyan, Hrant",
+     "year": 2012,
+     "result": "1/2-1/2"
+    },
+    {
+     "id": 13644,
+     "ply": 26,
+     "white": "Arkell, Keith C",
+     "black": "Banusz, Tamas",
+     "year": 2015,
+     "result": "1/2-1/2"
+    },
+    {
+     "id": 289342,
+     "ply": 26,
+     "white": "Nogerbek, Kazybek",
+     "black": "Iljiushenok, Ilia",
+     "year": 2023,
+     "result": "1-0"
+    }
+   ]
+  },
+  {
+   "id": "main-5-a4-9-qb3",
+   "title": "5.a4 · 9.Qb3",
+   "name": "Slav Defense: Czech Variation, Dutch Variation",
+   "moves": "d4 d5 c4 c6 Nc3 Nf6 Nf3 dxc4 a4 Bf5 e3 e6 Bxc4 Bb4 O-O Nbd7 Qb3 a5 Na2 Be7 Qxb7 Rb8 Qa6 Ra8 Qb7 Rb8",
+   "reach": 0.004,
+   "games": [
+    {
+     "id": 587919,
+     "ply": 26,
+     "white": "Shariyazdanov, Andrey",
+     "black": "Ponkratov, Pavel",
+     "year": 2013,
+     "result": "1/2-1/2"
+    },
+    {
+     "id": 587919,
+     "ply": 26,
+     "white": "Shariyazdanov, Andrey",
+     "black": "Ponkratov, Pavel",
+     "year": 2013,
+     "result": "1/2-1/2"
+    },
+    {
+     "id": 587919,
+     "ply": 26,
+     "white": "Shariyazdanov, Andrey",
+     "black": "Ponkratov, Pavel",
+     "year": 2013,
+     "result": "1/2-1/2"
+    }
+   ]
+  },
+  {
+   "id": "main-5-a4-9-bd2",
+   "title": "5.a4 · 9.Bd2",
+   "name": "Slav Defense: Czech Variation, Dutch Variation",
+   "moves": "d4 d5 c4 c6 Nc3 Nf6 Nf3 dxc4 a4 Bf5 e3 e6 Bxc4 Bb4 O-O Nbd7 Bd2 a5 Re1 O-O",
+   "reach": 0.003,
+   "games": [
+    {
+     "id": 84086,
+     "ply": 20,
+     "white": "Kuzmin, Alexey",
+     "black": "Vladimirov, Yevgeniy",
+     "year": 1987,
+     "result": "1/2-1/2"
+    }
+   ]
+  },
+  {
+   "id": "main-5-a4-9-nh4",
+   "title": "5.a4 · 9.Nh4",
+   "name": "Slav Defense: Czech Variation, Dutch Variation",
+   "moves": "d4 d5 c4 c6 Nc3 Nf6 Nf3 dxc4 a4 Bf5 e3 e6 Bxc4 Bb4 O-O Nbd7 Nh4 Bg6 Nxg6 hxg6",
+   "reach": 0.002,
+   "games": [
+    {
+     "id": 733716,
+     "ply": 20,
+     "white": "Kramnik, Vladimir",
+     "black": "Le, Quang Liem",
+     "year": 2011,
+     "result": "1/2-1/2"
+    },
+    {
+     "id": 734781,
+     "ply": 20,
+     "white": "Cheparinov, Ivan",
+     "black": "Le, Quang Liem",
+     "year": 2013,
+     "result": "1/2-1/2"
+    },
+    {
+     "id": 660855,
+     "ply": 20,
+     "white": "Van Wely, Loek",
+     "black": "Inarkiev, Ernesto",
+     "year": 2011,
+     "result": "1/2-1/2"
+    }
+   ]
+  },
+  {
+   "id": "main-5-a4-6-ne5",
+   "title": "5.a4 · 6.Ne5",
+   "name": "Slav Defense: Czech Variation, Carlsbad Variation, Morozevich Variation",
+   "moves": "d4 d5 c4 c6 Nc3 Nf6 Nf3 dxc4 a4 Bf5 Ne5 Nbd7 Nxc4 Qc7 g3 e5 dxe5 Nxe5 Bf4 Nfd7 Bg2 g5 Ne3 gxf4 Nxf5 O-O-O Qc2 Nc5",
+   "reach": 0.013,
+   "games": [
+    {
+     "id": 588827,
+     "ply": 28,
+     "white": "Kramnik, Vladimir",
+     "black": "Morozevich, Alexander",
+     "year": 2001,
+     "result": "1/2-1/2"
+    },
+    {
+     "id": 660786,
+     "ply": 28,
+     "white": "So, Wesley",
+     "black": "Mamedyarov, Shakhriyar",
+     "year": 2015,
+     "result": "1/2-1/2"
+    },
+    {
+     "id": 733406,
+     "ply": 28,
+     "white": "Ivanchuk, Vasyl",
+     "black": "Gelfand, Boris",
+     "year": 2005,
+     "result": "0-1"
+    }
+   ]
+  },
+  {
+   "id": "main-5-a4-6-ne5-8-f3",
+   "title": "5.a4 · 6.Ne5 · 8.f3",
+   "name": "Slav Defense: Czech Variation, Krause Attack",
+   "moves": "d4 d5 c4 c6 Nc3 Nf6 Nf3 dxc4 a4 Bf5 Ne5 Nbd7 Nxc4 Qc7 f3 e5 e4 exd4 Qxd4 Be6 Be3 Bb4",
+   "reach": 0.004,
+   "games": [
+    {
+     "id": 659711,
+     "ply": 19,
+     "white": "Mozharov, Mikhail",
+     "black": "Koziak, Vitali",
+     "year": 2016,
+     "result": "1-0"
+    }
+   ]
+  },
+  {
+   "id": "main-5-a4-6-bg5",
+   "title": "5.a4 · 6.Bg5",
+   "name": "Slav Defense: Czech Variation",
+   "moves": "d4 d5 c4 c6 Nc3 Nf6 Nf3 dxc4 a4 Bf5 Bg5 Ne4 Nxe4 Bxe4 e3 Bxf3 Qxf3 Qa5+ Kd1 Qxg5 Bxc4 e6 h4 Qa5",
+   "reach": 0.005,
+   "games": [
+    {
+     "id": 734478,
+     "ply": 10,
+     "white": "Dessaules, Peter",
+     "black": "Caruana, Fabiano",
+     "year": 2020,
+     "result": "1-0"
+    },
+    {
+     "id": 660531,
+     "ply": 10,
+     "white": "Topalov, Veselin",
+     "black": "Anand, Viswanathan",
+     "year": 2010,
+     "result": "1-0"
+    },
+    {
+     "id": 660532,
+     "ply": 10,
+     "white": "Topalov, Veselin",
+     "black": "Anand, Viswanathan",
+     "year": 2010,
+     "result": "1-0"
+    }
+   ]
+  },
+  {
+   "id": "main-5-a4-6-bf4",
+   "title": "5.a4 · 6.Bf4",
+   "name": "Slav Defense: Czech Variation",
+   "moves": "d4 d5 c4 c6 Nc3 Nf6 Nf3 dxc4 a4 Bf5 Bf4 e6 e3 Nd5 Bxc4 Nxf4",
+   "reach": 0.002,
+   "games": [
+    {
+     "id": 734478,
+     "ply": 10,
+     "white": "Dessaules, Peter",
+     "black": "Caruana, Fabiano",
+     "year": 2020,
+     "result": "1-0"
+    },
+    {
+     "id": 660531,
+     "ply": 10,
+     "white": "Topalov, Veselin",
+     "black": "Anand, Viswanathan",
+     "year": 2010,
+     "result": "1-0"
+    },
+    {
+     "id": 660532,
+     "ply": 10,
+     "white": "Topalov, Veselin",
+     "black": "Anand, Viswanathan",
+     "year": 2010,
+     "result": "1-0"
+    }
+   ]
+  },
+  {
+   "id": "main-5-e4",
+   "title": "5.e4",
+   "name": "Slav Defense: Geller Gambit",
+   "moves": "d4 d5 c4 c6 Nc3 Nf6 Nf3 dxc4 e4 b5 e5 Nd5 a4 e6 axb5 Nxc3 bxc3 cxb5 Ng5 Bb7 Qh5 g6 Qg4 Be7 Be2 Bd5",
+   "reach": 0.026,
+   "games": [
+    {
+     "id": 85028,
+     "ply": 26,
+     "white": "Magerramov, Elmar",
+     "black": "Sasikiran, Krishnan",
+     "year": 2002,
+     "result": "1/2-1/2"
+    },
+    {
+     "id": 660501,
+     "ply": 26,
+     "white": "Schmidt, Loren R",
+     "black": "Spasov, Vasil",
+     "year": 2003,
+     "result": "1/2-1/2"
+    },
+    {
+     "id": 733111,
+     "ply": 26,
+     "white": "Porper, Edward",
+     "black": "Solak, Dragan",
+     "year": 2007,
+     "result": "0-1"
+    }
+   ]
+  },
+  {
+   "id": "main-5-e4-6-a4",
+   "title": "5.e4 · 6.a4",
+   "name": "Slav Defense: Geller Gambit",
+   "moves": "d4 d5 c4 c6 Nc3 Nf6 Nf3 dxc4 e4 b5 a4 b4 Na2 Nxe4 Bxc4 Nd6",
+   "reach": 0.007,
+   "games": [
+    {
+     "id": 502373,
+     "ply": 16,
+     "white": "Shankland, Sam",
+     "black": "Nogerbek, Kazybek",
+     "year": 2026,
+     "result": "1/2-1/2"
+    }
+   ]
+  },
+  {
+   "id": "main-5-e4-6-a3",
+   "title": "5.e4 · 6.a3",
+   "name": "Slav Defense: Geller Gambit",
+   "moves": "d4 d5 c4 c6 Nc3 Nf6 Nf3 dxc4 e4 b5 a3 e6 Bg5 Be7 Be2 h6 Bh4 Nxe4",
+   "reach": 0.002,
+   "games": [
+    {
+     "id": 661459,
+     "ply": 10,
+     "white": "Carlsen, Magnus",
+     "black": "Yu, Yangyi",
+     "year": 2019,
+     "result": "1-0"
+    },
+    {
+     "id": 282575,
+     "ply": 10,
+     "white": "Svidler, Peter",
+     "black": "Svidler, Peter",
+     "year": 2006,
+     "result": "1-0"
+    },
+    {
+     "id": 284374,
+     "ply": 10,
+     "white": "Aronian, Levon",
+     "black": "Kramnik, Vladimir",
+     "year": 2007,
+     "result": "1/2-1/2"
+    }
+   ]
+  },
+  {
+   "id": "main-5-e3",
+   "title": "5.e3",
+   "name": "Slav Defense: Alekhine Variation",
+   "moves": "d4 d5 c4 c6 Nc3 Nf6 Nf3 dxc4 e3 b5 a4 b4 Na2 e6 Bxc4 Nbd7 O-O Bb7 Bd2 a5 Nc1 Be7",
+   "reach": 0.01,
+   "games": [
+    {
+     "id": 587744,
+     "ply": 22,
+     "white": "Lautier, Joel",
+     "black": "Van Wely, Loek",
+     "year": 2005,
+     "result": "1/2-1/2"
+    },
+    {
+     "id": 288745,
+     "ply": 22,
+     "white": "Czarnota, Pawel",
+     "black": "Fressinet, Laurent",
+     "year": 2006,
+     "result": "0-1"
+    },
+    {
+     "id": 660485,
+     "ply": 22,
+     "white": "Perez Candelario, Manuel",
+     "black": "Magem Badals, Jordi",
+     "year": 2013,
+     "result": "1/2-1/2"
+    }
+   ]
+  },
+  {
+   "id": "main-5-e3-7-nb1",
+   "title": "5.e3 · 7.Nb1",
+   "name": "Slav Defense: Alekhine Variation",
+   "moves": "d4 d5 c4 c6 Nc3 Nf6 Nf3 dxc4 e3 b5 a4 b4 Nb1 Ba6 Ne5 e6 Bxc4 Bxc4",
+   "reach": 0.002,
+   "games": [
+    {
+     "id": 588095,
+     "ply": 14,
+     "white": "Westerinen, Heikki M.J.",
+     "black": "Kasparov, Garry",
+     "year": 1998,
+     "result": "0-1"
+    },
+    {
+     "id": 282570,
+     "ply": 14,
+     "white": "Shirov, Alexei",
+     "black": "Granda Zuniga, Julio E",
+     "year": 1994,
+     "result": "1/2-1/2"
+    },
+    {
+     "id": 733104,
+     "ply": 14,
+     "white": "Nisipeanu, Liviu-Dieter",
+     "black": "Postny, Evgeny",
+     "year": 2008,
+     "result": "1-0"
+    }
+   ]
+  },
+  {
+   "id": "main-5-bg5",
+   "title": "5.Bg5",
+   "name": "Slav Defense: Two Knights Attack",
+   "moves": "d4 d5 c4 c6 Nc3 Nf6 Nf3 dxc4 Bg5 h6 Bh4 b5 e3 Bb7",
+   "reach": 0.007,
+   "games": [
+    {
+     "id": 732569,
+     "ply": 8,
+     "white": "Aronian, Levon",
+     "black": "Carlsen, Magnus",
+     "year": 2014,
+     "result": "1/2-1/2"
+    },
+    {
+     "id": 734478,
+     "ply": 8,
+     "white": "Dessaules, Peter",
+     "black": "Caruana, Fabiano",
+     "year": 2020,
+     "result": "1-0"
+    },
+    {
+     "id": 733068,
+     "ply": 8,
+     "white": "Carlsen, Magnus",
+     "black": "Nakamura, Hikaru",
+     "year": 2025,
+     "result": "1-0"
+    }
+   ]
+  },
+  {
+   "id": "main-5-bg5-6-bxf6",
+   "title": "5.Bg5 · 6.Bxf6",
+   "name": "Slav Defense: Two Knights Attack",
+   "moves": "d4 d5 c4 c6 Nc3 Nf6 Nf3 dxc4 Bg5 h6 Bxf6 exf6 e4 b5 a4 Bb4",
+   "reach": 0.003,
+   "games": [
+    {
+     "id": 732569,
+     "ply": 8,
+     "white": "Aronian, Levon",
+     "black": "Carlsen, Magnus",
+     "year": 2014,
+     "result": "1/2-1/2"
+    },
+    {
+     "id": 734478,
+     "ply": 8,
+     "white": "Dessaules, Peter",
+     "black": "Caruana, Fabiano",
+     "year": 2020,
+     "result": "1-0"
+    },
+    {
+     "id": 733068,
+     "ply": 8,
+     "white": "Carlsen, Magnus",
+     "black": "Nakamura, Hikaru",
+     "year": 2025,
+     "result": "1-0"
+    }
+   ]
+  },
+  {
+   "id": "main-5-g3",
+   "title": "5.g3",
+   "name": "Slav Defense: Two Knights Attack",
+   "moves": "d4 d5 c4 c6 Nc3 Nf6 Nf3 dxc4 g3 b5 Bg2 e6 O-O Nbd7 a4 b4",
+   "reach": 0.003,
+   "games": [
+    {
+     "id": 663999,
+     "ply": 14,
+     "white": "Sosonko, Gennadi",
+     "black": "Sokolov, Ivan",
+     "year": 1995,
+     "result": "0-1"
+    },
+    {
+     "id": 660478,
+     "ply": 14,
+     "white": "Petursson, Margeir",
+     "black": "Steingrimsson, Hedinn",
+     "year": 2024,
+     "result": "0-1"
+    }
+   ]
+  }
+ ],
+ "exchange": [
+  {
+   "id": "exchange-4-nc3",
+   "title": "4.Nc3",
+   "name": "Slav Defense: Exchange Variation",
+   "moves": "d4 d5 c4 c6 cxd5 cxd5 Nc3 Nf6",
+   "reach": 0.036,
+   "transposesTo": "nc3-4-cxd5",
+   "games": [
+    {
+     "id": 8010,
+     "ply": 8,
+     "white": "So, Wesley",
+     "black": "Carlsen, Magnus",
+     "year": 2022,
+     "result": "1/2-1/2"
+    },
+    {
+     "id": 149386,
+     "ply": 8,
+     "white": "Carlsen, Magnus",
+     "black": "Anand, Viswanathan",
+     "year": 2014,
+     "result": "0-1"
+    },
+    {
+     "id": 7036,
+     "ply": 8,
+     "white": "Kramnik, Vladimir",
+     "black": "Aronian, Levon",
+     "year": 2012,
+     "result": "1-0"
+    }
+   ]
+  },
+  {
+   "id": "exchange-4-nf3",
+   "title": "4.Nf3",
+   "name": "Slav Defense: Exchange Variation",
+   "moves": "d4 d5 c4 c6 cxd5 cxd5 Nf3 Nf6",
+   "reach": 0.007,
+   "transposesTo": "slav-other-3-nf3-4-cxd5",
+   "games": [
+    {
+     "id": 586217,
+     "ply": 8,
+     "white": "Carlsen, Magnus",
+     "black": "Giri, Anish",
+     "year": 2023,
+     "result": "1/2-1/2"
+    },
+    {
+     "id": 803716,
+     "ply": 8,
+     "white": "Kramnik, Vladimir",
+     "black": "Anand, Viswanathan",
+     "year": 2013,
+     "result": "1/2-1/2"
+    },
+    {
+     "id": 512741,
+     "ply": 8,
+     "white": "Mamedyarov, Shakhriyar",
+     "black": "Radjabov, Teimour",
+     "year": 2022,
+     "result": "1/2-1/2"
+    }
+   ]
+  },
+  {
+   "id": "exchange-4-bf4",
+   "title": "4.Bf4",
+   "name": "Slav Defense: Exchange Variation",
+   "moves": "d4 d5 c4 c6 cxd5 cxd5 Bf4 Nc6 e3 Nf6 Nc3",
+   "reach": 0.007,
+   "transposesTo": "nc3-4-cxd5-5-bf4",
+   "games": [
+    {
+     "id": 149386,
+     "ply": 11,
+     "white": "Carlsen, Magnus",
+     "black": "Anand, Viswanathan",
+     "year": 2014,
+     "result": "0-1"
+    },
+    {
+     "id": 7036,
+     "ply": 11,
+     "white": "Kramnik, Vladimir",
+     "black": "Aronian, Levon",
+     "year": 2012,
+     "result": "1-0"
+    },
+    {
+     "id": 6298,
+     "ply": 11,
+     "white": "Mamedyarov, Shakhriyar",
+     "black": "Carlsen, Magnus",
+     "year": 2023,
+     "result": "1-0"
+    }
+   ]
+  }
+ ],
+ "e3": [
+  {
+   "id": "e3-5-nc3",
+   "title": "5.Nc3",
+   "name": "Slav Defense: Quiet Variation, Schallopp Defense",
+   "moves": "d4 d5 c4 c6 Nf3 Nf6 e3 Bf5 Nc3 e6 Bd3 Bxd3 Qxd3 Nbd7 O-O Be7 e4 dxe4 Nxe4 Nxe4 Qxe4 O-O",
+   "reach": 0.007,
+   "games": [
+    {
+     "id": 359139,
+     "ply": 22,
+     "white": "Kempinski, Robert",
+     "black": "Nielsen, Peter Heine",
+     "year": 2005,
+     "result": "1/2-1/2"
+    },
+    {
+     "id": 436254,
+     "ply": 22,
+     "white": "Serper, Grigory",
+     "black": "Shirov, Alexei",
+     "year": 1993,
+     "result": "1/2-1/2"
+    },
+    {
+     "id": 84262,
+     "ply": 22,
+     "white": "Ulybin, Mikhail",
+     "black": "Akopian, Vladimir",
+     "year": 2000,
+     "result": "1/2-1/2"
+    }
+   ]
+  },
+  {
+   "id": "e3-4-nc3",
+   "title": "4.Nc3",
+   "name": "Slav Defense",
+   "moves": "d4 d5 c4 c6 e3 Nf6 Nc3",
+   "reach": 0.015,
+   "transposesTo": "nc3-4-e3",
+   "games": [
+    {
+     "id": 6275,
+     "ply": 7,
+     "white": "Aronian, Levon",
+     "black": "Carlsen, Magnus",
+     "year": 2017,
+     "result": "1/2-1/2"
+    },
+    {
+     "id": 149149,
+     "ply": 7,
+     "white": "Carlsen, Magnus",
+     "black": "Firouzja, Alireza",
+     "year": 2023,
+     "result": "1-0"
+    },
+    {
+     "id": 7911,
+     "ply": 7,
+     "white": "Carlsen, Magnus",
+     "black": "Nakamura, Hikaru",
+     "year": 2011,
+     "result": "1-0"
+    }
+   ]
+  },
+  {
+   "id": "e3-4-nf3",
+   "title": "4.Nf3",
+   "name": "Slav Defense: Quiet Variation",
+   "moves": "d4 d5 c4 c6 e3 Nf6 Nf3",
+   "reach": 0.012,
+   "transposesTo": "e3-5-nc3",
+   "games": [
+    {
+     "id": 513715,
+     "ply": 7,
+     "white": "Carlsen, Magnus",
+     "black": "Nakamura, Hikaru",
+     "year": 2014,
+     "result": "1-0"
+    },
+    {
+     "id": 515095,
+     "ply": 7,
+     "white": "So, Wesley",
+     "black": "Carlsen, Magnus",
+     "year": 2017,
+     "result": "1/2-1/2"
+    },
+    {
+     "id": 513743,
+     "ply": 7,
+     "white": "Carlsen, Magnus",
+     "black": "Karjakin, Sergey",
+     "year": 2013,
+     "result": "1-0"
+    }
+   ]
+  },
+  {
+   "id": "e3-4-cxd5",
+   "title": "4.cxd5",
+   "name": "Slav Defense",
+   "moves": "d4 d5 c4 c6 e3 Nf6 cxd5 cxd5 Nc3 Nc6 Nf3 a6",
+   "reach": 0.003,
+   "games": [
+    {
+     "id": 289231,
+     "ply": 12,
+     "white": "Matlak, Marek",
+     "black": "Dreev, Aleksey",
+     "year": 1994,
+     "result": "0-1"
+    },
+    {
+     "id": 78080,
+     "ply": 12,
+     "white": "Enricci, Juan Andres",
+     "black": "Hoffmann, Andreas",
+     "year": 1999,
+     "result": "0-1"
+    },
+    {
+     "id": 809312,
+     "ply": 12,
+     "white": "Nanu, Costica-Ciprian",
+     "black": "Kozhuharov, Spas",
+     "year": 2007,
+     "result": "1/2-1/2"
+    }
+   ]
+  }
+ ],
+ "nc3": [
+  {
+   "id": "nc3-4-bg5",
+   "title": "4.Bg5",
+   "name": "Slav Defense",
+   "moves": "d4 d5 c4 c6 Nc3 Nf6 Bg5 dxc4 e4 b5 a4 b4 Na2 Nxe4 Be3 b3",
+   "reach": 0.043,
+   "games": [
+    {
+     "id": 6423,
+     "ply": 8,
+     "white": "Timofeev, Artyom",
+     "black": "Galkin, Alexander",
+     "year": 2006,
+     "result": "1/2-1/2"
+    },
+    {
+     "id": 217374,
+     "ply": 8,
+     "white": "Vladimirov, Yevgeniy",
+     "black": "Sasikiran, Krishnan",
+     "year": 2000,
+     "result": "1/2-1/2"
+    },
+    {
+     "id": 77079,
+     "ply": 8,
+     "white": "Agdestein, Simen",
+     "black": "Guidarelli, Laurent",
+     "year": 2005,
+     "result": "1/2-1/2"
+    }
+   ]
+  },
+  {
+   "id": "nc3-4-bg5-6-e5",
+   "title": "4.Bg5 · 6.e5",
+   "name": "Slav Defense",
+   "moves": "d4 d5 c4 c6 Nc3 Nf6 Bg5 dxc4 e4 b5 e5 Nd5 Nf3 Nxc3",
+   "reach": 0.003,
+   "games": [
+    {
+     "id": 6423,
+     "ply": 8,
+     "white": "Timofeev, Artyom",
+     "black": "Galkin, Alexander",
+     "year": 2006,
+     "result": "1/2-1/2"
+    },
+    {
+     "id": 217374,
+     "ply": 8,
+     "white": "Vladimirov, Yevgeniy",
+     "black": "Sasikiran, Krishnan",
+     "year": 2000,
+     "result": "1/2-1/2"
+    },
+    {
+     "id": 77079,
+     "ply": 8,
+     "white": "Agdestein, Simen",
+     "black": "Guidarelli, Laurent",
+     "year": 2005,
+     "result": "1/2-1/2"
+    }
+   ]
+  },
+  {
+   "id": "nc3-4-bg5-6-nf3",
+   "title": "4.Bg5 · 6.Nf3",
+   "name": "Slav Defense",
+   "moves": "d4 d5 c4 c6 Nc3 Nf6 Bg5 dxc4 e4 b5 Nf3 h6 Bh4 g5 Bg3 Bg7",
+   "reach": 0.002,
+   "games": [
+    {
+     "id": 6423,
+     "ply": 8,
+     "white": "Timofeev, Artyom",
+     "black": "Galkin, Alexander",
+     "year": 2006,
+     "result": "1/2-1/2"
+    },
+    {
+     "id": 217374,
+     "ply": 8,
+     "white": "Vladimirov, Yevgeniy",
+     "black": "Sasikiran, Krishnan",
+     "year": 2000,
+     "result": "1/2-1/2"
+    },
+    {
+     "id": 77079,
+     "ply": 8,
+     "white": "Agdestein, Simen",
+     "black": "Guidarelli, Laurent",
+     "year": 2005,
+     "result": "1/2-1/2"
+    }
+   ]
+  },
+  {
+   "id": "nc3-4-bg5-5-a4",
+   "title": "4.Bg5 · 5.a4",
+   "name": "Slav Defense",
+   "moves": "d4 d5 c4 c6 Nc3 Nf6 Bg5 dxc4 a4 Qa5 Bxf6 exf6 e3 Bb4 Qc2 Bf5",
+   "reach": 0.01,
+   "games": [
+    {
+     "id": 217374,
+     "ply": 10,
+     "white": "Vladimirov, Yevgeniy",
+     "black": "Sasikiran, Krishnan",
+     "year": 2000,
+     "result": "1/2-1/2"
+    },
+    {
+     "id": 77079,
+     "ply": 10,
+     "white": "Agdestein, Simen",
+     "black": "Guidarelli, Laurent",
+     "year": 2005,
+     "result": "1/2-1/2"
+    },
+    {
+     "id": 8000,
+     "ply": 10,
+     "white": "Christiansen, Larry",
+     "black": "Donaldson, John",
+     "year": 1987,
+     "result": "1-0"
+    }
+   ]
+  },
+  {
+   "id": "nc3-4-bg5-5-a4-7-e4",
+   "title": "4.Bg5 · 5.a4 · 7.e4",
+   "name": "Slav Defense",
+   "moves": "d4 d5 c4 c6 Nc3 Nf6 Bg5 dxc4 a4 Qa5 Bxf6 exf6 e4 Bb4 Qc2 Be6",
+   "reach": 0.002,
+   "games": [
+    {
+     "id": 217374,
+     "ply": 10,
+     "white": "Vladimirov, Yevgeniy",
+     "black": "Sasikiran, Krishnan",
+     "year": 2000,
+     "result": "1/2-1/2"
+    },
+    {
+     "id": 77079,
+     "ply": 10,
+     "white": "Agdestein, Simen",
+     "black": "Guidarelli, Laurent",
+     "year": 2005,
+     "result": "1/2-1/2"
+    },
+    {
+     "id": 8000,
+     "ply": 10,
+     "white": "Christiansen, Larry",
+     "black": "Donaldson, John",
+     "year": 1987,
+     "result": "1-0"
+    }
+   ]
+  },
+  {
+   "id": "nc3-4-bg5-5-e3",
+   "title": "4.Bg5 · 5.e3",
+   "name": "Slav Defense",
+   "moves": "d4 d5 c4 c6 Nc3 Nf6 Bg5 dxc4 e3 b5 a4 Qb6 axb5 cxb5 Nf3 Nbd7",
+   "reach": 0.01,
+   "games": [
+    {
+     "id": 76774,
+     "ply": 11,
+     "white": "Johannessen, Leif Erlend",
+     "black": "Sammour-Hasbun, Jorge",
+     "year": 1995,
+     "result": "1/2-1/2"
+    }
+   ]
+  },
+  {
+   "id": "nc3-4-bg5-5-bxf6",
+   "title": "4.Bg5 · 5.Bxf6",
+   "name": "Slav Defense",
+   "moves": "d4 d5 c4 c6 Nc3 Nf6 Bg5 dxc4 Bxf6 exf6 e4 b5 a4 Bb4 axb5 cxb5 Nf3 Bb7",
+   "reach": 0.008,
+   "games": [
+    {
+     "id": 6423,
+     "ply": 8,
+     "white": "Timofeev, Artyom",
+     "black": "Galkin, Alexander",
+     "year": 2006,
+     "result": "1/2-1/2"
+    },
+    {
+     "id": 217374,
+     "ply": 8,
+     "white": "Vladimirov, Yevgeniy",
+     "black": "Sasikiran, Krishnan",
+     "year": 2000,
+     "result": "1/2-1/2"
+    },
+    {
+     "id": 77079,
+     "ply": 8,
+     "white": "Agdestein, Simen",
+     "black": "Guidarelli, Laurent",
+     "year": 2005,
+     "result": "1/2-1/2"
+    }
+   ]
+  },
+  {
+   "id": "nc3-4-bg5-5-bxf6-6-a4",
+   "title": "4.Bg5 · 5.Bxf6 · 6.a4",
+   "name": "Slav Defense",
+   "moves": "d4 d5 c4 c6 Nc3 Nf6 Bg5 dxc4 Bxf6 exf6 a4 Be6 e4 Bb4 Nf3 Qa5",
+   "reach": 0.002,
+   "games": [
+    {
+     "id": 6423,
+     "ply": 8,
+     "white": "Timofeev, Artyom",
+     "black": "Galkin, Alexander",
+     "year": 2006,
+     "result": "1/2-1/2"
+    },
+    {
+     "id": 217374,
+     "ply": 8,
+     "white": "Vladimirov, Yevgeniy",
+     "black": "Sasikiran, Krishnan",
+     "year": 2000,
+     "result": "1/2-1/2"
+    },
+    {
+     "id": 77079,
+     "ply": 8,
+     "white": "Agdestein, Simen",
+     "black": "Guidarelli, Laurent",
+     "year": 2005,
+     "result": "1/2-1/2"
+    }
+   ]
+  },
+  {
+   "id": "nc3-4-bg5-5-bxf6-6-e3",
+   "title": "4.Bg5 · 5.Bxf6 · 6.e3",
+   "name": "Slav Defense",
+   "moves": "d4 d5 c4 c6 Nc3 Nf6 Bg5 dxc4 Bxf6 exf6 e3 Be6 Nf3 Bb4",
+   "reach": 0.002,
+   "games": [
+    {
+     "id": 6423,
+     "ply": 8,
+     "white": "Timofeev, Artyom",
+     "black": "Galkin, Alexander",
+     "year": 2006,
+     "result": "1/2-1/2"
+    },
+    {
+     "id": 217374,
+     "ply": 8,
+     "white": "Vladimirov, Yevgeniy",
+     "black": "Sasikiran, Krishnan",
+     "year": 2000,
+     "result": "1/2-1/2"
+    },
+    {
+     "id": 77079,
+     "ply": 8,
+     "white": "Agdestein, Simen",
+     "black": "Guidarelli, Laurent",
+     "year": 2005,
+     "result": "1/2-1/2"
+    }
+   ]
+  },
+  {
+   "id": "nc3-4-e3",
+   "title": "4.e3",
+   "name": "Slav Defense",
+   "moves": "d4 d5 c4 c6 Nc3 Nf6 e3 a6 Nf3 b5 cxd5 cxd5 Bd3 e6 O-O Bb7 Ne5 Bd6",
+   "reach": 0.029,
+   "games": [
+    {
+     "id": 5775,
+     "ply": 18,
+     "white": "Moiseenko, Alexander",
+     "black": "Bareev, Evgeny",
+     "year": 2002,
+     "result": "1/2-1/2"
+    },
+    {
+     "id": 283825,
+     "ply": 18,
+     "white": "Granda Zuniga, Julio E",
+     "black": "Sokolov, Ivan",
+     "year": 1993,
+     "result": "0-1"
+    },
+    {
+     "id": 218308,
+     "ply": 18,
+     "white": "Prusikin, Michael",
+     "black": "Kritz, Leonid",
+     "year": 2006,
+     "result": "1/2-1/2"
+    }
+   ]
+  },
+  {
+   "id": "nc3-4-e3-6-b3",
+   "title": "4.e3 · 6.b3",
+   "name": "Slav Defense",
+   "moves": "d4 d5 c4 c6 Nc3 Nf6 e3 a6 Nf3 b5 b3 Bg4 Be2 e6 O-O Nbd7 Bb2 Bd6",
+   "reach": 0.005,
+   "games": [
+    {
+     "id": 515114,
+     "ply": 18,
+     "white": "Bu, Xiangzhi",
+     "black": "Ni, Hua",
+     "year": 2009,
+     "result": "1/2-1/2"
+    },
+    {
+     "id": 7749,
+     "ply": 18,
+     "white": "Riazantsev, Alexander",
+     "black": "Ni, Hua",
+     "year": 2011,
+     "result": "1-0"
+    },
+    {
+     "id": 659507,
+     "ply": 18,
+     "white": "Korobov, Anton",
+     "black": "Movsesian, Sergei",
+     "year": 2015,
+     "result": "0-1"
+    }
+   ]
+  },
+  {
+   "id": "nc3-4-e3-6-c5",
+   "title": "4.e3 · 6.c5",
+   "name": "Slav Defense",
+   "moves": "d4 d5 c4 c6 Nc3 Nf6 e3 a6 Nf3 b5 c5 g6 Bd3 Bg7",
+   "reach": 0.002,
+   "games": [
+    {
+     "id": 7890,
+     "ply": 14,
+     "white": "Radjabov, Teimour",
+     "black": "Ivanchuk, Vasyl",
+     "year": 2007,
+     "result": "0-1"
+    },
+    {
+     "id": 734085,
+     "ply": 14,
+     "white": "Ivanchuk, Vasyl",
+     "black": "Bacrot, Etienne",
+     "year": 2007,
+     "result": "1-0"
+    },
+    {
+     "id": 734108,
+     "ply": 14,
+     "white": "Ivanchuk, Vasyl",
+     "black": "Bacrot, Etienne",
+     "year": 2007,
+     "result": "1-0"
+    }
+   ]
+  },
+  {
+   "id": "nc3-4-e3-5-cxd5",
+   "title": "4.e3 · 5.cxd5",
+   "name": "Slav Defense",
+   "moves": "d4 d5 c4 c6 Nc3 Nf6 e3 a6 cxd5 cxd5 Nf3 b5",
+   "reach": 0.002,
+   "transposesTo": "nc3-4-e3",
+   "games": [
+    {
+     "id": 734094,
+     "ply": 12,
+     "white": "Ivanchuk, Vasyl",
+     "black": "Kasparov, Garry",
+     "year": 2002,
+     "result": "1/2-1/2"
+    },
+    {
+     "id": 588037,
+     "ply": 12,
+     "white": "Khalifman, Alexander",
+     "black": "Kasparov, Garry",
+     "year": 2002,
+     "result": "1/2-1/2"
+    },
+    {
+     "id": 76845,
+     "ply": 12,
+     "white": "Karpov, Anatoly",
+     "black": "Short, Nigel D",
+     "year": 1995,
+     "result": "1/2-1/2"
+    }
+   ]
+  },
+  {
+   "id": "nc3-4-cxd5",
+   "title": "4.cxd5",
+   "name": "Slav Defense: Exchange Variation, Symmetrical Line",
+   "moves": "d4 d5 c4 c6 Nc3 Nf6 cxd5 cxd5 Nf3 Nc6 Bf4 Bf5 e3 e6 Bd3 Bxd3 Qxd3 Bd6 Bxd6 Qxd6 O-O O-O",
+   "reach": 0.026,
+   "games": [
+    {
+     "id": 804224,
+     "ply": 22,
+     "white": "Vitiugov, Nikita",
+     "black": "Tomashevsky, Evgeny",
+     "year": 2015,
+     "result": "1/2-1/2"
+    },
+    {
+     "id": 84226,
+     "ply": 22,
+     "white": "Li, Chao b",
+     "black": "Carlsen, Magnus",
+     "year": 2016,
+     "result": "1/2-1/2"
+    },
+    {
+     "id": 805364,
+     "ply": 22,
+     "white": "Radjabov, Teimour",
+     "black": "Mamedyarov, Shakhriyar",
+     "year": 2013,
+     "result": "1/2-1/2"
+    }
+   ]
+  },
+  {
+   "id": "nc3-4-cxd5-6-bg5",
+   "title": "4.cxd5 · 6.Bg5",
+   "name": "Slav Defense",
+   "moves": "d4 d5 c4 c6 Nc3 Nf6 cxd5 cxd5 Nf3 Nc6 Bg5 Ne4 Bf4 f6",
+   "reach": 0.003,
+   "games": [
+    {
+     "id": 809658,
+     "ply": 13,
+     "white": "Nogga, Uwe",
+     "black": "Pivinsky, Evgeny Grigorievich",
+     "year": 2017,
+     "result": "1/2-1/2"
+    }
+   ]
+  },
+  {
+   "id": "nc3-4-cxd5-5-bf4",
+   "title": "4.cxd5 · 5.Bf4",
+   "name": "Slav Defense",
+   "moves": "d4 d5 c4 c6 Nc3 Nf6 cxd5 cxd5 Bf4 Nc6 e3 a6 Bd3 Bg4 Nge2 e6 O-O Be7",
+   "reach": 0.006,
+   "games": [
+    {
+     "id": 149086,
+     "ply": 18,
+     "white": "Aronian, Levon",
+     "black": "Nakamura, Hikaru",
+     "year": 2013,
+     "result": "1-0"
+    },
+    {
+     "id": 149651,
+     "ply": 18,
+     "white": "Nakamura, Hikaru",
+     "black": "Caruana, Fabiano",
+     "year": 2013,
+     "result": "1/2-1/2"
+    },
+    {
+     "id": 6997,
+     "ply": 18,
+     "white": "Wang, Hao",
+     "black": "Caruana, Fabiano",
+     "year": 2012,
+     "result": "1-0"
+    }
+   ]
+  },
+  {
+   "id": "nc3-4-cxd5-5-bg5",
+   "title": "4.cxd5 · 5.Bg5",
+   "name": "Slav Defense",
+   "moves": "d4 d5 c4 c6 Nc3 Nf6 cxd5 cxd5 Bg5 Ne4 Nxe4 dxe4 e3 Qa5+ Qd2 Qxg5 Ne2 e6",
+   "reach": 0.005,
+   "games": [
+    {
+     "id": 218341,
+     "ply": 12,
+     "white": "Korobov, Anton",
+     "black": "Duda, Jan-Krzysztof",
+     "year": 2021,
+     "result": "0-1"
+    },
+    {
+     "id": 804579,
+     "ply": 12,
+     "white": "Ivanisevic, Ivan",
+     "black": "Giri, Anish",
+     "year": 2016,
+     "result": "1/2-1/2"
+    },
+    {
+     "id": 804341,
+     "ply": 12,
+     "white": "Perelshteyn, Eugene",
+     "black": "Becerra Rivero, Julio",
+     "year": 2009,
+     "result": "1/2-1/2"
+    }
+   ]
+  },
+  {
+   "id": "nc3-4-bf4",
+   "title": "4.Bf4",
+   "name": "Slav Defense",
+   "moves": "d4 d5 c4 c6 Nc3 Nf6 Bf4 dxc4 e3 b5 a4 Qb6 axb5 cxb5 Nf3 e6 Be2 Bb4",
+   "reach": 0.022,
+   "games": [
+    {
+     "id": 149048,
+     "ply": 11,
+     "white": "Miles, Anthony J",
+     "black": "Akopian, Vladimir",
+     "year": 1994,
+     "result": "0-1"
+    },
+    {
+     "id": 217814,
+     "ply": 11,
+     "white": "Tran, Mai Truong An",
+     "black": "Huynh, Trung Quoc Thai",
+     "year": 2012,
+     "result": "0-1"
+    },
+    {
+     "id": 5656,
+     "ply": 11,
+     "white": "Vidmar, Milan Sr",
+     "black": "Kostic, Boris",
+     "year": 1923,
+     "result": "1-0"
+    }
+   ]
+  },
+  {
+   "id": "nc3-4-bf4-5-a4",
+   "title": "4.Bf4 · 5.a4",
+   "name": "Slav Defense",
+   "moves": "d4 d5 c4 c6 Nc3 Nf6 Bf4 dxc4 a4 Nd5 Bg3 Nxc3 bxc3 b5 axb5 cxb5 e4 a6",
+   "reach": 0.007,
+   "games": [
+    {
+     "id": 149165,
+     "ply": 11,
+     "white": "Peyrer, Konstantin",
+     "black": "Leisch, Lukas",
+     "year": 2022,
+     "result": "1-0"
+    }
+   ]
+  },
+  {
+   "id": "nc3-4-bf4-5-e4",
+   "title": "4.Bf4 · 5.e4",
+   "name": "Slav Defense",
+   "moves": "d4 d5 c4 c6 Nc3 Nf6 Bf4 dxc4 e4 b5 a4 b4 Na2 Be6",
+   "reach": 0.006,
+   "games": [
+    {
+     "id": 217814,
+     "ply": 8,
+     "white": "Tran, Mai Truong An",
+     "black": "Huynh, Trung Quoc Thai",
+     "year": 2012,
+     "result": "0-1"
+    },
+    {
+     "id": 5656,
+     "ply": 8,
+     "white": "Vidmar, Milan Sr",
+     "black": "Kostic, Boris",
+     "year": 1923,
+     "result": "1-0"
+    }
+   ]
+  }
+ ],
+ "slav-other": [
+  {
+   "id": "slav-other-3-nf3",
+   "title": "3.Nf3",
+   "name": "Slav Defense: Three Knights Variation",
+   "moves": "d4 d5 c4 c6 Nf3 Nf6 Nc3",
+   "reach": 0.089,
+   "transposesTo": "main-5-a4",
+   "games": [
+    {
+     "id": 732569,
+     "ply": 7,
+     "white": "Aronian, Levon",
+     "black": "Carlsen, Magnus",
+     "year": 2014,
+     "result": "1/2-1/2"
+    },
+    {
+     "id": 734119,
+     "ply": 7,
+     "white": "Kramnik, Vladimir",
+     "black": "Kasparov, Garry",
+     "year": 2001,
+     "result": "1/2-1/2"
+    },
+    {
+     "id": 734478,
+     "ply": 7,
+     "white": "Dessaules, Peter",
+     "black": "Caruana, Fabiano",
+     "year": 2020,
+     "result": "1-0"
+    }
+   ]
+  },
+  {
+   "id": "slav-other-3-nf3-4-g3",
+   "title": "3.Nf3 · 4.g3",
+   "name": "Slav Defense: Modern Line",
+   "moves": "d4 d5 c4 c6 Nf3 Nf6 g3 Bf5 Bg2 e6 O-O Nbd7 Nc3 h6 Qb3 Qb6 c5 Qxb3 axb3 a6",
+   "reach": 0.011,
+   "games": [
+    {
+     "id": 154164,
+     "ply": 20,
+     "white": "Makhnev, Denis",
+     "black": "Abdusattorov, Nodirbek",
+     "year": 2025,
+     "result": "1/2-1/2"
+    },
+    {
+     "id": 809672,
+     "ply": 20,
+     "white": "Stupak, Kirill",
+     "black": "Mastrovasilis, Dimitrios",
+     "year": 2017,
+     "result": "1-0"
+    },
+    {
+     "id": 512040,
+     "ply": 20,
+     "white": "Mozharov, Mikhail",
+     "black": "Seliverstov, Vladimir",
+     "year": 2014,
+     "result": "1/2-1/2"
+    }
+   ]
+  },
+  {
+   "id": "slav-other-3-nf3-4-cxd5",
+   "title": "3.Nf3 · 4.cxd5",
+   "name": "Slav Defense: Exchange Variation",
+   "moves": "d4 d5 c4 c6 Nf3 Nf6 cxd5 cxd5 Nc3",
+   "reach": 0.006,
+   "transposesTo": "nc3-4-cxd5",
+   "games": [
+    {
+     "id": 586217,
+     "ply": 9,
+     "white": "Carlsen, Magnus",
+     "black": "Giri, Anish",
+     "year": 2023,
+     "result": "1/2-1/2"
+    },
+    {
+     "id": 803716,
+     "ply": 9,
+     "white": "Kramnik, Vladimir",
+     "black": "Anand, Viswanathan",
+     "year": 2013,
+     "result": "1/2-1/2"
+    },
+    {
+     "id": 149269,
+     "ply": 9,
+     "white": "Ivanchuk, Vasyl",
+     "black": "Nakamura, Hikaru",
+     "year": 2011,
+     "result": "1-0"
+    }
+   ]
+  },
+  {
+   "id": "slav-other-3-nf3-4-bg5",
+   "title": "3.Nf3 · 4.Bg5",
+   "name": "Slav Defense: Bonet Gambit",
+   "moves": "d4 d5 c4 c6 Nf3 Nf6 Bg5 dxc4 e3 b5 a4 e6 axb5 Bb4+",
+   "reach": 0.004,
+   "games": [
+    {
+     "id": 732569,
+     "ply": 6,
+     "white": "Aronian, Levon",
+     "black": "Carlsen, Magnus",
+     "year": 2014,
+     "result": "1/2-1/2"
+    },
+    {
+     "id": 513715,
+     "ply": 6,
+     "white": "Carlsen, Magnus",
+     "black": "Nakamura, Hikaru",
+     "year": 2014,
+     "result": "1-0"
+    },
+    {
+     "id": 515095,
+     "ply": 6,
+     "white": "So, Wesley",
+     "black": "Carlsen, Magnus",
+     "year": 2017,
+     "result": "1/2-1/2"
+    }
+   ]
+  },
+  {
+   "id": "slav-other-3-nf3-4-qc2",
+   "title": "3.Nf3 · 4.Qc2",
+   "name": "Slav Defense: Modern Line",
+   "moves": "d4 d5 c4 c6 Nf3 Nf6 Qc2 g6 Bf4 Bg7 e3 O-O Nc3 c5 dxc5 Qa5",
+   "reach": 0.003,
+   "games": [
+    {
+     "id": 438426,
+     "ply": 16,
+     "white": "Van Wely, Loek",
+     "black": "Giri, Anish",
+     "year": 2013,
+     "result": "1/2-1/2"
+    },
+    {
+     "id": 515434,
+     "ply": 16,
+     "white": "Bu, Xiangzhi",
+     "black": "Harikrishna, P",
+     "year": 2007,
+     "result": "1-0"
+    },
+    {
+     "id": 514009,
+     "ply": 16,
+     "white": "Postny, Evgeny",
+     "black": "Sasikiran, Krishnan",
+     "year": 2009,
+     "result": "1-0"
+    }
+   ]
+  },
+  {
+   "id": "slav-other-3-nf3-4-bf4",
+   "title": "3.Nf3 · 4.Bf4",
+   "name": "Slav Defense: Modern Line",
+   "moves": "d4 d5 c4 c6 Nf3 Nf6 Bf4 dxc4 e3 b5 a4 e6 axb5 cxb5",
+   "reach": 0.002,
+   "games": [
+    {
+     "id": 732569,
+     "ply": 6,
+     "white": "Aronian, Levon",
+     "black": "Carlsen, Magnus",
+     "year": 2014,
+     "result": "1/2-1/2"
+    },
+    {
+     "id": 513715,
+     "ply": 6,
+     "white": "Carlsen, Magnus",
+     "black": "Nakamura, Hikaru",
+     "year": 2014,
+     "result": "1-0"
+    },
+    {
+     "id": 515095,
+     "ply": 6,
+     "white": "So, Wesley",
+     "black": "Carlsen, Magnus",
+     "year": 2017,
+     "result": "1/2-1/2"
+    }
+   ]
+  }
+ ],
+ "london": [
+  {
+   "id": "london-4-e3",
+   "title": "4.e3",
+   "name": "Queen's Pawn Game: London System",
+   "moves": "d4 d5 Nf3 Nf6 Bf4 c5 e3 Nc6 c3 Qb6 Qb3 c4 Qxb6 axb6 Nbd2 b5 Be2 e6 O-O b4 Ne5 Nxe5 Bxe5 b5",
+   "reach": 0.032,
+   "games": [
+    {
+     "id": 153791,
+     "ply": 20,
+     "white": "Mehmeti, Dritan",
+     "black": "Pelletier, Yannick",
+     "year": 2017,
+     "result": "0-1"
+    }
+   ]
+  },
+  {
+   "id": "london-4-e3-7-qc2",
+   "title": "4.e3 · 7.Qc2",
+   "name": "Queen's Pawn Game: London System",
+   "moves": "d4 d5 Nf3 Nf6 Bf4 c5 e3 Nc6 c3 Qb6 Qb3 c4 Qc2 Bf5 Qc1 e6 Nbd2 Be7 Be2 O-O O-O Rac8",
+   "reach": 0.004,
+   "games": [
+    {
+     "id": 221612,
+     "ply": 21,
+     "white": "Bacrot, Etienne",
+     "black": "Kramnik, Vladimir",
+     "year": 2007,
+     "result": "1/2-1/2"
+    },
+    {
+     "id": 736844,
+     "ply": 21,
+     "white": "Bogdanovich, Saveliy Vl",
+     "black": "Sumets, Andrey",
+     "year": 2018,
+     "result": "1-0"
+    },
+    {
+     "id": 153790,
+     "ply": 21,
+     "white": "Noe, Christopher",
+     "black": "Mons, Leon",
+     "year": 2018,
+     "result": "1/2-1/2"
+    }
+   ]
+  },
+  {
+   "id": "london-4-e3-6-qc2",
+   "title": "4.e3 · 6.Qc2",
+   "name": "Queen's Pawn Game: London System",
+   "moves": "d4 d5 Nf3 Nf6 Bf4 c5 e3 Nc6 c3 Qb6 Qc2 g6 Nbd2 Nh5",
+   "reach": 0.004,
+   "games": [
+    {
+     "id": 736727,
+     "ply": 13,
+     "white": "Laznicka, Viktor",
+     "black": "Nisipeanu, Liviu-Dieter",
+     "year": 2019,
+     "result": "1/2-1/2"
+    },
+    {
+     "id": 221589,
+     "ply": 13,
+     "white": "Burmakin, Vladimir",
+     "black": "Edouard, Romain",
+     "year": 2009,
+     "result": "0-1"
+    },
+    {
+     "id": 282263,
+     "ply": 13,
+     "white": "Sedlak, Nikola",
+     "black": "Georgiev, Vladimir",
+     "year": 2008,
+     "result": "1/2-1/2"
+    }
+   ]
+  },
+  {
+   "id": "london-4-e3-6-b3",
+   "title": "4.e3 · 6.b3",
+   "name": "Queen's Pawn Game: London System",
+   "moves": "d4 d5 Nf3 Nf6 Bf4 c5 e3 Nc6 c3 Qb6 b3 cxd4 exd4 h6",
+   "reach": 0.003,
+   "games": [
+    {
+     "id": 435896,
+     "ply": 13,
+     "white": "Magalhães, Leonardo Guedes de",
+     "black": "Mirás García, Eduardo",
+     "year": 2018,
+     "result": "1/2-1/2"
+    },
+    {
+     "id": 221634,
+     "ply": 13,
+     "white": "Broniek, Mariusz Maciej",
+     "black": "Churkin, Mikhail Mikhailovich",
+     "year": 2020,
+     "result": "1/2-1/2"
+    },
+    {
+     "id": 154125,
+     "ply": 13,
+     "white": "Broniek, Mariusz Maciej",
+     "black": "Ryazanov, Anton Viktorovich",
+     "year": 2020,
+     "result": "1/2-1/2"
+    }
+   ]
+  },
+  {
+   "id": "london-4-e3-6-qc1",
+   "title": "4.e3 · 6.Qc1",
+   "name": "Queen's Pawn Game: London System",
+   "moves": "d4 d5 Nf3 Nf6 Bf4 c5 e3 Nc6 c3 Qb6 Qc1 Bf5 Nbd2 e6 Be2 cxd4 exd4 Rc8 O-O Be7",
+   "reach": 0.002,
+   "games": [
+    {
+     "id": 221610,
+     "ply": 20,
+     "white": "Gretarsson, Helgi Ass",
+     "black": "Schandorff, Lars",
+     "year": 1997,
+     "result": "1/2-1/2"
+    }
+   ]
+  },
+  {
+   "id": "london-4-e3-5-nbd2",
+   "title": "4.e3 · 5.Nbd2",
+   "name": "Queen's Pawn Game: London System",
+   "moves": "d4 d5 Nf3 Nf6 Bf4 c5 e3 Nc6 Nbd2 cxd4 exd4 Bf5 c3 e6 Bb5 Qb6 Qa4 a6",
+   "reach": 0.005,
+   "games": [
+    {
+     "id": 154109,
+     "ply": 16,
+     "white": "Grischuk, Alexander",
+     "black": "Dardha, Daniel",
+     "year": 2023,
+     "result": "1/2-1/2"
+    }
+   ]
+  },
+  {
+   "id": "london-4-e3-5-bb5",
+   "title": "4.e3 · 5.Bb5",
+   "name": "Queen's Pawn Game: London System",
+   "moves": "d4 d5 Nf3 Nf6 Bf4 c5 e3 Nc6 Bb5 Qa5+ Nc3 Ne4 Bxc6+ bxc6 O-O Nxc3 bxc3 Qxc3 Ne5 g6",
+   "reach": 0.002,
+   "games": [
+    {
+     "id": 221572,
+     "ply": 9,
+     "white": "Praggnanandhaa R",
+     "black": "So, Wesley",
+     "year": 2024,
+     "result": "1-0"
+    },
+    {
+     "id": 153723,
+     "ply": 9,
+     "white": "Nisipeanu, Liviu-Dieter",
+     "black": "Van Foreest, Jorden",
+     "year": 2016,
+     "result": "1/2-1/2"
+    },
+    {
+     "id": 221631,
+     "ply": 9,
+     "white": "Nogueiras Santiago, Jesus",
+     "black": "Bruzon Batista, Lazaro",
+     "year": 2005,
+     "result": "0-1"
+    }
+   ]
+  },
+  {
+   "id": "london-4-c3",
+   "title": "4.c3",
+   "name": "Queen's Pawn Game: London System",
+   "moves": "d4 d5 Nf3 Nf6 Bf4 c5 c3 Nc6 e3",
+   "reach": 0.011,
+   "transposesTo": "london-4-e3",
+   "games": [
+    {
+     "id": 221612,
+     "ply": 9,
+     "white": "Bacrot, Etienne",
+     "black": "Kramnik, Vladimir",
+     "year": 2007,
+     "result": "1/2-1/2"
+    },
+    {
+     "id": 221653,
+     "ply": 9,
+     "white": "Kamsky, Gata",
+     "black": "Karjakin, Sergey",
+     "year": 2008,
+     "result": "1-0"
+    },
+    {
+     "id": 222061,
+     "ply": 9,
+     "white": "Kamsky, Gata",
+     "black": "Carlsen, Magnus",
+     "year": 2007,
+     "result": "0-1"
+    }
+   ]
+  },
+  {
+   "id": "london-3-e3",
+   "title": "3.e3",
+   "name": "Queen's Pawn Game: Accelerated London System",
+   "moves": "d4 d5 Bf4 Nf6 e3 c5 c3 Nc6 Nd2 Bf5 Ngf3 e6 Bb5 Qb6 Qa4 Rc8 Ne5 a6 Bxc6+ bxc6 O-O c4",
+   "reach": 0.114,
+   "games": [
+    {
+     "id": 282482,
+     "ply": 15,
+     "white": "Kindermann, Stefan",
+     "black": "Bluebaum, Matthias",
+     "year": 2017,
+     "result": "1/2-1/2"
+    },
+    {
+     "id": 357454,
+     "ply": 15,
+     "white": "Galyas, Miklos",
+     "black": "Groszpeter, Attila",
+     "year": 2018,
+     "result": "1/2-1/2"
+    },
+    {
+     "id": 585639,
+     "ply": 15,
+     "white": "Ding, Yixin",
+     "black": "Shen, Yang",
+     "year": 2017,
+     "result": "1/2-1/2"
+    }
+   ]
+  },
+  {
+   "id": "london-3-e3-7-be2",
+   "title": "3.e3 · 7.Be2",
+   "name": "Queen's Pawn Game: Accelerated London System",
+   "moves": "d4 d5 Bf4 Nf6 e3 c5 c3 Nc6 Nd2 Bf5 Ngf3 e6 Be2 Qb6 Qb3 c4 Qxb6 axb6 O-O b5 a3 Be7",
+   "reach": 0.003,
+   "games": [
+    {
+     "id": 357357,
+     "ply": 14,
+     "white": "Prie, Eric",
+     "black": "Flear, Glenn C",
+     "year": 2010,
+     "result": "1/2-1/2"
+    },
+    {
+     "id": 435666,
+     "ply": 14,
+     "white": "Aabel, Anders",
+     "black": "Márquez Abreu, Carlos Javier",
+     "year": 2014,
+     "result": "1/2-1/2"
+    }
+   ]
+  },
+  {
+   "id": "london-3-e3-6-qb3",
+   "title": "3.e3 · 6.Qb3",
+   "name": "Queen's Pawn Game: Accelerated London System",
+   "moves": "d4 d5 Bf4 Nf6 e3 c5 c3 Nc6 Nd2 Bf5 Qb3 Qd7 Ngf3 c4 Qd1 e6 Be2 b5",
+   "reach": 0.008,
+   "games": [
+    {
+     "id": 435831,
+     "ply": 18,
+     "white": "Berkes, Ferenc",
+     "black": "Robson, Ray",
+     "year": 2010,
+     "result": "1-0"
+    },
+    {
+     "id": 435826,
+     "ply": 18,
+     "white": "Stephan, Jürgen",
+     "black": "Cruzado Dueñas, Carlos",
+     "year": 2017,
+     "result": "1/2-1/2"
+    },
+    {
+     "id": 357553,
+     "ply": 18,
+     "white": "Schwarz, Stephan",
+     "black": "Matyukhin, Sergey",
+     "year": 2017,
+     "result": "1/2-1/2"
+    }
+   ]
+  },
+  {
+   "id": "london-3-e3-5-nf3",
+   "title": "3.e3 · 5.Nf3",
+   "name": "Queen's Pawn Game: Accelerated London System",
+   "moves": "d4 d5 Bf4 Nf6 e3 c5 c3 Nc6 Nf3",
+   "reach": 0.024,
+   "transposesTo": "london-4-e3",
+   "games": [
+    {
+     "id": 221612,
+     "ply": 9,
+     "white": "Bacrot, Etienne",
+     "black": "Kramnik, Vladimir",
+     "year": 2007,
+     "result": "1/2-1/2"
+    },
+    {
+     "id": 221653,
+     "ply": 9,
+     "white": "Kamsky, Gata",
+     "black": "Karjakin, Sergey",
+     "year": 2008,
+     "result": "1-0"
+    },
+    {
+     "id": 222061,
+     "ply": 9,
+     "white": "Kamsky, Gata",
+     "black": "Carlsen, Magnus",
+     "year": 2007,
+     "result": "0-1"
+    }
+   ]
+  },
+  {
+   "id": "london-3-e3-5-bd3",
+   "title": "3.e3 · 5.Bd3",
+   "name": "Queen's Pawn Game: Accelerated London System",
+   "moves": "d4 d5 Bf4 Nf6 e3 c5 c3 Nc6 Bd3 Qb6 Qb3 c4 Qxb6 axb6 Bc2 b5 Nd2 b4 Ngf3 b3 Bb1 b5",
+   "reach": 0.014,
+   "games": [
+    {
+     "id": 511999,
+     "ply": 10,
+     "white": "Jugelt, Tobias",
+     "black": "Baramidze, David",
+     "year": 2010,
+     "result": "0-1"
+    },
+    {
+     "id": 435819,
+     "ply": 10,
+     "white": "Kovalenko, Igor",
+     "black": "Kharchenko, Boris",
+     "year": 2009,
+     "result": "1-0"
+    },
+    {
+     "id": 282496,
+     "ply": 10,
+     "white": "Klaric, Zlatko",
+     "black": "Lukacs, Peter",
+     "year": 1992,
+     "result": "1/2-1/2"
+    }
+   ]
+  },
+  {
+   "id": "london-3-e3-5-bd3-6-b3",
+   "title": "3.e3 · 5.Bd3 · 6.b3",
+   "name": "Queen's Pawn Game: Accelerated London System",
+   "moves": "d4 d5 Bf4 Nf6 e3 c5 c3 Nc6 Bd3 Qb6 b3 g6 Nf3 Nh5",
+   "reach": 0.003,
+   "games": [
+    {
+     "id": 282496,
+     "ply": 13,
+     "white": "Klaric, Zlatko",
+     "black": "Lukacs, Peter",
+     "year": 1992,
+     "result": "1/2-1/2"
+    }
+   ]
+  },
+  {
+   "id": "london-3-e3-5-bd3-6-qc1",
+   "title": "3.e3 · 5.Bd3 · 6.Qc1",
+   "name": "Queen's Pawn Game: Accelerated London System",
+   "moves": "d4 d5 Bf4 Nf6 e3 c5 c3 Nc6 Bd3 Qb6 Qc1 cxd4 exd4 e5",
+   "reach": 0.003,
+   "games": [
+    {
+     "id": 435819,
+     "ply": 11,
+     "white": "Kovalenko, Igor",
+     "black": "Kharchenko, Boris",
+     "year": 2009,
+     "result": "1-0"
+    }
+   ]
+  },
+  {
+   "id": "london-3-e3-5-bd3-6-qc2",
+   "title": "3.e3 · 5.Bd3 · 6.Qc2",
+   "name": "Queen's Pawn Game: Accelerated London System",
+   "moves": "d4 d5 Bf4 Nf6 e3 c5 c3 Nc6 Bd3 Qb6 Qc2 c4 Be2 Bf5 Qc1 e6 Nd2 Be7 Ngf3",
+   "reach": 0.002,
+   "transposesTo": "london-4-e3-7-qc2",
+   "games": [
+    {
+     "id": 153790,
+     "ply": 19,
+     "white": "Noe, Christopher",
+     "black": "Mons, Leon",
+     "year": 2018,
+     "result": "1/2-1/2"
+    },
+    {
+     "id": 221602,
+     "ply": 19,
+     "white": "Velten, Paul",
+     "black": "Feller, Sebastien",
+     "year": 2016,
+     "result": "1/2-1/2"
+    },
+    {
+     "id": 585638,
+     "ply": 19,
+     "white": "Georgiev, Kiril",
+     "black": "Artemiev, Vladislav",
+     "year": 2013,
+     "result": "0-1"
+    }
+   ]
+  },
+  {
+   "id": "london-3-e3-5-h3",
+   "title": "3.e3 · 5.h3",
+   "name": "Queen's Pawn Game: Accelerated London System",
+   "moves": "d4 d5 Bf4 Nf6 e3 c5 c3 Nc6 h3 Qb6 Qb3 c4 Qxb6 axb6",
+   "reach": 0.002,
+   "games": [
+    {
+     "id": 585419,
+     "ply": 8,
+     "white": "Nakamura, Hikaru",
+     "black": "Kramnik, Vladimir",
+     "year": 2016,
+     "result": "1/2-1/2"
+    },
+    {
+     "id": 585616,
+     "ply": 8,
+     "white": "Carlsen, Magnus",
+     "black": "Vachier-Lagrave, Maxime",
+     "year": 2023,
+     "result": "1/2-1/2"
+    },
+    {
+     "id": 357783,
+     "ply": 8,
+     "white": "Carlsen, Magnus",
+     "black": "Korobov, Anton",
+     "year": 2016,
+     "result": "0-1"
+    }
+   ]
+  },
+  {
+   "id": "london-3-e3-4-nf3",
+   "title": "3.e3 · 4.Nf3",
+   "name": "Queen's Pawn Game: London System",
+   "moves": "d4 d5 Bf4 Nf6 e3 c5 Nf3",
+   "reach": 0.023,
+   "transposesTo": "london-4-e3",
+   "games": [
+    {
+     "id": 221542,
+     "ply": 7,
+     "white": "Carlsen, Magnus",
+     "black": "So, Wesley",
+     "year": 2023,
+     "result": "1/2-1/2"
+    },
+    {
+     "id": 809640,
+     "ply": 7,
+     "white": "Abdusattorov, Nodirbek",
+     "black": "Carlsen, Magnus",
+     "year": 2024,
+     "result": "1/2-1/2"
+    },
+    {
+     "id": 154064,
+     "ply": 7,
+     "white": "Erigaisi Arjun",
+     "black": "Abdusattorov, Nodirbek",
+     "year": 2024,
+     "result": "1-0"
+    }
+   ]
+  },
+  {
+   "id": "london-3-e3-4-nc3",
+   "title": "3.e3 · 4.Nc3",
+   "name": "Queen's Pawn Game: Accelerated London System",
+   "moves": "d4 d5 Bf4 Nf6 e3 c5 Nc3 cxd4 exd4 a6 Nf3 Nc6 Bd3 Bg4 h3 Bxf3",
+   "reach": 0.006,
+   "games": [
+    {
+     "id": 357734,
+     "ply": 12,
+     "white": "Carlsen, Magnus",
+     "black": "Abdusattorov, Nodirbek",
+     "year": 2025,
+     "result": "1/2-1/2"
+    },
+    {
+     "id": 511921,
+     "ply": 12,
+     "white": "Niemann, Hans Moke",
+     "black": "Duda, Jan-Krzysztof",
+     "year": 2022,
+     "result": "0-1"
+    },
+    {
+     "id": 511918,
+     "ply": 12,
+     "white": "Rapport, Richard",
+     "black": "Bu, Xiangzhi",
+     "year": 2015,
+     "result": "1/2-1/2"
+    }
+   ]
+  },
+  {
+   "id": "london-3-e3-4-dxc5",
+   "title": "3.e3 · 4.dxc5",
+   "name": "Queen's Pawn Game: Accelerated London System",
+   "moves": "d4 d5 Bf4 Nf6 e3 c5 dxc5 Nc6 Bb5 e6 b4 a5 c3 Bd7 Qb3 Nh5",
+   "reach": 0.005,
+   "games": [
+    {
+     "id": 435802,
+     "ply": 16,
+     "white": "Moroni, Luca Jr",
+     "black": "Petrov, Nikita",
+     "year": 2018,
+     "result": "1/2-1/2"
+    },
+    {
+     "id": 512136,
+     "ply": 16,
+     "white": "Schlindwein, Rolf",
+     "black": "Jirovsky, Milos",
+     "year": 2007,
+     "result": "1-0"
+    },
+    {
+     "id": 585591,
+     "ply": 16,
+     "white": "Hagberg, Jan",
+     "black": "Dela Cruz, Elden Michael",
+     "year": 2015,
+     "result": "1-0"
+    }
+   ]
+  },
+  {
+   "id": "london-3-e3-4-nd2",
+   "title": "3.e3 · 4.Nd2",
+   "name": "Queen's Pawn Game: Accelerated London System",
+   "moves": "d4 d5 Bf4 Nf6 e3 c5 Nd2 Nc6 c3",
+   "reach": 0.003,
+   "transposesTo": "london-3-e3",
+   "games": [
+    {
+     "id": 585616,
+     "ply": 9,
+     "white": "Carlsen, Magnus",
+     "black": "Vachier-Lagrave, Maxime",
+     "year": 2023,
+     "result": "1/2-1/2"
+    },
+    {
+     "id": 357783,
+     "ply": 9,
+     "white": "Carlsen, Magnus",
+     "black": "Korobov, Anton",
+     "year": 2016,
+     "result": "0-1"
+    },
+    {
+     "id": 585386,
+     "ply": 9,
+     "white": "Gukesh D",
+     "black": "So, Wesley",
+     "year": 2024,
+     "result": "1-0"
+    }
+   ]
+  },
+  {
+   "id": "london-3-nf3",
+   "title": "3.Nf3",
+   "name": "Queen's Pawn Game: London System",
+   "moves": "d4 d5 Bf4 Nf6 Nf3",
+   "reach": 0.039,
+   "transposesTo": "london-4-e3",
+   "games": [
+    {
+     "id": 221542,
+     "ply": 5,
+     "white": "Carlsen, Magnus",
+     "black": "So, Wesley",
+     "year": 2023,
+     "result": "1/2-1/2"
+    },
+    {
+     "id": 809640,
+     "ply": 5,
+     "white": "Abdusattorov, Nodirbek",
+     "black": "Carlsen, Magnus",
+     "year": 2024,
+     "result": "1/2-1/2"
+    },
+    {
+     "id": 222246,
+     "ply": 5,
+     "white": "Erigaisi Arjun",
+     "black": "Carlsen, Magnus",
+     "year": 2024,
+     "result": "0-1"
+    }
+   ]
+  },
+  {
+   "id": "london-3-nc3",
+   "title": "3.Nc3",
+   "name": "Rapport-Jobava System",
+   "moves": "d4 d5 Bf4 Nf6 Nc3 e6 e3 Bb4 Bd3 c5 dxc5 Nbd7 Ne2 Bxc5",
+   "reach": 0.008,
+   "games": [
+    {
+     "id": 585230,
+     "ply": 13,
+     "white": "Jobava, Baadur",
+     "black": "Korneev, Oleg",
+     "year": 2014,
+     "result": "1-0"
+    },
+    {
+     "id": 357415,
+     "ply": 13,
+     "white": "Jobava, Baadur",
+     "black": "Shalamberidze, Akaki",
+     "year": 2014,
+     "result": "1-0"
+    }
+   ]
+  },
+  {
+   "id": "london-3-nc3-4-nb5",
+   "title": "3.Nc3 · 4.Nb5",
+   "name": "Rapport-Jobava System",
+   "moves": "d4 d5 Bf4 Nf6 Nc3 e6 Nb5 Na6 e3 Be7 Nf3 O-O Bd3 c6 Nc3 c5",
+   "reach": 0.002,
+   "games": [
+    {
+     "id": 585228,
+     "ply": 16,
+     "white": "Isanzhulov, Arystan",
+     "black": "Makhnev, Denis",
+     "year": 2023,
+     "result": "0-1"
+    },
+    {
+     "id": 511826,
+     "ply": 16,
+     "white": "Buksa, Nataliya",
+     "black": "Gunina, Valentina",
+     "year": 2021,
+     "result": "0-1"
+    }
+   ]
+  }
+ ],
+ "nf3": [
+  {
+   "id": "nf3-3-c4",
+   "title": "3.c4",
+   "name": "Queen's Pawn Game: Symmetrical Variation",
+   "moves": "d4 d5 Nf3 Nf6 c4 c6",
+   "reach": 0.043,
+   "transposesTo": "slav-other-3-nf3",
+   "games": [
+    {
+     "id": 732569,
+     "ply": 6,
+     "white": "Aronian, Levon",
+     "black": "Carlsen, Magnus",
+     "year": 2014,
+     "result": "1/2-1/2"
+    },
+    {
+     "id": 513715,
+     "ply": 6,
+     "white": "Carlsen, Magnus",
+     "black": "Nakamura, Hikaru",
+     "year": 2014,
+     "result": "1-0"
+    },
+    {
+     "id": 515095,
+     "ply": 6,
+     "white": "So, Wesley",
+     "black": "Carlsen, Magnus",
+     "year": 2017,
+     "result": "1/2-1/2"
+    }
+   ]
+  },
+  {
+   "id": "nf3-3-e3",
+   "title": "3.e3",
+   "name": "Queen's Pawn Game: Colle System, Traditional Colle",
+   "moves": "d4 d5 Nf3 Nf6 e3 e6 Bd3 c5 c3 Nc6 Nbd2 Bd6 O-O O-O Qe2 Qc7 e4 cxd4",
+   "reach": 0.036,
+   "games": [
+    {
+     "id": 222253,
+     "ply": 16,
+     "white": "Gazik, Viktor",
+     "black": "Mons, Leon",
+     "year": 2017,
+     "result": "0-1"
+    }
+   ]
+  },
+  {
+   "id": "nf3-3-e3-6-o-o",
+   "title": "3.e3 · 6.O-O",
+   "name": "Queen's Pawn Game: Colle System, Traditional Colle",
+   "moves": "d4 d5 Nf3 Nf6 e3 e6 Bd3 c5 c3 Nc6 O-O Bd6 Nbd2",
+   "reach": 0.003,
+   "transposesTo": "nf3-3-e3",
+   "games": [
+    {
+     "id": 736663,
+     "ply": 13,
+     "white": "Rahman, Ziaur",
+     "black": "Ganguly, Surya Shekhar",
+     "year": 2009,
+     "result": "1/2-1/2"
+    },
+    {
+     "id": 12000,
+     "ply": 13,
+     "white": "Dronavalli, Harika",
+     "black": "Muzychuk, Anna",
+     "year": 2014,
+     "result": "0-1"
+    },
+    {
+     "id": 153928,
+     "ply": 13,
+     "white": "Nanu, Costica-Ciprian",
+     "black": "Horvath, Peter",
+     "year": 2007,
+     "result": "1-0"
+    }
+   ]
+  },
+  {
+   "id": "nf3-3-e3-5-b3",
+   "title": "3.e3 · 5.b3",
+   "name": "Queen's Pawn Game: Colle System",
+   "moves": "d4 d5 Nf3 Nf6 e3 e6 Bd3 c5 b3 Nc6 Bb2 cxd4 exd4 Bd6 O-O O-O Nbd2 b6",
+   "reach": 0.005,
+   "games": [
+    {
+     "id": 221793,
+     "ply": 18,
+     "white": "Keymer, Vincent",
+     "black": "Costa, Leonardo",
+     "year": 2025,
+     "result": "1-0"
+    }
+   ]
+  },
+  {
+   "id": "nf3-3-e3-4-c4",
+   "title": "3.e3 · 4.c4",
+   "name": "Queen's Gambit Declined: Three Knights Variation",
+   "moves": "d4 d5 Nf3 Nf6 e3 e6 c4 Be7 Nc3 O-O Bd3 dxc4 Bxc4 a6 O-O b5 Bd3 Bb7",
+   "reach": 0.007,
+   "games": [
+    {
+     "id": 443476,
+     "ply": 8,
+     "white": "Gorshtein, Ido",
+     "black": "Kobo, Ori",
+     "year": 2024,
+     "result": "1-0"
+    },
+    {
+     "id": 365014,
+     "ply": 8,
+     "white": "Berkes, Ferenc",
+     "black": "Csonka, Balazs",
+     "year": 2025,
+     "result": "1/2-1/2"
+    },
+    {
+     "id": 443471,
+     "ply": 8,
+     "white": "Lubbe, Nikolas",
+     "black": "Prohaszka, Peter",
+     "year": 2025,
+     "result": "1/2-1/2"
+    }
+   ]
+  },
+  {
+   "id": "nf3-3-e3-4-be2",
+   "title": "3.e3 · 4.Be2",
+   "name": "Queen's Pawn Game: Colle System",
+   "moves": "d4 d5 Nf3 Nf6 e3 e6 Be2 Be7 O-O O-O b3 b6 Bb2 c5 Nbd2 Nc6",
+   "reach": 0.004,
+   "games": [
+    {
+     "id": 154230,
+     "ply": 7,
+     "white": "Burmakin, Vladimir",
+     "black": "Lintchevski, Daniil",
+     "year": 2017,
+     "result": "1/2-1/2"
+    },
+    {
+     "id": 357534,
+     "ply": 7,
+     "white": "Bellin, Robert",
+     "black": "Keene, Raymond D",
+     "year": 1982,
+     "result": "1/2-1/2"
+    },
+    {
+     "id": 443015,
+     "ply": 7,
+     "white": "Savchenko, Viacheslav",
+     "black": "Bosch, Jeroen",
+     "year": 2007,
+     "result": "1/2-1/2"
+    }
+   ]
+  },
+  {
+   "id": "nf3-3-g3",
+   "title": "3.g3",
+   "name": "Queen's Pawn Game: Symmetrical Variation, Pseudo-Catalan",
+   "moves": "d4 d5 Nf3 Nf6 g3 c6 Bg2 Bf5 O-O e6 c4",
+   "reach": 0.021,
+   "transposesTo": "slav-other-3-nf3-4-g3",
+   "games": [
+    {
+     "id": 221721,
+     "ply": 11,
+     "white": "Maghsoodloo, Parham",
+     "black": "Abdusattorov, Nodirbek",
+     "year": 2023,
+     "result": "0-1"
+    },
+    {
+     "id": 154198,
+     "ply": 11,
+     "white": "Adly, Ahmed",
+     "black": "Short, Nigel D",
+     "year": 2017,
+     "result": "0-1"
+    },
+    {
+     "id": 809696,
+     "ply": 11,
+     "white": "Stupak, Kirill",
+     "black": "Rodshtein, Maxim",
+     "year": 2017,
+     "result": "1-0"
+    }
+   ]
+  },
+  {
+   "id": "nf3-3-g3-6-b3",
+   "title": "3.g3 · 6.b3",
+   "name": "Queen's Pawn Game: Symmetrical Variation, Pseudo-Catalan",
+   "moves": "d4 d5 Nf3 Nf6 g3 c6 Bg2 Bf5 O-O e6 b3 Nbd7 Bb2 Ne4 Nbd2 h5",
+   "reach": 0.002,
+   "games": [
+    {
+     "id": 221722,
+     "ply": 13,
+     "white": "Madan, Augustin",
+     "black": "Fridman, Daniel",
+     "year": 2007,
+     "result": "0-1"
+    },
+    {
+     "id": 736653,
+     "ply": 13,
+     "white": "Miladinovic, Igor",
+     "black": "Kosic, Dragan",
+     "year": 1997,
+     "result": "1/2-1/2"
+    },
+    {
+     "id": 663854,
+     "ply": 13,
+     "white": "Dzagnidze, Nana",
+     "black": "Danielian, Elina",
+     "year": 2011,
+     "result": "0-1"
+    }
+   ]
+  },
+  {
+   "id": "nf3-3-bg5",
+   "title": "3.Bg5",
+   "name": "Queen's Pawn Game: Torre Attack, Gossip Variation",
+   "moves": "d4 d5 Nf3 Nf6 Bg5 Ne4 Bh4 c5 e3 Qb6 b3 Nc6 c3 cxd4",
+   "reach": 0.017,
+   "games": [
+    {
+     "id": 154076,
+     "ply": 10,
+     "white": "Duda, Jan-Krzysztof",
+     "black": "Anand, Viswanathan",
+     "year": 2023,
+     "result": "0-1"
+    },
+    {
+     "id": 736507,
+     "ply": 10,
+     "white": "Westerinen, Heikki M.J.",
+     "black": "Van Wely, Loek",
+     "year": 2000,
+     "result": "0-1"
+    },
+    {
+     "id": 736726,
+     "ply": 10,
+     "white": "Rogers, Ian",
+     "black": "Sadvakasov, Darmen",
+     "year": 2000,
+     "result": "1/2-1/2"
+    }
+   ]
+  },
+  {
+   "id": "nf3-3-bg5-5-c3",
+   "title": "3.Bg5 · 5.c3",
+   "name": "Queen's Pawn Game: Torre Attack, Gossip Variation",
+   "moves": "d4 d5 Nf3 Nf6 Bg5 Ne4 Bh4 c5 c3 Qb6 Qb3 Nc6 e3 c4 Qxb6 axb6 Nbd2 Nxd2 Nxd2 b5",
+   "reach": 0.003,
+   "games": [
+    {
+     "id": 222062,
+     "ply": 14,
+     "white": "Arbakov, Valentin",
+     "black": "Khenkin, Igor",
+     "year": 1998,
+     "result": "1-0"
+    }
+   ]
+  },
+  {
+   "id": "nf3-3-bg5-4-bf4",
+   "title": "3.Bg5 · 4.Bf4",
+   "name": "Queen's Pawn Game: Torre Attack, Gossip Variation",
+   "moves": "d4 d5 Nf3 Nf6 Bg5 Ne4 Bf4 c5 e3 Qb6 Qc1 Nc6 c3 f6",
+   "reach": 0.006,
+   "games": [
+    {
+     "id": 221590,
+     "ply": 14,
+     "white": "Nogga, Uwe",
+     "black": "Bukarin, Mikhail Yurievich",
+     "year": 2018,
+     "result": "1/2-1/2"
+    }
+   ]
+  },
+  {
+   "id": "nf3-3-nc3",
+   "title": "3.Nc3",
+   "name": "Queen's Pawn Game: Veresov Attack, Classical Defense",
+   "moves": "d4 d5 Nf3 Nf6 Nc3 e6 Bg5 Bb4 e3 Nbd7 Bd3 c5 O-O c4",
+   "reach": 0.008,
+   "games": [
+    {
+     "id": 585232,
+     "ply": 7,
+     "white": "Kovacevic, Vlatko",
+     "black": "Damjanovic, Mato",
+     "year": 1977,
+     "result": "1/2-1/2"
+    },
+    {
+     "id": 435568,
+     "ply": 7,
+     "white": "Moreno Ruiz, Javier",
+     "black": "Martin Gonzalez, Angel",
+     "year": 1998,
+     "result": "0-1"
+    }
+   ]
+  },
+  {
+   "id": "nf3-3-c3",
+   "title": "3.c3",
+   "name": "Queen's Pawn Game: Symmetrical Variation",
+   "moves": "d4 d5 Nf3 Nf6 c3 e6 Bg5 h6 Bh4 g5 Bg3 Ne4 Nbd2 h5",
+   "reach": 0.005,
+   "games": [
+    {
+     "id": 504392,
+     "ply": 12,
+     "white": "Cordova, Emilio",
+     "black": "Dominguez Perez, Leinier",
+     "year": 2026,
+     "result": "1/2-1/2"
+    },
+    {
+     "id": 12073,
+     "ply": 12,
+     "white": "Salimova, Nurgyul",
+     "black": "Atalik, Ekaterina",
+     "year": 2023,
+     "result": "1/2-1/2"
+    }
+   ]
+  },
+  {
+   "id": "nf3-3-bd3",
+   "title": "3.Bd3",
+   "name": "Queen's Pawn Game: Stonewall Attack",
+   "moves": "d4 d5 e3 Nf6 Bd3 c5 c3 Nc6 f4 Bg4 Nf3 e6 O-O Bd6 Nbd2 O-O Qe1 Bf5 Bxf5 exf5 Ne5 Qc7",
+   "reach": 0.023,
+   "games": [
+    {
+     "id": 511710,
+     "ply": 17,
+     "white": "Ristorto, Rogelio Santo",
+     "black": "Maes, Wim",
+     "year": 1999,
+     "result": "0-1"
+    }
+   ]
+  },
+  {
+   "id": "nf3-3-bd3-8-qe1",
+   "title": "3.Bd3 · 8.Qe1",
+   "name": "Queen's Pawn Game: Stonewall Attack",
+   "moves": "d4 d5 e3 Nf6 Bd3 c5 c3 Nc6 f4 Bg4 Nf3 e6 O-O Bd6 Qe1 Bf5",
+   "reach": 0.002,
+   "games": [
+    {
+     "id": 511710,
+     "ply": 15,
+     "white": "Ristorto, Rogelio Santo",
+     "black": "Maes, Wim",
+     "year": 1999,
+     "result": "0-1"
+    }
+   ]
+  },
+  {
+   "id": "nf3-3-bd3-7-nbd2",
+   "title": "3.Bd3 · 7.Nbd2",
+   "name": "Queen's Pawn Game: Stonewall Attack",
+   "moves": "d4 d5 e3 Nf6 Bd3 c5 c3 Nc6 f4 Bg4 Nf3 e6 Nbd2 Bd6 O-O",
+   "reach": 0.005,
+   "transposesTo": "nf3-3-bd3",
+   "games": [
+    {
+     "id": 511710,
+     "ply": 12,
+     "white": "Ristorto, Rogelio Santo",
+     "black": "Maes, Wim",
+     "year": 1999,
+     "result": "0-1"
+    }
+   ]
+  },
+  {
+   "id": "nf3-3-bd3-5-nd2",
+   "title": "3.Bd3 · 5.Nd2",
+   "name": "Queen's Pawn Game: Stonewall Attack",
+   "moves": "d4 d5 e3 Nf6 Bd3 c5 c3 Nc6 Nd2 e5 dxe5 Nxe5 Bc2 Bd6 Ngf3 O-O",
+   "reach": 0.003,
+   "games": [
+    {
+     "id": 435861,
+     "ply": 8,
+     "white": "Nguyen, Dang Trong Phuc",
+     "black": "Nguyen, Trong Tien",
+     "year": 2012,
+     "result": "0-1"
+    },
+    {
+     "id": 511710,
+     "ply": 8,
+     "white": "Ristorto, Rogelio Santo",
+     "black": "Maes, Wim",
+     "year": 1999,
+     "result": "0-1"
+    },
+    {
+     "id": 512213,
+     "ply": 8,
+     "white": "Sturt, Raven",
+     "black": "Loiseau, Quentin",
+     "year": 2019,
+     "result": "1-0"
+    }
+   ]
+  },
+  {
+   "id": "nf3-3-nf3",
+   "title": "3.Nf3",
+   "name": "Queen's Pawn Game: Colle System",
+   "moves": "d4 d5 e3 Nf6 Nf3",
+   "reach": 0.02,
+   "transposesTo": "nf3-3-e3",
+   "games": [
+    {
+     "id": 222272,
+     "ply": 5,
+     "white": "Erigaisi Arjun",
+     "black": "Abdusattorov, Nodirbek",
+     "year": 2024,
+     "result": "1-0"
+    },
+    {
+     "id": 153948,
+     "ply": 5,
+     "white": "Aronian, Levon",
+     "black": "Caruana, Fabiano",
+     "year": 2025,
+     "result": "1-0"
+    },
+    {
+     "id": 154288,
+     "ply": 5,
+     "white": "Aronian, Levon",
+     "black": "Caruana, Fabiano",
+     "year": 2025,
+     "result": "0-1"
+    }
+   ]
+  },
+  {
+   "id": "nf3-2-e3-3-c4",
+   "title": "2.e3 · 3.c4",
+   "name": "Queen's Pawn Game",
+   "moves": "d4 d5 e3 Nf6 c4 e6 Nf3",
+   "reach": 0.013,
+   "transposesTo": "nf3-3-e3-4-c4",
+   "games": [
+    {
+     "id": 591336,
+     "ply": 7,
+     "white": "Aronian, Levon",
+     "black": "Oleksiyenko, Mykhaylo",
+     "year": 2024,
+     "result": "1/2-1/2"
+    },
+    {
+     "id": 443476,
+     "ply": 7,
+     "white": "Gorshtein, Ido",
+     "black": "Kobo, Ori",
+     "year": 2024,
+     "result": "1-0"
+    },
+    {
+     "id": 365014,
+     "ply": 7,
+     "white": "Berkes, Ferenc",
+     "black": "Csonka, Balazs",
+     "year": 2025,
+     "result": "1/2-1/2"
+    }
+   ]
+  },
+  {
+   "id": "nf3-3-c4-4-nc3",
+   "title": "3.c4 · 4.Nc3",
+   "name": "Queen's Pawn Game",
+   "moves": "d4 d5 e3 Nf6 c4 e6 Nc3 c5 Nf3 a6 cxd5 exd5",
+   "reach": 0.004,
+   "games": [
+    {
+     "id": 512230,
+     "ply": 5,
+     "white": "Riazantsev, Alexander",
+     "black": "Afanasiev, Nikita",
+     "year": 2024,
+     "result": "1/2-1/2"
+    },
+    {
+     "id": 357587,
+     "ply": 5,
+     "white": "Kurajica, Bojan",
+     "black": "Weinstein, Luc",
+     "year": 2006,
+     "result": "1-0"
+    },
+    {
+     "id": 282502,
+     "ply": 5,
+     "white": "Kurajica, Bojan",
+     "black": "Hillarp Persson, Tiger",
+     "year": 2008,
+     "result": "1/2-1/2"
+    }
+   ]
+  },
+  {
+   "id": "nf3-3-f4",
+   "title": "3.f4",
+   "name": "Queen's Pawn Game",
+   "moves": "d4 d5 e3 Nf6 f4 Bf5 Nf3 e6 Bd3 Be7 O-O O-O Ne5 c5",
+   "reach": 0.009,
+   "games": [
+    {
+     "id": 511585,
+     "ply": 9,
+     "white": "Knoppert, Erik",
+     "black": "Riemersma, Li",
+     "year": 1995,
+     "result": "0-1"
+    }
+   ]
+  },
+  {
+   "id": "nf3-3-f4-4-bd3",
+   "title": "3.f4 · 4.Bd3",
+   "name": "Queen's Pawn Game",
+   "moves": "d4 d5 e3 Nf6 f4 Bf5 Bd3 e6 Nf3",
+   "reach": 0.002,
+   "transposesTo": "nf3-3-f4",
+   "games": [
+    {
+     "id": 511585,
+     "ply": 9,
+     "white": "Knoppert, Erik",
+     "black": "Riemersma, Li",
+     "year": 1995,
+     "result": "0-1"
+    }
+   ]
+  },
+  {
+   "id": "nf3-3-h3",
+   "title": "3.h3",
+   "name": "Queen's Pawn Game",
+   "moves": "d4 d5 e3 Nf6 h3 e6 Nf3 b6 a3 Bb7",
+   "reach": 0.002,
+   "games": [
+    {
+     "id": 585658,
+     "ply": 4,
+     "white": "Dardha, Daniel",
+     "black": "Maurizzi, MarcAndria",
+     "year": 2024,
+     "result": "1/2-1/2"
+    },
+    {
+     "id": 435861,
+     "ply": 4,
+     "white": "Nguyen, Dang Trong Phuc",
+     "black": "Nguyen, Trong Tien",
+     "year": 2012,
+     "result": "0-1"
+    },
+    {
+     "id": 512230,
+     "ply": 4,
+     "white": "Riazantsev, Alexander",
+     "black": "Afanasiev, Nikita",
+     "year": 2024,
+     "result": "1/2-1/2"
+    }
+   ]
+  },
+  {
+   "id": "nf3-2-e3-3-c3",
+   "title": "2.e3 · 3.c3",
+   "name": "Queen's Pawn Game",
+   "moves": "d4 d5 e3 Nf6 c3 Bf5 Bd3 Bxd3 Qxd3 Nbd7",
+   "reach": 0.002,
+   "games": [
+    {
+     "id": 585658,
+     "ply": 4,
+     "white": "Dardha, Daniel",
+     "black": "Maurizzi, MarcAndria",
+     "year": 2024,
+     "result": "1/2-1/2"
+    },
+    {
+     "id": 435861,
+     "ply": 4,
+     "white": "Nguyen, Dang Trong Phuc",
+     "black": "Nguyen, Trong Tien",
+     "year": 2012,
+     "result": "0-1"
+    },
+    {
+     "id": 512230,
+     "ply": 4,
+     "white": "Riazantsev, Alexander",
+     "black": "Afanasiev, Nikita",
+     "year": 2024,
+     "result": "1/2-1/2"
+    }
+   ]
+  }
+ ],
+ "gambits": [
+  {
+   "id": "gambits-3-bf4",
+   "title": "3.Bf4",
+   "name": "Rapport-Jobava System",
+   "moves": "d4 d5 Nc3 Nf6 Bf4",
+   "reach": 0.023,
+   "transposesTo": "london-3-nc3",
+   "games": [
+    {
+     "id": 357734,
+     "ply": 5,
+     "white": "Carlsen, Magnus",
+     "black": "Abdusattorov, Nodirbek",
+     "year": 2025,
+     "result": "1/2-1/2"
+    },
+    {
+     "id": 435777,
+     "ply": 5,
+     "white": "Nakamura, Hikaru",
+     "black": "Firouzja, Alireza",
+     "year": 2023,
+     "result": "1-0"
+    },
+    {
+     "id": 585458,
+     "ply": 5,
+     "white": "Jobava, Baadur",
+     "black": "Carlsen, Magnus",
+     "year": 2016,
+     "result": "0-1"
+    }
+   ]
+  },
+  {
+   "id": "gambits-3-bg5",
+   "title": "3.Bg5",
+   "name": "Richter-Veresov Attack: Two Knights System, Grünfeld Defense",
+   "moves": "d4 d5 Nc3 Nf6 Bg5 Nbd7 Nf3 g6 e3 Bg7 Bd3 O-O O-O c5",
+   "reach": 0.011,
+   "games": [
+    {
+     "id": 282527,
+     "ply": 14,
+     "white": "Mamedyarov, Shakhriyar",
+     "black": "Gagunashvili, Merab",
+     "year": 2002,
+     "result": "1/2-1/2"
+    },
+    {
+     "id": 357637,
+     "ply": 14,
+     "white": "Vyzmanavin, Alexey",
+     "black": "Novikov, Igor",
+     "year": 1983,
+     "result": "1/2-1/2"
+    }
+   ]
+  },
+  {
+   "id": "gambits-3-bg5-4-f3",
+   "title": "3.Bg5 · 4.f3",
+   "name": "Richter-Veresov Attack",
+   "moves": "d4 d5 Nc3 Nf6 Bg5 Nbd7 f3 c6 e4 dxe4 fxe4 e5 dxe5 Qa5 Bxf6 gxf6 e6 Ne5",
+   "reach": 0.003,
+   "games": [
+    {
+     "id": 357500,
+     "ply": 17,
+     "white": "Maksimenko, Andrei",
+     "black": "Chandler, Murray G",
+     "year": 1983,
+     "result": "1/2-1/2"
+    }
+   ]
+  },
+  {
+   "id": "gambits-3-bg5-4-e3",
+   "title": "3.Bg5 · 4.e3",
+   "name": "Richter-Veresov Attack",
+   "moves": "d4 d5 Nc3 Nf6 Bg5 Nbd7 e3 e6 Nf3 Bb4",
+   "reach": 0.002,
+   "transposesTo": "nf3-3-nc3",
+   "games": [
+    {
+     "id": 512098,
+     "ply": 9,
+     "white": "Kotronias, Vasilios",
+     "black": "Anand, Viswanathan",
+     "year": 1986,
+     "result": "0-1"
+    },
+    {
+     "id": 435980,
+     "ply": 9,
+     "white": "Dydyshko, Viacheslav",
+     "black": "Sadler, Matthew D",
+     "year": 1997,
+     "result": "0-1"
+    },
+    {
+     "id": 357510,
+     "ply": 9,
+     "white": "Dydyshko, Viacheslav",
+     "black": "Timoshenko, Georgy",
+     "year": 1967,
+     "result": "1-0"
+    }
+   ]
+  },
+  {
+   "id": "gambits-3-e4",
+   "title": "3.e4",
+   "name": "Queen's Pawn Game: Hübsch Gambit",
+   "moves": "d4 d5 Nc3 Nf6 e4 Nxe4 Nxe4 dxe4 f3 e5 d5 Bc5 fxe4 Qh4+",
+   "reach": 0.006,
+   "games": [
+    {
+     "id": 357579,
+     "ply": 5,
+     "white": "Mamonovas, Viktoras",
+     "black": "Martí Pericot, Juan Manuel",
+     "year": 2009,
+     "result": "0-1"
+    },
+    {
+     "id": 585666,
+     "ply": 5,
+     "white": "Kislinsky, Alexey",
+     "black": "Slugin, Sergey",
+     "year": 2008,
+     "result": "1/2-1/2"
+    }
+   ]
+  },
+  {
+   "id": "gambits-3-nf3",
+   "title": "3.Nf3",
+   "name": "Queen's Pawn Game: Chigorin Variation",
+   "moves": "d4 d5 Nc3 Nf6 Nf3",
+   "reach": 0.006,
+   "transposesTo": "nf3-3-nc3",
+   "games": [
+    {
+     "id": 435566,
+     "ply": 5,
+     "white": "Nghiem, Vinh Khang",
+     "black": "Le, Quang Khai",
+     "year": 2012,
+     "result": "1-0"
+    },
+    {
+     "id": 736706,
+     "ply": 5,
+     "white": "Nguyen, Manh Kha",
+     "black": "Vo, Hoang Khai",
+     "year": 2012,
+     "result": "0-1"
+    },
+    {
+     "id": 736531,
+     "ply": 5,
+     "white": "Hansen, Sune Berg",
+     "black": "Palo, Davor",
+     "year": 2005,
+     "result": "1/2-1/2"
+    }
+   ]
+  },
+  {
+   "id": "gambits-3-nc3",
+   "title": "3.Nc3",
+   "name": "Blackmar-Diemer Gambit Accepted: Bogoljubow Defense, Studier Attack",
+   "moves": "d4 d5 e4 dxe4 Nc3 Nf6 f3 exf3 Nxf3 g6 Bc4 Bg7 O-O O-O Qe1 Nc6 Qh4 Bg4 Be3 e6",
+   "reach": 0.017,
+   "games": [
+    {
+     "id": 511722,
+     "ply": 17,
+     "white": "Borges Matos, Juan",
+     "black": "Beliavsky, Alexander G",
+     "year": 2007,
+     "result": "0-1"
+    }
+   ]
+  },
+  {
+   "id": "gambits-3-nc3-5-qxf3",
+   "title": "3.Nc3 · 5.Qxf3",
+   "name": "Blackmar-Diemer Gambit Accepted: Ryder Gambit",
+   "moves": "d4 d5 e4 dxe4 Nc3 Nf6 f3 exf3 Qxf3 Qxd4 Be3 Qh4+ g3 Qg4 Qf2 Qf5",
+   "reach": 0.005,
+   "games": [
+    {
+     "id": 511722,
+     "ply": 8,
+     "white": "Borges Matos, Juan",
+     "black": "Beliavsky, Alexander G",
+     "year": 2007,
+     "result": "0-1"
+    },
+    {
+     "id": 435872,
+     "ply": 8,
+     "white": "Haugen, Arild",
+     "black": "Weisskohl, Jerry",
+     "year": 2008,
+     "result": "1/2-1/2"
+    },
+    {
+     "id": 511721,
+     "ply": 8,
+     "white": "Haugen, Arild",
+     "black": "Donnelly, Mike J Dr",
+     "year": 2008,
+     "result": "0-1"
+    }
+   ]
+  },
+  {
+   "id": "gambits-3-nc3-4-bg5",
+   "title": "3.Nc3 · 4.Bg5",
+   "name": "Blackmar-Diemer Gambit: von Popiel Gambit",
+   "moves": "d4 d5 e4 dxe4 Nc3 Nf6 Bg5 c6 Bxf6 exf6 Nxe4 f5 Ng3 Qe7+",
+   "reach": 0.003,
+   "games": [
+    {
+     "id": 585483,
+     "ply": 7,
+     "white": "Salcedo Mederos, Pablo Ing",
+     "black": "Da Silva, Flavio Arnaldo Braga",
+     "year": 2003,
+     "result": "1-0"
+    }
+   ]
+  },
+  {
+   "id": "gambits-3-f3",
+   "title": "3.f3",
+   "name": "Blackmar-Diemer Gambit: Blackmar Gambit",
+   "moves": "d4 d5 e4 dxe4 f3 e5 d5 Nf6 Nc3 Bb4",
+   "reach": 0.004,
+   "games": [
+    {
+     "id": 511722,
+     "ply": 4,
+     "white": "Borges Matos, Juan",
+     "black": "Beliavsky, Alexander G",
+     "year": 2007,
+     "result": "0-1"
+    },
+    {
+     "id": 435872,
+     "ply": 4,
+     "white": "Haugen, Arild",
+     "black": "Weisskohl, Jerry",
+     "year": 2008,
+     "result": "1/2-1/2"
+    },
+    {
+     "id": 511721,
+     "ply": 4,
+     "white": "Haugen, Arild",
+     "black": "Donnelly, Mike J Dr",
+     "year": 2008,
+     "result": "0-1"
+    }
+   ]
+  }
+ ],
+ "sidelines": []
+}

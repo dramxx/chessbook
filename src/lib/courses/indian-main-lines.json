@@ -1,0 +1,3596 @@
+{
+ "nimzo": [
+  {
+   "id": "nimzo-4-o-o",
+   "title": "4...O-O",
+   "name": "Nimzo-Indian Defense: Normal Variation, Bernstein Defense",
+   "moves": "d4 Nf6 c4 e6 Nc3 Bb4 e3 O-O Bd3 d5 Nf3 c5 O-O Nc6 a3 Bxc3 bxc3 dxc4 Bxc4 Qc7 Bb2 e5 h3",
+   "reach": 0.071,
+   "games": [
+    {
+     "id": 90694,
+     "ply": 23,
+     "white": "Potkin, Vladimir",
+     "black": "Karjakin, Sergey",
+     "year": 2012,
+     "result": "1/2-1/2"
+    },
+    {
+     "id": 371925,
+     "ply": 23,
+     "white": "Nisipeanu, Liviu-Dieter",
+     "black": "Ponomariov, Ruslan",
+     "year": 2013,
+     "result": "1/2-1/2"
+    },
+    {
+     "id": 297525,
+     "ply": 23,
+     "white": "Ponomariov, Ruslan",
+     "black": "Naiditsch, Arkadij",
+     "year": 2010,
+     "result": "1-0"
+    }
+   ]
+  },
+  {
+   "id": "nimzo-4-o-o-7-cxd4",
+   "title": "4...O-O · 7...cxd4",
+   "name": "Nimzo-Indian Defense: Normal Variation, Gligoric System, Exchange Variation",
+   "moves": "d4 Nf6 c4 e6 Nc3 Bb4 e3 O-O Bd3 d5 Nf3 c5 O-O cxd4 exd4 dxc4 Bxc4 Nc6 Bg5",
+   "reach": 0.003,
+   "games": [
+    {
+     "id": 19733,
+     "ply": 19,
+     "white": "Sedlak, Nikola",
+     "black": "Jobava, Baadur",
+     "year": 2011,
+     "result": "0-1"
+    },
+    {
+     "id": 669212,
+     "ply": 19,
+     "white": "Gagunashvili, Merab",
+     "black": "Maroroa Jones, Gawain C B",
+     "year": 2004,
+     "result": "1-0"
+    },
+    {
+     "id": 228261,
+     "ply": 19,
+     "white": "Tal, Mikhail",
+     "black": "Ljubojevic, Ljubomir",
+     "year": 1990,
+     "result": "0-1"
+    }
+   ]
+  },
+  {
+   "id": "nimzo-4-o-o-7-dxc4",
+   "title": "4...O-O · 7...dxc4",
+   "name": "Nimzo-Indian Defense: Normal Variation, Gligoric System, Exchange Variation",
+   "moves": "d4 Nf6 c4 e6 Nc3 Bb4 e3 O-O Bd3 d5 Nf3 c5 O-O dxc4 Bxc4 cxd4 exd4",
+   "reach": 0.002,
+   "transposesTo": "nimzo-4-o-o-7-cxd4",
+   "games": [
+    {
+     "id": 21089,
+     "ply": 17,
+     "white": "Kramnik, Vladimir",
+     "black": "Kasparov, Garry",
+     "year": 2000,
+     "result": "1-0"
+    },
+    {
+     "id": 298296,
+     "ply": 17,
+     "white": "Aronian, Levon",
+     "black": "Caruana, Fabiano",
+     "year": 2015,
+     "result": "1/2-1/2"
+    },
+    {
+     "id": 237794,
+     "ply": 17,
+     "white": "Caruana, Fabiano",
+     "black": "Nepomniachtchi, Ian",
+     "year": 2021,
+     "result": "1/2-1/2"
+    }
+   ]
+  },
+  {
+   "id": "nimzo-4-o-o-6-dxc4",
+   "title": "4...O-O · 6...dxc4",
+   "name": "Nimzo-Indian Defense: Normal Variation, Gligoric System, Exchange Variation",
+   "moves": "d4 Nf6 c4 e6 Nc3 Bb4 e3 O-O Bd3 d5 Nf3 dxc4 Bxc4 c5 O-O",
+   "reach": 0.008,
+   "transposesTo": "nimzo-4-o-o-7-dxc4",
+   "games": [
+    {
+     "id": 91425,
+     "ply": 15,
+     "white": "Kramnik, Vladimir",
+     "black": "Kasparov, Garry",
+     "year": 2000,
+     "result": "1/2-1/2"
+    },
+    {
+     "id": 296386,
+     "ply": 15,
+     "white": "Radjabov, Teimour",
+     "black": "Kramnik, Vladimir",
+     "year": 2013,
+     "result": "1/2-1/2"
+    },
+    {
+     "id": 297417,
+     "ply": 15,
+     "white": "Caruana, Fabiano",
+     "black": "Kramnik, Vladimir",
+     "year": 2021,
+     "result": "1/2-1/2"
+    }
+   ]
+  },
+  {
+   "id": "nimzo-4-o-o-6-b6",
+   "title": "4...O-O · 6...b6",
+   "name": "Nimzo-Indian Defense: Normal Variation, Schlechter Defense",
+   "moves": "d4 Nf6 c4 e6 Nc3 Bb4 e3 O-O Bd3 d5 Nf3 b6 O-O Bb7 cxd5 exd5 a3 Bd6 b4",
+   "reach": 0.003,
+   "games": [
+    {
+     "id": 742755,
+     "ply": 19,
+     "white": "Mamedyarov, Shakhriyar",
+     "black": "Adams, Michael",
+     "year": 2017,
+     "result": "1-0"
+    },
+    {
+     "id": 742750,
+     "ply": 19,
+     "white": "Yu, Yangyi",
+     "black": "Adams, Michael",
+     "year": 2017,
+     "result": "1/2-1/2"
+    },
+    {
+     "id": 159967,
+     "ply": 19,
+     "white": "Mamedyarov, Shakhriyar",
+     "black": "Karjakin, Sergey",
+     "year": 2015,
+     "result": "1/2-1/2"
+    }
+   ]
+  },
+  {
+   "id": "nimzo-4-o-o-6-c6",
+   "title": "4...O-O · 6...c6",
+   "name": "Nimzo-Indian Defense: Normal Variation, Classical Defense",
+   "moves": "d4 Nf6 c4 e6 Nc3 Bb4 e3 O-O Bd3 d5 Nf3 c6 Bd2 Nbd7 Qc2",
+   "reach": 0.002,
+   "games": [
+    {
+     "id": 822384,
+     "ply": 13,
+     "white": "Berkes, Ferenc",
+     "black": "Deac, Bogdan-Daniel",
+     "year": 2017,
+     "result": "1/2-1/2"
+    }
+   ]
+  },
+  {
+   "id": "nimzo-4-o-o-6-nbd7",
+   "title": "4...O-O · 6...Nbd7",
+   "name": "Nimzo-Indian Defense: Normal Variation, Gligoric System",
+   "moves": "d4 Nf6 c4 e6 Nc3 Bb4 e3 O-O Bd3 d5 Nf3 Nbd7 O-O c5 cxd5 exd5 Bd2",
+   "reach": 0.002,
+   "games": [
+    {
+     "id": 297605,
+     "ply": 16,
+     "white": "Vitiugov, Nikita",
+     "black": "Gasimova, Fakhriyya",
+     "year": 2009,
+     "result": "0-1"
+    },
+    {
+     "id": 297577,
+     "ply": 16,
+     "white": "Jussupow, Artur",
+     "black": "Westerinen, Heikki M.J.",
+     "year": 1992,
+     "result": "1/2-1/2"
+    },
+    {
+     "id": 298564,
+     "ply": 16,
+     "white": "Van der Sterren, Paul",
+     "black": "Piket, Jeroen",
+     "year": 1994,
+     "result": "1/2-1/2"
+    }
+   ]
+  },
+  {
+   "id": "nimzo-4-o-o-5-c5",
+   "title": "4...O-O · 5...c5",
+   "name": "Nimzo-Indian Defense: Normal Variation, Gligoric System",
+   "moves": "d4 Nf6 c4 e6 Nc3 Bb4 e3 O-O Bd3 c5 Nf3 d5",
+   "reach": 0.018,
+   "transposesTo": "nimzo-4-o-o",
+   "games": [
+    {
+     "id": 297017,
+     "ply": 12,
+     "white": "Carlsen, Magnus",
+     "black": "So, Wesley",
+     "year": 2017,
+     "result": "0-1"
+    },
+    {
+     "id": 21089,
+     "ply": 12,
+     "white": "Kramnik, Vladimir",
+     "black": "Kasparov, Garry",
+     "year": 2000,
+     "result": "1-0"
+    },
+    {
+     "id": 91425,
+     "ply": 12,
+     "white": "Kramnik, Vladimir",
+     "black": "Kasparov, Garry",
+     "year": 2000,
+     "result": "1/2-1/2"
+    }
+   ]
+  },
+  {
+   "id": "nimzo-4-o-o-5-c5-6-nc6",
+   "title": "4...O-O · 5...c5 · 6...Nc6",
+   "name": "Nimzo-Indian Defense: Rubinstein System, Hübner Variation",
+   "moves": "d4 Nf6 c4 e6 Nc3 Bb4 e3 O-O Bd3 c5 Nf3 Nc6 O-O Bxc3 bxc3 d6 e4 e5 d5 Ne7 Nh4",
+   "reach": 0.004,
+   "games": [
+    {
+     "id": 90565,
+     "ply": 21,
+     "white": "Gelfand, Boris",
+     "black": "Grischuk, Alexander",
+     "year": 2012,
+     "result": "1/2-1/2"
+    },
+    {
+     "id": 298343,
+     "ply": 21,
+     "white": "Wang, Hao",
+     "black": "Andreikin, Dmitry",
+     "year": 2013,
+     "result": "1-0"
+    },
+    {
+     "id": 298342,
+     "ply": 21,
+     "white": "Wang, Hao",
+     "black": "Ponomariov, Ruslan",
+     "year": 2011,
+     "result": "1-0"
+    }
+   ]
+  },
+  {
+   "id": "nimzo-4-o-o-5-c5-6-cxd4",
+   "title": "4...O-O · 5...c5 · 6...cxd4",
+   "name": "Nimzo-Indian Defense: Normal Variation",
+   "moves": "d4 Nf6 c4 e6 Nc3 Bb4 e3 O-O Bd3 c5 Nf3 cxd4 exd4 d5 O-O",
+   "reach": 0.003,
+   "transposesTo": "nimzo-4-o-o-7-cxd4",
+   "games": [
+    {
+     "id": 21089,
+     "ply": 15,
+     "white": "Kramnik, Vladimir",
+     "black": "Kasparov, Garry",
+     "year": 2000,
+     "result": "1-0"
+    },
+    {
+     "id": 298296,
+     "ply": 15,
+     "white": "Aronian, Levon",
+     "black": "Caruana, Fabiano",
+     "year": 2015,
+     "result": "1/2-1/2"
+    },
+    {
+     "id": 237794,
+     "ply": 15,
+     "white": "Caruana, Fabiano",
+     "black": "Nepomniachtchi, Ian",
+     "year": 2021,
+     "result": "1/2-1/2"
+    }
+   ]
+  },
+  {
+   "id": "nimzo-4-o-o-5-c5-6-b6",
+   "title": "4...O-O · 5...c5 · 6...b6",
+   "name": "Nimzo-Indian Defense: St. Petersburg Variation",
+   "moves": "d4 Nf6 c4 e6 Nc3 Bb4 e3 O-O Bd3 c5 Nf3 b6 O-O Bb7 Na4 cxd4 exd4 Re8 a3 Bf8 b4 d6 Re1 Nbd7 Bb2",
+   "reach": 0.002,
+   "games": [
+    {
+     "id": 90556,
+     "ply": 25,
+     "white": "Korobov, Dmitry A.",
+     "black": "Fedorchuk, Sergey A.",
+     "year": 2012,
+     "result": "1/2-1/2"
+    },
+    {
+     "id": 90558,
+     "ply": 25,
+     "white": "Istratescu, Andrei",
+     "black": "Edouard, Romain",
+     "year": 2013,
+     "result": "1/2-1/2"
+    },
+    {
+     "id": 229782,
+     "ply": 25,
+     "white": "Wojtaszek, Radoslaw",
+     "black": "Tomczak, Jacek",
+     "year": 2016,
+     "result": "1-0"
+    }
+   ]
+  },
+  {
+   "id": "nimzo-4-o-o-5-b6",
+   "title": "4...O-O · 5...b6",
+   "name": "Nimzo-Indian Defense: Normal Variation",
+   "moves": "d4 Nf6 c4 e6 Nc3 Bb4 e3 O-O Bd3 b6 Ne2 Bb7 O-O d5 cxd5 exd5 a3 Bd6 b4",
+   "reach": 0.011,
+   "games": [
+    {
+     "id": 297677,
+     "ply": 19,
+     "white": "Navara, David",
+     "black": "Movsesian, Sergei",
+     "year": 2016,
+     "result": "1-0"
+    },
+    {
+     "id": 92714,
+     "ply": 19,
+     "white": "Navara, David",
+     "black": "Movsesian, Sergei",
+     "year": 2016,
+     "result": "1-0"
+    },
+    {
+     "id": 91666,
+     "ply": 19,
+     "white": "Nisipeanu, Liviu-Dieter",
+     "black": "Babula, Vlastimil",
+     "year": 2021,
+     "result": "1/2-1/2"
+    }
+   ]
+  },
+  {
+   "id": "nimzo-4-o-o-5-d6",
+   "title": "4...O-O · 5...d6",
+   "name": "Nimzo-Indian Defense: Normal Variation",
+   "moves": "d4 Nf6 c4 e6 Nc3 Bb4 e3 O-O Bd3 d6 Ne2 e5 O-O",
+   "reach": 0.003,
+   "games": [
+    {
+     "id": 298072,
+     "ply": 13,
+     "white": "Milanovic, Danilo",
+     "black": "Bogosavljevic, Boban",
+     "year": 2011,
+     "result": "0-1"
+    },
+    {
+     "id": 161116,
+     "ply": 13,
+     "white": "Bosiocic, Marin",
+     "black": "Kurajica, Bojan",
+     "year": 2013,
+     "result": "1/2-1/2"
+    },
+    {
+     "id": 90643,
+     "ply": 13,
+     "white": "Van der Sterren, Paul",
+     "black": "Frias Apablaza, Victor",
+     "year": 1995,
+     "result": "1/2-1/2"
+    }
+   ]
+  },
+  {
+   "id": "nimzo-4-c5",
+   "title": "4...c5",
+   "name": "Nimzo-Indian Defense: Rubinstein System, Hübner Variation",
+   "moves": "d4 Nf6 c4 e6 Nc3 Bb4 e3 c5 Bd3 Nc6 Nf3 Bxc3+ bxc3 d6 O-O e5 Nd2 O-O Rb1 b6 h3",
+   "reach": 0.034,
+   "games": [
+    {
+     "id": 228378,
+     "ply": 21,
+     "white": "Korobov, Anton",
+     "black": "Polak, Tomas",
+     "year": 2010,
+     "result": "1-0"
+    },
+    {
+     "id": 227724,
+     "ply": 21,
+     "white": "Sokolov, Ivan",
+     "black": "Weinstein, Luc",
+     "year": 1994,
+     "result": "1-0"
+    },
+    {
+     "id": 227725,
+     "ply": 21,
+     "white": "Sokolov, Ivan",
+     "black": "Weinstein, Luc",
+     "year": 1995,
+     "result": "1-0"
+    }
+   ]
+  },
+  {
+   "id": "nimzo-4-c5-6-o-o",
+   "title": "4...c5 · 6...O-O",
+   "name": "Nimzo-Indian Defense: Rubinstein System",
+   "moves": "d4 Nf6 c4 e6 Nc3 Bb4 e3 c5 Bd3 Nc6 Nf3 O-O",
+   "reach": 0.002,
+   "transposesTo": "nimzo-4-o-o-5-c5-6-nc6",
+   "games": [
+    {
+     "id": 93075,
+     "ply": 12,
+     "white": "Ponomariov, Ruslan",
+     "black": "Kasparov, Garry",
+     "year": 2003,
+     "result": "1/2-1/2"
+    },
+    {
+     "id": 90565,
+     "ply": 12,
+     "white": "Gelfand, Boris",
+     "black": "Grischuk, Alexander",
+     "year": 2012,
+     "result": "1/2-1/2"
+    },
+    {
+     "id": 298343,
+     "ply": 12,
+     "white": "Wang, Hao",
+     "black": "Andreikin, Dmitry",
+     "year": 2013,
+     "result": "1-0"
+    }
+   ]
+  },
+  {
+   "id": "nimzo-4-c5-5-o-o",
+   "title": "4...c5 · 5...O-O",
+   "name": "Nimzo-Indian Defense: Rubinstein System",
+   "moves": "d4 Nf6 c4 e6 Nc3 Bb4 e3 c5 Bd3 O-O",
+   "reach": 0.008,
+   "transposesTo": "nimzo-4-o-o-5-c5",
+   "games": [
+    {
+     "id": 372058,
+     "ply": 10,
+     "white": "Carlsen, Magnus",
+     "black": "Caruana, Fabiano",
+     "year": 2018,
+     "result": "1-0"
+    },
+    {
+     "id": 371900,
+     "ply": 10,
+     "white": "So, Wesley",
+     "black": "Caruana, Fabiano",
+     "year": 2021,
+     "result": "1/2-1/2"
+    },
+    {
+     "id": 371960,
+     "ply": 10,
+     "white": "Nakamura, Hikaru",
+     "black": "Carlsen, Magnus",
+     "year": 2011,
+     "result": "1/2-1/2"
+    }
+   ]
+  },
+  {
+   "id": "nimzo-4-c5-5-cxd4",
+   "title": "4...c5 · 5...cxd4",
+   "name": "Nimzo-Indian Defense: Rubinstein System",
+   "moves": "d4 Nf6 c4 e6 Nc3 Bb4 e3 c5 Bd3 cxd4 exd4 d5 cxd5 Nxd5 Ne2 Nc6 O-O O-O Nxd5 Qxd5 a3",
+   "reach": 0.005,
+   "games": [
+    {
+     "id": 18973,
+     "ply": 21,
+     "white": "Tregubov, Pavel V.",
+     "black": "Inarkiev, Ernesto",
+     "year": 2016,
+     "result": "0-1"
+    },
+    {
+     "id": 20567,
+     "ply": 21,
+     "white": "David, Alberto",
+     "black": "Fedorchuk, Sergey A.",
+     "year": 2011,
+     "result": "1/2-1/2"
+    },
+    {
+     "id": 161235,
+     "ply": 21,
+     "white": "Kacheishvili, Giorgi",
+     "black": "Milov, Vadim",
+     "year": 2001,
+     "result": "1/2-1/2"
+    }
+   ]
+  },
+  {
+   "id": "nimzo-4-c5-5-d5",
+   "title": "4...c5 · 5...d5",
+   "name": "Nimzo-Indian Defense: Normal Variation, Gligoric System, Bernstein Defense",
+   "moves": "d4 Nf6 c4 e6 Nc3 Bb4 e3 c5 Bd3 d5 Nf3 Nc6 O-O O-O",
+   "reach": 0.005,
+   "transposesTo": "nimzo-4-o-o",
+   "games": [
+    {
+     "id": 93146,
+     "ply": 14,
+     "white": "Kasparov, Garry",
+     "black": "Kramnik, Vladimir",
+     "year": 1997,
+     "result": "1-0"
+    },
+    {
+     "id": 298270,
+     "ply": 14,
+     "white": "Nakamura, Hikaru",
+     "black": "Ponomariov, Ruslan",
+     "year": 2011,
+     "result": "0-1"
+    },
+    {
+     "id": 93125,
+     "ply": 14,
+     "white": "Anand, Viswanathan",
+     "black": "Bacrot, Etienne",
+     "year": 2010,
+     "result": "1-0"
+    }
+   ]
+  },
+  {
+   "id": "nimzo-4-b6",
+   "title": "4...b6",
+   "name": "Nimzo-Indian Defense: St. Petersburg Variation",
+   "moves": "d4 Nf6 c4 e6 Nc3 Bb4 e3 b6 Ne2 Bb7 a3 Be7 d5 O-O Ng3 d6 e4",
+   "reach": 0.026,
+   "games": [
+    {
+     "id": 19416,
+     "ply": 17,
+     "white": "Gurevich, Valery M.",
+     "black": "Foisor, Ovidiu-Doru",
+     "year": 1999,
+     "result": "1-0"
+    },
+    {
+     "id": 19403,
+     "ply": 17,
+     "white": "Rapaka Samuel Paul",
+     "black": "Arunkumar Baskaran",
+     "year": 1971,
+     "result": "1/2-1/2"
+    },
+    {
+     "id": 227407,
+     "ply": 17,
+     "white": "Chekhov, Valery A",
+     "black": "Kengis, Edvins",
+     "year": 1986,
+     "result": "1/2-1/2"
+    }
+   ]
+  },
+  {
+   "id": "nimzo-4-b6-7-exd5",
+   "title": "4...b6 · 7...exd5",
+   "name": "Nimzo-Indian Defense: St. Petersburg Variation",
+   "moves": "d4 Nf6 c4 e6 Nc3 Bb4 e3 b6 Ne2 Bb7 a3 Be7 d5 exd5 cxd5 O-O g3 d6 Bg2",
+   "reach": 0.002,
+   "games": [
+    {
+     "id": 161449,
+     "ply": 17,
+     "white": "Jussupow, Artur",
+     "black": "Onischuk, Alexander",
+     "year": 1999,
+     "result": "1/2-1/2"
+    },
+    {
+     "id": 93305,
+     "ply": 17,
+     "white": "Rapaka Samuel Paul",
+     "black": "Belavenets, Sergey",
+     "year": 1939,
+     "result": "1-0"
+    },
+    {
+     "id": 227977,
+     "ply": 17,
+     "white": "Vrolijk, Liam",
+     "black": "Lai, Hing Ting",
+     "year": 2025,
+     "result": "1-0"
+    }
+   ]
+  },
+  {
+   "id": "nimzo-4-b6-6-bxc3",
+   "title": "4...b6 · 6...Bxc3+",
+   "name": "Nimzo-Indian Defense: St. Petersburg Variation",
+   "moves": "d4 Nf6 c4 e6 Nc3 Bb4 e3 b6 Ne2 Bb7 a3 Bxc3+ Nxc3 O-O Bd3 d5 cxd5 exd5 b4",
+   "reach": 0.008,
+   "games": [
+    {
+     "id": 91309,
+     "ply": 19,
+     "white": "Lenic, Luka",
+     "black": "Babula, Vlastimil",
+     "year": 2012,
+     "result": "1-0"
+    },
+    {
+     "id": 19376,
+     "ply": 19,
+     "white": "Hovhannisyan, Robert",
+     "black": "Markus, Robert",
+     "year": 2024,
+     "result": "1/2-1/2"
+    },
+    {
+     "id": 228655,
+     "ply": 19,
+     "white": "Vaisser, Anatoli",
+     "black": "Utasi, Tamas",
+     "year": 1985,
+     "result": "1-0"
+    }
+   ]
+  },
+  {
+   "id": "nimzo-4-b6-5-ba6",
+   "title": "4...b6 · 5...Ba6",
+   "name": "Nimzo-Indian Defense: St. Petersburg Variation, Fischer Variation",
+   "moves": "d4 Nf6 c4 e6 Nc3 Bb4 e3 b6 Ne2 Ba6 a3 Bxc3+ Nxc3 d5 b3 O-O Be2 Nc6 a4 Re8 O-O",
+   "reach": 0.004,
+   "games": [
+    {
+     "id": 160884,
+     "ply": 21,
+     "white": "Vaisser, Anatoli",
+     "black": "Fressinet, Laurent",
+     "year": 2008,
+     "result": "1/2-1/2"
+    },
+    {
+     "id": 227964,
+     "ply": 21,
+     "white": "Piorun, Kacper",
+     "black": "Moranda, Wojciech",
+     "year": 2009,
+     "result": "0-1"
+    },
+    {
+     "id": 227378,
+     "ply": 21,
+     "white": "Ulko, Jaroslav",
+     "black": "Ibragimov, Ildar",
+     "year": 2014,
+     "result": "1-0"
+    }
+   ]
+  },
+  {
+   "id": "nimzo-4-d5",
+   "title": "4...d5",
+   "name": "Nimzo-Indian Defense: Rubinstein System",
+   "moves": "d4 Nf6 c4 e6 Nc3 Bb4 e3 d5 a3 Bxc3+ bxc3 O-O cxd5 exd5 Bd3 c5 Ne2 Nc6 O-O",
+   "reach": 0.019,
+   "games": [
+    {
+     "id": 91929,
+     "ply": 19,
+     "white": "Shevchenko, Kirill",
+     "black": "Ponkratov, Pavel",
+     "year": 2023,
+     "result": "1/2-1/2"
+    },
+    {
+     "id": 298854,
+     "ply": 19,
+     "white": "Tregubov, Pavel V.",
+     "black": "Mareco, Sandro",
+     "year": 2016,
+     "result": "0-1"
+    },
+    {
+     "id": 297380,
+     "ply": 19,
+     "white": "Giorgadze, Giorgi Gel",
+     "black": "Kovacevic, Vlatko",
+     "year": 1998,
+     "result": "1/2-1/2"
+    }
+   ]
+  },
+  {
+   "id": "nimzo-4-d5-7-nxd5",
+   "title": "4...d5 · 7...Nxd5",
+   "name": "Nimzo-Indian Defense: Rubinstein System",
+   "moves": "d4 Nf6 c4 e6 Nc3 Bb4 e3 d5 a3 Bxc3+ bxc3 O-O cxd5 Nxd5 Bd3",
+   "reach": 0.003,
+   "games": [
+    {
+     "id": 227492,
+     "ply": 13,
+     "white": "Vidit, Santosh Gujrathi",
+     "black": "Abasov, Nijat",
+     "year": 2023,
+     "result": "1-0"
+    },
+    {
+     "id": 372356,
+     "ply": 13,
+     "white": "Tabatabaei, M. Amin",
+     "black": "Yuffa, Daniil",
+     "year": 2023,
+     "result": "1-0"
+    },
+    {
+     "id": 90606,
+     "ply": 13,
+     "white": "Sokolov, Ivan",
+     "black": "Maze, Sebastien",
+     "year": 2009,
+     "result": "1-0"
+    }
+   ]
+  },
+  {
+   "id": "nimzo-4-d5-6-ne4",
+   "title": "4...d5 · 6...Ne4",
+   "name": "Nimzo-Indian Defense: Rubinstein System",
+   "moves": "d4 Nf6 c4 e6 Nc3 Bb4 e3 d5 a3 Bxc3+ bxc3 Ne4 Bd3",
+   "reach": 0.002,
+   "games": [
+    {
+     "id": 228751,
+     "ply": 13,
+     "white": "Hammer, Johannes",
+     "black": "Lyrberg, Patrik",
+     "year": 2024,
+     "result": "1-0"
+    }
+   ]
+  },
+  {
+   "id": "nimzo-4-bxc3",
+   "title": "4...Bxc3+",
+   "name": "Nimzo-Indian Defense: Rubinstein System",
+   "moves": "d4 Nf6 c4 e6 Nc3 Bb4 e3 Bxc3+ bxc3 O-O Bd3 d6 e4 e5 Ne2",
+   "reach": 0.018,
+   "games": [
+    {
+     "id": 90590,
+     "ply": 15,
+     "white": "Sargissian, Gabriel",
+     "black": "Pichot, Alan",
+     "year": 2021,
+     "result": "1-0"
+    },
+    {
+     "id": 21003,
+     "ply": 15,
+     "white": "Garcia Palermo, Carlos Horacio",
+     "black": "Granda Zuniga, Julio E",
+     "year": 1987,
+     "result": "1-0"
+    },
+    {
+     "id": 20288,
+     "ply": 15,
+     "white": "Brodsky, Michail",
+     "black": "Kopylov, Alexander A.",
+     "year": 2010,
+     "result": "1-0"
+    }
+   ]
+  },
+  {
+   "id": "nimzo-4-bxc3-5-b6",
+   "title": "4...Bxc3+ · 5...b6",
+   "name": "Nimzo-Indian Defense: Rubinstein System",
+   "moves": "d4 Nf6 c4 e6 Nc3 Bb4 e3 Bxc3+ bxc3 b6 Bd3 Bb7 f3 d6 e4 Nbd7 Ne2 e5 O-O",
+   "reach": 0.005,
+   "games": [
+    {
+     "id": 20297,
+     "ply": 14,
+     "white": "Grachev, Boris",
+     "black": "Sjugirov, Sanan",
+     "year": 2022,
+     "result": "1-0"
+    },
+    {
+     "id": 20296,
+     "ply": 14,
+     "white": "Shulman, Yury",
+     "black": "Yudasin, Leonid",
+     "year": 1998,
+     "result": "1-0"
+    },
+    {
+     "id": 19489,
+     "ply": 14,
+     "white": "Deuer, Marius",
+     "black": "Bharath Subramaniyam H",
+     "year": 2025,
+     "result": "1/2-1/2"
+    }
+   ]
+  },
+  {
+   "id": "nimzo-4-bxc3-5-c5",
+   "title": "4...Bxc3+ · 5...c5",
+   "name": "Nimzo-Indian Defense: Rubinstein System",
+   "moves": "d4 Nf6 c4 e6 Nc3 Bb4 e3 Bxc3+ bxc3 c5 Bd3 d6 Ne2 Nc6 O-O e5 e4",
+   "reach": 0.004,
+   "games": [
+    {
+     "id": 19130,
+     "ply": 17,
+     "white": "Laznicka, Viktor",
+     "black": "Korobov, Anton",
+     "year": 2014,
+     "result": "1-0"
+    },
+    {
+     "id": 20295,
+     "ply": 17,
+     "white": "Beliavsky, Alexander G",
+     "black": "Anastasian, Ashot",
+     "year": 2003,
+     "result": "1/2-1/2"
+    },
+    {
+     "id": 228036,
+     "ply": 17,
+     "white": "Graf, Alexander",
+     "black": "Anastasian, Ashot",
+     "year": 2006,
+     "result": "1/2-1/2"
+    }
+   ]
+  },
+  {
+   "id": "nimzo-4-bxc3-5-d6",
+   "title": "4...Bxc3+ · 5...d6",
+   "name": "Nimzo-Indian Defense: Rubinstein System",
+   "moves": "d4 Nf6 c4 e6 Nc3 Bb4 e3 Bxc3+ bxc3 d6 Bd3 Nbd7 Ne2",
+   "reach": 0.002,
+   "games": [
+    {
+     "id": 227427,
+     "ply": 12,
+     "white": "Adly, Ahmed",
+     "black": "Taleb, Moussa",
+     "year": 2014,
+     "result": "1-0"
+    }
+   ]
+  },
+  {
+   "id": "nimzo-4-ne4",
+   "title": "4...Ne4",
+   "name": "Nimzo-Indian Defense: Rubinstein System",
+   "moves": "d4 Nf6 c4 e6 Nc3 Bb4 e3 Ne4 Qc2 f5 Bd3 Bxc3+ bxc3 Nf6 f3",
+   "reach": 0.009,
+   "games": [
+    {
+     "id": 228712,
+     "ply": 13,
+     "white": "Deuer, Marius",
+     "black": "Sulskis, Sarunas",
+     "year": 2025,
+     "result": "1-0"
+    }
+   ]
+  },
+  {
+   "id": "nimzo-4-ne4-5-d5",
+   "title": "4...Ne4 · 5...d5",
+   "name": "Nimzo-Indian Defense: Rubinstein System",
+   "moves": "d4 Nf6 c4 e6 Nc3 Bb4 e3 Ne4 Qc2 d5 Bd3 f5 Nh3",
+   "reach": 0.002,
+   "games": [
+    {
+     "id": 160752,
+     "ply": 12,
+     "white": "Najdorf, Miguel",
+     "black": "Quinteros, Miguel A.",
+     "year": 1978,
+     "result": "1/2-1/2"
+    }
+   ]
+  }
+ ],
+ "qgd": [
+  {
+   "id": "qgd-4-exd5",
+   "title": "4...exd5",
+   "name": "Queen's Gambit Declined: Exchange Variation, Positional Variation",
+   "moves": "d4 Nf6 c4 e6 Nc3 d5 cxd5 exd5 Bg5 Be7 e3 O-O Bd3 c6 Nge2 Nbd7 f3 Re8 O-O Nf8 Qc2",
+   "reach": 0.082,
+   "games": [
+    {
+     "id": 745385,
+     "ply": 9,
+     "white": "Sarana, Alexey",
+     "black": "Gavrilescu, David",
+     "year": 2023,
+     "result": "1-0"
+    }
+   ]
+  },
+  {
+   "id": "qgd-4-exd5-7-h6",
+   "title": "4...exd5 · 7...h6",
+   "name": "Queen's Gambit Declined: Exchange Variation, Positional Variation",
+   "moves": "d4 Nf6 c4 e6 Nc3 d5 cxd5 exd5 Bg5 Be7 e3 O-O Bd3 h6 Bh4 c6 Bg3",
+   "reach": 0.005,
+   "games": [
+    {
+     "id": 745385,
+     "ply": 9,
+     "white": "Sarana, Alexey",
+     "black": "Gavrilescu, David",
+     "year": 2023,
+     "result": "1-0"
+    }
+   ]
+  },
+  {
+   "id": "qgd-4-exd5-7-nbd7",
+   "title": "4...exd5 · 7...Nbd7",
+   "name": "Queen's Gambit Declined: Exchange Variation, Positional Variation",
+   "moves": "d4 Nf6 c4 e6 Nc3 d5 cxd5 exd5 Bg5 Be7 e3 O-O Bd3 Nbd7 Nge2 c6",
+   "reach": 0.002,
+   "transposesTo": "qgd-4-exd5",
+   "games": [
+    {
+     "id": 745385,
+     "ply": 9,
+     "white": "Sarana, Alexey",
+     "black": "Gavrilescu, David",
+     "year": 2023,
+     "result": "1-0"
+    }
+   ]
+  },
+  {
+   "id": "qgd-4-exd5-6-c6",
+   "title": "4...exd5 · 6...c6",
+   "name": "Queen's Gambit Declined: Exchange Variation, Positional Variation",
+   "moves": "d4 Nf6 c4 e6 Nc3 d5 cxd5 exd5 Bg5 Be7 e3 c6 Bd3 O-O",
+   "reach": 0.01,
+   "transposesTo": "qgd-4-exd5",
+   "games": [
+    {
+     "id": 745385,
+     "ply": 9,
+     "white": "Sarana, Alexey",
+     "black": "Gavrilescu, David",
+     "year": 2023,
+     "result": "1-0"
+    }
+   ]
+  },
+  {
+   "id": "qgd-4-exd5-6-h6",
+   "title": "4...exd5 · 6...h6",
+   "name": "Queen's Gambit Declined: Exchange Variation, Positional Variation",
+   "moves": "d4 Nf6 c4 e6 Nc3 d5 cxd5 exd5 Bg5 Be7 e3 h6 Bh4 O-O Bd3",
+   "reach": 0.004,
+   "transposesTo": "qgd-4-exd5-7-h6",
+   "games": [
+    {
+     "id": 745385,
+     "ply": 9,
+     "white": "Sarana, Alexey",
+     "black": "Gavrilescu, David",
+     "year": 2023,
+     "result": "1-0"
+    }
+   ]
+  },
+  {
+   "id": "qgd-4-exd5-5-c6",
+   "title": "4...exd5 · 5...c6",
+   "name": "Queen's Gambit Declined: Exchange Variation, Positional Variation",
+   "moves": "d4 Nf6 c4 e6 Nc3 d5 cxd5 exd5 Bg5 c6 e3 Be7",
+   "reach": 0.024,
+   "transposesTo": "qgd-4-exd5-6-c6",
+   "games": [
+    {
+     "id": 745385,
+     "ply": 9,
+     "white": "Sarana, Alexey",
+     "black": "Gavrilescu, David",
+     "year": 2023,
+     "result": "1-0"
+    }
+   ]
+  },
+  {
+   "id": "qgd-4-exd5-5-c6-6-bd6",
+   "title": "4...exd5 · 5...c6 · 6...Bd6",
+   "name": "Queen's Gambit Declined: Exchange Variation, Positional Variation",
+   "moves": "d4 Nf6 c4 e6 Nc3 d5 cxd5 exd5 Bg5 c6 e3 Bd6 Qc2 O-O Bd3 h6 Bh4 Re8 Nge2",
+   "reach": 0.004,
+   "games": [
+    {
+     "id": 745385,
+     "ply": 9,
+     "white": "Sarana, Alexey",
+     "black": "Gavrilescu, David",
+     "year": 2023,
+     "result": "1-0"
+    }
+   ]
+  },
+  {
+   "id": "qgd-4-exd5-5-c6-6-bf5",
+   "title": "4...exd5 · 5...c6 · 6...Bf5",
+   "name": "Queen's Gambit Declined: Exchange Variation, Positional Variation",
+   "moves": "d4 Nf6 c4 e6 Nc3 d5 cxd5 exd5 Bg5 c6 e3 Bf5 Qf3 Bg6 Bxf6 Qxf6 Qxf6 gxf6 h4 h5 Nh3 Bd6 g3",
+   "reach": 0.003,
+   "games": [
+    {
+     "id": 745385,
+     "ply": 9,
+     "white": "Sarana, Alexey",
+     "black": "Gavrilescu, David",
+     "year": 2023,
+     "result": "1-0"
+    }
+   ]
+  },
+  {
+   "id": "qgd-4-exd5-5-c6-6-h6",
+   "title": "4...exd5 · 5...c6 · 6...h6",
+   "name": "Queen's Gambit Declined: Exchange Variation, Positional Variation",
+   "moves": "d4 Nf6 c4 e6 Nc3 d5 cxd5 exd5 Bg5 c6 e3 h6 Bh4 Be7 Bd3 O-O",
+   "reach": 0.002,
+   "transposesTo": "qgd-4-exd5-7-h6",
+   "games": [
+    {
+     "id": 294598,
+     "ply": 13,
+     "white": "Martirosyan, Haik M.",
+     "black": "Arndt, Magnus",
+     "year": 2023,
+     "result": "1-0"
+    }
+   ]
+  },
+  {
+   "id": "qgd-4-exd5-5-bb4",
+   "title": "4...exd5 · 5...Bb4",
+   "name": "Queen's Gambit Declined: Exchange Variation, Positional Variation",
+   "moves": "d4 Nf6 c4 e6 Nc3 d5 cxd5 exd5 Bg5 Bb4 e3 O-O Bd3 h6 Bh4",
+   "reach": 0.006,
+   "games": [
+    {
+     "id": 743353,
+     "ply": 15,
+     "white": "Comas Fabrego, Lluis",
+     "black": "Oll, Lembit",
+     "year": 1991,
+     "result": "0-1"
+    }
+   ]
+  },
+  {
+   "id": "qgd-4-exd5-5-nbd7",
+   "title": "4...exd5 · 5...Nbd7",
+   "name": "Queen's Gambit Declined: Exchange Variation, Positional Variation",
+   "moves": "d4 Nf6 c4 e6 Nc3 d5 cxd5 exd5 Bg5 Nbd7 e3 c6 Bd3 Be7 h3 O-O Qc2 Re8 Nf3 Nf8 O-O",
+   "reach": 0.005,
+   "games": [
+    {
+     "id": 745385,
+     "ply": 9,
+     "white": "Sarana, Alexey",
+     "black": "Gavrilescu, David",
+     "year": 2023,
+     "result": "1-0"
+    }
+   ]
+  },
+  {
+   "id": "qgd-4-exd5-5-be6",
+   "title": "4...exd5 · 5...Be6",
+   "name": "Queen's Gambit Declined: Exchange Variation, Positional Variation",
+   "moves": "d4 Nf6 c4 e6 Nc3 d5 cxd5 exd5 Bg5 Be6 e3 Be7 Bd3 O-O Nge2",
+   "reach": 0.003,
+   "games": [
+    {
+     "id": 745385,
+     "ply": 9,
+     "white": "Sarana, Alexey",
+     "black": "Gavrilescu, David",
+     "year": 2023,
+     "result": "1-0"
+    }
+   ]
+  },
+  {
+   "id": "qgd-4-nxd5",
+   "title": "4...Nxd5",
+   "name": "Queen's Gambit Declined: Exchange Variation",
+   "moves": "d4 Nf6 c4 e6 Nc3 d5 cxd5 Nxd5 Nf3 Bb4 Qb3 Bxc3+ bxc3 O-O Ba3",
+   "reach": 0.025,
+   "games": [
+    {
+     "id": 818020,
+     "ply": 9,
+     "white": "Zubov, Alexander",
+     "black": "Golod, Vitali",
+     "year": 2022,
+     "result": "1-0"
+    }
+   ]
+  },
+  {
+   "id": "qgd-4-nxd5-6-nc6",
+   "title": "4...Nxd5 · 6...Nc6",
+   "name": "Queen's Gambit Declined: Exchange Variation",
+   "moves": "d4 Nf6 c4 e6 Nc3 d5 cxd5 Nxd5 Nf3 Bb4 Qb3 Nc6 e4 Nxc3 bxc3 Be7 Bd3",
+   "reach": 0.003,
+   "games": [
+    {
+     "id": 818020,
+     "ply": 9,
+     "white": "Zubov, Alexander",
+     "black": "Golod, Vitali",
+     "year": 2022,
+     "result": "1-0"
+    }
+   ]
+  },
+  {
+   "id": "qgd-4-nxd5-6-o-o",
+   "title": "4...Nxd5 · 6...O-O",
+   "name": "Queen's Gambit Declined: Exchange Variation",
+   "moves": "d4 Nf6 c4 e6 Nc3 d5 cxd5 Nxd5 Nf3 Bb4 Qb3 O-O e4 Bxc3+ bxc3 Nf6 e5",
+   "reach": 0.002,
+   "games": [
+    {
+     "id": 818020,
+     "ply": 9,
+     "white": "Zubov, Alexander",
+     "black": "Golod, Vitali",
+     "year": 2022,
+     "result": "1-0"
+    }
+   ]
+  },
+  {
+   "id": "qgd-4-nxd5-5-nxc3",
+   "title": "4...Nxd5 · 5...Nxc3",
+   "name": "Queen's Gambit Declined: Exchange Variation",
+   "moves": "d4 Nf6 c4 e6 Nc3 d5 cxd5 Nxd5 Nf3 Nxc3 bxc3 Be7 e4 O-O Bd3 c5 O-O",
+   "reach": 0.005,
+   "games": [
+    {
+     "id": 818020,
+     "ply": 9,
+     "white": "Zubov, Alexander",
+     "black": "Golod, Vitali",
+     "year": 2022,
+     "result": "1-0"
+    }
+   ]
+  },
+  {
+   "id": "qgd-4-nxd5-5-be7",
+   "title": "4...Nxd5 · 5...Be7",
+   "name": "Queen's Gambit Declined: Exchange Variation",
+   "moves": "d4 Nf6 c4 e6 Nc3 d5 cxd5 Nxd5 Nf3 Be7 e4 Nxc3 bxc3",
+   "reach": 0.003,
+   "transposesTo": "qgd-4-nxd5-5-nxc3",
+   "games": [
+    {
+     "id": 818020,
+     "ply": 9,
+     "white": "Zubov, Alexander",
+     "black": "Golod, Vitali",
+     "year": 2022,
+     "result": "1-0"
+    }
+   ]
+  },
+  {
+   "id": "qgd-4-nxd5-5-c5",
+   "title": "4...Nxd5 · 5...c5",
+   "name": "Queen's Gambit Declined: Semi-Tarrasch Defense, Exchange Variation",
+   "moves": "d4 Nf6 c4 e6 Nc3 d5 cxd5 Nxd5 Nf3 c5 e4 Nxc3 bxc3 cxd4 cxd4 Bb4+ Bd2 Bxd2+ Qxd2 O-O Bc4 Nd7 O-O",
+   "reach": 0.002,
+   "games": [
+    {
+     "id": 818020,
+     "ply": 10,
+     "white": "Zubov, Alexander",
+     "black": "Golod, Vitali",
+     "year": 2022,
+     "result": "1-0"
+    }
+   ]
+  }
+ ],
+ "kid": [
+  {
+   "id": "kid-3-bg7",
+   "title": "3...Bg7",
+   "name": "King's Indian Defense: Orthodox Variation, Bayonet Attack",
+   "moves": "d4 Nf6 c4 g6 Nc3 Bg7 e4 d6 Nf3 O-O Be2 e5 O-O Nc6 d5 Ne7 b4 a5 Ba3 axb4 Bxb4 b6 a4 Nd7 a5 bxa5 Bxa5",
+   "reach": 0.22,
+   "games": [
+    {
+     "id": 458212,
+     "ply": 23,
+     "white": "Dessaules, Peter",
+     "black": "Radjabov, Teimour",
+     "year": 2012,
+     "result": "1/2-1/2"
+    },
+    {
+     "id": 830054,
+     "ply": 23,
+     "white": "Fressinet, Laurent",
+     "black": "Grischuk, Alexander",
+     "year": 2012,
+     "result": "1/2-1/2"
+    },
+    {
+     "id": 378891,
+     "ply": 23,
+     "white": "Ivanchuk, Vasyl",
+     "black": "Ye, Jiangchuan",
+     "year": 2001,
+     "result": "1-0"
+    }
+   ]
+  },
+  {
+   "id": "kid-3-bg7-9-ne8",
+   "title": "3...Bg7 · 9...Ne8",
+   "name": "King's Indian Defense: Orthodox Variation, Bayonet Attack",
+   "moves": "d4 Nf6 c4 g6 Nc3 Bg7 e4 d6 Nf3 O-O Be2 e5 O-O Nc6 d5 Ne7 b4 Ne8 c5 f5 Nd2 f4 a4 g5 Ba3",
+   "reach": 0.008,
+   "games": [
+    {
+     "id": 532783,
+     "ply": 22,
+     "white": "Habermehl, Tobias",
+     "black": "Telepnev, Igor Viktorovich",
+     "year": 2016,
+     "result": "1/2-1/2"
+    }
+   ]
+  },
+  {
+   "id": "kid-3-bg7-9-nh5",
+   "title": "3...Bg7 · 9...Nh5",
+   "name": "King's Indian Defense: Orthodox Variation, Bayonet Attack, Sokolov's Line",
+   "moves": "d4 Nf6 c4 g6 Nc3 Bg7 e4 d6 Nf3 O-O Be2 e5 O-O Nc6 d5 Ne7 b4 Nh5 Re1 f5 Ng5 Nf6 Bf3 c6 Be3 h6 Ne6 Bxe6 dxe6",
+   "reach": 0.008,
+   "games": [
+    {
+     "id": 381579,
+     "ply": 29,
+     "white": "Finocchiaro, Fabio",
+     "black": "Robson, Nigel",
+     "year": 2015,
+     "result": "1/2-1/2"
+    },
+    {
+     "id": 458806,
+     "ply": 29,
+     "white": "Dziuba, Marcin",
+     "black": "Wojtaszek, Radoslaw",
+     "year": 2009,
+     "result": "1/2-1/2"
+    },
+    {
+     "id": 168588,
+     "ply": 29,
+     "white": "Raykin, Leonid Gershevich",
+     "black": "Vassia, Elio",
+     "year": 2004,
+     "result": "1/2-1/2"
+    }
+   ]
+  },
+  {
+   "id": "kid-3-bg7-9-nh5-10-nf4",
+   "title": "3...Bg7 · 9...Nh5 · 10...Nf4",
+   "name": "King's Indian Defense: Orthodox Variation, Bayonet Attack, Sokolov's Line",
+   "moves": "d4 Nf6 c4 g6 Nc3 Bg7 e4 d6 Nf3 O-O Be2 e5 O-O Nc6 d5 Ne7 b4 Nh5 Re1 Nf4 Bf1 f5 Bxf4 exf4 Rc1",
+   "reach": 0.003,
+   "games": [
+    {
+     "id": 752224,
+     "ply": 24,
+     "white": "Lputian, Smbat",
+     "black": "Nalbandian, Tigran",
+     "year": 1996,
+     "result": "1-0"
+    },
+    {
+     "id": 830096,
+     "ply": 24,
+     "white": "Komarov, Dimitri",
+     "black": "Oral, Tomas",
+     "year": 1995,
+     "result": "1-0"
+    }
+   ]
+  },
+  {
+   "id": "kid-3-bg7-9-nd7",
+   "title": "3...Bg7 · 9...Nd7",
+   "name": "King's Indian Defense: Orthodox Variation, Bayonet Attack",
+   "moves": "d4 Nf6 c4 g6 Nc3 Bg7 e4 d6 Nf3 O-O Be2 e5 O-O Nc6 d5 Ne7 b4 Nd7 a4 f5 a5 Nf6 Bg5",
+   "reach": 0.005,
+   "games": [
+    {
+     "id": 825138,
+     "ply": 23,
+     "white": "Ivanchuk, Vasyl",
+     "black": "Radjabov, Teimour",
+     "year": 2009,
+     "result": "0-1"
+    },
+    {
+     "id": 459084,
+     "ply": 23,
+     "white": "Kamsky, Gata",
+     "black": "Nakamura, Hikaru",
+     "year": 2010,
+     "result": "1/2-1/2"
+    },
+    {
+     "id": 459353,
+     "ply": 23,
+     "white": "Grischuk, Alexander",
+     "black": "Khalifman, Alexander",
+     "year": 2009,
+     "result": "1-0"
+    }
+   ]
+  },
+  {
+   "id": "kid-3-bg7-7-exd4",
+   "title": "3...Bg7 · 7...exd4",
+   "name": "King's Indian Defense: Orthodox Variation",
+   "moves": "d4 Nf6 c4 g6 Nc3 Bg7 e4 d6 Nf3 O-O Be2 e5 O-O exd4 Nxd4 Re8 f3 c6 Kh1 Nbd7 Bg5 Qb6 Nb3 a5 Qd2 a4 Be3 Qd8 Nd4",
+   "reach": 0.008,
+   "games": [
+    {
+     "id": 456850,
+     "ply": 29,
+     "white": "Khalifman, Alexander",
+     "black": "Kokarev, Dmitry",
+     "year": 2009,
+     "result": "1/2-1/2"
+    },
+    {
+     "id": 825941,
+     "ply": 29,
+     "white": "Hammer, Jon Ludvig",
+     "black": "Baklan, Vladimir",
+     "year": 2011,
+     "result": "1/2-1/2"
+    },
+    {
+     "id": 380250,
+     "ply": 29,
+     "white": "Van Wely, Loek",
+     "black": "Shchekachev, Andrei",
+     "year": 2010,
+     "result": "1-0"
+    }
+   ]
+  },
+  {
+   "id": "kid-3-bg7-7-nbd7",
+   "title": "3...Bg7 · 7...Nbd7",
+   "name": "King's Indian Defense: Orthodox Variation, Positional Defense",
+   "moves": "d4 Nf6 c4 g6 Nc3 Bg7 e4 d6 Nf3 O-O Be2 e5 O-O Nbd7 Be3 Ng4 Bg5 f6 Bd2",
+   "reach": 0.002,
+   "games": [
+    {
+     "id": 446810,
+     "ply": 19,
+     "white": "Can, Emre",
+     "black": "Markus, Robert",
+     "year": 2017,
+     "result": "1/2-1/2"
+    },
+    {
+     "id": 380244,
+     "ply": 19,
+     "white": "Goganov, Aleksey",
+     "black": "Amonatov, Farrukh",
+     "year": 2015,
+     "result": "0-1"
+    },
+    {
+     "id": 99782,
+     "ply": 19,
+     "white": "Sedlak, Nikola",
+     "black": "Markus, Robert",
+     "year": 2015,
+     "result": "1/2-1/2"
+    }
+   ]
+  },
+  {
+   "id": "kid-3-bg7-6-nbd7",
+   "title": "3...Bg7 · 6...Nbd7",
+   "name": "King's Indian Defense: Orthodox Variation, Positional Defense",
+   "moves": "d4 Nf6 c4 g6 Nc3 Bg7 e4 d6 Nf3 O-O Be2 Nbd7 O-O e5",
+   "reach": 0.024,
+   "transposesTo": "kid-3-bg7-7-nbd7",
+   "games": [
+    {
+     "id": 830404,
+     "ply": 14,
+     "white": "Le, Quang Liem",
+     "black": "Grischuk, Alexander",
+     "year": 2013,
+     "result": "1/2-1/2"
+    },
+    {
+     "id": 824897,
+     "ply": 14,
+     "white": "Gelfand, Boris",
+     "black": "Radjabov, Teimour",
+     "year": 2008,
+     "result": "0-1"
+    },
+    {
+     "id": 447777,
+     "ply": 14,
+     "white": "Shankland, Sam",
+     "black": "Rapport, Richard",
+     "year": 2019,
+     "result": "0-1"
+    }
+   ]
+  },
+  {
+   "id": "kid-3-bg7-6-nbd7-7-c5",
+   "title": "3...Bg7 · 6...Nbd7 · 7...c5",
+   "name": "King's Indian Defense: Orthodox Variation",
+   "moves": "d4 Nf6 c4 g6 Nc3 Bg7 e4 d6 Nf3 O-O Be2 Nbd7 O-O c5 d5 a6 a4 Rb8 h3",
+   "reach": 0.004,
+   "games": [
+    {
+     "id": 294129,
+     "ply": 17,
+     "white": "Druska, Juraj",
+     "black": "Petenyi, Tamas",
+     "year": 2015,
+     "result": "1/2-1/2"
+    }
+   ]
+  },
+  {
+   "id": "kid-3-bg7-6-nc6",
+   "title": "3...Bg7 · 6...Nc6",
+   "name": "King's Indian Defense: Orthodox Variation, Aronin-Taimanov Defense",
+   "moves": "d4 Nf6 c4 g6 Nc3 Bg7 e4 d6 Nf3 O-O Be2 Nc6 O-O e5",
+   "reach": 0.019,
+   "transposesTo": "kid-3-bg7",
+   "games": [
+    {
+     "id": 380743,
+     "ply": 14,
+     "white": "Carlsen, Magnus",
+     "black": "Grischuk, Alexander",
+     "year": 2019,
+     "result": "1/2-1/2"
+    },
+    {
+     "id": 459163,
+     "ply": 14,
+     "white": "Kramnik, Vladimir",
+     "black": "Carlsen, Magnus",
+     "year": 2010,
+     "result": "1/2-1/2"
+    },
+    {
+     "id": 458562,
+     "ply": 14,
+     "white": "So, Wesley",
+     "black": "Nakamura, Hikaru",
+     "year": 2015,
+     "result": "0-1"
+    }
+   ]
+  },
+  {
+   "id": "kid-3-bg7-6-nc6-7-bg4",
+   "title": "3...Bg7 · 6...Nc6 · 7...Bg4",
+   "name": "King's Indian Defense: Orthodox Variation",
+   "moves": "d4 Nf6 c4 g6 Nc3 Bg7 e4 d6 Nf3 O-O Be2 Nc6 O-O Bg4 d5 Bxf3 Bxf3 Ne5 Be2 c6 f4 Ned7 Be3",
+   "reach": 0.003,
+   "games": [
+    {
+     "id": 305115,
+     "ply": 23,
+     "white": "Votava, Jan",
+     "black": "Kaczur, Florian",
+     "year": 2022,
+     "result": "1/2-1/2"
+    },
+    {
+     "id": 305435,
+     "ply": 23,
+     "white": "Gunina, Valentina",
+     "black": "Paehtz, Elisabeth",
+     "year": 2024,
+     "result": "1-0"
+    }
+   ]
+  },
+  {
+   "id": "kid-3-bg7-6-c5",
+   "title": "3...Bg7 · 6...c5",
+   "name": "King's Indian Defense: Orthodox Variation",
+   "moves": "d4 Nf6 c4 g6 Nc3 Bg7 e4 d6 Nf3 O-O Be2 c5 O-O cxd4 Nxd4 Nc6 Be3 Bd7 Nc2 Rc8 Rc1 a6 Qd2 Ne5 b3",
+   "reach": 0.014,
+   "games": [
+    {
+     "id": 830579,
+     "ply": 22,
+     "white": "Ravi, Teja S.",
+     "black": "Quizon, Daniel",
+     "year": 2025,
+     "result": "1-0"
+    }
+   ]
+  },
+  {
+   "id": "kid-3-bg7-6-c5-7-nc6",
+   "title": "3...Bg7 · 6...c5 · 7...Nc6",
+   "name": "King's Indian Defense: Orthodox Variation",
+   "moves": "d4 Nf6 c4 g6 Nc3 Bg7 e4 d6 Nf3 O-O Be2 c5 O-O Nc6 d5 Na5 Bd2 e5 a3",
+   "reach": 0.002,
+   "games": [
+    {
+     "id": 305396,
+     "ply": 19,
+     "white": "Gajewski, Grzegorz",
+     "black": "Damljanovic, Branko",
+     "year": 2006,
+     "result": "0-1"
+    },
+    {
+     "id": 684594,
+     "ply": 19,
+     "white": "Lima, Darcy",
+     "black": "Milos, Gilberto",
+     "year": 1993,
+     "result": "1-0"
+    },
+    {
+     "id": 829811,
+     "ply": 19,
+     "white": "Ostojic, Nikola",
+     "black": "Nevednichy, Vladislav",
+     "year": 2008,
+     "result": "1/2-1/2"
+    }
+   ]
+  },
+  {
+   "id": "kid-3-bg7-6-bg4",
+   "title": "3...Bg7 · 6...Bg4",
+   "name": "King's Indian Defense: Orthodox Variation",
+   "moves": "d4 Nf6 c4 g6 Nc3 Bg7 e4 d6 Nf3 O-O Be2 Bg4 Be3 Nbd7 Nd2 Bxe2 Qxe2 e5 d5",
+   "reach": 0.011,
+   "games": [
+    {
+     "id": 830602,
+     "ply": 17,
+     "white": "Remon, Adelquis",
+     "black": "Pigusov, Evgeny",
+     "year": 1991,
+     "result": "0-1"
+    }
+   ]
+  },
+  {
+   "id": "kid-3-bg7-6-bg4-7-nc6",
+   "title": "3...Bg7 · 6...Bg4 · 7...Nc6",
+   "name": "King's Indian Defense: Orthodox Variation",
+   "moves": "d4 Nf6 c4 g6 Nc3 Bg7 e4 d6 Nf3 O-O Be2 Bg4 Be3 Nc6 d5 Bxf3 Bxf3 Ne5 Be2 c6 O-O cxd5 exd5",
+   "reach": 0.003,
+   "games": [
+    {
+     "id": 825018,
+     "ply": 23,
+     "white": "Yrjola, Jouni",
+     "black": "Barlov, Dragan",
+     "year": 1984,
+     "result": "1-0"
+    }
+   ]
+  },
+  {
+   "id": "kid-3-bg7-6-c6",
+   "title": "3...Bg7 · 6...c6",
+   "name": "King's Indian Defense: Orthodox Variation",
+   "moves": "d4 Nf6 c4 g6 Nc3 Bg7 e4 d6 Nf3 O-O Be2 c6 O-O Nbd7 Qc2 e5 Rd1 Qe7 d5 c5 Bg5",
+   "reach": 0.006,
+   "games": [
+    {
+     "id": 457891,
+     "ply": 21,
+     "white": "Nielsen, Peter Heine",
+     "black": "Svidler, Peter",
+     "year": 2010,
+     "result": "1/2-1/2"
+    },
+    {
+     "id": 756595,
+     "ply": 21,
+     "white": "Psakhis, Lev",
+     "black": "Sutovsky, Emil",
+     "year": 1996,
+     "result": "1/2-1/2"
+    },
+    {
+     "id": 294322,
+     "ply": 21,
+     "white": "Graf, Alexander",
+     "black": "Saltaev, Mihail",
+     "year": 1995,
+     "result": "1/2-1/2"
+    }
+   ]
+  },
+  {
+   "id": "kid-3-bg7-6-na6",
+   "title": "3...Bg7 · 6...Na6",
+   "name": "King's Indian Defense: Orthodox Variation, Glek Defense",
+   "moves": "d4 Nf6 c4 g6 Nc3 Bg7 e4 d6 Nf3 O-O Be2 Na6 O-O e5 Be3 Ng4 Bg5 Qe8 dxe5 dxe5 h3 h6 Bd2 Nf6 Be3 Qe7 Nd5 Qd8 Nxf6+",
+   "reach": 0.005,
+   "games": [
+    {
+     "id": 381127,
+     "ply": 29,
+     "white": "Piket, Jeroen",
+     "black": "Kramnik, Vladimir",
+     "year": 1997,
+     "result": "0-1"
+    },
+    {
+     "id": 380509,
+     "ply": 29,
+     "white": "Gurevich, Valery M.",
+     "black": "McShane, Luke J",
+     "year": 2006,
+     "result": "1/2-1/2"
+    },
+    {
+     "id": 306063,
+     "ply": 29,
+     "white": "Lautier, Joel",
+     "black": "Peng, Xiaomin",
+     "year": 1998,
+     "result": "1-0"
+    }
+   ]
+  },
+  {
+   "id": "kid-3-bg7-6-re8",
+   "title": "3...Bg7 · 6...Re8",
+   "name": "King's Indian Defense: Orthodox Variation",
+   "moves": "d4 Nf6 c4 g6 Nc3 Bg7 e4 d6 Nf3 O-O Be2 Re8 Be3 e5 d5",
+   "reach": 0.003,
+   "games": [
+    {
+     "id": 825296,
+     "ply": 15,
+     "white": "Rapaka Samuel Paul",
+     "black": "Kavalek, Lubomir",
+     "year": 1971,
+     "result": "1-0"
+    },
+    {
+     "id": 825297,
+     "ply": 15,
+     "white": "Rapaka Samuel Paul",
+     "black": "Kavalek, Lubomir",
+     "year": 1971,
+     "result": "1-0"
+    }
+   ]
+  },
+  {
+   "id": "kid-3-bg7-5-bg4",
+   "title": "3...Bg7 · 5...Bg4",
+   "name": "King's Indian Defense: Normal Variation, Rare Defenses",
+   "moves": "d4 Nf6 c4 g6 Nc3 Bg7 e4 d6 Nf3 Bg4 Be2 O-O",
+   "reach": 0.01,
+   "transposesTo": "kid-3-bg7-6-bg4",
+   "games": [
+    {
+     "id": 825386,
+     "ply": 12,
+     "white": "Gelfand, Boris",
+     "black": "Kramnik, Vladimir",
+     "year": 2010,
+     "result": "1-0"
+    },
+    {
+     "id": 305412,
+     "ply": 12,
+     "white": "Sokolov, Ivan",
+     "black": "Morozevich, Alexander",
+     "year": 2008,
+     "result": "1/2-1/2"
+    },
+    {
+     "id": 368850,
+     "ply": 12,
+     "white": "Wojtaszek, Radoslaw",
+     "black": "Lenic, Luka",
+     "year": 2014,
+     "result": "1-0"
+    }
+   ]
+  },
+  {
+   "id": "kid-3-bg7-5-nbd7",
+   "title": "3...Bg7 · 5...Nbd7",
+   "name": "King's Indian Defense: Normal Variation, Rare Defenses",
+   "moves": "d4 Nf6 c4 g6 Nc3 Bg7 e4 d6 Nf3 Nbd7 Be2 O-O",
+   "reach": 0.009,
+   "transposesTo": "kid-3-bg7-6-nbd7",
+   "games": [
+    {
+     "id": 305351,
+     "ply": 12,
+     "white": "Caruana, Fabiano",
+     "black": "Firouzja, Alireza",
+     "year": 2025,
+     "result": "1-0"
+    },
+    {
+     "id": 830404,
+     "ply": 12,
+     "white": "Le, Quang Liem",
+     "black": "Grischuk, Alexander",
+     "year": 2013,
+     "result": "1/2-1/2"
+    },
+    {
+     "id": 100311,
+     "ply": 12,
+     "white": "Navara, David",
+     "black": "Fressinet, Laurent",
+     "year": 2016,
+     "result": "1/2-1/2"
+    }
+   ]
+  },
+  {
+   "id": "kid-3-bg7-5-nbd7-6-e5",
+   "title": "3...Bg7 · 5...Nbd7 · 6...e5",
+   "name": "King's Indian Defense: Orthodox Variation, Positional Defense",
+   "moves": "d4 Nf6 c4 g6 Nc3 Bg7 e4 d6 Nf3 Nbd7 Be2 e5 O-O O-O",
+   "reach": 0.002,
+   "transposesTo": "kid-3-bg7-7-nbd7",
+   "games": [
+    {
+     "id": 830404,
+     "ply": 14,
+     "white": "Le, Quang Liem",
+     "black": "Grischuk, Alexander",
+     "year": 2013,
+     "result": "1/2-1/2"
+    },
+    {
+     "id": 824897,
+     "ply": 14,
+     "white": "Gelfand, Boris",
+     "black": "Radjabov, Teimour",
+     "year": 2008,
+     "result": "0-1"
+    },
+    {
+     "id": 447777,
+     "ply": 14,
+     "white": "Shankland, Sam",
+     "black": "Rapport, Richard",
+     "year": 2019,
+     "result": "0-1"
+    }
+   ]
+  },
+  {
+   "id": "kid-3-bg7-5-nc6",
+   "title": "3...Bg7 · 5...Nc6",
+   "name": "King's Indian Defense: Normal Variation, Rare Defenses",
+   "moves": "d4 Nf6 c4 g6 Nc3 Bg7 e4 d6 Nf3 Nc6 d5 Nb8 h3 O-O Be3 e5 g4",
+   "reach": 0.004,
+   "games": [
+    {
+     "id": 368864,
+     "ply": 14,
+     "white": "Prusikin, Michael",
+     "black": "Gonzales, Jayson",
+     "year": 2006,
+     "result": "1/2-1/2"
+    }
+   ]
+  },
+  {
+   "id": "kid-3-bg7-4-o-o",
+   "title": "3...Bg7 · 4...O-O",
+   "name": "King's Indian Defense: Normal Variation",
+   "moves": "d4 Nf6 c4 g6 Nc3 Bg7 e4 O-O Nf3 d6",
+   "reach": 0.043,
+   "transposesTo": "kid-3-bg7",
+   "games": [
+    {
+     "id": 99669,
+     "ply": 10,
+     "white": "Aronian, Levon",
+     "black": "Carlsen, Magnus",
+     "year": 2013,
+     "result": "1/2-1/2"
+    },
+    {
+     "id": 380743,
+     "ply": 10,
+     "white": "Carlsen, Magnus",
+     "black": "Grischuk, Alexander",
+     "year": 2019,
+     "result": "1/2-1/2"
+    },
+    {
+     "id": 99406,
+     "ply": 10,
+     "white": "Carlsen, Magnus",
+     "black": "Nakamura, Hi",
+     "year": 2025,
+     "result": "0-1"
+    }
+   ]
+  },
+  {
+   "id": "kid-3-d6",
+   "title": "3...d6",
+   "name": "King's Indian Defense: Normal Variation",
+   "moves": "d4 Nf6 c4 g6 Nc3 d6 e4 Bg7",
+   "reach": 0.011,
+   "transposesTo": "kid-3-bg7",
+   "games": [
+    {
+     "id": 27787,
+     "ply": 8,
+     "white": "Carlsen, Magnus",
+     "black": "Grischuk, Alexander",
+     "year": 2014,
+     "result": "1-0"
+    },
+    {
+     "id": 99669,
+     "ply": 8,
+     "white": "Aronian, Levon",
+     "black": "Carlsen, Magnus",
+     "year": 2013,
+     "result": "1/2-1/2"
+    },
+    {
+     "id": 380743,
+     "ply": 8,
+     "white": "Carlsen, Magnus",
+     "black": "Grischuk, Alexander",
+     "year": 2019,
+     "result": "1/2-1/2"
+    }
+   ]
+  }
+ ],
+ "grunfeld": [
+  {
+   "id": "grunfeld-4-nxd5",
+   "title": "4...Nxd5",
+   "name": "Grünfeld Defense: Exchange Variation, Sokolsky Variation",
+   "moves": "d4 Nf6 c4 g6 Nc3 d5 cxd5 Nxd5 e4 Nxc3 bxc3 Bg7 Bc4 c5 Ne2 O-O O-O Nc6 Be3 Bg4 f3 Na5 Bd3 cxd4 cxd4 Be6 d5 Bxa1 Qxa1",
+   "reach": 0.076,
+   "games": [
+    {
+     "id": 827767,
+     "ply": 29,
+     "white": "Topalov, Veselin",
+     "black": "Shirov, Alexei",
+     "year": 2008,
+     "result": "1-0"
+    },
+    {
+     "id": 171373,
+     "ply": 29,
+     "white": "Topalov, Veselin",
+     "black": "Shirov, Alexei",
+     "year": 2007,
+     "result": "1-0"
+    },
+    {
+     "id": 827718,
+     "ply": 29,
+     "white": "Aronian, Levon",
+     "black": "Shirov, Alexei",
+     "year": 2007,
+     "result": "1/2-1/2"
+    }
+   ]
+  },
+  {
+   "id": "grunfeld-4-nxd5-10-cxd4",
+   "title": "4...Nxd5 · 10...cxd4",
+   "name": "Grünfeld Defense: Exchange Variation, Spassky Variation",
+   "moves": "d4 Nf6 c4 g6 Nc3 d5 cxd5 Nxd5 e4 Nxc3 bxc3 Bg7 Bc4 c5 Ne2 O-O O-O Nc6 Be3 cxd4 cxd4 Bg4 f3 Na5 Bd3",
+   "reach": 0.002,
+   "transposesTo": "grunfeld-4-nxd5",
+   "games": [
+    {
+     "id": 827767,
+     "ply": 25,
+     "white": "Topalov, Veselin",
+     "black": "Shirov, Alexei",
+     "year": 2008,
+     "result": "1-0"
+    },
+    {
+     "id": 235748,
+     "ply": 25,
+     "white": "Kramnik, Vladimir",
+     "black": "Shirov, Alexei",
+     "year": 1998,
+     "result": "1/2-1/2"
+    },
+    {
+     "id": 828431,
+     "ply": 25,
+     "white": "Kramnik, Vladimir",
+     "black": "Shirov, Alexei",
+     "year": 1998,
+     "result": "1/2-1/2"
+    }
+   ]
+  },
+  {
+   "id": "grunfeld-4-nxd5-10-qc7",
+   "title": "4...Nxd5 · 10...Qc7",
+   "name": "Grünfeld Defense: Exchange Variation, Spassky Variation",
+   "moves": "d4 Nf6 c4 g6 Nc3 d5 cxd5 Nxd5 e4 Nxc3 bxc3 Bg7 Bc4 c5 Ne2 O-O O-O Nc6 Be3 Qc7 Rc1 Rd8 Bf4 e5 Bg5",
+   "reach": 0.002,
+   "games": [
+    {
+     "id": 827314,
+     "ply": 25,
+     "white": "Caruana, Fabiano",
+     "black": "Svidler, Peter",
+     "year": 2009,
+     "result": "1/2-1/2"
+    },
+    {
+     "id": 172226,
+     "ply": 25,
+     "white": "Michalik, Peter",
+     "black": "Brunello, Sabino",
+     "year": 2011,
+     "result": "0-1"
+    },
+    {
+     "id": 828058,
+     "ply": 25,
+     "white": "Peralta, Fernando",
+     "black": "Fluvia Poyatos, Jordi",
+     "year": 2019,
+     "result": "1/2-1/2"
+    }
+   ]
+  },
+  {
+   "id": "grunfeld-4-nxd5-9-cxd4",
+   "title": "4...Nxd5 · 9...cxd4",
+   "name": "Grünfeld Defense: Exchange Variation, Spassky Variation",
+   "moves": "d4 Nf6 c4 g6 Nc3 d5 cxd5 Nxd5 e4 Nxc3 bxc3 Bg7 Bc4 c5 Ne2 O-O O-O cxd4 cxd4 Nc6 Be3",
+   "reach": 0.003,
+   "transposesTo": "grunfeld-4-nxd5-10-cxd4",
+   "games": [
+    {
+     "id": 235101,
+     "ply": 21,
+     "white": "Ivanchuk, Vasyl",
+     "black": "Shirov, Alexei",
+     "year": 2000,
+     "result": "1-0"
+    },
+    {
+     "id": 827926,
+     "ply": 21,
+     "white": "Korobov, Anton",
+     "black": "Nguyen, Ngoc Truong Son",
+     "year": 2010,
+     "result": "1-0"
+    },
+    {
+     "id": 828231,
+     "ply": 21,
+     "white": "Polugaevsky, Lev",
+     "black": "Mecking, Henrique",
+     "year": 1977,
+     "result": "1/2-1/2"
+    }
+   ]
+  },
+  {
+   "id": "grunfeld-4-nxd5-8-nc6",
+   "title": "4...Nxd5 · 8...Nc6",
+   "name": "Grünfeld Defense: Exchange Variation, Classical Variation",
+   "moves": "d4 Nf6 c4 g6 Nc3 d5 cxd5 Nxd5 e4 Nxc3 bxc3 Bg7 Bc4 c5 Ne2 Nc6 Be3 O-O O-O",
+   "reach": 0.018,
+   "transposesTo": "grunfeld-4-nxd5",
+   "games": [
+    {
+     "id": 234759,
+     "ply": 19,
+     "white": "Caruana, Fabiano",
+     "black": "Nepomniachtchi, Ian",
+     "year": 2020,
+     "result": "1/2-1/2"
+    },
+    {
+     "id": 235765,
+     "ply": 19,
+     "white": "Topalov, Veselin",
+     "black": "Anand, Viswanathan",
+     "year": 2010,
+     "result": "1/2-1/2"
+    },
+    {
+     "id": 171644,
+     "ply": 19,
+     "white": "Topalov, Veselin",
+     "black": "Anand, Viswanathan",
+     "year": 2010,
+     "result": "1-0"
+    }
+   ]
+  },
+  {
+   "id": "grunfeld-4-nxd5-8-nc6-9-cxd4",
+   "title": "4...Nxd5 · 8...Nc6 · 9...cxd4",
+   "name": "Grünfeld Defense: Exchange Variation, Classical Variation",
+   "moves": "d4 Nf6 c4 g6 Nc3 d5 cxd5 Nxd5 e4 Nxc3 bxc3 Bg7 Bc4 c5 Ne2 Nc6 Be3 cxd4 cxd4 Qa5+ Bd2 Qa3 Rb1",
+   "reach": 0.003,
+   "games": [
+    {
+     "id": 235868,
+     "ply": 23,
+     "white": "Grebnev, Aleksey",
+     "black": "Zemlyanskii, Ivan",
+     "year": 2026,
+     "result": "1/2-1/2"
+    },
+    {
+     "id": 235953,
+     "ply": 23,
+     "white": "Yuffa, Daniil",
+     "black": "Paravyan, David",
+     "year": 2021,
+     "result": "1/2-1/2"
+    },
+    {
+     "id": 235051,
+     "ply": 23,
+     "white": "Goryachkina, Aleksandra",
+     "black": "Muzychuk, Anna",
+     "year": 2021,
+     "result": "1-0"
+    }
+   ]
+  },
+  {
+   "id": "grunfeld-4-nxd5-8-nc6-9-qa5",
+   "title": "4...Nxd5 · 8...Nc6 · 9...Qa5",
+   "name": "Grünfeld Defense: Exchange Variation, Classical Variation",
+   "moves": "d4 Nf6 c4 g6 Nc3 d5 cxd5 Nxd5 e4 Nxc3 bxc3 Bg7 Bc4 c5 Ne2 Nc6 Be3 Qa5 O-O O-O Rb1 a6 Bb3",
+   "reach": 0.002,
+   "games": [
+    {
+     "id": 172000,
+     "ply": 22,
+     "white": "Graf, Alexander",
+     "black": "Pandavos, Panayotis",
+     "year": 1995,
+     "result": "1-0"
+    },
+    {
+     "id": 171170,
+     "ply": 22,
+     "white": "Tisdall, Jonathan D",
+     "black": "Dvoirys, Semen I.",
+     "year": 1991,
+     "result": "0-1"
+    }
+   ]
+  },
+  {
+   "id": "grunfeld-4-nxd5-8-cxd4",
+   "title": "4...Nxd5 · 8...cxd4",
+   "name": "Grünfeld Defense: Exchange Variation, Classical Variation",
+   "moves": "d4 Nf6 c4 g6 Nc3 d5 cxd5 Nxd5 e4 Nxc3 bxc3 Bg7 Bc4 c5 Ne2 cxd4 cxd4 Nc6 Be3",
+   "reach": 0.003,
+   "transposesTo": "grunfeld-4-nxd5-8-nc6-9-cxd4",
+   "games": [
+    {
+     "id": 236163,
+     "ply": 19,
+     "white": "Topalov, Veselin",
+     "black": "Mamedyarov, Shakhriyar",
+     "year": 2007,
+     "result": "1/2-1/2"
+    },
+    {
+     "id": 170952,
+     "ply": 19,
+     "white": "Kramnik, Vladimir",
+     "black": "Svidler, Peter",
+     "year": 1998,
+     "result": "1-0"
+    },
+    {
+     "id": 827762,
+     "ply": 19,
+     "white": "Le, Quang Liem",
+     "black": "Mamedyarov, Shakhriyar",
+     "year": 2013,
+     "result": "1-0"
+    }
+   ]
+  },
+  {
+   "id": "grunfeld-4-nxd5-7-o-o",
+   "title": "4...Nxd5 · 7...O-O",
+   "name": "Grünfeld Defense: Exchange Variation, Spassky Variation",
+   "moves": "d4 Nf6 c4 g6 Nc3 d5 cxd5 Nxd5 e4 Nxc3 bxc3 Bg7 Bc4 O-O Ne2 c5",
+   "reach": 0.022,
+   "transposesTo": "grunfeld-4-nxd5",
+   "games": [
+    {
+     "id": 235657,
+     "ply": 16,
+     "white": "Carlsen, Magnus",
+     "black": "Vachier-Lagrave, Maxime",
+     "year": 2019,
+     "result": "1/2-1/2"
+    },
+    {
+     "id": 170976,
+     "ply": 16,
+     "white": "Carlsen, Magnus",
+     "black": "Nepomniachtchi, Ian",
+     "year": 2019,
+     "result": "1/2-1/2"
+    },
+    {
+     "id": 234759,
+     "ply": 16,
+     "white": "Caruana, Fabiano",
+     "black": "Nepomniachtchi, Ian",
+     "year": 2020,
+     "result": "1/2-1/2"
+    }
+   ]
+  },
+  {
+   "id": "grunfeld-4-nxd5-6-c5",
+   "title": "4...Nxd5 · 6...c5",
+   "name": "Grünfeld Defense: Exchange Variation",
+   "moves": "d4 Nf6 c4 g6 Nc3 d5 cxd5 Nxd5 e4 Nxc3 bxc3 c5 Bc4 Bg7",
+   "reach": 0.008,
+   "transposesTo": "grunfeld-4-nxd5",
+   "games": [
+    {
+     "id": 235657,
+     "ply": 14,
+     "white": "Carlsen, Magnus",
+     "black": "Vachier-Lagrave, Maxime",
+     "year": 2019,
+     "result": "1/2-1/2"
+    },
+    {
+     "id": 170976,
+     "ply": 14,
+     "white": "Carlsen, Magnus",
+     "black": "Nepomniachtchi, Ian",
+     "year": 2019,
+     "result": "1/2-1/2"
+    },
+    {
+     "id": 234759,
+     "ply": 14,
+     "white": "Caruana, Fabiano",
+     "black": "Nepomniachtchi, Ian",
+     "year": 2020,
+     "result": "1/2-1/2"
+    }
+   ]
+  }
+ ],
+ "benoni": [
+  {
+   "id": "benoni-4-exd5",
+   "title": "4...exd5",
+   "name": "Benoni Defense: Taimanov Variation",
+   "moves": "d4 Nf6 c4 e6 Nc3 c5 d5 exd5 cxd5 d6 e4 g6 f4 Bg7 Bb5+ Nfd7 a4 O-O Nf3 Na6 O-O Nb4 Re1 a6 Bf1 Re8 h3",
+   "reach": 0.016,
+   "games": [
+    {
+     "id": 596515,
+     "ply": 27,
+     "white": "Al-Sayed, Mohammed",
+     "black": "Iturrizaga Bonelli, Eduardo",
+     "year": 2013,
+     "result": "0-1"
+    },
+    {
+     "id": 596758,
+     "ply": 27,
+     "white": "Belozerov, Andrei",
+     "black": "Grigoryan, Avetik",
+     "year": 2012,
+     "result": "1/2-1/2"
+    },
+    {
+     "id": 596454,
+     "ply": 27,
+     "white": "Badolati, Sérgio",
+     "black": "Magalhães, Leonardo Guedes de",
+     "year": 2009,
+     "result": "1/2-1/2"
+    }
+   ]
+  },
+  {
+   "id": "benoni-4-exd5-8-bd7",
+   "title": "4...exd5 · 8...Bd7",
+   "name": "Benoni Defense: Taimanov Variation",
+   "moves": "d4 Nf6 c4 e6 Nc3 c5 d5 exd5 cxd5 d6 e4 g6 f4 Bg7 Bb5+ Bd7 e5 dxe5 fxe5 Nh5 Nf3",
+   "reach": 0.002,
+   "games": [
+    {
+     "id": 814546,
+     "ply": 19,
+     "white": "Lukacs, Peter",
+     "black": "Hazai, Laszlo Dr.",
+     "year": 1979,
+     "result": "1/2-1/2"
+    }
+   ]
+  },
+  {
+   "id": "benoni-4-exd5-6-be7",
+   "title": "4...exd5 · 6...Be7",
+   "name": "Benoni Defense: King's Pawn Line",
+   "moves": "d4 Nf6 c4 e6 Nc3 c5 d5 exd5 cxd5 d6 e4 Be7 Bd3 O-O Nge2 Nbd7 O-O Ne5 Bc2",
+   "reach": 0.003,
+   "games": [
+    {
+     "id": 669326,
+     "ply": 14,
+     "white": "Gonzalez Garcia, Jose",
+     "black": "Munoz, Miguel",
+     "year": 2017,
+     "result": "1/2-1/2"
+    }
+   ]
+  },
+  {
+   "id": "benoni-4-d6",
+   "title": "4...d6",
+   "name": "Indian Defense: Normal Variation",
+   "moves": "d4 Nf6 c4 e6 Nc3 c5 d5 d6 e4 Be7 Bd3 O-O Nge2",
+   "reach": 0.002,
+   "games": [
+    {
+     "id": 158769,
+     "ply": 10,
+     "white": "Gurevich, Valery M.",
+     "black": "Hausrath, Daniel",
+     "year": 1997,
+     "result": "1-0"
+    }
+   ]
+  },
+  {
+   "id": "benoni-3-e6",
+   "title": "3...e6",
+   "name": "Benoni Defense: Modern Variation",
+   "moves": "d4 Nf6 c4 c5 d5 e6 Nc3",
+   "reach": 0.027,
+   "transposesTo": "benoni-4-exd5",
+   "games": [
+    {
+     "id": 741412,
+     "ply": 7,
+     "white": "Mamedyarov, Shakhriyar",
+     "black": "Svidler, Peter",
+     "year": 2018,
+     "result": "1-0"
+    },
+    {
+     "id": 596150,
+     "ply": 7,
+     "white": "Keymer, Vincent",
+     "black": "Carlsen, Magnus",
+     "year": 2024,
+     "result": "0-1"
+    },
+    {
+     "id": 596761,
+     "ply": 7,
+     "white": "Keymer, Vincent",
+     "black": "Carlsen, Magnus",
+     "year": 2024,
+     "result": "0-1"
+    }
+   ]
+  },
+  {
+   "id": "benoni-3-d6",
+   "title": "3...d6",
+   "name": "Benoni Defense: Hromádka System",
+   "moves": "d4 Nf6 c4 c5 d5 d6 Nc3 g6 e4 Bg7 Nf3 O-O h3 e6 Bd3 exd5 exd5 Re8+ Be3 Nbd7 O-O",
+   "reach": 0.012,
+   "games": [
+    {
+     "id": 678797,
+     "ply": 21,
+     "white": "Salem, A.R. Saleh",
+     "black": "Socko, Bartosz",
+     "year": 2021,
+     "result": "0-1"
+    },
+    {
+     "id": 815112,
+     "ply": 21,
+     "white": "Kuzubov, Yuriy",
+     "black": "Ivanisevic, Ivan",
+     "year": 2019,
+     "result": "1-0"
+    },
+    {
+     "id": 814193,
+     "ply": 21,
+     "white": "Martirosyan, Haik M.",
+     "black": "Gabuzyan, Hovhannes",
+     "year": 2022,
+     "result": "1-0"
+    }
+   ]
+  },
+  {
+   "id": "benoni-3-d6-4-e6",
+   "title": "3...d6 · 4...e6",
+   "name": "Benoni Defense: Hromádka System",
+   "moves": "d4 Nf6 c4 c5 d5 d6 Nc3 e6",
+   "reach": 0.002,
+   "transposesTo": "benoni-4-d6",
+   "games": [
+    {
+     "id": 741412,
+     "ply": 8,
+     "white": "Mamedyarov, Shakhriyar",
+     "black": "Svidler, Peter",
+     "year": 2018,
+     "result": "1-0"
+    },
+    {
+     "id": 158856,
+     "ply": 8,
+     "white": "Dessaules, Peter",
+     "black": "So, Wesley",
+     "year": 2017,
+     "result": "1/2-1/2"
+    },
+    {
+     "id": 159829,
+     "ply": 8,
+     "white": "Vallejo Pons, Francisco",
+     "black": "Matlakov, Maxim",
+     "year": 2016,
+     "result": "1-0"
+    }
+   ]
+  },
+  {
+   "id": "benoni-3-g6",
+   "title": "3...g6",
+   "name": "Benoni Defense",
+   "moves": "d4 Nf6 c4 c5 d5 g6 Nc3 Bg7 e4 d6",
+   "reach": 0.006,
+   "transposesTo": "benoni-3-d6",
+   "games": [
+    {
+     "id": 741728,
+     "ply": 10,
+     "white": "So, Wesley",
+     "black": "Carlsen, Magnus",
+     "year": 2019,
+     "result": "1/2-1/2"
+    },
+    {
+     "id": 741664,
+     "ply": 10,
+     "white": "Yu, Yangyi",
+     "black": "Carlsen, Magnus",
+     "year": 2019,
+     "result": "0-1"
+    },
+    {
+     "id": 159435,
+     "ply": 10,
+     "white": "Dessaules, Peter",
+     "black": "Carlsen, Magnus",
+     "year": 2017,
+     "result": "0-1"
+    }
+   ]
+  },
+  {
+   "id": "benoni-3-e5",
+   "title": "3...e5",
+   "name": "Benoni Defense: Czech Benoni Defense",
+   "moves": "d4 Nf6 c4 c5 d5 e5 Nc3 d6 e4 Be7 g3 O-O Bg2 Ne8 Nge2",
+   "reach": 0.006,
+   "games": [
+    {
+     "id": 159677,
+     "ply": 15,
+     "white": "Drozdovskij, Yuri",
+     "black": "Sokolov, Ivan",
+     "year": 2010,
+     "result": "1-0"
+    },
+    {
+     "id": 158940,
+     "ply": 15,
+     "white": "Ni, Hua",
+     "black": "Malakhov, Vladimir",
+     "year": 2010,
+     "result": "1/2-1/2"
+    },
+    {
+     "id": 741373,
+     "ply": 15,
+     "white": "Bareev, Evgeny",
+     "black": "Kharitonov, Adil",
+     "year": 1997,
+     "result": "1/2-1/2"
+    }
+   ]
+  }
+ ],
+ "benko": [
+  {
+   "id": "benko-4-a6",
+   "title": "4...a6",
+   "name": "Benko Gambit Accepted: Fianchetto Variation",
+   "moves": "d4 Nf6 c4 c5 d5 b5 cxb5 a6 bxa6 Bxa6 Nc3 d6 Nf3 g6 g3 Bg7 Bg2 O-O O-O Nbd7 Qc2 Qa5 Rd1 Rfb8 Bd2 Ng4 b3",
+   "reach": 0.057,
+   "games": [
+    {
+     "id": 89914,
+     "ply": 27,
+     "white": "Van der Sterren, Paul",
+     "black": "Adams, Michael",
+     "year": 1992,
+     "result": "0-1"
+    },
+    {
+     "id": 90039,
+     "ply": 27,
+     "white": "Kakageldyev, Amanmurad",
+     "black": "Vaganian, Rafael A",
+     "year": 1979,
+     "result": "1/2-1/2"
+    },
+    {
+     "id": 90040,
+     "ply": 27,
+     "white": "Kakageldyev, Amanmurad",
+     "black": "Vaganian, Rafael A",
+     "year": 1979,
+     "result": "1/2-1/2"
+    }
+   ]
+  },
+  {
+   "id": "benko-4-a6-11-qb6",
+   "title": "4...a6 · 11...Qb6",
+   "name": "Benko Gambit Accepted: Fianchetto Variation",
+   "moves": "d4 Nf6 c4 c5 d5 b5 cxb5 a6 bxa6 Bxa6 Nc3 d6 Nf3 g6 g3 Bg7 Bg2 O-O O-O Nbd7 Qc2 Qb6 Rb1 Rfb8 Re1 Ng4 h3",
+   "reach": 0.003,
+   "games": [
+    {
+     "id": 18653,
+     "ply": 27,
+     "white": "Balashov, Yuri S",
+     "black": "Tal, Mikhail",
+     "year": 1971,
+     "result": "1-0"
+    }
+   ]
+  },
+  {
+   "id": "benko-4-a6-9-nbd7",
+   "title": "4...a6 · 9...Nbd7",
+   "name": "Benko Gambit Accepted: Fianchetto Variation",
+   "moves": "d4 Nf6 c4 c5 d5 b5 cxb5 a6 bxa6 Bxa6 Nc3 d6 Nf3 g6 g3 Bg7 Bg2 Nbd7 Rb1 O-O O-O Qa5 Bd2 Rfb8 Qc2",
+   "reach": 0.003,
+   "games": [
+    {
+     "id": 295382,
+     "ply": 25,
+     "white": "Kramnik, Vladimir",
+     "black": "Topalov, Veselin",
+     "year": 2003,
+     "result": "1-0"
+    },
+    {
+     "id": 295458,
+     "ply": 25,
+     "white": "Kramnik, Vladimir",
+     "black": "Van Wely, Loek",
+     "year": 2003,
+     "result": "1-0"
+    },
+    {
+     "id": 18683,
+     "ply": 25,
+     "white": "Sumets, Andrey",
+     "black": "Bologan, Victor",
+     "year": 2010,
+     "result": "0-1"
+    }
+   ]
+  },
+  {
+   "id": "benko-4-a6-7-nbd7",
+   "title": "4...a6 · 7...Nbd7",
+   "name": "Benko Gambit Accepted: Fully Accepted Variation",
+   "moves": "d4 Nf6 c4 c5 d5 b5 cxb5 a6 bxa6 Bxa6 Nc3 d6 Nf3 Nbd7 e4 Bxf1 Kxf1 g6 g3 Bg7 Kg2 O-O Re1 Ng4 Nd2 Nge5 Qe2 Nb6 f4",
+   "reach": 0.003,
+   "games": [
+    {
+     "id": 90048,
+     "ply": 29,
+     "white": "Jussupow, Artur",
+     "black": "Baklan, Vladimir",
+     "year": 1998,
+     "result": "0-1"
+    },
+    {
+     "id": 89479,
+     "ply": 29,
+     "white": "Gurevich, Mikhail",
+     "black": "Banikas, Hristos",
+     "year": 2002,
+     "result": "1/2-1/2"
+    },
+    {
+     "id": 89905,
+     "ply": 29,
+     "white": "Lugovoi, Aleksei",
+     "black": "Khalifman, Alexander",
+     "year": 1996,
+     "result": "1/2-1/2"
+    }
+   ]
+  },
+  {
+   "id": "benko-4-a6-6-g6",
+   "title": "4...a6 · 6...g6",
+   "name": "Benko Gambit Accepted: King Walk Variation",
+   "moves": "d4 Nf6 c4 c5 d5 b5 cxb5 a6 bxa6 Bxa6 Nc3 g6 e4 Bxf1 Kxf1 d6 Nf3 Bg7 g3 O-O Kg2 Nbd7",
+   "reach": 0.014,
+   "transposesTo": "benko-4-a6-7-nbd7",
+   "games": [
+    {
+     "id": 295296,
+     "ply": 22,
+     "white": "Carlsen, Magnus",
+     "black": "Andreikin, Dmitry",
+     "year": 2012,
+     "result": "1/2-1/2"
+    },
+    {
+     "id": 89467,
+     "ply": 22,
+     "white": "Carlsen, Magnus",
+     "black": "Bologan, Victor",
+     "year": 2012,
+     "result": "1-0"
+    },
+    {
+     "id": 90428,
+     "ply": 22,
+     "white": "Nakamura, Hikaru",
+     "black": "Bologan, Victor",
+     "year": 2012,
+     "result": "1-0"
+    }
+   ]
+  },
+  {
+   "id": "benko-4-a6-5-g6",
+   "title": "4...a6 · 5...g6",
+   "name": "Benko Gambit Accepted: Fully Accepted Variation",
+   "moves": "d4 Nf6 c4 c5 d5 b5 cxb5 a6 bxa6 g6 Nc3 Bg7 e4 O-O Nf3 Qa5 Bd2 Bxa6 Be2 Bxe2 Qxe2 Qa6 a4",
+   "reach": 0.018,
+   "games": [
+    {
+     "id": 294857,
+     "ply": 23,
+     "white": "Miron, Lucian-Costin",
+     "black": "Hamitevici, Vladimir",
+     "year": 2019,
+     "result": "1-0"
+    }
+   ]
+  },
+  {
+   "id": "benko-4-a6-5-g6-7-d6",
+   "title": "4...a6 · 5...g6 · 7...d6",
+   "name": "Benko Gambit Accepted: Fully Accepted Variation",
+   "moves": "d4 Nf6 c4 c5 d5 b5 cxb5 a6 bxa6 g6 Nc3 Bg7 e4 d6 Nf3 O-O Be2 Bxa6 O-O Nbd7 h3",
+   "reach": 0.003,
+   "games": [
+    {
+     "id": 17916,
+     "ply": 21,
+     "white": "Ipatov, Alexander",
+     "black": "Perez Mitjans, Orelvis",
+     "year": 2009,
+     "result": "1/2-1/2"
+    },
+    {
+     "id": 295446,
+     "ply": 21,
+     "white": "Kornev, Alexei",
+     "black": "Novikov, Maxim",
+     "year": 2014,
+     "result": "1/2-1/2"
+    },
+    {
+     "id": 756934,
+     "ply": 21,
+     "white": "Kozul, Zdenko",
+     "black": "Loncar, Robert",
+     "year": 1996,
+     "result": "1/2-1/2"
+    }
+   ]
+  },
+  {
+   "id": "benko-4-a6-5-g6-6-bxa6",
+   "title": "4...a6 · 5...g6 · 6...Bxa6",
+   "name": "Benko Gambit Accepted: Fully Accepted Variation",
+   "moves": "d4 Nf6 c4 c5 d5 b5 cxb5 a6 bxa6 g6 Nc3 Bxa6",
+   "reach": 0.007,
+   "transposesTo": "benko-4-a6-6-g6",
+   "games": [
+    {
+     "id": 295296,
+     "ply": 12,
+     "white": "Carlsen, Magnus",
+     "black": "Andreikin, Dmitry",
+     "year": 2012,
+     "result": "1/2-1/2"
+    },
+    {
+     "id": 295382,
+     "ply": 12,
+     "white": "Kramnik, Vladimir",
+     "black": "Topalov, Veselin",
+     "year": 2003,
+     "result": "1-0"
+    },
+    {
+     "id": 295275,
+     "ply": 12,
+     "white": "Gelfand, Boris",
+     "black": "Carlsen, Magnus",
+     "year": 2011,
+     "result": "0-1"
+    }
+   ]
+  },
+  {
+   "id": "benko-4-a6-5-d6",
+   "title": "4...a6 · 5...d6",
+   "name": "Benko Gambit Accepted: Fully Accepted Variation",
+   "moves": "d4 Nf6 c4 c5 d5 b5 cxb5 a6 bxa6 d6 Nc3 g6 a7",
+   "reach": 0.002,
+   "games": [
+    {
+     "id": 90105,
+     "ply": 12,
+     "white": "Kosyrev, Vladimir",
+     "black": "Iljushin, Alexei",
+     "year": 2004,
+     "result": "1-0"
+    },
+    {
+     "id": 295446,
+     "ply": 12,
+     "white": "Kornev, Alexei",
+     "black": "Novikov, Maxim",
+     "year": 2014,
+     "result": "1/2-1/2"
+    },
+    {
+     "id": 89963,
+     "ply": 12,
+     "white": "Vaganian, Rafael A",
+     "black": "Parma, Bruno",
+     "year": 1972,
+     "result": "1-0"
+    }
+   ]
+  }
+ ],
+ "budapest": [
+  {
+   "id": "budapest-3-ng4",
+   "title": "3...Ng4",
+   "name": "Indian Defense: Budapest Gambit Accepted, Main Line, Rubinstein Variation",
+   "moves": "d4 Nf6 c4 e5 dxe5 Ng4 Bf4 Nc6 Nf3 Bb4+ Nbd2 Qe7 e3 Ngxe5 Nxe5 Nxe5 Be2 d6 O-O Bxd2 Qxd2 O-O b4 b6 c5 dxc5 Qd5",
+   "reach": 0.077,
+   "games": [
+    {
+     "id": 294694,
+     "ply": 23,
+     "white": "Mikhalevski, Victor",
+     "black": "Miezis, Normunds",
+     "year": 1997,
+     "result": "1-0"
+    },
+    {
+     "id": 447528,
+     "ply": 23,
+     "white": "Heberla, Bartlomiej",
+     "black": "Friedmann, Rafael",
+     "year": 2018,
+     "result": "1/2-1/2"
+    },
+    {
+     "id": 368626,
+     "ply": 23,
+     "white": "Bluvshtein, Mark",
+     "black": "Miezis, Normunds",
+     "year": 2004,
+     "result": "1-0"
+    }
+   ]
+  },
+  {
+   "id": "budapest-3-ng4-10-o-o",
+   "title": "3...Ng4 · 10...O-O",
+   "name": "Indian Defense: Budapest Gambit Accepted, Main Line, Rubinstein Variation",
+   "moves": "d4 Nf6 c4 e5 dxe5 Ng4 Bf4 Nc6 Nf3 Bb4+ Nbd2 Qe7 e3 Ngxe5 Nxe5 Nxe5 Be2 d6 O-O O-O Nb3 Be6 a3 Bc5 Nxc5 dxc5 Bxe5",
+   "reach": 0.003,
+   "games": [
+    {
+     "id": 447513,
+     "ply": 21,
+     "white": "Karpov, Anatoly",
+     "black": "Short, Nigel D",
+     "year": 1992,
+     "result": "1-0"
+    },
+    {
+     "id": 88544,
+     "ply": 21,
+     "white": "Ivanchuk, Vasyl",
+     "black": "Short, Nigel D",
+     "year": 1993,
+     "result": "1/2-1/2"
+    },
+    {
+     "id": 368615,
+     "ply": 21,
+     "white": "Korchnoi, Viktor",
+     "black": "Piket, Jeroen",
+     "year": 1994,
+     "result": "1-0"
+    }
+   ]
+  },
+  {
+   "id": "budapest-3-ng4-9-o-o",
+   "title": "3...Ng4 · 9...O-O",
+   "name": "Indian Defense: Budapest Gambit Accepted, Main Line, Rubinstein Variation",
+   "moves": "d4 Nf6 c4 e5 dxe5 Ng4 Bf4 Nc6 Nf3 Bb4+ Nbd2 Qe7 e3 Ngxe5 Nxe5 Nxe5 Be2 O-O O-O Bxd2 Qxd2 d6",
+   "reach": 0.011,
+   "transposesTo": "budapest-3-ng4",
+   "games": [
+    {
+     "id": 368612,
+     "ply": 22,
+     "white": "Solozhenkin, Evgeniy",
+     "black": "Miezis, Normunds",
+     "year": 2001,
+     "result": "0-1"
+    },
+    {
+     "id": 294694,
+     "ply": 22,
+     "white": "Mikhalevski, Victor",
+     "black": "Miezis, Normunds",
+     "year": 1997,
+     "result": "1-0"
+    },
+    {
+     "id": 447528,
+     "ply": 22,
+     "white": "Heberla, Bartlomiej",
+     "black": "Friedmann, Rafael",
+     "year": 2018,
+     "result": "1/2-1/2"
+    }
+   ]
+  },
+  {
+   "id": "budapest-3-ng4-9-o-o-10-d6",
+   "title": "3...Ng4 · 9...O-O · 10...d6",
+   "name": "Indian Defense: Budapest Gambit Accepted, Main Line, Rubinstein Variation",
+   "moves": "d4 Nf6 c4 e5 dxe5 Ng4 Bf4 Nc6 Nf3 Bb4+ Nbd2 Qe7 e3 Ngxe5 Nxe5 Nxe5 Be2 O-O O-O d6",
+   "reach": 0.004,
+   "transposesTo": "budapest-3-ng4-10-o-o",
+   "games": [
+    {
+     "id": 447513,
+     "ply": 20,
+     "white": "Karpov, Anatoly",
+     "black": "Short, Nigel D",
+     "year": 1992,
+     "result": "1-0"
+    },
+    {
+     "id": 88544,
+     "ply": 20,
+     "white": "Ivanchuk, Vasyl",
+     "black": "Short, Nigel D",
+     "year": 1993,
+     "result": "1/2-1/2"
+    },
+    {
+     "id": 88548,
+     "ply": 20,
+     "white": "Zhigalko, Sergei",
+     "black": "Onyshchuk, Volodymyr",
+     "year": 2014,
+     "result": "1/2-1/2"
+    }
+   ]
+  },
+  {
+   "id": "budapest-3-ng4-5-bc5",
+   "title": "3...Ng4 · 5...Bc5",
+   "name": "Indian Defense: Budapest Gambit Accepted, Main Line, Rubinstein Variation",
+   "moves": "d4 Nf6 c4 e5 dxe5 Ng4 Bf4 Nc6 Nf3 Bc5 e3 Qe7 Nc3 Ngxe5 Nxe5 Nxe5 Nd5 Bb4+ Ke2 Qd6 Nxb4",
+   "reach": 0.007,
+   "games": [
+    {
+     "id": 17583,
+     "ply": 12,
+     "white": "Varga, Zoltan",
+     "black": "Flumbort, Andras Dr.",
+     "year": 2012,
+     "result": "1/2-1/2"
+    },
+    {
+     "id": 294731,
+     "ply": 12,
+     "white": "Sulava, Nenad",
+     "black": "Drazic, Sinisa",
+     "year": 2004,
+     "result": "1-0"
+    }
+   ]
+  },
+  {
+   "id": "budapest-3-ng4-4-bb4",
+   "title": "3...Ng4 · 4...Bb4+",
+   "name": "Indian Defense: Budapest Gambit Accepted, Main Line, Rubinstein Variation",
+   "moves": "d4 Nf6 c4 e5 dxe5 Ng4 Bf4 Bb4+ Nd2 Nc6 Nf3",
+   "reach": 0.011,
+   "transposesTo": "budapest-3-ng4",
+   "games": [
+    {
+     "id": 447513,
+     "ply": 11,
+     "white": "Karpov, Anatoly",
+     "black": "Short, Nigel D",
+     "year": 1992,
+     "result": "1-0"
+    },
+    {
+     "id": 88544,
+     "ply": 11,
+     "white": "Ivanchuk, Vasyl",
+     "black": "Short, Nigel D",
+     "year": 1993,
+     "result": "1/2-1/2"
+    },
+    {
+     "id": 522288,
+     "ply": 11,
+     "white": "Ivanchuk, Vasyl",
+     "black": "Epishin, Vladimir",
+     "year": 1991,
+     "result": "1/2-1/2"
+    }
+   ]
+  },
+  {
+   "id": "budapest-3-ng4-4-g5",
+   "title": "3...Ng4 · 4...g5",
+   "name": "Indian Defense: Budapest Gambit Accepted, Main Line, Rubinstein Variation",
+   "moves": "d4 Nf6 c4 e5 dxe5 Ng4 Bf4 g5 Bg3 Bg7 Nf3 Nc6 Nc3 Ngxe5 Nxe5 Nxe5 e3 d6 h4 g4 h5 h6 Bh4",
+   "reach": 0.009,
+   "games": [
+    {
+     "id": 368530,
+     "ply": 23,
+     "white": "Guzy, Gerhard",
+     "black": "Schmidt, Loren R",
+     "year": 2007,
+     "result": "0-1"
+    },
+    {
+     "id": 294604,
+     "ply": 23,
+     "white": "Keuter, Klaus",
+     "black": "Schmidt, Loren R",
+     "year": 2008,
+     "result": "1/2-1/2"
+    },
+    {
+     "id": 522162,
+     "ply": 23,
+     "white": "Kourkoulos-Arditis, Stamatis",
+     "black": "Zwardon, Vojtech",
+     "year": 2020,
+     "result": "1-0"
+    }
+   ]
+  },
+  {
+   "id": "budapest-3-ng4-4-bc5",
+   "title": "3...Ng4 · 4...Bc5",
+   "name": "Indian Defense: Budapest Gambit Accepted, Main Line, Rubinstein Variation",
+   "moves": "d4 Nf6 c4 e5 dxe5 Ng4 Bf4 Bc5 e3 Nc6 Qxg4 O-O Bh6 g6 Bxf8 Qxf8 Qd1",
+   "reach": 0.008,
+   "games": [
+    {
+     "id": 17583,
+     "ply": 10,
+     "white": "Varga, Zoltan",
+     "black": "Flumbort, Andras Dr.",
+     "year": 2012,
+     "result": "1/2-1/2"
+    }
+   ]
+  },
+  {
+   "id": "budapest-3-ng4-4-bc5-5-d6",
+   "title": "3...Ng4 · 4...Bc5 · 5...d6",
+   "name": "Indian Defense: Budapest Gambit Accepted, Main Line, Rubinstein Variation",
+   "moves": "d4 Nf6 c4 e5 dxe5 Ng4 Bf4 Bc5 e3 d6 exd6 cxd6 Nc3 O-O Nf3",
+   "reach": 0.003,
+   "games": [
+    {
+     "id": 88812,
+     "ply": 14,
+     "white": "Van Wely, Loek",
+     "black": "Miezis, Normunds",
+     "year": 2005,
+     "result": "1-0"
+    }
+   ]
+  },
+  {
+   "id": "budapest-3-ne4",
+   "title": "3...Ne4",
+   "name": "Indian Defense: Budapest Gambit Accepted, Fajarowicz Defense",
+   "moves": "d4 Nf6 c4 e5 dxe5 Ne4 Nf3 Bb4+ Bd2 Nxd2 Nbxd2 Nc6 a3 Bxd2+ Qxd2 Qe7 Qc3 O-O O-O-O",
+   "reach": 0.011,
+   "games": [
+    {
+     "id": 294041,
+     "ply": 19,
+     "white": "Rogozenco, Dorian",
+     "black": "Kahn, Evarth Dr.",
+     "year": 1995,
+     "result": "1-0"
+    }
+   ]
+  },
+  {
+   "id": "budapest-3-ne4-4-d6",
+   "title": "3...Ne4 · 4...d6",
+   "name": "Indian Defense: Budapest Gambit Accepted, Fajarowicz Defense",
+   "moves": "d4 Nf6 c4 e5 dxe5 Ne4 Nf3 d6 Qc2 Bf5 Nc3",
+   "reach": 0.002,
+   "games": [
+    {
+     "id": 89129,
+     "ply": 8,
+     "white": "Finegold, Benjamin",
+     "black": "Rogers, Ian",
+     "year": 1990,
+     "result": "1-0"
+    }
+   ]
+  },
+  {
+   "id": "budapest-3-ne4-4-b6",
+   "title": "3...Ne4 · 4...b6",
+   "name": "Indian Defense: Budapest Gambit Accepted, Fajarowicz Defense",
+   "moves": "d4 Nf6 c4 e5 dxe5 Ne4 Nf3 b6 Nbd2 Bb4 g3",
+   "reach": 0.002,
+   "games": [
+    {
+     "id": 294653,
+     "ply": 7,
+     "white": "Kasimdzhanov, Rustam",
+     "black": "Schlindwein, Rolf",
+     "year": 2001,
+     "result": "1-0"
+    },
+    {
+     "id": 17876,
+     "ply": 7,
+     "white": "Dautov, Rustem",
+     "black": "Gutman, Lev",
+     "year": 2003,
+     "result": "1-0"
+    },
+    {
+     "id": 447623,
+     "ply": 7,
+     "white": "Yermolinsky, Alex",
+     "black": "Khmelnitsky, Igor",
+     "year": 2002,
+     "result": "1-0"
+    }
+   ]
+  }
+ ],
+ "sidelines": [
+  {
+   "id": "sidelines-2-e6-3-b6",
+   "title": "2...e6 · 3...b6",
+   "name": "Indian Defense: Normal Variation",
+   "moves": "d4 Nf6 c4 e6 Nc3 b6 e4 Bb7 Bd3 Bb4 Qc2 Bxc3+ bxc3 d6 f4",
+   "reach": 0.011,
+   "games": [
+    {
+     "id": 451076,
+     "ply": 15,
+     "white": "Korchnoi, Viktor",
+     "black": "Chernyshov, Konstantin",
+     "year": 2002,
+     "result": "1/2-1/2"
+    },
+    {
+     "id": 596470,
+     "ply": 15,
+     "white": "Brodsky, Michail",
+     "black": "Zakarian, David",
+     "year": 2014,
+     "result": "1-0"
+    },
+    {
+     "id": 596886,
+     "ply": 15,
+     "white": "Erdos, Viktor",
+     "black": "Nguyen, Ngoc Truong Son",
+     "year": 2003,
+     "result": "1/2-1/2"
+    }
+   ]
+  },
+  {
+   "id": "sidelines-2-e6-3-b6-4-bb4",
+   "title": "2...e6 · 3...b6 · 4...Bb4",
+   "name": "Indian Defense: Normal Variation",
+   "moves": "d4 Nf6 c4 e6 Nc3 b6 e4 Bb4 Bd3 Bb7",
+   "reach": 0.002,
+   "transposesTo": "sidelines-2-e6-3-b6",
+   "games": [
+    {
+     "id": 596609,
+     "ply": 10,
+     "white": "Markus, Robert",
+     "black": "Vajda, Levente",
+     "year": 2002,
+     "result": "0-1"
+    },
+    {
+     "id": 596752,
+     "ply": 10,
+     "white": "Reinhart, Kenneth M",
+     "black": "Hill, Grayling V",
+     "year": 2020,
+     "result": "1-0"
+    },
+    {
+     "id": 596608,
+     "ply": 10,
+     "white": "Pellen, Mickael",
+     "black": "Horvath, Mihaly",
+     "year": 2012,
+     "result": "1-0"
+    }
+   ]
+  },
+  {
+   "id": "sidelines-2-e6-3-be7",
+   "title": "2...e6 · 3...Be7",
+   "name": "Indian Defense: Normal Variation",
+   "moves": "d4 Nf6 c4 e6 Nc3 Be7 e4 O-O e5 Ne8 Nf3 d6 Bd3 dxe5 dxe5 Nc6 a3",
+   "reach": 0.01,
+   "games": [
+    {
+     "id": 598124,
+     "ply": 5,
+     "white": "Carlsen, Magnus",
+     "black": "Caruana, Fabiano",
+     "year": 2020,
+     "result": "1-0"
+    },
+    {
+     "id": 817145,
+     "ply": 5,
+     "white": "Carlsen, Magnus",
+     "black": "Dessaules, Peter",
+     "year": 2019,
+     "result": "1/2-1/2"
+    },
+    {
+     "id": 816932,
+     "ply": 5,
+     "white": "Carlsen, Magnus",
+     "black": "Dessaules, Peter",
+     "year": 2019,
+     "result": "1/2-1/2"
+    }
+   ]
+  },
+  {
+   "id": "sidelines-2-e6-3-be7-4-d6",
+   "title": "2...e6 · 3...Be7 · 4...d6",
+   "name": "Indian Defense: Normal Variation",
+   "moves": "d4 Nf6 c4 e6 Nc3 Be7 e4 d6 Nf3 O-O Bd3 Nbd7 h3",
+   "reach": 0.003,
+   "games": [
+    {
+     "id": 598124,
+     "ply": 5,
+     "white": "Carlsen, Magnus",
+     "black": "Caruana, Fabiano",
+     "year": 2020,
+     "result": "1-0"
+    },
+    {
+     "id": 817145,
+     "ply": 5,
+     "white": "Carlsen, Magnus",
+     "black": "Dessaules, Peter",
+     "year": 2019,
+     "result": "1/2-1/2"
+    },
+    {
+     "id": 816932,
+     "ply": 5,
+     "white": "Carlsen, Magnus",
+     "black": "Dessaules, Peter",
+     "year": 2019,
+     "result": "1/2-1/2"
+    }
+   ]
+  },
+  {
+   "id": "sidelines-2-d5",
+   "title": "2...d5",
+   "name": "Queen's Gambit Declined: Marshall Defense",
+   "moves": "d4 Nf6 c4 d5 cxd5 Nxd5 Nf3 e6 e4 Nf6 Nc3 Bb4 Bd3 O-O e5 Nd5 Bxh7+ Kxh7 Ng5+ Kg6 h4",
+   "reach": 0.056,
+   "games": [
+    {
+     "id": 446993,
+     "ply": 6,
+     "white": "Nadera, Barlo A.",
+     "black": "Dimakiling, Oliver",
+     "year": 2007,
+     "result": "1/2-1/2"
+    }
+   ]
+  },
+  {
+   "id": "sidelines-2-d5-5-nb6",
+   "title": "2...d5 · 5...Nb6",
+   "name": "Queen's Gambit Declined: Marshall Defense",
+   "moves": "d4 Nf6 c4 d5 cxd5 Nxd5 Nf3 e6 e4 Nb6 Be3 Bb4+ Nc3 O-O Qb3",
+   "reach": 0.002,
+   "games": [
+    {
+     "id": 446993,
+     "ply": 6,
+     "white": "Nadera, Barlo A.",
+     "black": "Dimakiling, Oliver",
+     "year": 2007,
+     "result": "1/2-1/2"
+    }
+   ]
+  },
+  {
+   "id": "sidelines-2-d5-4-bg4",
+   "title": "2...d5 · 4...Bg4",
+   "name": "Queen's Gambit Declined: Marshall Defense",
+   "moves": "d4 Nf6 c4 d5 cxd5 Nxd5 Nf3 Bg4 Ne5 Bh5 g4 Bg6 Bg2 e6 Nc3",
+   "reach": 0.008,
+   "games": [
+    {
+     "id": 446993,
+     "ply": 6,
+     "white": "Nadera, Barlo A.",
+     "black": "Dimakiling, Oliver",
+     "year": 2007,
+     "result": "1/2-1/2"
+    }
+   ]
+  },
+  {
+   "id": "sidelines-2-d5-4-bg4-5-bf5",
+   "title": "2...d5 · 4...Bg4 · 5...Bf5",
+   "name": "Queen's Gambit Declined: Marshall Defense",
+   "moves": "d4 Nf6 c4 d5 cxd5 Nxd5 Nf3 Bg4 Ne5 Bf5 Qb3 b6 e4 Bxe4 Bb5+",
+   "reach": 0.002,
+   "games": [
+    {
+     "id": 446993,
+     "ply": 6,
+     "white": "Nadera, Barlo A.",
+     "black": "Dimakiling, Oliver",
+     "year": 2007,
+     "result": "1/2-1/2"
+    }
+   ]
+  },
+  {
+   "id": "sidelines-2-d5-4-nc6",
+   "title": "2...d5 · 4...Nc6",
+   "name": "Queen's Gambit Declined: Marshall Defense",
+   "moves": "d4 Nf6 c4 d5 cxd5 Nxd5 Nf3 Nc6 e4 Nf6 Nc3 Bg4 d5 Ne5 Nxe5 Bxd1 Bb5+ c6 dxc6 bxc6 Bxc6+ Nd7 Bxd7+ Qxd7 Nxd7 Kxd7 Kxd1",
+   "reach": 0.006,
+   "games": [
+    {
+     "id": 446993,
+     "ply": 6,
+     "white": "Nadera, Barlo A.",
+     "black": "Dimakiling, Oliver",
+     "year": 2007,
+     "result": "1/2-1/2"
+    }
+   ]
+  },
+  {
+   "id": "sidelines-2-d5-4-nc6-5-nb6",
+   "title": "2...d5 · 4...Nc6 · 5...Nb6",
+   "name": "Queen's Gambit Declined: Marshall Defense",
+   "moves": "d4 Nf6 c4 d5 cxd5 Nxd5 Nf3 Nc6 e4 Nb6 d5 Nb8 a4 a5 Be3",
+   "reach": 0.003,
+   "games": [
+    {
+     "id": 446993,
+     "ply": 6,
+     "white": "Nadera, Barlo A.",
+     "black": "Dimakiling, Oliver",
+     "year": 2007,
+     "result": "1/2-1/2"
+    }
+   ]
+  },
+  {
+   "id": "sidelines-2-d5-4-g6",
+   "title": "2...d5 · 4...g6",
+   "name": "Queen's Gambit Declined: Marshall Defense",
+   "moves": "d4 Nf6 c4 d5 cxd5 Nxd5 Nf3 g6 e4 Nb6 h3 Bg7 Nc3 O-O Be3 Nc6 Be2 e5 d5 Ne7 a4",
+   "reach": 0.006,
+   "games": [
+    {
+     "id": 754122,
+     "ply": 20,
+     "white": "Gruenberg, Hans-Ulrich",
+     "black": "Kraut, Rainer",
+     "year": 1991,
+     "result": "1-0"
+    }
+   ]
+  },
+  {
+   "id": "sidelines-2-d5-4-g6-5-nf6",
+   "title": "2...d5 · 4...g6 · 5...Nf6",
+   "name": "Queen's Gambit Declined: Marshall Defense",
+   "moves": "d4 Nf6 c4 d5 cxd5 Nxd5 Nf3 g6 e4 Nf6 Nc3 Bg7 Be3 O-O h3 b6 Qc2",
+   "reach": 0.002,
+   "games": [
+    {
+     "id": 609196,
+     "ply": 9,
+     "white": "Larsen, Benjamin Holsko",
+     "black": "Ljubojevic, Ljubomir",
+     "year": 1992,
+     "result": "0-1"
+    },
+    {
+     "id": 609283,
+     "ply": 9,
+     "white": "Broniek, Mariusz Maciej",
+     "black": "Perez, Brigiliano",
+     "year": 2020,
+     "result": "1-0"
+    },
+    {
+     "id": 609340,
+     "ply": 9,
+     "white": "Steiger, Walfried",
+     "black": "Dela Cruz, Elden Michael",
+     "year": 2019,
+     "result": "1/2-1/2"
+    }
+   ]
+  },
+  {
+   "id": "sidelines-2-d5-4-bf5",
+   "title": "2...d5 · 4...Bf5",
+   "name": "Queen's Gambit Declined: Marshall Defense",
+   "moves": "d4 Nf6 c4 d5 cxd5 Nxd5 Nf3 Bf5 Nbd2 Bg6 h4",
+   "reach": 0.005,
+   "games": [
+    {
+     "id": 446993,
+     "ply": 6,
+     "white": "Nadera, Barlo A.",
+     "black": "Dimakiling, Oliver",
+     "year": 2007,
+     "result": "1/2-1/2"
+    }
+   ]
+  },
+  {
+   "id": "sidelines-2-d5-4-c6",
+   "title": "2...d5 · 4...c6",
+   "name": "Queen's Gambit Declined: Marshall Defense",
+   "moves": "d4 Nf6 c4 d5 cxd5 Nxd5 Nf3 c6 e4 Nf6 Nc3 Bg4 Qb3 Qb6 Ne5",
+   "reach": 0.002,
+   "games": [
+    {
+     "id": 446993,
+     "ply": 6,
+     "white": "Nadera, Barlo A.",
+     "black": "Dimakiling, Oliver",
+     "year": 2007,
+     "result": "1/2-1/2"
+    }
+   ]
+  },
+  {
+   "id": "sidelines-2-d5-3-qxd5",
+   "title": "2...d5 · 3...Qxd5",
+   "name": "Queen's Gambit Declined: Marshall Defense",
+   "moves": "d4 Nf6 c4 d5 cxd5 Qxd5 Nc3 Qd8 Nf3 e6 e4",
+   "reach": 0.012,
+   "transposesTo": "sidelines-2-d5",
+   "games": [
+    {
+     "id": 446993,
+     "ply": 5,
+     "white": "Nadera, Barlo A.",
+     "black": "Dimakiling, Oliver",
+     "year": 2007,
+     "result": "1/2-1/2"
+    }
+   ]
+  },
+  {
+   "id": "sidelines-2-d5-3-qxd5-4-qa5",
+   "title": "2...d5 · 3...Qxd5 · 4...Qa5",
+   "name": "Queen's Gambit Declined: Marshall Defense",
+   "moves": "d4 Nf6 c4 d5 cxd5 Qxd5 Nc3 Qa5 Bd2 c6 e4 Bg4 Qc2",
+   "reach": 0.004,
+   "games": [
+    {
+     "id": 446993,
+     "ply": 5,
+     "white": "Nadera, Barlo A.",
+     "black": "Dimakiling, Oliver",
+     "year": 2007,
+     "result": "1/2-1/2"
+    }
+   ]
+  },
+  {
+   "id": "sidelines-2-d6",
+   "title": "2...d6",
+   "name": "Old Indian Defense",
+   "moves": "d4 Nf6 c4 d6 Nc3 g6",
+   "reach": 0.047,
+   "transposesTo": "kid-3-d6",
+   "games": [
+    {
+     "id": 98297,
+     "ply": 6,
+     "white": "Carlsen, Magnus",
+     "black": "Firouzja, Alireza",
+     "year": 2024,
+     "result": "0-1"
+    },
+    {
+     "id": 96416,
+     "ply": 6,
+     "white": "Tomashevsky, Evgeny",
+     "black": "Nakamura, Hikaru",
+     "year": 2014,
+     "result": "1-0"
+    },
+    {
+     "id": 522591,
+     "ply": 6,
+     "white": "Duda, Jan-Krzysztof",
+     "black": "Indjic, Aleksandar",
+     "year": 2019,
+     "result": "1-0"
+    }
+   ]
+  },
+  {
+   "id": "sidelines-2-d6-3-nbd7",
+   "title": "2...d6 · 3...Nbd7",
+   "name": "Old Indian Defense: Normal Variation",
+   "moves": "d4 Nf6 c4 d6 Nc3 Nbd7 e4 e5 Nf3 Be7 Be2 O-O O-O c6 Re1 Qc7 Qc2",
+   "reach": 0.006,
+   "games": [
+    {
+     "id": 294316,
+     "ply": 16,
+     "white": "Oll, Lembit",
+     "black": "Vaganian, Rafael A",
+     "year": 1993,
+     "result": "1-0"
+    },
+    {
+     "id": 521782,
+     "ply": 16,
+     "white": "Navara, David",
+     "black": "Bortnyk, Mykola",
+     "year": 2015,
+     "result": "0-1"
+    },
+    {
+     "id": 446912,
+     "ply": 16,
+     "white": "Tregubov, Pavel V.",
+     "black": "Sargissian, Gabriel",
+     "year": 2000,
+     "result": "0-1"
+    }
+   ]
+  },
+  {
+   "id": "sidelines-2-d6-3-c6",
+   "title": "2...d6 · 3...c6",
+   "name": "Old Indian Defense: Czech Variation, with Nc3",
+   "moves": "d4 Nf6 c4 d6 Nc3 c6 e4 Qa5 Bd3 e5 Nf3 Bg4 d5",
+   "reach": 0.004,
+   "games": [
+    {
+     "id": 448006,
+     "ply": 13,
+     "white": "Velikov, Petar",
+     "black": "Soltis, Andrew",
+     "year": 1982,
+     "result": "1-0"
+    },
+    {
+     "id": 294254,
+     "ply": 13,
+     "white": "Fedorowicz, John",
+     "black": "Day, Lawrence A.",
+     "year": 1981,
+     "result": "1-0"
+    }
+   ]
+  },
+  {
+   "id": "sidelines-2-d6-3-e5",
+   "title": "2...d6 · 3...e5",
+   "name": "Old Indian Defense: Two Knights Variation",
+   "moves": "d4 Nf6 c4 d6 Nc3 e5 Nf3 exd4 Nxd4 Be7 e4 O-O Be2",
+   "reach": 0.003,
+   "games": [
+    {
+     "id": 522740,
+     "ply": 13,
+     "white": "Xu, Jun",
+     "black": "Campora, Daniel H.",
+     "year": 2004,
+     "result": "1/2-1/2"
+    }
+   ]
+  }
+ ]
+}
