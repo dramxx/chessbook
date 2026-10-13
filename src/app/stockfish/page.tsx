@@ -94,7 +94,8 @@ export default function BotPage() {
   const bot = useRef<Engine | null>(null);
   const analyst = useRef<Engine | null>(null);
 
-  // Restore the saved game and settings; a ?moves= link from the openings page starts a new setup.
+  // Restore the saved game and settings; a ?moves= link (openings page, Punish it) starts a new setup,
+  // with ?color= choosing the side.
   useEffect(() => {
     const params = new URLSearchParams(window.location.search);
     const fromOpenings = params.get("moves");
@@ -106,7 +107,13 @@ export default function BotPage() {
       const moves = fromOpenings.split(" ").filter(Boolean);
       try {
         replay(moves);
-        setSetup((s) => ({ ...s, moves, rating: saved?.rating ?? s.rating }));
+        const color = params.get("color");
+        setSetup((s) => ({
+          ...s,
+          moves,
+          rating: saved?.rating ?? s.rating,
+          color: color === "white" || color === "black" ? color : s.color,
+        }));
       } catch {}
       window.history.replaceState(null, "", window.location.pathname);
     } else if (saved && !saved.result && !replay(saved.moves).isGameOver()) {

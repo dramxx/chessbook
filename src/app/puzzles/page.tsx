@@ -8,6 +8,12 @@ const MODES = [
     text: "Solve puzzles that get harder as you go. Three strikes and you're out.",
   },
   {
+    href: "/puzzles/punish",
+    icon: "⚔",
+    title: "Punish it",
+    text: "Real mistakes club players make in the opening, all the time. Find the move that makes them pay. Filter by course to practice your own openings.",
+  },
+  {
     href: "/puzzles/guess",
     icon: "♞",
     title: "Guess the Move",
