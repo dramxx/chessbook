@@ -1,9 +1,14 @@
+import { Suspense } from "react";
+import Form from "next/form";
 import Link from "next/link";
+import { Spinner } from "@/components/Spinner";
 import { searchGames, type Search } from "@/lib/games";
 
 const RESULTS = ["1-0", "0-1", "1/2-1/2"];
 
-// Search form (a plain GET form, so the URL holds the search) and one page of results, newest first.
+// Search form (a GET form, so the URL holds the search) and one page of results, newest first. The
+// results load in their own Suspense boundary, keyed by the search, so a new search or page shows a
+// spinner below the form while the database answers.
 export default async function GamesPage({ searchParams }: PageProps<"/games">) {
   const sp = await searchParams;
   const str = (k: string) => {
@@ -33,23 +38,11 @@ export default async function GamesPage({ searchParams }: PageProps<"/games">) {
     result: RESULTS.includes(str("result") ?? "") ? str("result") : undefined,
     page: int("page"),
   };
-  const page = search.page ?? 0;
-  const { games, more } = await searchGames(search);
-
-  const pageHref = (p: number) => {
-    const q = new URLSearchParams();
-    for (const [k, v] of Object.entries(search)) {
-      if (v === undefined || k === "page") continue;
-      q.set(k === "players" ? "player" : k, k === "players" ? players.join(", ") : String(v));
-    }
-    if (p > 0) q.set("page", String(p));
-    return `/games?${q}`;
-  };
   const input = "rounded bg-surface px-2 py-1.5 text-base outline-none focus:ring-2 focus:ring-accent sm:text-sm";
 
   return (
     <main className="mx-auto flex w-full max-w-5xl flex-1 flex-col gap-4 p-4">
-      <form className="flex flex-wrap items-end gap-2 rounded-lg bg-panel p-4">
+      <Form action="/games" className="flex flex-wrap items-end gap-2 rounded-lg bg-panel p-4">
         <label className="flex flex-col gap-1 text-xs text-foreground/60">
           Player
           <input
@@ -91,8 +84,39 @@ export default async function GamesPage({ searchParams }: PageProps<"/games">) {
           </select>
         </label>
         <button className="btn-secondary">Search</button>
-      </form>
+      </Form>
 
+      <Suspense key={JSON.stringify(search)} fallback={<Spinner label="Searching…" />}>
+        <Results search={search} />
+      </Suspense>
+
+      <p className="text-xs text-foreground/50">
+        Games from{" "}
+        <a href="https://lumbrasgigabase.com" className="underline">
+          Lumbra&apos;s GigaBase
+        </a>{" "}
+        (OTB Elite, both players 2400+), CC BY-NC-SA 4.0.
+      </p>
+    </main>
+  );
+}
+
+async function Results({ search }: { search: Search }) {
+  const page = search.page ?? 0;
+  const { games, more } = await searchGames(search);
+
+  const pageHref = (p: number) => {
+    const q = new URLSearchParams();
+    for (const [k, v] of Object.entries(search)) {
+      if (v === undefined || k === "page") continue;
+      q.set(k === "players" ? "player" : k, k === "players" ? (v as string[]).join(", ") : String(v));
+    }
+    if (p > 0) q.set("page", String(p));
+    return `/games?${q}`;
+  };
+
+  return (
+    <>
       {games.length === 0 ? (
         <p className="text-sm text-foreground/60">No games found.</p>
       ) : (
@@ -105,7 +129,6 @@ export default async function GamesPage({ searchParams }: PageProps<"/games">) {
                 <th className="px-3 py-2 font-semibold">Result</th>
                 <th className="px-3 py-2 font-semibold">Moves</th>
                 <th className="px-3 py-2 font-semibold">Event</th>
-                <th className="px-3 py-2 font-semibold">Year</th>
               </tr>
             </thead>
             <tbody>
@@ -140,7 +163,6 @@ export default async function GamesPage({ searchParams }: PageProps<"/games">) {
                     {cell("font-mono whitespace-nowrap", g.result.replace("1/2", "½"))}
                     {cell("font-mono", Math.ceil(g.plies / 2))}
                     {cell("max-w-96 truncate", <span title={g.event ?? undefined}>{g.event}</span>)}
-                    {cell("font-mono", g.year)}
                   </tr>
                 );
               })}
@@ -164,14 +186,6 @@ export default async function GamesPage({ searchParams }: PageProps<"/games">) {
           )}
         </nav>
       )}
-
-      <p className="text-xs text-foreground/50">
-        Games from{" "}
-        <a href="https://lumbrasgigabase.com" className="underline">
-          Lumbra&apos;s GigaBase
-        </a>{" "}
-        (OTB Elite, both players 2400+), CC BY-NC-SA 4.0.
-      </p>
-    </main>
+    </>
   );
 }
